@@ -1,0 +1,4 @@
+#! /usr/bin/env node
+const {_, ...options} = require('minimist')(process.argv.slice(2));
+const Server = require('origami-core-server');
+new Server(options);

@@ -1,0 +1,24 @@
+{
+  "name": "origami-cms",
+  "version": "0.0.1",
+  "description": "Open source, flexible, and easy to use CMS for Node.js",
+  "main": "index.js",
+  "repository": "https://github.com/origami-cms/cms",
+  "author": "Tristan Matthias <hello@tristanmathias.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.7.2",
+    "eslint-plugin-prefer-object-spread": "^1.2.1"
+  },
+  "bin": {
+    "origami": "bin/origami"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "minimist": "^1.2.0",
+    "origami-cms": "^0.0.1",
+    "origami-core-lib": "^0.0.2",
+    "origami-core-server": "^0.0.4"
+  }
+}
