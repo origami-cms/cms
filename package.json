@@ -1,6 +1,6 @@
 {
   "name": "origami-cms",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Open source, flexible, and easy to use CMS for Node.js",
   "main": "index.js",
   "repository": "https://github.com/origami-cms/cms",
@@ -23,6 +23,6 @@
     "origami-admin-zen": "^0.0.2",
     "origami-cms": "^0.0.1",
     "origami-core-lib": "^0.0.2",
-    "origami-core-server": "^0.0.5"
+    "origami-core-server": "^0.0.6"
   }
 }
