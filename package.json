@@ -1,6 +1,6 @@
 {
   "name": "origami-cms",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Open source, flexible, and easy to use CMS for Node.js",
   "main": "index.js",
   "repository": "https://github.com/origami-cms/cms",
@@ -14,9 +14,13 @@
   "bin": {
     "origami": "bin/origami"
   },
+  "scripts": {
+    "upgrade-all": "yarn upgrade origami-core-lib origami-core-server origami-admin-zen"
+  },
   "dependencies": {
     "colors": "^1.1.2",
     "minimist": "^1.2.0",
+    "origami-admin-zen": "^0.0.2",
     "origami-cms": "^0.0.1",
     "origami-core-lib": "^0.0.2",
     "origami-core-server": "^0.0.4"

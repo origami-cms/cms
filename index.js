@@ -9,10 +9,12 @@ const s = symbols([
     'config',
     'server',
     'store',
+    'admin',
 
     // Methods
     'setup',
     'setupStore',
+    'setupAdmin',
     'setupServer'
 ]);
 
@@ -32,7 +34,10 @@ process.on('uncaughtException', handleErr);
 module.exports = class Origami {
     constructor(config) {
         validateConfig(config);
-        this[s.config] = config;
+        const defaults = {
+            'admin': 'zen'
+        };
+        this[s.config] = {...defaults, ...config};
 
         this[s.setup]();
     }
@@ -40,6 +45,7 @@ module.exports = class Origami {
 
     async [s.setup]() {
         await this[s.setupStore]();
+        await this[s.setupAdmin]();
         await this[s.setupServer]();
     }
 
@@ -55,14 +61,25 @@ module.exports = class Origami {
 
         const store = this[s.store] = new Store(c.store);
         await store.connect();
-        console.log(`Origami: Connected to store ${c.store.type}`);
+        console.log('✅ Origami: Connected to store'.magenta, c.store.type.cyan);
+    }
+
+    [s.setupAdmin]() {
+        const {admin} = this[s.config];
+        this[s.admin] = require(path.resolve(
+            process.cwd(),
+            'node_modules',
+            `origami-admin-${admin}`
+        ));
+        console.log('✅ Origami: Using admin interface'.magenta, admin.cyan);
     }
 
 
     async [s.setupServer]() {
         this[s.server] = await new Server(
             this[s.config].server,
-            this[s.store]
+            this[s.store],
+            this[s.admin]
         );
     }
 };
