@@ -1,12 +1,25 @@
 {
-    "parser": "babel-eslint",
     // http://eslint.org/docs/rules/
     'parserOptions': {
         'ecmaVersion': 6,
         'sourceType': 'module',
-        'ecmaFeatures': {
-            'jsx': true
-        }
+        },
+
+    'ecmaFeatures': {
+        'binaryLiterals': false,                    // enable binary literals
+        'blockBindings': false,                     // enable let and const (aka block bindings)
+        'defaultParams': false,                     // enable default function parameters
+        'forOf': false,                             // enable for-of loops
+        'generators': false,                        // enable generators
+        'objectLiteralComputedProperties': false,   // enable computed object literal property names
+        'objectLiteralDuplicateProperties': false,  // enable duplicate object literal properties in strict mode
+        'objectLiteralShorthandMethods': false,     // enable object literal shorthand methods
+        'objectLiteralShorthandProperties': false,  // enable object literal shorthand properties
+        'octalLiterals': false,                     // enable octal literals
+        'regexUFlag': false,                        // enable the regular expression u flag
+        'regexYFlag': false,                        // enable the regular expression y flag
+        'templateStrings': false,                   // enable template strings
+        'unicodeCodePointEscapes': false,           // enable code point escapes
     },
 
     'env': {
@@ -17,15 +30,13 @@
 
     'globals': {},
 
-    'plugins': ['prefer-object-spread'],
+    'plugins': [],
 
     'rules': {
-        'prefer-object-spread/prefer-object-spread': 2,
-
         // Possible errors
         'no-await-in-loop': 2,
         'no-cond-assign': 2,
-        'no-console': 0,
+        'no-console': [2, { allow: ["warn", "error"] }],
         'no-constant-condition': 2,
         'no-control-regex': 2,
         'no-debugger': 2,
@@ -104,7 +115,7 @@
         'no-useless-escape': 2,
         'no-useless-return': 2,
         'no-void': 2,
-        'no-warning-comments': 1,
+        'no-warning-comments': 2,
         'no-with': 2,
         'prefer-promise-reject-errors': 2,
         'radix': 0,
@@ -135,7 +146,7 @@
         'block-spacing': 2,
         'brace-style': [2, '1tbs', {'allowSingleLine': true}],
         'camelcase': 2,
-        'capitalized-comments': [1, 'always', {'ignoreConsecutiveComments': true }],
+        'capitalized-comments': [2, 'always', {'ignoreConsecutiveComments': true }],
         'comma-dangle': 2,
         'comma-spacing': 2,
         'comma-style': 2,
@@ -152,12 +163,12 @@
         'indent': [2, 4, { "SwitchCase": 1 }],
         'key-spacing': 2,
         'keyword-spacing': 2,
-        'line-comment-position': 0,
+        'line-comment-position': 2,
         'linebreak-style': 2,
         'lines-around-comment': 2,
         'lines-around-directive': 2,
         'max-depth': 0,
-        'max-len': [0, {
+        'max-len': [1, {
             "ignoreUrls": true,
             "ignoreComments": true
         }],
@@ -178,14 +189,14 @@
         'no-array-constructor': 2,
         'no-bitwise': 0,
         'no-continue': 2,
-        'no-inline-comments': 0,
+        'no-inline-comments': 2,
         'no-lonely-if': 2,
         'no-mixed-operators': 0,
         'no-mixed-spaces-and-tabs': 2,
         'no-multi-assign': 0,
         'no-multiple-empty-lines': 2,
         'no-negated-condition': 0,
-        'no-nested-ternary': 0,
+        'no-nested-ternary': 2,
         'no-new-object': 2,
         'no-plusplus': 0,
         'no-restricted-syntax': 2,
@@ -226,7 +237,7 @@
         'constructor-super': 2,
         'generator-star-spacing': 2,
         'no-class-assign': 2,
-        'no-confusing-arrow': [1, {"allowParens": true}],
+        'no-confusing-arrow': 2,
         'no-const-assign': 2,
         'no-dupe-class-members': 2,
         'no-duplicate-imports': 2,

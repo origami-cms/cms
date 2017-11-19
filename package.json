@@ -1,28 +1,9 @@
 {
-  "name": "origami-cms",
-  "version": "0.0.5",
-  "description": "Open source, flexible, and easy to use CMS for Node.js",
-  "main": "index.js",
-  "repository": "https://github.com/origami-cms/cms",
-  "author": "Tristan Matthias <hello@tristanmathias.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "babel-eslint": "^8.0.0",
-    "eslint": "^4.7.2",
-    "eslint-plugin-prefer-object-spread": "^1.2.1"
-  },
-  "bin": {
-    "origami": "bin/origami"
-  },
-  "scripts": {
-    "upgrade-all": "yarn upgrade origami-core-lib origami-core-server origami-admin-zen"
-  },
-  "dependencies": {
-    "colors": "^1.1.2",
-    "minimist": "^1.2.0",
-    "origami-admin-zen": "^0.0.2",
-    "origami-cms": "^0.0.1",
-    "origami-core-lib": "^0.0.2",
-    "origami-core-server": "^0.0.6"
-  }
+    "name": "origami-cms",
+    "version": "0.0.1",
+    "author": "Tristan Matthias <hello@tristanmatthias.com>",
+    "description": "Express Mongo CMS",
+    "dependencies": {
+        "mongodb": "^2.2.25"
+    }
 }
