@@ -2,9 +2,10 @@ const path = require('path');
 require('colors');
 const Server = require('origami-core-server');
 const {symbols, success} = require('origami-core-lib');
-const validateConfig = require('./validateConfig');
+const validateConfig = require('./lib/validateConfig');
+const readOrigamiFile = require('./lib/readOrigamiFile');
 
-const crane = require('./crane');
+const bird = require('origami-bird');
 
 const s = symbols([
     // Props
@@ -15,6 +16,7 @@ const s = symbols([
     'readyFuncs',
 
     // Methods
+    'init',
     'setup',
     'setupStore',
     'setupAdmin',
@@ -35,18 +37,26 @@ process.on('unhandledRejection', handleErr);
 process.on('uncaughtException', handleErr);
 
 module.exports = class Origami {
-    constructor(config) {
-        validateConfig(config);
+    constructor(config = {}) {
+        this[s.init](config);
+        this[s.readyFuncs] = [];
+    }
+
+    async [s.init](config) {
+        const origamiFile = (await readOrigamiFile()) || {};
         const defaults = {
             'admin': 'zen'
         };
-        this[s.config] = { ...defaults, ...config };
-        this[s.readyFuncs] = [];
+
+        const combined = {...defaults, ...origamiFile, ...config};
+        validateConfig(combined);
+        this[s.config] = combined;
+
+
         this[s.setup]();
 
-        crane();
+        bird();
     }
-
 
     async [s.setup]() {
         await this[s.setupStore]();

@@ -1,6 +1,0 @@
-{
-    "database": {
-        "url": "localhost",
-        "port": "27017"
-    }
-}
