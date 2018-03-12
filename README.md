@@ -3,7 +3,7 @@ The flexible, easy to use, and open-source CMS built for Node.js
 
 ![Origami CMS](docs/banner.jpg)
 
-Origami's aim is to be the world's best CMS for the Javascript community. It's built on Node.js and Express, and is built with flexibility as it's primary value. Use any database, any templating language, any CSS preprocesser (SASS, LESS, etc), and whatever else you'd like to bring to the table. It's a BYO tech stack! It also comes with a bunch of goodies right out of the box.
+Origami's aim is to be the world's best CMS for the Javascript community. It's built on Node.js and Express with **flexibility as it's primary value**. Use any database, any templating language, any CSS preprocesser (SASS, LESS, etc), and whatever else you'd like to bring to the table. It's a BYO tech stack! It also comes with a bunch of goodies right out of the box.
 
 > **We need your help!**
 > Origami is very much a work in progress. To make this platform incredible, we humbly call upon the brilliant minds off the web to collaboratively build the worlds best CMS.
