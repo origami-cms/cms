@@ -1,28 +1,28 @@
 {
-    "name": "origami-cms",
-    "version": "0.0.5",
-    "author": "Tristan Matthias <hello@tristanmatthias.com>",
-    "description": "The flexible, easy to use, and open-source CMS built for Node.js",
-    "homepage": "http://www.origamicms.com",
-    "keywords": [
-        "cms",
-        "mongo",
-        "express",
-        "sql",
-        "admin",
-        "app",
-        "dashboard"
-    ],
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/origmai-cms/cms"
-    },
-    "dependencies": {
-        "express": "^4.16.2",
-        "origami-admin-zen": "^0.0.2",
-        "origami-bird": "^1.0.0",
-        "origami-core-lib": "^0.0.3",
-        "origami-core-server": "^0.0.7"
-    }
+  "name": "origami-cms",
+  "version": "0.0.6",
+  "author": "Tristan Matthias <hello@tristanmatthias.com>",
+  "description": "The flexible, easy to use, and open-source CMS built for Node.js",
+  "homepage": "http://www.origamicms.com",
+  "keywords": [
+    "cms",
+    "mongo",
+    "express",
+    "sql",
+    "admin",
+    "app",
+    "dashboard"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/origmai-cms/cms"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "origami-admin-zen": "^0.0.2",
+    "origami-bird": "^1.0.0",
+    "origami-core-lib": "^0.0.3",
+    "origami-core-server": "^0.0.7"
+  }
 }
