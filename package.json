@@ -3,7 +3,13 @@
   "version": "0.0.6",
   "author": "Tristan Matthias <hello@tristanmatthias.com>",
   "description": "The flexible, easy to use, and open-source CMS built for Node.js",
+  "main": "build/index.js",
   "homepage": "http://www.origamicms.com",
+  "typings": "build/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf build",
+    "build": "yarn clean && tsc"
+  },
   "keywords": [
     "cms",
     "mongo",
@@ -23,6 +29,16 @@
     "origami-admin-zen": "^0.0.2",
     "origami-bird": "^1.0.0",
     "origami-core-lib": "^0.0.3",
-    "origami-core-server": "^0.0.7"
+    "origami-core-server": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/colors": "^1.2.1",
+    "@types/express": "^4.11.1",
+    "bitbar-webpack-progress-plugin": "^1.0.0",
+    "colors": "^1.2.1",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
   }
 }
