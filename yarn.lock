@@ -5696,13 +5696,17 @@ origami-core-lib@^0.1.6:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.1.6.tgz#f888831d55f46576f6df1f5642e9df4e68f325b2"
 
+origami-core-lib@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.1.7.tgz#e769c6322ebe060876425c2a0ac4077edad43438"
+
 origami-core-server-statuses@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/origami-core-server-statuses/-/origami-core-server-statuses-0.0.6.tgz#d47346edb33b7c0fc5fa1ab35bc9a88e5dccd169"
 
-origami-core-server@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.2.3.tgz#bfe9fc9d159d8a75f39a564fa8171b41eb5cf581"
+origami-core-server@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.2.4.tgz#007dad09d4691e0f36eca1897cb3578b187b0365"
   dependencies:
     bcrypt "^2.0.1"
     colors "^1.1.2"
@@ -5715,7 +5719,7 @@ origami-core-server@^0.2.3:
     lodash "^4.17.4"
     marked "^0.3.6"
     npm-programmatic "^0.0.10"
-    origami-core-lib "^0.1.6"
+    origami-core-lib "^0.1.7"
     origami-core-server-statuses "^0.0.6"
     osprey "^0.5.0"
     pluralize "^7.0.0"
