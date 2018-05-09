@@ -5705,13 +5705,19 @@ origami-core-lib@^0.2.0:
   dependencies:
     dot-object "^1.7.0"
 
+origami-core-lib@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.0.tgz#bc02fe31ecafee573ff80f9c73be64dcca3afc48"
+  dependencies:
+    dot-object "^1.7.0"
+
 origami-core-server-statuses@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/origami-core-server-statuses/-/origami-core-server-statuses-0.0.6.tgz#d47346edb33b7c0fc5fa1ab35bc9a88e5dccd169"
 
-origami-core-server@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.3.0.tgz#8048100a722a2940edd3c939101a6cafec6b0ae0"
+origami-core-server@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.3.2.tgz#6ebd2baa2f7b190fddc98eb144f08b056a63b094"
   dependencies:
     bcrypt "^2.0.1"
     colors "^1.1.2"
@@ -5724,7 +5730,7 @@ origami-core-server@^0.3.0:
     lodash "^4.17.4"
     marked "^0.3.6"
     npm-programmatic "^0.0.10"
-    origami-core-lib "^0.2.0"
+    origami-core-lib "^0.3.0"
     origami-core-server-statuses "^0.0.6"
     osprey "^0.5.0"
     pluralize "^7.0.0"
