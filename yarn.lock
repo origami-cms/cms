@@ -5666,9 +5666,9 @@ ora@^0.2.3:
     cli-spinners "^0.1.2"
     object-assign "^4.0.1"
 
-origami-admin-zen@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/origami-admin-zen/-/origami-admin-zen-0.0.3.tgz#ea8cd44f8767f9fd6659303b1bab67bf95d412f8"
+origami-admin-zen@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/origami-admin-zen/-/origami-admin-zen-0.0.4.tgz#4b59057ea13e79cf2cef7c559482ddedc3dc5530"
   dependencies:
     "@types/lodash" "^4.14.106"
     "@types/pluralize" "^0.0.28"
@@ -5735,7 +5735,7 @@ origami-core-server-statuses@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/origami-core-server-statuses/-/origami-core-server-statuses-0.0.6.tgz#d47346edb33b7c0fc5fa1ab35bc9a88e5dccd169"
 
-origami-core-server@0.3.4:
+origami-core-server@^0.3.4:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.3.4.tgz#45311634a704d1d07a4d027b19d9cbde63aac67e"
   dependencies:
