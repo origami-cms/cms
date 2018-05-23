@@ -1,6 +1,6 @@
 import 'colors';
-import Server from 'origami-core-server';
 import { Origami } from 'origami-core-lib';
+import Server from 'origami-core-server';
 export default class OrigamiRunner {
     server: Server | null;
     private _readyFuncs;
@@ -8,10 +8,10 @@ export default class OrigamiRunner {
     private _store;
     private _admin;
     constructor(config: Origami.Config);
-    _init(c: Origami.Config): Promise<void>;
-    _setup(): Promise<void>;
-    _setupStore(): Promise<void>;
-    _setupAdmin(): void;
-    _setupServer(): Promise<void>;
     ready(func: Function): void;
+    private _init(c);
+    private _setup();
+    private _setupStore();
+    private _setupAdmin();
+    private _setupServer();
 }

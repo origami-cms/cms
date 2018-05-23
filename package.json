@@ -26,10 +26,10 @@
   },
   "dependencies": {
     "express": "^4.16.2",
-    "origami-admin-zen": "^0.0.4",
+    "origami-admin-zen": "^0.0.6-alpha.3",
     "origami-bird": "^1.0.0",
-    "origami-core-lib": "^0.2.0",
-    "origami-core-server": "^0.3.4",
+    "origami-core-lib": "^0.3.4",
+    "origami-core-server": "^0.3.8",
     "origami-store-mongodb": "^0.1.2",
     "origami-theme-snow": "^0.0.3"
   },

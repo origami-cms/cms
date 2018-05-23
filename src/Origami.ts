@@ -1,19 +1,15 @@
-import path from 'path';
 import 'colors';
-import Server, {Route} from 'origami-core-server';
-import {Origami, success, error, config} from 'origami-core-lib';
+import {Origami, config, error, success} from 'origami-core-lib';
+import Server from 'origami-core-server';
+import path from 'path';
 
 const bird = require('origami-bird');
 
 
 const handleErr = (err: Error) => {
-    const testOrigami = /^(Origami.+:)(.+)/;
-    const res = testOrigami.exec(err.message);
-    if (res && res.length >= 3) {
-        const [, type, message] = res;
-        console.error('❌', type.yellow, message.red);
-    } else if (err.stack) console.log(err.stack.red);
+    console.log(err);
 
+    error(err);
     process.exit();
 };
 
@@ -29,14 +25,21 @@ export default class OrigamiRunner {
     private _store: object | null = null;
     private _admin: Function | null = null;
 
+
     constructor(config: Origami.Config) {
         this._init(config);
     }
 
-    async _init(c: Origami.Config) {
+
+    ready(func: Function) {
+        this._readyFuncs.push(func);
+    }
+
+
+    private async _init(c: Origami.Config) {
         const origamiFile = (await config.read()) || {};
         const defaults = {
-            'admin': 'zen'
+            admin: 'zen'
         };
 
         const combined = {...defaults, ...origamiFile, ...c};
@@ -46,10 +49,11 @@ export default class OrigamiRunner {
 
         this._setup();
 
-        bird();
+        if (process.env.LOG_VERBOSE) bird();
     }
 
-    async _setup() {
+
+    private async _setup() {
         await this._setupStore();
         await this._setupAdmin();
         await this._setupServer();
@@ -57,25 +61,26 @@ export default class OrigamiRunner {
     }
 
 
-    async _setupStore() {
+    private async _setupStore() {
         if (!this._config) return error('Not initialised');
         const c = this._config;
 
-        const Store = require(path.resolve(
+        const store = require(path.resolve(
             process.cwd(),
             'node_modules',
             `origami-store-${c.store.type}`
         ));
 
-        const store = this._store = new Store(c.store);
-        await store.connect();
+        const s = this._store = new store(c.store);
+        await s.connect();
         success('', 'Connected to store', c.store.type.cyan);
     }
 
-    _setupAdmin() {
+
+    private _setupAdmin() {
         if (!this._config) return error('Not initialised');
 
-        const { admin } = this._config;
+        const {admin} = this._config;
         this._admin = require(path.resolve(
             process.cwd(),
             'node_modules',
@@ -85,7 +90,7 @@ export default class OrigamiRunner {
     }
 
 
-    async _setupServer() {
+    private async _setupServer() {
         if (!this._config || !this._store || !this._admin) return error('Not initialised');
         this.server = await new Server(
             this._config.server,
@@ -93,9 +98,4 @@ export default class OrigamiRunner {
             this._admin
         );
     }
-
-
-    ready(func: Function) {
-        this._readyFuncs.push(func);
-    }
-};
+}
