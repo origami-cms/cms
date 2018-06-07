@@ -2048,6 +2048,10 @@ cors@^2.7.1:
     object-assign "^4"
     vary "^1"
 
+corser@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/corser/-/corser-2.0.1.tgz#8eda252ecaab5840dcd975ceb90d9370c819ff87"
+
 crc@3.4.4:
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/crc/-/crc-3.4.4.tgz#9da1e980e3bd44fc5c93bf5ab3da3378d85e466b"
@@ -5704,12 +5708,13 @@ origami-core-server@^0.3.7:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.3.8:
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.3.8.tgz#b5e25cd25419d3edba881618d60045a0e492a467"
+origami-core-server@^0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.3.9.tgz#75259c06f55081880fad8f313a88c2e1b881bd3a"
   dependencies:
     bcrypt "^2.0.1"
     colors "^1.1.2"
+    corser "^2.0.1"
     express "^4.15.4"
     express-list-endpoints "^3.0.1"
     find-root "^1.1.0"
