@@ -4187,9 +4187,9 @@ ora@^0.2.3:
     cli-spinners "^0.1.2"
     object-assign "^4.0.1"
 
-origami-admin-zen@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/origami-admin-zen/-/origami-admin-zen-0.0.8.tgz#66d2ad30db9b5d287e97df7af99d4246bd220a7d"
+origami-admin-zen@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/origami-admin-zen/-/origami-admin-zen-0.0.9.tgz#af87af22925750de01183f50dc237c97290ebe48"
   dependencies:
     "@types/route-parser" "^0.1.1"
     awesome-typescript-loader "^5.0.0"
