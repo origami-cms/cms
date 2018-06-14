@@ -4213,9 +4213,9 @@ origami-core-server-statuses@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/origami-core-server-statuses/-/origami-core-server-statuses-0.0.8.tgz#683e8ca0d30886df8986543ca439f008f4709885"
 
-origami-core-server@^0.3.12-alpha.1:
-  version "0.3.12-alpha.1"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.3.12-alpha.1.tgz#99c36a9c126edc630c52e15978572cbc4fb3a929"
+origami-core-server@^0.3.12-alpha.2:
+  version "0.3.12-alpha.2"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.3.12-alpha.2.tgz#bcdfc8e7257a2cdf18e47844d75ad120e5e812ab"
   dependencies:
     bcrypt "^2.0.1"
     colors "^1.1.2"
