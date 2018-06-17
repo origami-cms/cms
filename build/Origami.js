@@ -22,10 +22,14 @@ class OrigamiRunner {
         this._config = null;
         this._store = null;
         this._admin = null;
+        this._ready = false;
         this._init(config);
     }
     ready(func) {
-        this._readyFuncs.push(func);
+        if (this._ready)
+            func();
+        else
+            this._readyFuncs.push(func);
     }
     async _init(c) {
         const origamiFile = (await origami_core_lib_1.config.read()) || {};
@@ -43,6 +47,7 @@ class OrigamiRunner {
         await this._setupStore();
         await this._setupAdmin();
         await this._setupServer();
+        this._ready = true;
         this._readyFuncs.forEach(f => f());
     }
     async _setupStore() {

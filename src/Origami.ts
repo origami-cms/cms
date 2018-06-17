@@ -24,6 +24,7 @@ export default class OrigamiRunner {
     private _config: Origami.Config | null = null;
     private _store: object | null = null;
     private _admin: Function | null = null;
+    private _ready: boolean = false;
 
 
     constructor(config: Origami.Config) {
@@ -32,7 +33,8 @@ export default class OrigamiRunner {
 
 
     ready(func: Function) {
-        this._readyFuncs.push(func);
+        if (this._ready) func();
+        else this._readyFuncs.push(func);
     }
 
 
@@ -57,6 +59,7 @@ export default class OrigamiRunner {
         await this._setupStore();
         await this._setupAdmin();
         await this._setupServer();
+        this._ready = true;
         this._readyFuncs.forEach(f => f());
     }
 

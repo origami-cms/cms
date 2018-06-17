@@ -7,6 +7,7 @@ export default class OrigamiRunner {
     private _config;
     private _store;
     private _admin;
+    private _ready;
     constructor(config: Origami.Config);
     ready(func: Function): void;
     private _init(c);
