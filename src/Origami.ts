@@ -98,7 +98,8 @@ export default class OrigamiRunner {
         this.server = await new Server(
             this._config.server,
             this._store,
-            this._admin
+            this._admin,
+            this._config.plugins
         );
     }
 }

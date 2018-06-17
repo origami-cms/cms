@@ -69,7 +69,7 @@ class OrigamiRunner {
     async _setupServer() {
         if (!this._config || !this._store || !this._admin)
             return origami_core_lib_1.error('Not initialised');
-        this.server = await new origami_core_server_1.default(this._config.server, this._store, this._admin);
+        this.server = await new origami_core_server_1.default(this._config.server, this._store, this._admin, this._config.plugins);
     }
 }
 exports.default = OrigamiRunner;
