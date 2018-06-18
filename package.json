@@ -1,6 +1,6 @@
 {
   "name": "origami-cms",
-  "version": "0.2.12-alpha.0",
+  "version": "0.2.12-alpha.1",
   "author": "Tristan Matthias <hello@tristanmatthias.com>",
   "description": "The flexible, easy to use, and open-source CMS built for Node.js",
   "main": "build/index.js",
