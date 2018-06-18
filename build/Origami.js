@@ -69,7 +69,8 @@ class OrigamiRunner {
     async _setupServer() {
         if (!this._config || !this._store || !this._admin)
             return origami_core_lib_1.error('Not initialized');
-        const s = this.server = await new origami_core_server_1.default(this._config.server, this._store, this._admin, this._config.plugins);
+        const s = this.server = await new origami_core_server_1.default(this._config.server, this._store);
+        this._admin(this.server, {});
         // Setup the plugins for the server
         if (this._config.plugins) {
             Object.entries(this._config.plugins).forEach(([name, settings]) => {

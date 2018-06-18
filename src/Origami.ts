@@ -97,10 +97,10 @@ export default class OrigamiRunner {
         if (!this._config || !this._store || !this._admin) return error('Not initialized');
         const s = this.server = await new Server(
             this._config.server,
-            this._store,
-            this._admin,
-            this._config.plugins
+            this._store
         );
+
+        this._admin(this.server, {});
 
         // Setup the plugins for the server
         if (this._config.plugins) {
