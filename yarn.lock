@@ -4262,9 +4262,9 @@ origami-core-server@^0.3.7:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.4.1-alpha.1:
-  version "0.4.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.4.1-alpha.1.tgz#8e70fd8508777fb8ec5b793c50e11deef73dd3a2"
+origami-core-server@^0.4.1-alpha.2:
+  version "0.4.1-alpha.2"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.4.1-alpha.2.tgz#4a31b6d297e20cddf4f522325bade57d759d1cb3"
   dependencies:
     bcrypt "^2.0.1"
     colors "^1.1.2"
