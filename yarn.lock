@@ -1725,6 +1725,12 @@ debug@^3.1.0:
   dependencies:
     ms "2.0.0"
 
+debug@~2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
+  dependencies:
+    ms "0.7.1"
+
 decamelize@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -3929,6 +3935,10 @@ mquery@2.3.3:
     regexp-clone "0.0.1"
     sliced "0.0.5"
 
+ms@0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -4277,9 +4287,9 @@ origami-core-server@^0.3.7:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.4.2.tgz#48832a3e5f9f7864945add5438da29b5a9e46707"
+origami-core-server@^0.5.1-alpha.0:
+  version "0.5.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.1-alpha.0.tgz#3a0f4dd375913c4ae609d0154491174f38978b74"
   dependencies:
     bcrypt "^2.0.1"
     colors "^1.1.2"
@@ -5311,7 +5321,7 @@ router@blakeembrey/router#router-engine:
   resolved "https://codeload.github.com/blakeembrey/router/tar.gz/5eb68560e91b302251ff17a70cd1b6af1fc36d30"
   dependencies:
     array-flatten "2.0.0"
-    debug "^3.1.0"
+    debug "~2.2.0"
     methods "~1.1.2"
     parseurl "~1.3.1"
     path-to-regexp "0.1.7"
