@@ -29,7 +29,7 @@
     "origami-admin-zen": "^0.0.9",
     "origami-bird": "^1.0.0",
     "origami-core-lib": "^0.3.5",
-    "origami-core-server": "^0.4.1-alpha.0",
+    "origami-core-server": "^0.4.1-alpha.1",
     "origami-store-mongodb": "^0.1.2",
     "origami-theme-snow": "^0.0.3"
   },
