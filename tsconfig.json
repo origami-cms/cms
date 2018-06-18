@@ -10,7 +10,8 @@
             "es5",
             "es6",
             "es2015.promise",
-            "es2016.array.include"
+            "es2016.array.include",
+            "es2017.object"
         ],
         "declaration": true,
         "outDir": "./build",

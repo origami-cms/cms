@@ -61,15 +61,38 @@ class OrigamiRunner {
     }
     _setupAdmin() {
         if (!this._config)
-            return origami_core_lib_1.error('Not initialised');
+            return origami_core_lib_1.error('Not initialized');
         const { admin } = this._config;
         this._admin = require(path_1.default.resolve(process.cwd(), 'node_modules', `origami-admin-${admin}`));
         origami_core_lib_1.success('', 'Using admin interface', admin.cyan);
     }
     async _setupServer() {
         if (!this._config || !this._store || !this._admin)
-            return origami_core_lib_1.error('Not initialised');
-        this.server = await new origami_core_server_1.default(this._config.server, this._store, this._admin, this._config.plugins);
+            return origami_core_lib_1.error('Not initialized');
+        const s = this.server = await new origami_core_server_1.default(this._config.server, this._store, this._admin, this._config.plugins);
+        // Setup the plugins for the server
+        if (this._config.plugins) {
+            Object.entries(this._config.plugins).forEach(([name, settings]) => {
+                s.plugin(name, settings);
+            });
+        }
+        // Setup the resources for the server API
+        if (this._config.resources) {
+            Object.entries(this._config.resources).forEach(([name, r]) => {
+                if (typeof r === 'string') {
+                    const model = require(path_1.default.resolve(process.cwd(), r));
+                    const auth = true;
+                    s.resource(name, { model, auth });
+                }
+                else if (r instanceof Object) {
+                    const model = require(path_1.default.resolve(process.cwd(), r.model));
+                    const auth = r.auth;
+                    s.resource(name, { model, auth });
+                }
+            });
+        }
+        // Serve the app
+        this.server.serve();
     }
 }
 exports.default = OrigamiRunner;
