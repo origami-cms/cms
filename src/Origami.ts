@@ -1,6 +1,6 @@
 import 'colors';
-import {Origami, config, error, success} from 'origami-core-lib';
-import Server from 'origami-core-server';
+import { config, error, Origami, requireLib, success } from 'origami-core-lib';
+import Server, { Route } from 'origami-core-server';
 import path from 'path';
 
 const bird = require('origami-bird');
@@ -17,7 +17,7 @@ const handleErr = (err: Error) => {
 process.on('unhandledRejection', handleErr);
 process.on('uncaughtException', handleErr);
 
-export default class OrigamiRunner {
+export default class OrigamiInstance {
     server: Server | null = null;
 
     private _readyFuncs: Function[] = [];
@@ -58,7 +58,8 @@ export default class OrigamiRunner {
     private async _setup() {
         await this._setupStore();
         await this._setupAdmin();
-         await this._setupServer();
+        await this._setupServer();
+
         this._ready = true;
         this._readyFuncs.forEach(f => f());
     }
@@ -68,11 +69,7 @@ export default class OrigamiRunner {
         if (!this._config) return error('Not initialised');
         const c = this._config;
 
-        const store = require(path.resolve(
-            process.cwd(),
-            'node_modules',
-            `origami-store-${c.store.type}`
-        ));
+        const store = await requireLib(c.store.type, __dirname, `origami-store-`);
 
         const s = this._store = new store(c.store);
         await s.connect();
@@ -80,15 +77,11 @@ export default class OrigamiRunner {
     }
 
 
-    private _setupAdmin() {
+    private async _setupAdmin() {
         if (!this._config) return error('Not initialized');
 
         const {admin} = this._config;
-        this._admin = require(path.resolve(
-            process.cwd(),
-            'node_modules',
-            `origami-admin-${admin}`
-        ));
+        this._admin = await requireLib(admin, __dirname, `origami-admin-`);
         success('', 'Using admin interface', admin.cyan);
     }
 
@@ -112,11 +105,13 @@ export default class OrigamiRunner {
         // Setup the resources for the server API
         if (this._config.resources) {
             Object.entries(this._config.resources).forEach(([name, r]) => {
+                // r is a string to the model
                 if (typeof r === 'string') {
                     const model = require(path.resolve(process.cwd(), r));
                     const auth = true;
                     s.resource(name, { model, auth });
 
+                    // r is a config object
                 } else if (r instanceof Object) {
                     const model = require(path.resolve(process.cwd(), r.model));
                     const auth = r.auth;
@@ -125,7 +120,31 @@ export default class OrigamiRunner {
             });
         }
 
+        // Setup the controllers for the server API
+        if (this._config.controllers) {
+            Object.entries(this._config.controllers).forEach(async([_path, c]) => {
+                let config: Origami.ConfigController = {
+                    prefix: ''
+                };
+
+                if (typeof c === 'string') {
+                    config.prefix = c;
+                } else if (c instanceof Object) {
+                    config = {
+                        ...config,
+                        ...c
+                    };
+                }
+
+                const route = new Route(config.prefix);
+
+                const inc = await route.include(path.resolve(process.cwd(), _path), config.prefix, true);
+
+                s.useRouter(route);
+            });
+        }
+
         // Serve the app
-        this.server.serve();
+        s.serve();
     }
 }

@@ -1,7 +1,7 @@
 import 'colors';
 import { Origami } from 'origami-core-lib';
 import Server from 'origami-core-server';
-export default class OrigamiRunner {
+export default class OrigamiInstance {
     server: Server | null;
     private _readyFuncs;
     private _config;
