@@ -106,7 +106,7 @@ class OrigamiInstance {
                 else if (c instanceof Object) {
                     config = Object.assign({}, config, c);
                 }
-                const route = new origami_core_server_1.Route(config.prefix);
+                const route = new origami_core_lib_1.Route(config.prefix);
                 const inc = await route.include(path_1.default.resolve(process.cwd(), _path), config.prefix, true);
                 s.useRouter(route);
             });

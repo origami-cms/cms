@@ -1,6 +1,6 @@
 import 'colors';
-import { config, error, Origami, requireLib, success } from 'origami-core-lib';
-import Server, { Route } from 'origami-core-server';
+import { config, error, Origami, requireLib, Route, success } from 'origami-core-lib';
+import Server from 'origami-core-server';
 import path from 'path';
 
 const bird = require('origami-bird');

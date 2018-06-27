@@ -9,6 +9,10 @@
     "@types/express" "*"
     "@types/node" "*"
 
+"@types/caseless@*":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@types/caseless/-/caseless-0.12.1.tgz#9794c69c8385d0192acc471a540d1f8e0d16218a"
+
 "@types/colors@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@types/colors/-/colors-1.2.1.tgz#57703f1a9f7f5fc40afb81eef13e96acdd1016a6"
@@ -38,6 +42,12 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
+"@types/form-data@*":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@types/form-data/-/form-data-2.2.1.tgz#ee2b3b8eaa11c0938289953606b745b738c54b1e"
+  dependencies:
+    "@types/node" "*"
+
 "@types/mime@*":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
@@ -50,12 +60,31 @@
   version "7.0.66"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.66.tgz#3d1dc4d6f52e484e843806ff456379f7e6ad5553"
 
+"@types/request-promise-native@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@types/request-promise-native/-/request-promise-native-1.0.15.tgz#5b3369fc6aaf9e7fef7b6b688aef4c5759623e16"
+  dependencies:
+    "@types/request" "*"
+
+"@types/request@*":
+  version "2.47.1"
+  resolved "https://registry.yarnpkg.com/@types/request/-/request-2.47.1.tgz#25410d3afbdac04c91a94ad9efc9824100735824"
+  dependencies:
+    "@types/caseless" "*"
+    "@types/form-data" "*"
+    "@types/node" "*"
+    "@types/tough-cookie" "*"
+
 "@types/serve-static@*":
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.1.tgz#1d2801fa635d274cd97d4ec07e26b21b44127492"
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
+
+"@types/tough-cookie@*":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-2.3.3.tgz#7f226d67d654ec9070e755f46daebf014628e9d9"
 
 abbrev@1:
   version "1.1.1"
@@ -471,7 +500,7 @@ deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
 
-deepmerge@^2.1.0:
+deepmerge@^2.1.0, deepmerge@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.1.1.tgz#e862b4e45ea0555072bf51e7fd0d9845170ae768"
 
@@ -1097,7 +1126,7 @@ jsonify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
 
-jsonwebtoken@^8.0.1:
+jsonwebtoken@^8.0.1, jsonwebtoken@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.3.0.tgz#056c90eee9a65ed6e6c72ddb0a1d325109aaf643"
   dependencies:
@@ -1541,7 +1570,7 @@ origami-core-lib@^0.3.4:
   dependencies:
     dot-object "^1.7.0"
 
-origami-core-lib@^0.3.5, origami-core-lib@^0.3.7:
+origami-core-lib@^0.3.5:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.7.tgz#88b53325d6acb8bab9ade773d50cc25b2501eaa6"
   dependencies:
@@ -1549,6 +1578,17 @@ origami-core-lib@^0.3.5, origami-core-lib@^0.3.7:
     dot-object "^1.7.0"
     find-root "^1.1.0"
     import-from "^2.1.0"
+
+origami-core-lib@^0.3.7, origami-core-lib@^0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.9.tgz#ee5f589923674460f22623eb7b4c43ce463963e3"
+  dependencies:
+    bcrypt "^2.0.1"
+    deepmerge "^2.1.1"
+    dot-object "^1.7.0"
+    find-root "^1.1.0"
+    import-from "^2.1.0"
+    jsonwebtoken "^8.3.0"
 
 origami-core-server-statuses@^0.0.8:
   version "0.0.8"
@@ -1613,9 +1653,40 @@ origami-core-server@^0.4.2:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.5.1-alpha.1:
-  version "0.5.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.1-alpha.1.tgz#a7b47fe5c060d8ae1370295dd22dfe8e1aecfd03"
+origami-core-server@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.0.tgz#6433c8d0235c54c1b4c182bd5ec9fcda54063048"
+  dependencies:
+    bcrypt "^2.0.1"
+    colors "^1.1.2"
+    corser "^2.0.1"
+    express "^4.15.4"
+    express-fileupload "^0.4.0"
+    express-list-endpoints "^3.0.1"
+    find-root "^1.1.0"
+    helmet "^3.12.0"
+    http-status-codes "^1.3.0"
+    json-query "^2.2.2"
+    jsonwebtoken "^8.0.1"
+    lodash "^4.17.4"
+    marked "^0.3.6"
+    md5 "^2.2.1"
+    npm-programmatic "^0.0.10"
+    origami-core-lib "^0.3.5"
+    origami-core-server "^0.3.7"
+    origami-core-server-statuses "^0.0.8"
+    origami-plugin-media "^1.0.1"
+    origami-plugin-user-profiles "^1.0.0"
+    osprey "^0.5.0"
+    pluralize "^7.0.0"
+    recursive-readdir "^2.2.1"
+    request "^2.85.0"
+    request-promise-native "^1.0.5"
+    routington "^1.0.3"
+
+origami-core-server@^0.5.1-alpha.2:
+  version "0.5.1-alpha.2"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.1-alpha.2.tgz#fcaaa8946be3edb75ed03c080f0c6c68cf2dd135"
   dependencies:
     bcrypt "^2.0.1"
     colors "^1.1.2"
@@ -1635,6 +1706,7 @@ origami-core-server@^0.5.1-alpha.1:
     origami-core-lib "^0.3.7"
     origami-core-server "^0.3.7"
     origami-core-server-statuses "^0.0.8"
+    origami-plugin-core-api "^0.0.2"
     origami-plugin-media "^1.0.1"
     origami-plugin-user-profiles "^1.0.0"
     osprey "^0.5.0"
@@ -1643,6 +1715,15 @@ origami-core-server@^0.5.1-alpha.1:
     request "^2.85.0"
     request-promise-native "^1.0.5"
     routington "^1.0.3"
+
+origami-plugin-core-api@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/origami-plugin-core-api/-/origami-plugin-core-api-0.0.2.tgz#8b9ea96ed07881648594473aa7cc1b27cde5a75f"
+  dependencies:
+    "@types/request-promise-native" "^1.0.15"
+    origami-core-lib "^0.3.7"
+    origami-core-server "^0.5.0"
+    request-promise-native "^1.0.5"
 
 origami-plugin-media@^1.0.1:
   version "1.0.1"
