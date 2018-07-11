@@ -1,1 +1,64 @@
-Setting up GH Pages
+<h1>
+    <a id="Origami_CMS_Alpha_0"></a>Origami CMS [Alpha]</h1>
+<p>The flexible, easy to use, and open-source CMS built for Node.js</p>
+<p>
+    <img src="docs/banner.jpg" alt="Origami CMS">
+</p>
+<p>Origami’s aim is to be the world’s best CMS for the Javascript community. It’s built on Node.js and Express with
+    <strong>flexibility as it’s primary value</strong>. Use any database, any templating language, any CSS preprocesser (SASS, LESS,
+    etc), and whatever else you’d like to bring to the table. It’s a BYO tech stack! It also comes with a bunch of goodies
+    right out of the box.</p>
+<blockquote>
+    <p>
+        <strong>We need your help!</strong>
+        <br> Origami is very much a work in progress. To make this platform incredible, we humbly call upon the brilliant minds
+        off the web to collaboratively build the worlds best CMS.</p>
+</blockquote>
+<h2>
+    <a id="Getting_started_10"></a>Getting started</h2>
+<p>You’ll need:</p>
+<ul>
+    <li>
+        <a href="http://nodejs.org">Node.js</a>
+    </li>
+    <li>
+        <a href="https://yarnpkg.com">Yarn</a>
+    </li>
+    <li>A terminal</li>
+    <li>A database of some sort</li>
+</ul>
+<blockquote>
+    <p>Checkout
+        <a href="https://github.com/origami-cms/cli">the Origami CLI</a> for easy project setup and more.</p>
+</blockquote>
+<p>Once you’ve got that setup, create a
+    <code>.origami</code> file. This is used for Origami’s configuration, and tells the platform things like what theme to use, what database
+    credentials to use, etc. This can be automatically generated for you with
+    <code>origami new</code> using the CLI.</p>
+<p>Example
+    <code>.origami</code> file:</p>
+<pre><code class="language-json">{
+    "<span class="hljs-attribute">app</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Origami Site"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">store</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"mongodb"</span></span>,
+        "<span class="hljs-attribute">host</span>": <span class="hljs-value"><span class="hljs-string">"localhost"</span></span>,
+        "<span class="hljs-attribute">port</span>": <span class="hljs-value"><span class="hljs-string">"27017"</span></span>,
+        "<span class="hljs-attribute">database</span>": <span class="hljs-value"><span class="hljs-string">"origami-site"</span></span>,
+        "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"origami"</span></span>,
+        "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"supersecret"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">theme</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"snow"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">server</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">port</span>": <span class="hljs-value"><span class="hljs-number">9999</span></span>,
+        "<span class="hljs-attribute">secret</span>": <span class="hljs-value"><span class="hljs-string">"6177fca40ba40bb859e277dc76dd67cf"</span>
+    </span>}
+</span>}
+</code></pre>
+<p>After you have your
+    <code>.origami</code> file and the cms, store and theme Node packages installed (automatically handled via CLI), you’re good to go!</p>
+<p>Simply run
+    <code>origami</code> in the directory to start the server.</p>
