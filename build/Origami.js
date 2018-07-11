@@ -77,6 +77,12 @@ class OrigamiInstance {
                 s.plugin(name, settings);
             });
         }
+        // Setup the apps for the server
+        if (this._config.apps) {
+            Object.entries(this._config.apps).forEach(([name, settings]) => {
+                s.application(name, settings);
+            });
+        }
         // Setup the resources for the server API
         if (this._config.resources) {
             Object.entries(this._config.resources).forEach(([name, r]) => {
