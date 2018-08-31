@@ -1,7 +1,6 @@
 import 'colors';
-import { config, error, Origami, requireLib, Route, success } from 'origami-core-lib';
+import { config, error, Origami, requireLib, success } from 'origami-core-lib';
 import Server from 'origami-core-server';
-import path from 'path';
 
 const bird = require('origami-bird');
 
@@ -66,7 +65,7 @@ export default class OrigamiInstance {
 
 
     private async _setupStore() {
-        if (!this._config) return error('Not initialised');
+        if (!this._config) return error('Not initialized');
         const c = this._config;
 
         const store = await requireLib(c.store.type, __dirname, `origami-store-`);
@@ -96,60 +95,16 @@ export default class OrigamiInstance {
         this._admin(this.server, {});
 
         // Setup the plugins for the server
-        if (this._config.plugins) {
-            Object.entries(this._config.plugins).forEach(([name, settings]) => {
-                s.plugin(name, settings);
-            });
-        }
+        if (this._config.plugins) config.setupPlugins(this._config, this.server);
 
         // Setup the apps for the server
-        if (this._config.apps) {
-            Object.entries(this._config.apps).forEach(([name, settings]) => {
-                s.application(name, settings);
-            });
-        }
+        if (this._config.apps) config.setupApps(this._config, this.server);
 
         // Setup the resources for the server API
-        if (this._config.resources) {
-            Object.entries(this._config.resources).forEach(([name, r]) => {
-                // r is a string to the model
-                if (typeof r === 'string') {
-                    const model = require(path.resolve(process.cwd(), r));
-                    const auth = true;
-                    s.resource(name, { model, auth });
-
-                    // r is a config object
-                } else if (r instanceof Object) {
-                    const model = require(path.resolve(process.cwd(), r.model));
-                    const auth = r.auth;
-                    s.resource(name, { model, auth });
-                }
-            });
-        }
+        if (this._config.resources) config.setupResources(this._config, this.server);
 
         // Setup the controllers for the server API
-        if (this._config.controllers) {
-            Object.entries(this._config.controllers).forEach(async([_path, c]) => {
-                let config: Origami.ConfigController = {
-                    prefix: ''
-                };
-
-                if (typeof c === 'string') {
-                    config.prefix = c;
-                } else if (c instanceof Object) {
-                    config = {
-                        ...config,
-                        ...c
-                    };
-                }
-
-                const route = new Route(config.prefix);
-
-                const inc = await route.include(path.resolve(process.cwd(), _path), config.prefix, true);
-
-                s.useRouter(route);
-            });
-        }
+        if (this._config.controllers) config.setupControllers(this._config, this.server);
 
         // Serve the app
         s.serve();
