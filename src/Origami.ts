@@ -1,5 +1,5 @@
 import 'colors';
-import { config, error, Origami, requireLib, success } from 'origami-core-lib';
+import { config, error, Origami, requireLib, success, warn } from 'origami-core-lib';
 import Server from 'origami-core-server';
 
 const bird = require('origami-bird');
@@ -67,32 +67,34 @@ export default class OrigamiInstance {
     private async _setupStore() {
         if (!this._config) return error('Not initialized');
         const c = this._config;
+        if (!c.store) return warn('CMS: Store is disabled. I hope you know what you\'re doing...');
 
         const store = await requireLib(c.store.type, __dirname, `origami-store-`);
 
         const s = this._store = new store(c.store);
         await s.connect();
-        success('', 'Connected to store', c.store.type.cyan);
+        success('CMS: Connected to store', c.store.type.cyan);
     }
 
 
     private async _setupAdmin() {
         if (!this._config) return error('Not initialized');
+        if (!this._store) return;
 
         const {admin} = this._config;
         this._admin = await requireLib(admin, __dirname, `origami-admin-`);
-        success('', 'Using admin interface', admin.cyan);
+        success('CMS: Using admin interface', admin.cyan);
     }
 
 
     private async _setupServer() {
-        if (!this._config || !this._store || !this._admin) return error('Not initialized');
+        if (!this._config) return error('Not initialized');
         const s = this.server = await new Server(
             this._config.server,
             this._store
         );
 
-        this._admin(this.server, {});
+        if (this._store && this._admin) this._admin!(this.server, {});
 
         // Setup the plugins for the server
         if (this._config.plugins) config.setupPlugins(this._config, this.server);

@@ -29,8 +29,8 @@
     "express": "^4.16.2",
     "origami-admin-zen": "^0.0.10-alpha.6",
     "origami-bird": "^1.0.0",
-    "origami-core-lib": "^0.3.13-alpha.1",
-    "origami-core-server": "^0.5.3-alpha.1",
+    "origami-core-lib": "^0.3.13-alpha.7",
+    "origami-core-server": "^0.5.3-alpha.3",
     "origami-store-mongodb": "^0.1.2",
     "origami-theme-snow": "^0.0.3"
   },

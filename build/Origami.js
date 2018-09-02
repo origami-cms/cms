@@ -53,23 +53,28 @@ class OrigamiInstance {
         if (!this._config)
             return origami_core_lib_1.error('Not initialized');
         const c = this._config;
+        if (!c.store)
+            return origami_core_lib_1.warn('CMS: Store is disabled. I hope you know what you\'re doing...');
         const store = await origami_core_lib_1.requireLib(c.store.type, __dirname, `origami-store-`);
         const s = this._store = new store(c.store);
         await s.connect();
-        origami_core_lib_1.success('', 'Connected to store', c.store.type.cyan);
+        origami_core_lib_1.success('CMS: Connected to store', c.store.type.cyan);
     }
     async _setupAdmin() {
         if (!this._config)
             return origami_core_lib_1.error('Not initialized');
+        if (!this._store)
+            return;
         const { admin } = this._config;
         this._admin = await origami_core_lib_1.requireLib(admin, __dirname, `origami-admin-`);
-        origami_core_lib_1.success('', 'Using admin interface', admin.cyan);
+        origami_core_lib_1.success('CMS: Using admin interface', admin.cyan);
     }
     async _setupServer() {
-        if (!this._config || !this._store || !this._admin)
+        if (!this._config)
             return origami_core_lib_1.error('Not initialized');
         const s = this.server = await new origami_core_server_1.default(this._config.server, this._store);
-        this._admin(this.server, {});
+        if (this._store && this._admin)
+            this._admin(this.server, {});
         // Setup the plugins for the server
         if (this._config.plugins)
             origami_core_lib_1.config.setupPlugins(this._config, this.server);
