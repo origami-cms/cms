@@ -1649,9 +1649,9 @@ origami-core-server@^0.4.2:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.5.3-alpha.4:
-  version "0.5.3-alpha.4"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.3-alpha.4.tgz#57275378618bb4a0801514c80438afb95ad53568"
+origami-core-server@^0.5.3-alpha.5:
+  version "0.5.3-alpha.5"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.3-alpha.5.tgz#3ac05b8be7f6b16c74e96b47b260d7bfc389367b"
   dependencies:
     colors "^1.1.2"
     corser "^2.0.1"
@@ -1667,7 +1667,7 @@ origami-core-server@^0.5.3-alpha.4:
     origami-core-lib "^0.3.13-alpha.7"
     origami-core-server "^0.3.7"
     origami-core-server-statuses "^0.0.8"
-    origami-plugin-auth "^1.0.2-alpha.0"
+    origami-plugin-auth "^1.0.2-alpha.1"
     origami-plugin-core-api "^0.1.5-alpha.0"
     origami-plugin-default-pages "^0.0.2-alpha.2"
     origami-plugin-media "^1.0.1"
@@ -1677,7 +1677,7 @@ origami-core-server@^0.5.3-alpha.4:
     request "^2.85.0"
     request-promise-native "^1.0.5"
 
-origami-plugin-auth@^1.0.2-alpha.0, origami-plugin-auth@^1.0.2-alpha.1:
+origami-plugin-auth@^1.0.2-alpha.1:
   version "1.0.2-alpha.1"
   resolved "https://registry.yarnpkg.com/origami-plugin-auth/-/origami-plugin-auth-1.0.2-alpha.1.tgz#5a020d433c44153b668eed030207ecfadc209ed9"
   dependencies:
