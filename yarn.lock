@@ -9,10 +9,6 @@
     "@types/express" "*"
     "@types/node" "*"
 
-"@types/caseless@*":
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/@types/caseless/-/caseless-0.12.1.tgz#9794c69c8385d0192acc471a540d1f8e0d16218a"
-
 "@types/colors@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@types/colors/-/colors-1.2.1.tgz#57703f1a9f7f5fc40afb81eef13e96acdd1016a6"
@@ -42,12 +38,6 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/form-data@*":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@types/form-data/-/form-data-2.2.1.tgz#ee2b3b8eaa11c0938289953606b745b738c54b1e"
-  dependencies:
-    "@types/node" "*"
-
 "@types/mime@*":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
@@ -60,31 +50,12 @@
   version "7.0.66"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.66.tgz#3d1dc4d6f52e484e843806ff456379f7e6ad5553"
 
-"@types/request-promise-native@^1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@types/request-promise-native/-/request-promise-native-1.0.15.tgz#5b3369fc6aaf9e7fef7b6b688aef4c5759623e16"
-  dependencies:
-    "@types/request" "*"
-
-"@types/request@*":
-  version "2.47.1"
-  resolved "https://registry.yarnpkg.com/@types/request/-/request-2.47.1.tgz#25410d3afbdac04c91a94ad9efc9824100735824"
-  dependencies:
-    "@types/caseless" "*"
-    "@types/form-data" "*"
-    "@types/node" "*"
-    "@types/tough-cookie" "*"
-
 "@types/serve-static@*":
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.1.tgz#1d2801fa635d274cd97d4ec07e26b21b44127492"
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
-
-"@types/tough-cookie@*":
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-2.3.3.tgz#7f226d67d654ec9070e755f46daebf014628e9d9"
 
 abbrev@1:
   version "1.1.1"
@@ -1575,7 +1546,7 @@ origami-bird@^1.0.0:
   dependencies:
     colors "^1.1.2"
 
-origami-core-lib@^0.3.11, origami-core-lib@^0.3.12:
+origami-core-lib@^0.3.12:
   version "0.3.12"
   resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.12.tgz#182276aedc0618db016d0946f2b6f802025e9947"
   dependencies:
@@ -1586,19 +1557,6 @@ origami-core-lib@^0.3.11, origami-core-lib@^0.3.12:
     find-root "^1.1.0"
     import-from "^2.1.0"
     jsonwebtoken "^8.3.0"
-
-origami-core-lib@^0.3.13-alpha.2:
-  version "0.3.13-alpha.2"
-  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.13-alpha.2.tgz#fb8ce993ad8deee16506b2d9637681fb218b13e4"
-  dependencies:
-    "@types/express" "^4.11.1"
-    bcrypt "^2.0.1"
-    deepmerge "^2.1.1"
-    dot-object "^1.7.0"
-    find-root "^1.1.0"
-    import-from "^2.1.0"
-    jsonwebtoken "^8.3.0"
-    marked "^0.3.6"
 
 origami-core-lib@^0.3.13-alpha.7:
   version "0.3.13-alpha.7"
@@ -1628,23 +1586,11 @@ origami-core-lib@^0.3.5:
     find-root "^1.1.0"
     import-from "^2.1.0"
 
-origami-core-lib@^0.3.9:
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.10.tgz#8e3cfb0999547bde7aa8c13c43d59cf2e455abc5"
-  dependencies:
-    "@types/express" "^4.11.1"
-    bcrypt "^2.0.1"
-    deepmerge "^2.1.1"
-    dot-object "^1.7.0"
-    find-root "^1.1.0"
-    import-from "^2.1.0"
-    jsonwebtoken "^8.3.0"
-
 origami-core-server-statuses@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/origami-core-server-statuses/-/origami-core-server-statuses-0.0.8.tgz#683e8ca0d30886df8986543ca439f008f4709885"
 
-origami-core-server@^0.3.3, origami-core-server@^0.3.7:
+origami-core-server@^0.3.7:
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.3.13.tgz#9b4340a878f565b1fb2bd2d512d4964b1cb9cb21"
   dependencies:
@@ -1703,9 +1649,9 @@ origami-core-server@^0.4.2:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.5.3-alpha.3:
-  version "0.5.3-alpha.3"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.3-alpha.3.tgz#25672956edf2dfda1840f4520fa7f1d232352d96"
+origami-core-server@^0.5.3-alpha.4:
+  version "0.5.3-alpha.4"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.3-alpha.4.tgz#57275378618bb4a0801514c80438afb95ad53568"
   dependencies:
     colors "^1.1.2"
     corser "^2.0.1"
@@ -1718,11 +1664,12 @@ origami-core-server@^0.5.3-alpha.3:
     lodash "^4.17.4"
     marked "^0.3.6"
     npm-programmatic "^0.0.10"
-    origami-core-lib "^0.3.13-alpha.2"
+    origami-core-lib "^0.3.13-alpha.7"
     origami-core-server "^0.3.7"
     origami-core-server-statuses "^0.0.8"
-    origami-plugin-auth "^1.0.0"
-    origami-plugin-core-api "^0.1.4"
+    origami-plugin-auth "^1.0.2-alpha.0"
+    origami-plugin-core-api "^0.1.5-alpha.0"
+    origami-plugin-default-pages "^0.0.2-alpha.2"
     origami-plugin-media "^1.0.1"
     origami-plugin-user-profiles "^1.0.1"
     pluralize "^7.0.0"
@@ -1730,23 +1677,27 @@ origami-core-server@^0.5.3-alpha.3:
     request "^2.85.0"
     request-promise-native "^1.0.5"
 
-origami-plugin-auth@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/origami-plugin-auth/-/origami-plugin-auth-1.0.0.tgz#035eb4095cd141c9ae6e795c404471c5f3dff50d"
+origami-plugin-auth@^1.0.2-alpha.0, origami-plugin-auth@^1.0.2-alpha.1:
+  version "1.0.2-alpha.1"
+  resolved "https://registry.yarnpkg.com/origami-plugin-auth/-/origami-plugin-auth-1.0.2-alpha.1.tgz#5a020d433c44153b668eed030207ecfadc209ed9"
   dependencies:
-    origami-core-lib "^0.3.9"
-    origami-core-server "^0.3.3"
+    origami-core-lib "^0.3.13-alpha.7"
 
-origami-plugin-core-api@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/origami-plugin-core-api/-/origami-plugin-core-api-0.1.4.tgz#f1b54a6770f2248ce4542955e58364f71b75dae0"
+origami-plugin-core-api@^0.1.5-alpha.0:
+  version "0.1.5-alpha.0"
+  resolved "https://registry.yarnpkg.com/origami-plugin-core-api/-/origami-plugin-core-api-0.1.5-alpha.0.tgz#b64498dfe4627cf7405b68554f2eca87754a04cf"
   dependencies:
-    "@types/request-promise-native" "^1.0.15"
     npm-programmatic "^0.0.10"
-    origami-core-lib "^0.3.11"
-    origami-plugin-auth "^1.0.0"
+    origami-core-lib "^0.3.13-alpha.7"
+    origami-plugin-auth "^1.0.2-alpha.1"
     request "^2.87.0"
     request-promise-native "^1.0.5"
+
+origami-plugin-default-pages@^0.0.2-alpha.2:
+  version "0.0.2-alpha.2"
+  resolved "https://registry.yarnpkg.com/origami-plugin-default-pages/-/origami-plugin-default-pages-0.0.2-alpha.2.tgz#910e87976aee02b778ed707dc0539858f6c2934a"
+  dependencies:
+    origami-core-lib "^0.3.13-alpha.7"
 
 origami-plugin-media@^1.0.1:
   version "1.0.1"
