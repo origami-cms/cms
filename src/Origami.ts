@@ -4,11 +4,20 @@ import Server from 'origami-core-server';
 
 const bird = require('origami-bird');
 
+interface AnyError extends Error {
+    errno?: string;
+};
 
-const handleErr = (err: Error) => {
-    console.log(err);
+const handleErr = (err: AnyError) => {
+    if (err.errno === 'EADDRINUSE') {
+        error('Server', 'That port is already in use!');
+    } else {
+        console.log(err);
+        error(err);
+    }
+    console.log('Exiting'.gray);
 
-    error(err);
+
     process.exit();
 };
 
@@ -109,6 +118,6 @@ export default class OrigamiInstance {
         if (this._config.controllers) config.setupControllers(this._config, this.server);
 
         // Serve the app
-        s.serve();
+        await s.serve();
     }
 }

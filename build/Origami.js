@@ -7,9 +7,16 @@ require("colors");
 const origami_core_lib_1 = require("origami-core-lib");
 const origami_core_server_1 = __importDefault(require("origami-core-server"));
 const bird = require('origami-bird');
+;
 const handleErr = (err) => {
-    console.log(err);
-    origami_core_lib_1.error(err);
+    if (err.errno === 'EADDRINUSE') {
+        origami_core_lib_1.error('Server', 'That port is already in use!');
+    }
+    else {
+        console.log(err);
+        origami_core_lib_1.error(err);
+    }
+    console.log('Exiting'.gray);
     process.exit();
 };
 process.on('unhandledRejection', handleErr);
@@ -88,7 +95,7 @@ class OrigamiInstance {
         if (this._config.controllers)
             origami_core_lib_1.config.setupControllers(this._config, this.server);
         // Serve the app
-        s.serve();
+        await s.serve();
     }
 }
 exports.default = OrigamiInstance;
