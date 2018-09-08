@@ -39,10 +39,7 @@ class OrigamiInstance {
     }
     async _init(c) {
         const origamiFile = (await origami_core_lib_1.config.read()) || {};
-        const defaults = {
-            admin: 'zen'
-        };
-        const combined = Object.assign({}, defaults, origamiFile, c);
+        const combined = Object.assign({}, origamiFile, c);
         origami_core_lib_1.config.validate(combined);
         this._config = combined;
         this._setup();
@@ -70,9 +67,11 @@ class OrigamiInstance {
     async _setupAdmin() {
         if (!this._config)
             return origami_core_lib_1.error('Not initialized');
-        if (!this._store)
+        if (!this._store || !this._config.admin)
             return;
-        const { admin } = this._config;
+        let { admin } = this._config;
+        if (admin === true)
+            admin = 'zen';
         this._admin = await origami_core_lib_1.requireLib(admin, __dirname, `origami-admin-`);
         origami_core_lib_1.success('CMS: Using admin interface', admin.cyan);
     }

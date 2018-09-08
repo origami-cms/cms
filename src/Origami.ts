@@ -48,11 +48,8 @@ export default class OrigamiInstance {
 
     private async _init(c: Origami.Config) {
         const origamiFile = (await config.read()) || {};
-        const defaults = {
-            admin: 'zen'
-        };
 
-        const combined = {...defaults, ...origamiFile, ...c};
+        const combined = {...origamiFile, ...c};
         config.validate(combined);
         this._config = combined;
 
@@ -88,9 +85,10 @@ export default class OrigamiInstance {
 
     private async _setupAdmin() {
         if (!this._config) return error('Not initialized');
-        if (!this._store) return;
+        if (!this._store || !this._config.admin) return;
 
-        const {admin} = this._config;
+        let {admin} = this._config;
+        if (admin === true) admin = 'zen';
         this._admin = await requireLib(admin, __dirname, `origami-admin-`);
         success('CMS: Using admin interface', admin.cyan);
     }
