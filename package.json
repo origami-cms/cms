@@ -31,8 +31,7 @@
     "origami-bird": "^1.0.0",
     "origami-core-lib": "^0.3.13",
     "origami-core-server": "^0.5.3-alpha.9",
-    "origami-store-mongodb": "^0.1.2",
-    "origami-theme-snow": "^0.0.3"
+    "origami-store-mongodb": "^0.1.2"
   },
   "devDependencies": {
     "@types/colors": "^1.2.1",

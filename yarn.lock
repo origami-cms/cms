@@ -1742,10 +1742,6 @@ origami-store-mongodb@^0.1.2:
     uuid "^3.1.0"
     uuid-validate "^0.0.2"
 
-origami-theme-snow@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/origami-theme-snow/-/origami-theme-snow-0.0.3.tgz#29cbc6ac65e13d7fb7d299e624d1c8e4da57d424"
-
 os-homedir@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
