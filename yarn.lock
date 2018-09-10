@@ -195,7 +195,7 @@ body-parser@1.18.2:
     raw-body "2.3.2"
     type-is "~1.6.15"
 
-body-parser@^1.15.2:
+body-parser@^1.15.2, body-parser@^1.18.3:
   version "1.18.3"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.18.3.tgz#5b292198ffdd553b3a0f20ded0592b956955c8b4"
   dependencies:
@@ -1662,10 +1662,11 @@ origami-core-server@^0.4.2:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.3.tgz#5763c56b8ced2e2ff5ddb1ee4a8b7789068503f0"
+origami-core-server@^0.5.4-alpha.0:
+  version "0.5.4-alpha.0"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.4-alpha.0.tgz#262a476a0fe3b5f480c5cd09c80e3793855193c7"
   dependencies:
+    body-parser "^1.18.3"
     colors "^1.1.2"
     corser "^2.0.1"
     express "^4.15.4"
@@ -1681,7 +1682,7 @@ origami-core-server@^0.5.3:
     origami-core-server-statuses "^0.0.8"
     origami-plugin-auth "^1.0.2-alpha.1"
     origami-plugin-core-api "^0.1.5-alpha.0"
-    origami-plugin-default-pages "^0.0.2"
+    origami-plugin-default-pages "^0.0.3"
     origami-plugin-media "^1.0.1"
     origami-plugin-user-profiles "^1.0.1"
     pluralize "^7.0.0"
@@ -1705,9 +1706,9 @@ origami-plugin-core-api@^0.1.5-alpha.0:
     request "^2.87.0"
     request-promise-native "^1.0.5"
 
-origami-plugin-default-pages@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/origami-plugin-default-pages/-/origami-plugin-default-pages-0.0.2.tgz#83f88a850e8625f95348003fbf1bf65e59a2fe9d"
+origami-plugin-default-pages@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/origami-plugin-default-pages/-/origami-plugin-default-pages-0.0.3.tgz#f8bcff86706ceb27a3ea9bdb2566092f03c916f6"
   dependencies:
     origami-core-lib "^0.3.13-alpha.7"
 
