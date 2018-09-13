@@ -26,7 +26,6 @@
     "url": "https://github.com/origmai-cms/cms"
   },
   "dependencies": {
-    "express": "^4.16.2",
     "origami-admin-zen": "^0.0.10-alpha.6",
     "origami-bird": "^1.0.0",
     "origami-core-lib": "^0.3.15-alpha.3",
@@ -35,12 +34,10 @@
     "origami-plugin-core-api": "^0.1.5-alpha.0",
     "origami-plugin-default-pages": "^0.0.4-alpha.0",
     "origami-plugin-media": "^1.0.1",
-    "origami-plugin-user-profiles": "^1.0.1",
-    "origami-store-mongodb": "^0.1.2"
+    "origami-plugin-user-profiles": "^1.0.1"
   },
   "devDependencies": {
     "@types/colors": "^1.2.1",
-    "@types/express": "^4.11.1",
     "colors": "^1.2.1",
     "typescript": "^2.8.1"
   }
