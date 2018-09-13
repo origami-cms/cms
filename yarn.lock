@@ -961,6 +961,16 @@ http-errors@1.6.3, http-errors@^1.2.8, http-errors@^1.3.1, http-errors@~1.6.1, h
     setprototypeof "1.1.0"
     statuses ">= 1.4.0 < 2"
 
+http-errors@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.7.1.tgz#6a4ffe5d35188e1c39f872534690585852e1f027"
+  dependencies:
+    depd "~1.1.2"
+    inherits "2.0.3"
+    setprototypeof "1.1.0"
+    statuses ">= 1.5.0 < 2"
+    toidentifier "1.0.0"
+
 http-response-object@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/http-response-object/-/http-response-object-2.0.3.tgz#530a48c3b6b683be2398fc42417f7c54f8b401a8"
@@ -1780,6 +1790,13 @@ origami-plugin-media@^1.0.1:
   dependencies:
     mkdir-recursive "^0.4.0"
 
+origami-plugin-setup@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/origami-plugin-setup/-/origami-plugin-setup-0.0.1.tgz#0cebc8d1b593cc49b99b4f9964c1226685221b11"
+  dependencies:
+    http-errors "^1.7.1"
+    origami-core-lib "^0.3.15-alpha.3"
+
 origami-plugin-user-profiles@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/origami-plugin-user-profiles/-/origami-plugin-user-profiles-1.0.0.tgz#bab43ff2ab7db0f4a7b2d365468a5d1e8464b160"
@@ -2487,7 +2504,7 @@ standard-headers@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/standard-headers/-/standard-headers-0.1.1.tgz#f7f2bac4a16ae12fc39ff6a84e4c23ba4abe4fb9"
 
-"statuses@>= 1.3.1 < 2", "statuses@>= 1.4.0 < 2":
+"statuses@>= 1.3.1 < 2", "statuses@>= 1.4.0 < 2", "statuses@>= 1.5.0 < 2":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
 
@@ -2613,6 +2630,10 @@ to-ico@^1.1.5:
     image-size "^0.5.0"
     parse-png "^1.0.0"
     resize-img "^1.1.0"
+
+toidentifier@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
 
 tough-cookie@>=2.3.3:
   version "2.4.2"
