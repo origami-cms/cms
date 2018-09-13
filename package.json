@@ -33,6 +33,7 @@
     "origami-plugin-auth": "^1.0.2-alpha.1",
     "origami-plugin-core-api": "^0.1.5-alpha.0",
     "origami-plugin-default-pages": "^0.0.4-alpha.0",
+    "origami-plugin-favicon": "^0.0.1",
     "origami-plugin-media": "^1.0.1",
     "origami-plugin-user-profiles": "^1.0.1"
   },
