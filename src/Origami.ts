@@ -1,6 +1,8 @@
 import 'colors';
-import { config, error, Origami, requireLib, success, warn } from 'origami-core-lib';
+import {config, error, Origami, requireLib, success, warn} from 'origami-core-lib';
 import Server from 'origami-core-server';
+import defaultPlugins from './defaultPlugins';
+import path from 'path';
 
 const bird = require('origami-bird');
 
@@ -89,6 +91,7 @@ export default class OrigamiInstance {
 
         let {admin} = this._config;
         if (admin === true) admin = 'zen';
+
         this._admin = await requireLib(admin, __dirname, `origami-admin-`);
         success('CMS: Using admin interface', admin.cyan);
     }
@@ -103,8 +106,11 @@ export default class OrigamiInstance {
 
         if (this._store && this._admin) this._admin!(this.server, {});
 
-        // Setup the plugins for the server
-        if (this._config.plugins) config.setupPlugins(this._config, this.server);
+        // Setup the default and user defined plugins for the server
+        const plugins = {...defaultPlugins, ...this._config.plugins};
+        await Promise.all(
+            config.setupPlugins({plugins}, this.server, path.resolve(__dirname, '../'))
+        );
 
         // Setup the apps for the server
         if (this._config.apps) config.setupApps(this._config, this.server);

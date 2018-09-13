@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("colors");
 const origami_core_lib_1 = require("origami-core-lib");
 const origami_core_server_1 = __importDefault(require("origami-core-server"));
+const defaultPlugins_1 = __importDefault(require("./defaultPlugins"));
+const path_1 = __importDefault(require("path"));
 const bird = require('origami-bird');
 ;
 const handleErr = (err) => {
@@ -81,9 +83,9 @@ class OrigamiInstance {
         const s = this.server = await new origami_core_server_1.default(this._config.server, this._store);
         if (this._store && this._admin)
             this._admin(this.server, {});
-        // Setup the plugins for the server
-        if (this._config.plugins)
-            origami_core_lib_1.config.setupPlugins(this._config, this.server);
+        // Setup the default and user defined plugins for the server
+        const plugins = Object.assign({}, defaultPlugins_1.default, this._config.plugins);
+        await Promise.all(origami_core_lib_1.config.setupPlugins({ plugins }, this.server, path_1.default.resolve(__dirname, '../')));
         // Setup the apps for the server
         if (this._config.apps)
             origami_core_lib_1.config.setupApps(this._config, this.server);
