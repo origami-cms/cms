@@ -109,6 +109,7 @@ export default class OrigamiInstance {
         // Setup the default and user defined plugins for the server
         const plugins = {...defaultPlugins, ...this._config.plugins};
         await Promise.all(
+            // @ts-ignore
             config.setupPlugins({plugins}, this.server, path.resolve(__dirname, '../'))
         );
 

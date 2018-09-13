@@ -85,7 +85,9 @@ class OrigamiInstance {
             this._admin(this.server, {});
         // Setup the default and user defined plugins for the server
         const plugins = Object.assign({}, defaultPlugins_1.default, this._config.plugins);
-        await Promise.all(origami_core_lib_1.config.setupPlugins({ plugins }, this.server, path_1.default.resolve(__dirname, '../')));
+        await Promise.all(
+        // @ts-ignore
+        origami_core_lib_1.config.setupPlugins({ plugins }, this.server, path_1.default.resolve(__dirname, '../')));
         // Setup the apps for the server
         if (this._config.apps)
             origami_core_lib_1.config.setupApps(this._config, this.server);
