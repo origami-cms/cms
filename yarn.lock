@@ -1362,6 +1362,12 @@ origami-plugin-media@^1.0.1:
   dependencies:
     mkdir-recursive "^0.4.0"
 
+origami-plugin-media@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/origami-plugin-media/-/origami-plugin-media-1.0.2.tgz#d2e194c817118498f332bd6cb1a1d9bb61887a9b"
+  dependencies:
+    mkdir-recursive "^0.4.0"
+
 origami-plugin-setup@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/origami-plugin-setup/-/origami-plugin-setup-0.0.1.tgz#0cebc8d1b593cc49b99b4f9964c1226685221b11"

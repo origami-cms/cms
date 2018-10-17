@@ -34,7 +34,7 @@
     "origami-plugin-core-api": "^0.1.8-alpha.0",
     "origami-plugin-default-pages": "^0.0.6",
     "origami-plugin-favicon": "^0.0.1",
-    "origami-plugin-media": "^1.0.1",
+    "origami-plugin-media": "^1.0.2",
     "origami-plugin-setup": "^0.0.1",
     "origami-plugin-user-profiles": "^1.0.1"
   },
