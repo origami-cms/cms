@@ -1189,9 +1189,9 @@ once@^1.3.0:
   dependencies:
     wrappy "1"
 
-origami-admin-zen@^0.0.10-alpha.7:
-  version "0.0.10-alpha.7"
-  resolved "https://registry.yarnpkg.com/origami-admin-zen/-/origami-admin-zen-0.0.10-alpha.7.tgz#2f36b70a883c517b666f6f1ebc4170e6578dc90b"
+origami-admin-zen@^0.0.10-alpha.8:
+  version "0.0.10-alpha.8"
+  resolved "https://registry.yarnpkg.com/origami-admin-zen/-/origami-admin-zen-0.0.10-alpha.8.tgz#10fa6f29cebd4c9d869702fa6507f33eb7170945"
   dependencies:
     origami-core-lib "^0.3.12"
     origami-core-server "^0.5.4-alpha.3"
