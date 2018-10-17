@@ -1227,7 +1227,7 @@ origami-core-lib@^0.3.13-alpha.7:
     jsonwebtoken "^8.3.0"
     marked "^0.3.6"
 
-origami-core-lib@^0.3.15-alpha.1, origami-core-lib@^0.3.15-alpha.4:
+origami-core-lib@^0.3.15-alpha.1:
   version "0.3.15-alpha.4"
   resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.15-alpha.4.tgz#3ca0ed2c2a764f7d7406c925ee6ba1086c2b74be"
   dependencies:
@@ -1255,6 +1255,22 @@ origami-core-lib@^0.3.15-alpha.3:
     jsonwebtoken "^8.3.0"
     log-symbols "^2.2.0"
     marked "^0.3.6"
+
+origami-core-lib@^0.3.15-alpha.5:
+  version "0.3.15-alpha.5"
+  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.15-alpha.5.tgz#38d1ae77c89533c6b9b5963d7bf857deb0f3de44"
+  dependencies:
+    "@types/express" "^4.11.1"
+    bcrypt "^2.0.1"
+    deepmerge "^2.1.1"
+    dot-object "^1.7.0"
+    dotenv "^6.1.0"
+    find-root "^1.1.0"
+    import-from "^2.1.0"
+    jsonwebtoken "^8.3.0"
+    log-symbols "^2.2.0"
+    marked "^0.3.6"
+    resolve-from "^4.0.0"
 
 origami-core-server-statuses@^0.0.8:
   version "0.0.8"
@@ -1627,6 +1643,10 @@ resize-img@^1.1.0:
 resolve-from@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-3.0.0.tgz#b22c7af7d9d6881bc8b6e653335eebcb0a188748"
+
+resolve-from@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
 
 rimraf@^2.6.1:
   version "2.6.2"
