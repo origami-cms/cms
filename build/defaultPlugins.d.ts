@@ -5,6 +5,7 @@ declare const _default: {
     'core-api': boolean;
     'user-profiles': boolean;
     media: {
+        provider: string;
         location: string;
     };
     'default-pages': boolean;

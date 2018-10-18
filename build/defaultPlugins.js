@@ -9,6 +9,7 @@ exports.default = {
     'core-api': true,
     'user-profiles': true,
     media: {
+        provider: 'filesystem',
         location: './media'
     },
     'default-pages': true

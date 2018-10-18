@@ -13,6 +13,7 @@ export default {
     'user-profiles': true,
 
     media: {
+        provider: 'filesystem',
         location: './media'
     },
 
