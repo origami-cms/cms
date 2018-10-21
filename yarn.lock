@@ -1284,9 +1284,25 @@ origami-core-lib@^0.3.15-alpha.1:
     log-symbols "^2.2.0"
     marked "^0.3.6"
 
-origami-core-lib@^0.3.15-alpha.3, origami-core-lib@^0.3.15-alpha.5:
+origami-core-lib@^0.3.15-alpha.3:
   version "0.3.15-alpha.5"
   resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.15-alpha.5.tgz#38d1ae77c89533c6b9b5963d7bf857deb0f3de44"
+  dependencies:
+    "@types/express" "^4.11.1"
+    bcrypt "^2.0.1"
+    deepmerge "^2.1.1"
+    dot-object "^1.7.0"
+    dotenv "^6.1.0"
+    find-root "^1.1.0"
+    import-from "^2.1.0"
+    jsonwebtoken "^8.3.0"
+    log-symbols "^2.2.0"
+    marked "^0.3.6"
+    resolve-from "^4.0.0"
+
+origami-core-lib@^0.3.15-alpha.6:
+  version "0.3.15-alpha.6"
+  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.15-alpha.6.tgz#29fc5c0c8281eb2081c3c9edaf21bf62ba005062"
   dependencies:
     "@types/express" "^4.11.1"
     bcrypt "^2.0.1"

@@ -10,9 +10,9 @@ export default class OrigamiInstance {
     private _ready;
     constructor(config: Origami.Config);
     ready(func: Function): void;
-    private _init(c);
-    private _setup();
-    private _setupStore();
-    private _setupAdmin();
-    private _setupServer();
+    private _init;
+    private _setup;
+    private _setupStore;
+    private _setupAdmin;
+    private _setupServer;
 }
