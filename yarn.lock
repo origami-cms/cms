@@ -1269,6 +1269,22 @@ origami-core-lib@^0.3.13-alpha.7:
     jsonwebtoken "^8.3.0"
     marked "^0.3.6"
 
+origami-core-lib@^0.3.15:
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.15.tgz#dad23bffecc9ef8b03266f6fc860ccdb5d16591f"
+  dependencies:
+    "@types/express" "^4.11.1"
+    bcrypt "^2.0.1"
+    deepmerge "^2.1.1"
+    dot-object "^1.7.0"
+    dotenv "^6.1.0"
+    find-root "^1.1.0"
+    import-from "^2.1.0"
+    jsonwebtoken "^8.3.0"
+    log-symbols "^2.2.0"
+    marked "^0.3.6"
+    resolve-from "^4.0.0"
+
 origami-core-lib@^0.3.15-alpha.1:
   version "0.3.15-alpha.4"
   resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.15-alpha.4.tgz#3ca0ed2c2a764f7d7406c925ee6ba1086c2b74be"
@@ -1300,25 +1316,26 @@ origami-core-lib@^0.3.15-alpha.3:
     marked "^0.3.6"
     resolve-from "^4.0.0"
 
-origami-core-lib@^0.3.15-alpha.6:
-  version "0.3.15-alpha.6"
-  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.15-alpha.6.tgz#29fc5c0c8281eb2081c3c9edaf21bf62ba005062"
-  dependencies:
-    "@types/express" "^4.11.1"
-    bcrypt "^2.0.1"
-    deepmerge "^2.1.1"
-    dot-object "^1.7.0"
-    dotenv "^6.1.0"
-    find-root "^1.1.0"
-    import-from "^2.1.0"
-    jsonwebtoken "^8.3.0"
-    log-symbols "^2.2.0"
-    marked "^0.3.6"
-    resolve-from "^4.0.0"
-
 origami-core-server-statuses@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/origami-core-server-statuses/-/origami-core-server-statuses-0.0.8.tgz#683e8ca0d30886df8986543ca439f008f4709885"
+
+origami-core-server@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.4.tgz#bcaa88fb551b89fc6d052c8ad641830794fe8d84"
+  dependencies:
+    body-parser "^1.18.3"
+    colors "^1.3.2"
+    corser "^2.0.1"
+    express "^4.15.4"
+    express-fileupload "^0.4.0"
+    express-static-gzip "^1.1.1"
+    helmet "^3.12.0"
+    http-status-codes "^1.3.0"
+    json-query "^2.2.2"
+    origami-core-lib "^0.3.15"
+    origami-core-server-statuses "^0.0.8"
+    pluralize "^7.0.0"
 
 origami-core-server@^0.5.4-alpha.3:
   version "0.5.4-alpha.3"
@@ -1347,22 +1364,11 @@ origami-core-server@^0.5.4-alpha.3:
     request "^2.85.0"
     request-promise-native "^1.0.5"
 
-origami-core-server@^0.5.4-alpha.8:
-  version "0.5.4-alpha.8"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.4-alpha.8.tgz#bfacfebd6ec157f09fbe7ddf85caf34b87a4558d"
+origami-plugin-auth@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/origami-plugin-auth/-/origami-plugin-auth-1.0.2.tgz#0be4ffc3617a7fd97eddf897e4837f867514652f"
   dependencies:
-    body-parser "^1.18.3"
-    colors "^1.3.2"
-    corser "^2.0.1"
-    express "^4.15.4"
-    express-fileupload "^0.4.0"
-    express-static-gzip "^1.1.1"
-    helmet "^3.12.0"
-    http-status-codes "^1.3.0"
-    json-query "^2.2.2"
-    origami-core-lib "^0.3.15-alpha.3"
-    origami-core-server-statuses "^0.0.8"
-    pluralize "^7.0.0"
+    origami-core-lib "^0.3.13-alpha.7"
 
 origami-plugin-auth@^1.0.2-alpha.1:
   version "1.0.2-alpha.1"
@@ -1370,9 +1376,9 @@ origami-plugin-auth@^1.0.2-alpha.1:
   dependencies:
     origami-core-lib "^0.3.13-alpha.7"
 
-origami-plugin-core-api@^0.1.8-alpha.0:
-  version "0.1.8-alpha.0"
-  resolved "https://registry.yarnpkg.com/origami-plugin-core-api/-/origami-plugin-core-api-0.1.8-alpha.0.tgz#8cf25e248a6fd37b1ca65989efbcc55549a3b1f5"
+origami-plugin-core-api@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/origami-plugin-core-api/-/origami-plugin-core-api-0.1.8.tgz#494e8881a49147619a9a8469f5a18879964512d6"
   dependencies:
     npm-programmatic "^0.0.10"
     origami-core-lib "^0.3.13-alpha.7"
