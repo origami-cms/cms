@@ -1392,9 +1392,9 @@ origami-plugin-default-pages@^0.0.4:
   dependencies:
     origami-core-lib "^0.3.13-alpha.7"
 
-origami-plugin-default-pages@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/origami-plugin-default-pages/-/origami-plugin-default-pages-0.0.6.tgz#1594fea32f207fdec6b1901716ee01c65b8c96c8"
+origami-plugin-default-pages@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/origami-plugin-default-pages/-/origami-plugin-default-pages-0.0.7.tgz#f8f5ebc8be23c4285bca57b338eb779fcb60556c"
   dependencies:
     origami-core-lib "^0.3.15-alpha.1"
 
