@@ -2,7 +2,8 @@ language: node_js
 node_js:
   - '10'
 install:
-  - npm install -g codecov
+  - yarn global add codecov
+  - yarn
 script:
   - yarn test
   - yarn coverage && codecov
