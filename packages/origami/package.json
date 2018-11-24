@@ -1,6 +1,6 @@
 {
   "name": "@origami/origami",
-  "version": "0.0.0",
+  "version": "0.0.2-alpha.0",
   "description": "The flexible, easy to use, and open-source CMS built for Node.js",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/origami",
   "homepage": "http://www.origami.so",

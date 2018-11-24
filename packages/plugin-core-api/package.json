@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-core-api",
-  "version": "0.0.0",
+  "version": "0.0.2-alpha.0",
   "description": "Origami plugin for the core API, routes, controllers and models",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/core-api",
   "homepage": "http://www.origami.so",
