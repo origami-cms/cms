@@ -1,5 +1,17 @@
 {
   "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "copy-config": "node ./lib/copy-config",
+    "lint": "lerna exec --bail=false --ignore tslint-config-origami --ignore @origami/cli-old -- tslint -t stylish --project ./",
+    "lint:fix": "yarn lint --fix",
+    "build": "lerna run build",
+    "watch": "lerna run build -- -w",
+    "test": "LOG_LEVEL=none jest --notify",
+    "test:watch": "yarn test --watch",
+    "cover": "yarn test --coverage --silent",
+    "visualize-deps": "madge --image graph.svg --exclude '(__tests__|.d.ts)' --extensions ts packages/; open graph.svg"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^7.1.2",
     "@types/express": "^4.16.0",
@@ -24,17 +36,5 @@
   },
   "workspaces": [
     "packages/*"
-  ],
-  "scripts": {
-    "copy-config": "node ./lib/copy-config",
-    "lint": "lerna exec --bail=false --ignore tslint-config-origami --ignore @origami/cli-old -- tslint -t stylish --project ./",
-    "lint:fix": "yarn lint --fix",
-    "build": "lerna run build",
-    "watch": "lerna run build -- -w",
-    "test": "LOG_LEVEL=none jest --notify",
-    "test:watch": "yarn test --watch",
-    "cover": "yarn test --coverage --silent",
-    "visualize-deps": "madge --image graph.svg --exclude '(__tests__|.d.ts)' --extensions ts packages/; open graph.svg"
-  },
-  "dependencies": {}
+  ]
 }

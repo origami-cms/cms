@@ -5,5 +5,5 @@ install:
   - yarn global add codecov
   - yarn
 script:
-  - yarn test
+  - yarn bootstrap
   - yarn coverage && codecov
