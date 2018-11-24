@@ -6,8 +6,8 @@
   "homepage": "http://www.origami.so",
   "author": "Tristan Matthias <tristan@origami.so>",
   "license": "MIT",
-  "main": "./build/server.js",
-  "typings": "./build/server.d.ts",
+  "main": "./build/Server.js",
+  "typings": "./build/Server.d.ts",
   "scripts": {
     "clean": "rm -rf build",
     "watch": "tsc -w",
