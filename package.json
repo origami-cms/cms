@@ -9,7 +9,7 @@
     "watch": "lerna run build -- -w",
     "test": "LOG_LEVEL=none jest --notify",
     "test:watch": "yarn test --watch",
-    "cover": "yarn test --coverage --silent",
+    "coverage": "yarn test --coverage --silent",
     "visualize-deps": "madge --image graph.svg --exclude '(__tests__|.d.ts)' --extensions ts packages/; open graph.svg"
   },
   "devDependencies": {
