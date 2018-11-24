@@ -40,5 +40,8 @@
     "origami-store-lowdb": "^0.0.1-alpha.4",
     "tslint": "^5.10.0",
     "typescript": "^2.7.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

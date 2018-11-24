@@ -78,5 +78,8 @@
     "watch": "tsc -w",
     "build": "yarn clean && tsc"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
 }

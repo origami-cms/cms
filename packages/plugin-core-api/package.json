@@ -23,5 +23,8 @@
     "npm-programmatic": "^0.0.10",
     "request-promise-native": "^1.0.5",
     "tslint-config-prettier": "^1.16.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
