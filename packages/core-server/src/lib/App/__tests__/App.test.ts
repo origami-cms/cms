@@ -1,5 +1,5 @@
 import 'jest-extended';
-import {Server} from '../../../server';
+import {Server} from '../../../Server';
 import {App as AppNS} from '../index';
 
 const {App} = AppNS;

@@ -19,6 +19,7 @@
     "allowSyntheticDefaultImports": true,
     "composite": true,
     "importHelpers": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true
   }
 }
