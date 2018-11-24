@@ -15,7 +15,7 @@ import path from 'path';
 import { check as checkPort } from 'tcp-port-used';
 import { promisify } from 'util';
 import * as err from './errors';
-import { App } from './lib/app';
+import { App } from './lib/App';
 import { Resource, ResourceOptions } from './lib/Resource/Resource';
 import { content } from './middleware/content';
 import { error as mwErrors } from './middleware/errors';
