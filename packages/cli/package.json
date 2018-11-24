@@ -56,12 +56,6 @@
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
   },
-  "files": [
-    "/bin",
-    "/lib",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
-  ],
   "homepage": "https://github.com/origami-cms/core/tree/master/packages/cli",
   "license": "MIT",
   "main": "build/index.js",
