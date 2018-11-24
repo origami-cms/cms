@@ -14,7 +14,7 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/tslint-config": "^0.0.1",
+    "@origami/tslint-config": "0.0.2-alpha.0",
     "bcrypt": "^2.0.1",
     "chalk": "^2.4.1",
     "deepmerge": "^2.1.1",

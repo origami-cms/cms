@@ -17,7 +17,7 @@ const sync = async () => {
     }
   });
 
-  Object.entries(packages).forEach(([pkg, {name, pkg: pkgjson}]) => {
+  Object.entries(packages).forEach(async ([pkg, {name, pkg: pkgjson}]) => {
     packageNames.forEach(p => {
       const _pkg = packages[p].pkg;
       // @ts-ignore
@@ -26,7 +26,9 @@ const sync = async () => {
       if (pkgjson.devDependencies && pkgjson.devDependencies[p]) pkgjson.devDependencies[p] = _pkg.version;
     });
 
-    fs.writeFileSync(path.resolve(__dirname, '../packages', name, 'package.json'), JSON.stringify(pkgjson, null, 2));
+    const file = path.resolve(__dirname, '../packages', name, 'package.json');
+    fs.writeFileSync(file, JSON.stringify(pkgjson, null, 2));
+    await execa('git', ['add', file]);
   });
 
 };

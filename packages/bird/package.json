@@ -14,8 +14,8 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/core-lib": "^0.0.1",
-    "@origami/tslint-config": "^0.0.1",
+    "@origami/core-lib": "0.0.2-alpha.0",
+    "@origami/tslint-config": "0.0.2-alpha.0",
     "tslint-config-prettier": "^1.16.0"
   },
   "devDependencies": {
