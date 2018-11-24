@@ -6,8 +6,8 @@ import path from 'path';
 import { check } from 'tcp-port-used';
 import { storeRemove, TestServer } from '../../../../lib/testing';
 import { ErrorServerExistingNamedMiddleware, ErrorServerPluginNotFunction, ErrorServerPortInUse, ErrorServerStoreNotConfigured, ErrorServerUnknownNamedMiddleware, ErrorServerUnknownPlugin } from '../errors';
-import { App } from '../lib/app';
-import { Server } from '../server';
+import { App } from '../lib/App';
+import { Server } from '../Server';
 
 
 describe('core-server.Server.constructor()', async () => {

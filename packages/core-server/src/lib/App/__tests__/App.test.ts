@@ -1,6 +1,6 @@
-import {App as AppNS} from '../index';
-import {Server} from '../../../server';
 import 'jest-extended';
+import {Server} from '../../../server';
+import {App as AppNS} from '../index';
 
 const {App} = AppNS;
 
