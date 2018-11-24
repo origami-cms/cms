@@ -9,7 +9,8 @@
     "test": "LOG_LEVEL=none jest --notify",
     "test:watch": "yarn test --watch",
     "coverage": "yarn test --coverage --silent",
-    "visualize-deps": "madge --image graph.svg --exclude '(__tests__|.d.ts)' --extensions ts packages/; open graph.svg"
+    "visualize-deps": "madge --image graph.svg --exclude '(__tests__|.d.ts)' --extensions ts packages/; open graph.svg",
+    "publish:canary": "lerna version prepatch; lerna exec -- yarn publish"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^7.1.2",
