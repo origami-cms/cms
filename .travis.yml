@@ -2,8 +2,10 @@ language: node_js
 node_js:
   - '10'
 install:
-  - yarn global add codecov
   - yarn
-script:
+  - yarn global add codecov
   - yarn bootstrap
-  - yarn coverage && codecov
+script:
+  - yarn build
+  - yarn coverage
+  - codecov
