@@ -1,23 +1,24 @@
 {
-    "include": [
-        "src/**/*.ts"
+  "exclude": [
+    "**/__tests__/"
+  ],
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "lib": [
+      "es5",
+      "es6",
+      "es2015.promise",
+      "es2016.array.include",
+      "es2017.object"
     ],
-    "exclude": [],
-    "compilerOptions": {
-        "target": "es2018",
-        "module": "commonjs",
-        "lib": [
-            "es5",
-            "es6",
-            "es2015.promise",
-            "es2016.array.include",
-            "es2017.object"
-        ],
-        "declaration": true,
-        "outDir": "./build",
-        "strict": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
-    }
+    "declaration": true,
+    "outDir": "build",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "importHelpers": true,
+    "resolveJsonModule": true
+  }
 }

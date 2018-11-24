@@ -1,46 +1,40 @@
 {
-  "name": "origami-cms",
-  "version": "0.2.17-alpha.0",
-  "author": "Tristan Matthias <hello@tristanmatthias.com>",
-  "description": "The flexible, easy to use, and open-source CMS built for Node.js",
-  "main": "build/index.js",
-  "homepage": "http://www.origamicms.com",
-  "typings": "build/index.d.ts",
-  "scripts": {
-    "clean": "rm -rf build",
-    "build": "yarn clean && tsc",
-    "watch": "yarn build -w"
-  },
-  "keywords": [
-    "cms",
-    "mongo",
-    "express",
-    "sql",
-    "admin",
-    "app",
-    "dashboard"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/origmai-cms/cms"
-  },
-  "dependencies": {
-    "origami-admin-zen": "^0.0.10-alpha.8",
-    "origami-bird": "^1.0.0",
-    "origami-core-lib": "^0.3.15",
-    "origami-core-server": "^0.5.4",
-    "origami-plugin-auth": "^1.0.2",
-    "origami-plugin-core-api": "^0.1.8",
-    "origami-plugin-default-pages": "^0.0.7",
-    "origami-plugin-favicon": "^0.0.1",
-    "origami-plugin-media": "^2.0.0-alpha.0",
-    "origami-plugin-setup": "^0.0.1",
-    "origami-plugin-user-profiles": "^1.0.1"
-  },
+  "private": true,
   "devDependencies": {
-    "@types/colors": "^1.2.1",
-    "colors": "^1.2.1",
-    "typescript": "^2.8.1"
-  }
+    "@commitlint/config-conventional": "^7.1.2",
+    "@types/express": "^4.16.0",
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.3",
+    "@types/node-sass": "^3.10.32",
+    "commitlint": "^7.2.1",
+    "ejs": "^2.6.1",
+    "get-port": "^4.0.0",
+    "handlebars": "^4.0.12",
+    "husky": "^1.1.3",
+    "jest": "^23.6.0",
+    "jest-extended": "^0.11.0",
+    "lerna": "^3.4.3",
+    "madge": "^3.3.0",
+    "node-sass": "^4.10.0",
+    "origami-plugin-auth": "^1.0.2",
+    "pug": "^2.0.3",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "copy-config": "node ./lib/copy-config",
+    "lint": "lerna exec --bail=false --ignore tslint-config-origami --ignore @origami/cli-old -- tslint -t stylish --project ./",
+    "lint:fix": "yarn lint --fix",
+    "build": "lerna run build",
+    "watch": "lerna run build -- -w",
+    "test": "LOG_LEVEL=none jest --notify",
+    "test:watch": "yarn test --watch",
+    "cover": "yarn test --coverage --silent",
+    "visualize-deps": "madge --image graph.svg --exclude '(__tests__|.d.ts)' --extensions ts packages/; open graph.svg"
+  },
+  "dependencies": {}
 }

@@ -1,3 +1,4 @@
 {
-    "extends": "tslint-config-origami"
+  "extends": "./packages/tslint",
+  "defaultSeverity": "error"
 }

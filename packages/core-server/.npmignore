@@ -1,0 +1,5 @@
+src/
+.*
+*.log
+tsconfig.json
+tslint.json

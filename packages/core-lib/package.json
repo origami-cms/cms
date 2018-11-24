@@ -1,0 +1,45 @@
+{
+  "name": "@origami/core-lib",
+  "version": "0.0.0",
+  "description": "Core library for Origami",
+  "repository": "https://github.com/origami-cms/core/tree/master/packages/core-lib",
+  "homepage": "http://www.origami.so",
+  "author": "Tristan Matthias <tristan@origami.so>",
+  "license": "MIT",
+  "main": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf build",
+    "watch": "tsc -w",
+    "build": "yarn clean && tsc"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "chalk": "^2.4.1",
+    "deepmerge": "^2.1.1",
+    "dot-object": "^1.7.0",
+    "dotenv": "^6.1.0",
+    "find-root": "^1.1.0",
+    "import-from": "^2.1.0",
+    "jsonwebtoken": "^8.3.0",
+    "log-symbols": "^2.2.0",
+    "marked": "^0.3.6",
+    "resolve-from": "^4.0.0",
+    "tslint-config-prettier": "^1.16.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^2.0.0",
+    "@types/deepmerge": "^2.1.0",
+    "@types/dot-object": "^1.5.0",
+    "@types/dotenv": "^4.0.3",
+    "@types/find-root": "^1.1.1",
+    "@types/jsonwebtoken": "^7.2.7",
+    "@types/log-symbols": "^2.0.0",
+    "execa": "^1.0.0",
+    "origami-app-pages": "^0.0.1-alpha.4",
+    "origami-plugin-auth": "^1.0.2",
+    "origami-store-lowdb": "^0.0.1-alpha.5",
+    "tslint": "^5.11.0",
+    "tslint-config-origami": "^1.0.4"
+  }
+}

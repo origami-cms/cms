@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+// tslint:disable no-var-requires no-require-imports no-submodule-imports non-literal-require
+const fs = require('fs');
+const path = require('path');
+const flush = require('@oclif/command/flush');
+const handle = require('@oclif/errors/handle');
+const command = require('@oclif/command');
+
+
+const project = path.join(__dirname, '../tsconfig.json');
+const dev = fs.existsSync(project);
+const args = process.argv.slice(2);
+const run = require(`../build/commands/run`).default;
+
+
+if (dev) {
+  require('ts-node').register({
+    project
+  });
+  process.env.DEV = true;
+}
+
+
+(async() => {
+    const runner = new run(args);
+    const {getEntry} = require(`../build/lib/entry`);
+    const entry = await getEntry(args);
+
+
+    (entry
+        // Run single
+        ? runner.run(['run', entry, ...args])
+        // Run multi
+        : command.run()
+    )
+        .then(flush)
+        .catch(handle);
+
+})();
