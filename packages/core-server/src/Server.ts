@@ -35,7 +35,7 @@ const DEFAULT_PORT = '8080';
 const DEFAULT_STATIC = 'public';
 
 export { lib } from './lib';
-export * from './lib/app';
+export * from './lib/App';
 
 
 export class Server {
