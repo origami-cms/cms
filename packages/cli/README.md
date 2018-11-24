@@ -15,49 +15,29 @@ delete
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g delete
-$ delete COMMAND
+$ npm install -g @origami/cli
+$ origami-dev COMMAND
 running command...
-$ delete (-v|--version|version)
-delete/0.0.0 darwin-x64 node-v10.9.0
-$ delete --help [COMMAND]
+$ origami-dev (-v|--version|version)
+@origami/cli/0.0.1 darwin-x64 node-v10.9.0
+$ origami-dev --help [COMMAND]
 USAGE
-  $ delete COMMAND
+  $ origami-dev COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`delete hello [FILE]`](#delete-hello-file)
-* [`delete help [COMMAND]`](#delete-help-command)
+* [`origami-dev help [COMMAND]`](#origami-dev-help-command)
+* [`origami-dev run [ENTRY]`](#origami-dev-run-entry)
 
-## `delete hello [FILE]`
+## `origami-dev help [COMMAND]`
 
-describe the command here
-
-```
-USAGE
-  $ delete hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ delete hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/tristanMatthias/delete/blob/v0.0.0/src/commands/hello.ts)_
-
-## `delete help [COMMAND]`
-
-display help for delete
+display help for origami-dev
 
 ```
 USAGE
-  $ delete help [COMMAND]
+  $ origami-dev help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -67,4 +47,28 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.4/src/commands/help.ts)_
+
+## `origami-dev run [ENTRY]`
+
+Run a origami instance
+
+```
+USAGE
+  $ origami-dev run [ENTRY]
+
+ARGUMENTS
+  ENTRY  The .origami file, or directory with a .origami file to run
+
+OPTIONS
+  -o, --open  Open Origami in the web browser once it's running
+
+EXAMPLES
+  $ origami
+  $ origami -o
+  $ origami my-site/
+  $ PORT=1234 origami my-site/
+  $ ORIGAMI_STORE_SECRET=supersecret origami my-app/
+```
+
+_See code: [build/commands/run.ts](https://github.com/tristanMatthias/origami-dev/blob/v0.0.1/build/commands/run.ts)_
 <!-- commandsstop -->

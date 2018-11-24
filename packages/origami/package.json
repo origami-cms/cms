@@ -1,6 +1,6 @@
 {
   "name": "@origami/origami",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The flexible, easy to use, and open-source CMS built for Node.js",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/origami",
   "homepage": "http://www.origami.so",
@@ -23,10 +23,10 @@
     "dashboard"
   ],
   "dependencies": {
-    "@origami/bird": "^0.0.0",
-    "@origami/core": "^0.0.0",
-    "@origami/plugin-core-api": "^0.0.0",
-    "@origami/tslint-config": "^1.0.4",
+    "@origami/bird": "^0.0.1",
+    "@origami/core": "^0.0.1",
+    "@origami/plugin-core-api": "^0.0.1",
+    "@origami/tslint-config": "^0.0.1",
     "origami-admin-zen": "^0.0.10-alpha.8",
     "origami-core-server": "^0.5.4",
     "origami-plugin-auth": "^1.0.2",

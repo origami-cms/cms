@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-core-api",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Origami plugin for the core API, routes, controllers and models",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/core-api",
   "homepage": "http://www.origami.so",
@@ -17,9 +17,9 @@
     "tslint": "^5.11.0"
   },
   "dependencies": {
-    "@origami/core-lib": "^0.0.0",
-    "@origami/core-server": "^0.0.0",
-    "@origami/tslint-config": "^1.0.4",
+    "@origami/core-lib": "^0.0.1",
+    "@origami/core-server": "^0.0.1",
+    "@origami/tslint-config": "^0.0.1",
     "npm-programmatic": "^0.0.10",
     "request-promise-native": "^1.0.5",
     "tslint-config-prettier": "^1.16.0"

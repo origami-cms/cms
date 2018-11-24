@@ -1,6 +1,6 @@
 {
   "name": "@origami/core-lib",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Core library for Origami",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/core-lib",
   "homepage": "http://www.origami.so",
@@ -14,7 +14,7 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/tslint-config": "^1.0.4",
+    "@origami/tslint-config": "^0.0.1",
     "bcrypt": "^2.0.1",
     "chalk": "^2.4.1",
     "deepmerge": "^2.1.1",
