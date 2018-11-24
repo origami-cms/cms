@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "author": "Tristan Matthias <tristan@origami.so>",
   "bin": {
-    "origami-dev": "./bin/run"
+    "origami": "./bin/run"
   },
-  "bugs": "https://github.com/tristanMatthias/origami-dev/issues",
+  "bugs": "https://github.com/tristanMatthias/origami/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -67,12 +67,12 @@
   "main": "build/index.js",
   "oclif": {
     "commands": "./build/commands",
-    "bin": "origami-dev",
+    "bin": "origami",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "tristanMatthias/origami-dev",
+  "repository": "tristanMatthias/origami",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "tslint -p test -t stylish",
