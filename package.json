@@ -13,8 +13,8 @@
     "visualize-deps": "madge --image graph.svg --exclude '(__tests__|.d.ts)' --extensions ts packages/; open graph.svg",
     "scripts:sync": "ts-node scripts/sync-versions.ts",
     "scripts:publish": "ts-node scripts/publish.ts",
-    "publish:prerelease": "lerna version prerelease && yarn scripts:publish",
-    "publish:patch": "lerna version patch && yarn scripts:publish"
+    "publish:prerelease": "lerna version prerelease --conventional-commits && yarn scripts:publish",
+    "publish:patch": "lerna version patch --conventional-commits && yarn scripts:publish"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^7.1.2",
