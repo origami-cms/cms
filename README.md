@@ -1,4 +1,4 @@
-# Origami CMS [Alpha]
+Â# Origami CMS [Alpha]
 The flexible, easy to use, and open-source CMS built for Node.js
 
 ![Origami CMS](docs/banner.jpg)
