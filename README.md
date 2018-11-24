@@ -1,7 +1,15 @@
-Â# Origami CMS [Alpha]
+# Origami CMS [Alpha]
 The flexible, easy to use, and open-source CMS built for Node.js
 
 ![Origami CMS](docs/banner.jpg)
+
+[![Travis](https://img.shields.io/travis/origami-cms/cms.svg?logo=travis)](https://travis-ci.org/origami-cms/cms)
+![Codecov branch](https://img.shields.io/codecov/c/github/origami-cms/cms/master.svg)
+[![npm](https://img.shields.io/npm/dt/origami-cms.svg)](https://www.npmjs.com/package/origami-cms)
+[![GitHub license](https://img.shields.io/github/license/origami-cms/cms.svg)](https://github.com/origami-cms/cms)
+[![GitHub issues](https://img.shields.io/github/issues/origami-cms/cms.svg?logo=github&logoColor=white)](https://github.com/origami-cms/cms/issues)
+[![GitHub stars](https://img.shields.io/github/stars/origami-cms/cms.svg)](https://github.com/origami-cms/cms/stargazers)
+
 
 Origami's aim is to be the world's best CMS for the Javascript community. It's built on Node.js and Express with **flexibility as it's primary value**. Use any database, any templating language, any CSS preprocesser (SASS, LESS, etc), and whatever else you'd like to bring to the table. It's a BYO tech stack! It also comes with a bunch of goodies right out of the box.
 
