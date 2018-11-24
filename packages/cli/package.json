@@ -15,6 +15,7 @@
     "@origami/core": "^0.0.0",
     "@origami/core-lib": "^0.0.0",
     "@origami/origami": "^0.0.0",
+    "@origami/tslint-config": "^1.0.4",
     "cli-ux": "^4.9.3",
     "dot-object": "^1.7.1",
     "execa": "^1.0.0",
@@ -53,7 +54,6 @@
     "globby": "^8",
     "nyc": "^13",
     "ts-node": "^7.0.1",
-    "tslint-config-origami": "^1.0.4",
     "typescript": "^3.1.6"
   },
   "files": [

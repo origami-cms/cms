@@ -3,7 +3,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "copy-config": "node ./lib/copy-config",
-    "lint": "lerna exec --bail=false --ignore tslint-config-origami --ignore @origami/cli-old -- tslint -t stylish --project ./",
+    "lint": "lerna exec --bail=false --ignore @origami/tslint-config -- tslint -t stylish --project ./",
     "lint:fix": "yarn lint --fix",
     "build": "lerna run build",
     "watch": "lerna run build -- -w",
