@@ -1,6 +1,6 @@
 {
   "name": "@origami/cli",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "Tristan Matthias <tristan@origami.so>",
   "bin": {
     "origami": "./bin/run"

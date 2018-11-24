@@ -1,6 +1,6 @@
 {
   "name": "@origami/bird",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Prints the Origami bird in the CLI",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/bird",
   "homepage": "http://www.origami.so",

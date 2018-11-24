@@ -1,6 +1,6 @@
 {
   "name": "@origami/core-server",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Core server for Origami",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/core-lib",
   "homepage": "http://www.origami.so",

@@ -1,6 +1,6 @@
 {
   "name": "@origami/core",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Core of Origami",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/core",
   "homepage": "http://www.origami.so",

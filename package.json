@@ -1,5 +1,4 @@
 {
-  "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "copy-config": "node ./lib/copy-config",

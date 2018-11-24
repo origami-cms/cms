@@ -1,7 +1,7 @@
 {
   "name": "@origami/tslint-config",
   "description": "A TSLint config for Origami JavaScript Style. Based on Airbnb's JavaScript Style.",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "Tristan Matthias <tristan@origami.so>",
   "dependencies": {
     "tslint-config-airbnb": "^5.11.0",
