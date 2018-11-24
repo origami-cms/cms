@@ -1,11 +1,14 @@
 language: node_js
 node_js:
-  - '10'
+- '10'
 install:
-  - yarn
-  - yarn global add codecov
-  - yarn bootstrap
+- yarn
+- yarn global add codecov
+- yarn bootstrap
 script:
-  - yarn build
-  - yarn coverage
-  - codecov
+- yarn build
+- yarn coverage
+- codecov
+notifications:
+  slack:
+    secure: 1qmHSpnS76Pnl6FlPNtADzKwAJHNyBpQPF6QGanbM2UmoC7fjT/nPAkOoJzn+LZt3UwmqXhAIz+e9TuQcd74auTpNPSsX0WK1nWopUbvym5x9vR2Gstf06rgmPzmFugX4X137aBgCORovj5nTT5s0t65riUd9W4Q0wx0PFEQUp7lvagJEOiFdGHDtzH4YuKWmaX6m0z2zV95NISyBvf8xYUr6+t9UPrSjjqSpZkKe7uWsWOEWtbqWV6np/IXM9HdHbMOaKadpQoRcwlHplPlOQOJJYLVHjaWadvJD+Dw8v95JVG2RpVpf6QaCirVMNj026jMkY+iZc6uvM/ITtvH9zP7ZGzWfghKSbx3DlJliEUcmYsA+FdrIVQLGpXiRJ3De43FFSShhad5LLn7aDaD/ax6IjTG3Ka/Ai6wPdkoOp2t8pORy1HunNADQgE/7JPdfm3HEKFWACjstguqW2VmGeLvIiy1Fi0aFEChQ0rs2ajmXzd5uqOTsc1nGUN10o0fdWQtVhLz59MB2hldz9zRJD2TjyBOuJDt1vqxLPsge6nk8JKI7kdqN876ak5vffRe7PxDdVwOV480Qd5iGLlekngp9t9xfVopMJb+Ev7NMuSkic4i2GPtDcZBVrGxb+Dq1iRImZ1Oj9ec0RxRwHLZTTOT6sjDx1F3IyrQLvrdF/Y=
