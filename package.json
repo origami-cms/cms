@@ -21,6 +21,7 @@
     "@types/node-sass": "^3.10.32",
     "commitlint": "^7.2.1",
     "ejs": "^2.6.1",
+    "execa": "^1.0.0",
     "get-port": "^4.0.0",
     "handlebars": "^4.0.12",
     "husky": "^1.1.3",
