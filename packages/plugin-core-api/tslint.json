@@ -1,4 +1,4 @@
 {
-    "extends": "@origami/tslint-config",
-    "defaultSeverity": "error"
+  "extends": "@origami/tslint-config",
+  "defaultSeverity": "error"
 }
