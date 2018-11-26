@@ -1,6 +1,6 @@
 import { auth, Route } from '@origami/core-lib';
 
-const r = new Route('/api/v1/auth/login');
+const r = new Route('/login');
 module.exports = r;
 /*
 * Validates the email and password of a user, then returns a JWT token, and

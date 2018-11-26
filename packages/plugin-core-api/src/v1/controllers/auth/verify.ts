@@ -1,6 +1,6 @@
 import { auth, Route } from '@origami/core-lib';
 
-const r = new Route('/api/v1/auth/verify');
+const r = new Route('/verify');
 module.exports = r;
 
 /*

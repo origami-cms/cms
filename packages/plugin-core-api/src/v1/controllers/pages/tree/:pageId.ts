@@ -1,6 +1,6 @@
 import {Route} from '@origami/core-lib';
 
-const r = new Route('/api/v1/pages/tree/:pageId');
+const r = new Route('/:pageId');
 module.exports = r;
 
 r.get(async (req, res, next) => {

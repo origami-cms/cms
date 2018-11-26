@@ -161,25 +161,7 @@ export class Route {
     throwErrors: boolean = true
   ): Promise<Route | Route[]> {
 
-    const nest = (_p: string) => {
-      const route = require(_p);
-      if (route.constructor.name === 'Route') {
-        if (prefix) {
-          const parent = new Route(prefix, this);
-          route.parent = parent;
-          parent.nested.push(route);
-          return parent;
-        } else {
-          route.parent = this;
-          this.nested.push(route);
-          return route;
-        }
-      }
-      const e = new ErrorRouteFileNotRoute(_p);
-      if (throwErrors) throw e;
-      else warn(e);
-    };
-
+    // Check the path is a valid path
     let stat;
     try {
       stat = fs.statSync(p);
@@ -187,18 +169,56 @@ export class Route {
       throw new ErrorRouteInvalidInclude(p);
     }
 
+
+    // Attempt to load a path as a Route, and either nest it, or wrap it in a
+    // prefixed Route, THEN nest it
+    const nest = (_p: string) => {
+      const route = require(_p);
+      // If required file exports a Route...
+      if (route.constructor.name === 'Route') {
+
+        let r = route;
+        // Create a wrapping parent if a prefix is supplied
+        if (prefix) {
+          const parent = new Route(prefix, this);
+          route.parent = parent;
+          parent.nested.push(route);
+          r = parent;
+
+        // Otherwise the route's parent is this route
+        } else route.parent = this;
+
+        // Append the new route/parent and return it
+        this.nested.push(r);
+        return r;
+      }
+
+      // If the file did not return a Route, handle the error
+      const e = new ErrorRouteFileNotRoute(_p);
+      if (throwErrors) throw e;
+      else warn(e);
+    };
+
+
     // Load as file
     if (stat.isFile()) {
       return nest(p);
 
-      // Treat as directory
+    // Treat as directory
     } else {
+      // Loop over all the files/directories...
       const list = fs.readdirSync(p);
+
+      // Recursively load all .js files as routes, and nest them
       const nested = (await Promise.all(
         list.map(async (i) => {
           const pathRel = path.resolve(p, i);
           const s = fs.statSync(pathRel);
+
+          // If pathRel is a JS file, nest it
           if (s.isFile() && /.*\.js$/.test(i)) return nest(pathRel);
+
+          // If pathRel is a directory, recursively load it
           if (recursive && s.isDirectory()) {
             return this.include(
               pathRel,
@@ -207,9 +227,13 @@ export class Route {
               throwErrors
             );
           }
+
+          // Otherwise return nothing
           return false;
         })
       )).filter((r) => r);
+
+      // Flatten the array
       return flatten(nested);
     }
   }

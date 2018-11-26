@@ -1,7 +1,7 @@
 import { Route } from '@origami/core-lib';
 import { App } from '@origami/core-server';
 
-const r = new Route('/api/v1/apps');
+const r = new Route();
 module.exports = r;
 
 r

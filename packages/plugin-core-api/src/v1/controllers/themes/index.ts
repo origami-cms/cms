@@ -1,7 +1,7 @@
 import { Route } from '@origami/core-lib';
 import * as NPM from '../../../lib/npm';
 
-const r = new Route('/api/v1/themes');
+const r = new Route('/themes');
 module.exports = r;
 
 r.get(async (req, res, next) => {

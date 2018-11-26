@@ -1,6 +1,6 @@
 import { auth, Route } from '@origami/core-lib';
 
-const r = new Route('/api/v1/auth/refresh');
+const r = new Route('/refresh');
 module.exports = r;
 
 /*
