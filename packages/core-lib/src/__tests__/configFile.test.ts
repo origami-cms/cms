@@ -274,13 +274,21 @@ describe('core-lib.configFile.setupPlugins', () => {
   });
 
   it('should throw error when trying to load unknown plugin', async () => {
-    const setup = async () => {
-      const s = await (new TestServer()).init();
-      const plugins = { unknown: true };
-      await config.setupPlugins({ plugins }, s);
-    };
-
-    await expect(setup()).rejects.toBeInstanceOf(ErrorServerPluginNotFunction);
+    const plugin = 'unknown';
+    try {
+      const setup = async () => {
+        const s = await (new TestServer()).init();
+        const plugins = { [plugin]: true };
+        await config.setupPlugins({ plugins }, s);
+      };
+      await setup();
+    } catch (e) {
+      expect(e).toMatchObject({
+        namespace: 'Server',
+        name: 'UnknownPlugin',
+        message: `Could not load plugin '${plugin}'`
+      });
+    }
   });
 });
 
@@ -324,7 +332,7 @@ describe('core-lib.configFile.setupApps', () => {
 describe('core-lib.configFile.setupResources', () => {
   beforeEach(() => {
     process.chdir(__dirname);
-  })
+  });
   afterEach(() => {
     storeRemove();
   });

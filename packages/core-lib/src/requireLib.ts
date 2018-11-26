@@ -55,13 +55,14 @@ export const requireLib = async (lib: string, context: string, prefix?: string |
   try {
     // Attempt to load module relative to where it's called with opt. prefix
     // EG: lib: user-profiles, prefix: origami-plugin-
-    loaded = load(findRoot(context));
+    loaded = await load(findRoot(context));
+
     if (loaded) return loaded;
     else throw notFound;
 
   } catch (e) {
     // Finally attempt to load it from the project's node_modules with opt. prefix
-    loaded = load(process.cwd());
+    loaded = await load(process.cwd());
     if (loaded) return loaded;
     else throw notFound;
   }
