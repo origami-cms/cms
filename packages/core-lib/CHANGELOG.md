@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.1](https://github.com/origami-cms/core/tree/master/packages/core-lib/compare/v0.0.3-alpha.0...v0.0.3-alpha.1) (2018-11-26)
+
+
+### Bug Fixes
+
+* **core-lib:** fixed issue with requireLib not awaiting ([2311f5f](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/2311f5f))
+* **plugin-core-api:** fixed prefixes on main API endpoints ([ea452a2](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/ea452a2))
+
+
+
+
+
 ## 0.0.2 (2018-11-24)
 
 
