@@ -178,7 +178,7 @@ export namespace App {
           }
         })
         .forEach((dir) => this.router!
-          .route(`/${dir}`)
+          .route(`/${dir.split('/').pop()}`)
           // TODO: convert to gzip serve
           // @ts-ignore Is a valid request handler
           .use(express.static(dir))
