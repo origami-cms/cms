@@ -18,10 +18,17 @@ export const run = async (entry: string, open: boolean) => {
 
     // Attempt to load a local instance of Origami in place of the CLI's default version
     try {
-      origami = require(path.resolve(process.cwd(), 'node_modules/origami-cms')).Origami;
+      origami = require(path.resolve(process.cwd(), 'node_modules/@origami/origami')).Origami;
 
-    // No local installation
-    } catch (e) { }
+    } catch (e) {
+      // DEPRECATE: Remove origami-cms from CLI
+      // Attempt to load old version
+      try {
+        origami = require(path.resolve(process.cwd(), 'node_modules/origami-cms')).Origami;
+      } catch (e) {
+        // No local installation
+      }
+    }
 
     // Run Origami
     const o = new origami(c);

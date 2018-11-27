@@ -1,6 +1,6 @@
 {
   "hooks": {
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-    "pre-commit": "yarn scripts:sync; yarn lint; yarn test;"
+    "pre-commit": "yarn scripts:sync && yarn lint && yarn build && yarn test;"
   }
 }

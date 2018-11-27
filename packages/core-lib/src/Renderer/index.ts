@@ -96,7 +96,7 @@ export class Renderer {
           return engine.compile(
             fs.readFileSync(template).toString(),
             options
-          )({});
+          )({data});
         };
 
 
@@ -105,20 +105,25 @@ export class Renderer {
         return this._engineCache[ext] = async (template: string, data?: object) =>
           engine.compile(
             fs.readFileSync(template).toString(),
-          )({});
+          )(data);
 
 
       case 'scss':
       case 'sass':
         return this._engineCache[ext] = async (
-          template: string, options?: object
+          template: string, options?: any
         ) => {
+          const includePaths = [path.dirname(template)];
+          if (options && options.includePaths && options.includePaths instanceof Array) {
+            includePaths.concat(options.includePaths);
+          }
 
           return engine.renderSync({
             ...{
               indentedSyntax: ext === 'sass'
             },
             ...options,
+            includePaths,
             data: fs.readFileSync(template).toString(),
           }).css.toString();
         };

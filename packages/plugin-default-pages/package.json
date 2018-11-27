@@ -1,0 +1,23 @@
+{
+  "name": "@origami/plugin-default-pages",
+  "version": "0.0.0",
+  "description": "Default pages and assets for the Origami platform",
+  "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages",
+  "homepage": "http://www.origami.so",
+  "author": "Tristan Matthias <tristan@origami.so>",
+  "license": "MIT",
+  "main": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf build",
+    "watch": "tsc -w",
+    "prebuild": "cp ../../node_modules/origami-zen/dist/zen.js static/zen.min.js",
+    "build": "yarn clean && tsc"
+  },
+  "devDependencies": {
+    "origami-zen": "^0.4.3-alpha.2"
+  },
+  "dependencies": {
+    "@origami/core-lib": "0.0.3-alpha.1"
+  }
+}

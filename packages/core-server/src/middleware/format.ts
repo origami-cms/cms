@@ -35,57 +35,10 @@ export const format = (): RequestHandler => {
     res.format({
       json() { sendJSON(message, req, res); },
       html() { sendHTML(message, req, res); },
-      text() { sendText(message, req, res); }
+      text() { sendText(message, req, res); },
+      css()  { sendText(message, req, res); },
+      default() { sendText(message, req, res); }
     });
-
-    // // If it's a json request, wrap the data as json
-    // // NOTE: Attempted req.is(), however there seemed to be a bug
-    // if (
-    //     req.accepts('application/json') ||
-    //     req.originalUrl.startsWith('/api') ||
-    //     typeof body === 'object'
-    // ) {
-    //     const returning: Returning = {
-    //         statusCode: res.statusCode
-    //     };
-    //     if (message) returning.message = message;
-    //     if (body) returning.data = message;
-
-    //     if (res.text || res.data) {
-    //         if (res.text) returning.message = res.text;
-    //         if (res.data) returning.data = res.data;
-
-    //     } else {
-    //         res.status(http.NOT_FOUND);
-    //         returning.statusCode = http.NOT_FOUND;
-    //         returning.message = 'Not found';
-    //     }
-
-    //     res.send(returning);
-    //     return;
-
-    // }
-
-    // if (!body) {
-    //     res.status(http.NOT_FOUND);
-    //     // If it's a page request, redirect
-    //     if (typeof req.headers.accept !== 'string') {
-    //         error('accept header should be a string');
-    //     }
-    //     if (req.headers.accept && req.headers.accept.includes('text/html')) {
-    //         if (req.url !== '404') res.redirect('/404');
-    //         // if (req.url === '/404') res.send('Not found');
-    //     }
-    //     // Otherwise send nothing
-    //     else res.send();
-    // } else {
-    //     if (res.statusCode !== http.OK) {
-    //         const br = '<br />';
-    //         // Show the error
-    //         if (res.data) body += br + res.data;
-    //     }
-    //     res.send(body);
-    // }
   };
 
 

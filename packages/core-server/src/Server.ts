@@ -1,4 +1,4 @@
-import { colors, error, info, Origami, requireLib, Route, RouterListItem, success, wrapMiddleware } from '@origami/core-lib';
+import { colors, error, info, log, Origami, requireLib, Route, RouterListItem, success, wrapMiddleware } from '@origami/core-lib';
 import bodyParser from 'body-parser';
 // @ts-ignore
 import corser from 'corser';
@@ -134,8 +134,10 @@ export class Server {
   // Add the Router's routes in each position to the middleware
   public useRouter(router: Route, requireNamedMiddleware: boolean = true) {
     Object.entries(this._positionRouters).forEach(([p, pr]) => {
+
       router.routers[p as Origami.Server.Position]
         .forEach(({ handlers, method }: RouterListItem) => {
+
           // Convert all the named handlers (EG: router.use('auth')) into request handlers
           const mappedNamedHandlers = handlers.map((h) => {
             if (typeof h === 'function') { return h; }
@@ -152,6 +154,20 @@ export class Server {
 
           // Wrap all handlers to catch any async errors
           const errorWrapped = mappedNamedHandlers.map(wrapMiddleware);
+
+          // Verbose debugging logger to show the positions, handlers and content of the request
+          if (process.env.LOG_LEVEL === 'debug') {
+            errorWrapped.unshift((req, res, next) => {
+              log(
+                'Server middleware',
+                colors.yellow(p),
+                m.toUpperCase(),
+                colors.yellow(_path.toString()),
+                res.locals.content.hasContent ? colors.green('has content') : colors.red('no content')
+              );
+              next();
+            });
+          }
 
           const _path = router.url || '';
           const m = method.toLowerCase() as keyof Router;

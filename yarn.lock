@@ -6207,7 +6207,7 @@ origami-app-pages@^0.0.1-alpha.4:
   dependencies:
     origami-core-lib "^0.3.15-alpha.6"
 
-origami-core-lib@^0.3.12, origami-core-lib@^0.3.13-alpha.7, origami-core-lib@^0.3.15, origami-core-lib@^0.3.15-alpha.1, origami-core-lib@^0.3.15-alpha.3, origami-core-lib@^0.3.15-alpha.6:
+origami-core-lib@^0.3.12, origami-core-lib@^0.3.13-alpha.7, origami-core-lib@^0.3.15, origami-core-lib@^0.3.15-alpha.3, origami-core-lib@^0.3.15-alpha.6:
   version "0.3.15"
   resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.15.tgz#dad23bffecc9ef8b03266f6fc860ccdb5d16591f"
   dependencies:
@@ -6249,12 +6249,6 @@ origami-plugin-auth@^1.0.2:
   resolved "https://registry.yarnpkg.com/origami-plugin-auth/-/origami-plugin-auth-1.0.2.tgz#0be4ffc3617a7fd97eddf897e4837f867514652f"
   dependencies:
     origami-core-lib "^0.3.13-alpha.7"
-
-origami-plugin-default-pages@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/origami-plugin-default-pages/-/origami-plugin-default-pages-0.0.7.tgz#f8f5ebc8be23c4285bca57b338eb779fcb60556c"
-  dependencies:
-    origami-core-lib "^0.3.15-alpha.1"
 
 origami-plugin-favicon@^0.0.1:
   version "0.0.1"
@@ -6312,6 +6306,10 @@ origami-store-lowdb@^0.0.1-alpha.5:
     origami-store-base "^0.0.1-alpha.1"
     uuid "^3.3.2"
     validator "^10.7.1"
+
+origami-zen@^0.4.3-alpha.2:
+  version "0.4.3-alpha.2"
+  resolved "https://registry.yarnpkg.com/origami-zen/-/origami-zen-0.4.3-alpha.2.tgz#443a99569b85e58e4bc8ab66ff21bac160030a9d"
 
 os-homedir@^1.0.0, os-homedir@^1.0.1:
   version "1.0.2"
