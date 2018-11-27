@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forbidden - Origami</title>
+    <link rel="stylesheet" href="/origami/zen.css">
+    <style>
+        body {
+            background: var(--color-white);
+            padding: var(--size-main);
+        }
+        a.logo {
+            position: fixed;
+            top: var(--size-small);
+            left: var(--size-small);
+            z-index: 100;
+        }
+        p {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50rem;
+        }
+        img.banner {
+            max-width: 68rem;
+            margin-top: 20%;
+        }
+
+        @media screen and (min-width: 640px) {
+            img.banner {
+                margin-top: 5vh;
+            }
+            a.logo {
+                top: var(--size-large);
+                left: var(--size-large);
+            }
+        }
+    </style>
+</head>
+
+<body class="text-center">
+    <a href='/' class="logo width-large">
+        <img src="/origami/logo.svg" />
+    </a>
+
+    <img class="banner" src="/origami/403/background.svg">
+    <h3 class="margin-t-main">You’re not permitted to see this.</h3>
+    <p>
+        The page you’re trying to access has restricted access.
+        If you feel this is a mistake, contact your admin.
+    </p>
+    <a href="/" class="button">Return home</a>
+</body>
+
+</html>

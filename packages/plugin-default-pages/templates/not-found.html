@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Not Found - Origami</title>
+<link rel="stylesheet" href="/origami/zen.css">
+    <style>
+        body {
+            height: 100vh;
+            background: white;
+        }
+        a.logo {
+            position: fixed;
+            top: var(--size-small);
+            left: var(--size-small);
+            z-index: 100;
+        }
+        .container img {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        p {
+            max-width: 60rem;
+            padding: 0 5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container {
+            position: relative;
+            height: 40vh;
+            background: var(--color-bg);
+            background-image: url(/origami/waves.svg);
+        }
+        @media screen and (min-width: 640px) {
+            .container {
+                height: 70vh;
+            }
+            a.logo {
+                top: var(--size-large);
+                left: var(--size-large);
+            }
+        }
+    </style>
+</head>
+<body class="text-center">
+    <a href='/' class="logo width-large">
+        <img src="/origami/logo.svg" />
+    </a>
+    <div class="container text-left">
+        <img src="/origami/404/background.svg">
+    </div>
+    <h3 class="margin-t-main">Are you lost?</h3>
+    <p>
+        We all lose our way sometimes. It seems the page you’re looking for doesn’t exist. Try returning home.
+    </p>
+    <a href="/" class="button">Return home</a>
+</body>
+</html>
