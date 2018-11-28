@@ -6,6 +6,9 @@ const path = require('path');
 const flush = require('@oclif/command/flush');
 const handle = require('@oclif/errors/handle');
 const command = require('@oclif/command');
+const {colors} = require('@origami/core-lib');
+// tslint:disable-next-line no-console
+console.log(colors.blue('Origami'), colors.yellow.bold(`v${require('../package.json').version}`));
 
 
 const project = path.join(__dirname, '../tsconfig.json');
