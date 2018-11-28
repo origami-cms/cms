@@ -96,7 +96,7 @@ export class Renderer {
           return engine.compile(
             fs.readFileSync(template).toString(),
             options
-          )({data});
+          )(data);
         };
 
 
