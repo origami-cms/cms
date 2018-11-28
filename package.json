@@ -15,8 +15,8 @@
     "scripts:copy": "ts-node scripts/copy-config.ts",
     "scripts:sync": "ts-node scripts/sync-versions.ts",
     "scripts:publish": "ts-node scripts/publish.ts",
-    "publish:prerelease": "lerna version prerelease --conventional-commits && yarn scripts:publish",
-    "publish:patch": "lerna version patch --conventional-commits && yarn scripts:publish"
+    "publish:prerelease": "yarn build && lerna version prerelease --conventional-commits && yarn scripts:publish",
+    "publish:patch": "yarn build lerna version patch --conventional-commits && yarn scripts:publish"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^7.1.2",
