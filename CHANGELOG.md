@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.3](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.2...v0.0.3-alpha.3) (2018-11-28)
+
+
+### Features
+
+* **cli:** show origami version whenever a command is run ([a1bba8e](https://github.com/origami-cms/cms/commit/a1bba8e))
+
+
+
+
+
 ## [0.0.3-alpha.2](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.1...v0.0.3-alpha.2) (2018-11-28)
 
 
