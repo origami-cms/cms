@@ -15,8 +15,7 @@
   },
   "dependencies": {
     "@origami/core-lib": "0.0.3-alpha.2",
-    "@origami/tslint-config": "0.0.3-alpha.1",
-    "tslint-config-prettier": "^1.16.0"
+    "@origami/tslint-config": "0.0.3-alpha.1"
   },
   "devDependencies": {
     "tslint": "^5.11.0"

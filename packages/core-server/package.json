@@ -26,8 +26,7 @@
     "ip": "^1.1.5",
     "json-query": "^2.2.2",
     "pluralize": "^7.0.0",
-    "tcp-port-used": "^1.0.1",
-    "tslint-config-prettier": "^1.16.0"
+    "tcp-port-used": "^1.0.1"
   },
   "devDependencies": {
     "@types/express": "^4.11.1",

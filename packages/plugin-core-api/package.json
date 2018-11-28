@@ -21,8 +21,7 @@
     "@origami/core-server": "0.0.3-alpha.2",
     "@origami/tslint-config": "0.0.3-alpha.1",
     "npm-programmatic": "^0.0.10",
-    "request-promise-native": "^1.0.5",
-    "tslint-config-prettier": "^1.16.0"
+    "request-promise-native": "^1.0.5"
   },
   "publishConfig": {
     "access": "public"

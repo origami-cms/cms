@@ -5,7 +5,7 @@
   "author": "Tristan Matthias <tristan@origami.so>",
   "dependencies": {
     "tslint-config-airbnb": "^5.11.0",
-    "tslint-config-prettier": "^1.16.0"
+    "tslint-config-prettier": "^1.17.0"
   },
   "keywords": [
     "origami",

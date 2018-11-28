@@ -25,8 +25,7 @@
     "jsonwebtoken": "^8.3.0",
     "log-symbols": "^2.2.0",
     "marked": "^0.3.6",
-    "resolve-from": "^4.0.0",
-    "tslint-config-prettier": "^1.16.0"
+    "resolve-from": "^4.0.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^2.0.0",
