@@ -2,8 +2,15 @@ import { Origami, Renderer, Route } from '@origami/core-lib';
 import path from 'path';
 
 const index: Origami.Server.RequestHandler = async (req, res, next) => {
-  // @ts-ignore Allow for older syntax
-  if (res.headersSent || res.body || res.data || res.locals.content.hasContent) {
+  if (
+    res.headersSent ||
+    // @ts-ignore Allow for older syntax
+    res.body ||
+    // @ts-ignore Allow for older syntax
+    res.data ||
+    res.locals.content.hasContent ||
+    res.locals.error
+  ) {
     next();
     return;
   }
@@ -29,6 +36,10 @@ const index: Origami.Server.RequestHandler = async (req, res, next) => {
       file = 'forbidden.html';
       break;
 
+    case '/500':
+      file = 'internal-error.html';
+      break;
+
     default:
     case '/404':
       file = 'not-found.html';
@@ -41,6 +52,8 @@ const index: Origami.Server.RequestHandler = async (req, res, next) => {
   res.locals.content.set(
     await r.render(path.resolve(__dirname, '../templates', file), data)
   );
+
+  next();
 };
 
 export interface Options {

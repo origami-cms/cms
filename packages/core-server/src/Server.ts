@@ -160,6 +160,7 @@ export class Server {
             errorWrapped.unshift((req, res, next) => {
               log(
                 'Server middleware',
+                colors.blue(req.originalUrl),
                 colors.yellow(p),
                 m.toUpperCase(),
                 colors.yellow(_path.toString()),

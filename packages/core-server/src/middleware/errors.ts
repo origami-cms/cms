@@ -46,7 +46,9 @@ export const error: ErrorRequestHandler = (async (
       new Error(`${
         colors.yellow(`${req.method} ${req.url}`)} ${
         colors.red(res.statusCode.toString())
-        } ${colors.red(message)}`));
+        } ${colors.red(message)}`
+      )
+    );
   }
 
   next();

@@ -102,7 +102,10 @@ const sendHTML: SendFunction = (message, req, res, force) => {
   const body = res.locals.content.get();
 
   // If no body, return 404
-  if (!body) {
+  if (res.locals.error) {
+    res.redirect('/500');
+    return;
+  } if (!body) {
     res.redirect('/404');
     return;
   }

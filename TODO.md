@@ -6,4 +6,5 @@
 | [packages/cli/src/lib/new/install.ts](packages/cli/src/lib/new/install.ts#L19) | 19 | Move to real namespace
 | [packages/core-server/src/lib/App/App.ts](packages/core-server/src/lib/App/App.ts#L182) | 182 | convert to gzip serve
 | [packages/core-server/src/lib/Resource/Resource.ts](packages/core-server/src/lib/Resource/Resource.ts#L181) | 181 | Delete resource
+| [packages/origami/node_modules/origami-plugin-media/src/providers/s3.ts](packages/origami/node_modules/origami-plugin-media/src/providers/s3.ts#L85) | 85 | Set correct headers and handle errors etc
 | [packages/plugin-core-api/src/v1/controllers/themes/installed.ts](packages/plugin-core-api/src/v1/controllers/themes/installed.ts#L11) | 11 | Move to db call
