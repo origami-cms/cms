@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.2](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.1...v0.0.3-alpha.2) (2018-11-28)
+
+
+### Bug Fixes
+
+* **core-server:** apps were hosting static dirs with incorrect url ([b2e5632](https://github.com/origami-cms/cms/commit/b2e5632))
+* **core-server:** fixed bug with pug rendering ([bed29cb](https://github.com/origami-cms/cms/commit/bed29cb))
+
+
+### Features
+
+* **plugin-default-pages:** added plugin default pages ([1fa947a](https://github.com/origami-cms/cms/commit/1fa947a))
+* added default 500 error page ([e850779](https://github.com/origami-cms/cms/commit/e850779))
+* added verbose debug logging in server route if needed ([6591bb1](https://github.com/origami-cms/cms/commit/6591bb1))
+
+
+
+
+
 ## [0.0.3-alpha.1](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.0...v0.0.3-alpha.1) (2018-11-26)
 
 

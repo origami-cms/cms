@@ -1,6 +1,6 @@
 {
   "name": "@origami/bird",
-  "version": "0.0.3-alpha.1",
+  "version": "0.0.3-alpha.2",
   "description": "Prints the Origami bird in the CLI",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/bird",
   "homepage": "http://www.origami.so",
@@ -14,7 +14,7 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/core-lib": "0.0.3-alpha.1",
+    "@origami/core-lib": "0.0.3-alpha.2",
     "@origami/tslint-config": "0.0.3-alpha.1",
     "tslint-config-prettier": "^1.16.0"
   },
