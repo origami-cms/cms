@@ -1,8 +1,13 @@
-import { auth, Route } from '@origami/core-lib';
+import { auth, info, Route } from '@origami/core-lib';
 import path from 'path';
 import { resources } from './v1/resources';
 
 module.exports = async (app: any, options: any) => {
+  if (!app.store) {
+    info('CoreAPIPlugin: Skipping plugin because there is no store configured');
+    return;
+  }
+
   resources(app);
 
   // ------------------------------------------------------------ Setup models
