@@ -4,7 +4,6 @@ import http from 'http-status-codes';
 import { Writable } from 'stream';
 import { status } from '../lib/status';
 
-
 interface Returning {
   statusCode: number;
   data?: object | string | boolean | number;
@@ -18,29 +17,56 @@ export const format = (): RequestHandler => {
     next: NextFunction
   ) => {
     next();
-    if (res.headersSent) { return; }
+    if (res.headersSent) return;
 
-    let message: string;
+    let message: string = '';
 
     // If there is already an error, status is set
     if (res.locals.error) {
       message = res.locals.error;
     } else if (res.locals.content.responseCode) {
       let code;
-      ({ message, code } = status(res.app.get('ln'), res.locals.content.responseCode, http.OK));
+      ({ message, code } = status(
+        res.app.get('ln'),
+        res.locals.content.responseCode,
+        http.OK
+      ));
 
       res.status(code);
     }
 
-    res.format({
-      json() { sendJSON(message, req, res); },
-      html() { sendHTML(message, req, res); },
-      text() { sendText(message, req, res); },
-      css()  { sendText(message, req, res); },
-      default() { sendText(message, req, res); }
-    });
-  };
+    let type =
+      req.headers.accept || res.get('Content-Type') || req.get('Content-Type');
+    const body = res.locals.content.get();
 
+    if (!type) {
+      type = typeof body === 'string' ? 'text/plain' : 'application/json';
+    } else type = type.split(';')[0];
+
+    let func;
+    switch (type.toLowerCase()) {
+      case 'application/json':
+        func = sendJSON;
+        break;
+
+      case 'text/html':
+        func = sendHTML;
+        break;
+
+      case 'application/xml':
+        func = sendXML;
+        break;
+
+      case 'text/plain':
+      case 'text/css':
+      default:
+        func = sendText;
+    }
+
+    res.set('Content-Type', type);
+
+    func(message, req, res);
+  };
 
   return fn as RequestHandler;
 };
@@ -52,18 +78,15 @@ type SendFunction = (
   force?: boolean
 ) => void;
 
-
 const sendJSON: SendFunction = (message, req, res, force) => {
   const body = res.locals.content.get();
 
   // If no body, return 404
   if (!body && !message) {
-    return res
-      .status(http.NOT_FOUND)
-      .json({
-        statusCode: http.NOT_FOUND,
-        message: 'Not found'
-      } as Returning);
+    return res.status(http.NOT_FOUND).json({
+      statusCode: http.NOT_FOUND,
+      message: 'Not found'
+    } as Returning);
   }
 
   // Convert string to JSON response...
@@ -73,14 +96,13 @@ const sendJSON: SendFunction = (message, req, res, force) => {
     // Attempt to parse the body as JSON, otherwise send as string in data
     try {
       _body = JSON.parse(_body);
-    } catch { }
+    } catch {}
 
     return res.json({
       statusCode: res.statusCode,
       message,
       data: _body
     } as Returning);
-
 
     // If body is a stream, send it as a stream instead
   } else if (body instanceof Writable) {
@@ -97,7 +119,6 @@ const sendJSON: SendFunction = (message, req, res, force) => {
   }
 };
 
-
 const sendHTML: SendFunction = (message, req, res, force) => {
   const body = res.locals.content.get();
 
@@ -105,7 +126,8 @@ const sendHTML: SendFunction = (message, req, res, force) => {
   if (res.locals.error) {
     res.redirect('/500');
     return;
-  } if (!body) {
+  }
+  if (!body) {
     res.redirect('/404');
     return;
   }
@@ -122,12 +144,15 @@ const sendHTML: SendFunction = (message, req, res, force) => {
   }
 };
 
-
 const sendText: SendFunction = (message, req, res, force) => {
   const body = res.locals.content.get();
   res.send(body);
 };
 
+const sendXML: SendFunction = (message, req, res, force) => {
+  const body = res.locals.content.get();
+  res.send(body);
+};
 
 const sendStream: SendFunction = (message, req, res, force) => {
   const body = res.locals.content.get() as Writable;
