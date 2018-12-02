@@ -36,12 +36,15 @@ export const format = (): RequestHandler => {
     }
 
     let type =
-      req.headers.accept || res.get('Content-Type') || req.get('Content-Type');
+      req.headers.accept ||
+      res.get('Content-Type') ||
+      req.get('Content-Type');
+
     const body = res.locals.content.get();
 
     if (!type) {
       type = typeof body === 'string' ? 'text/plain' : 'application/json';
-    } else type = type.split(';')[0];
+    } else type = type.split(',')[0].split(';')[0];
 
     let func;
     switch (type.toLowerCase()) {
@@ -63,7 +66,7 @@ export const format = (): RequestHandler => {
         func = sendText;
     }
 
-    res.set('Content-Type', type);
+    res.contentType(type);
 
     func(message, req, res);
   };
