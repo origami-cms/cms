@@ -950,6 +950,10 @@
   dependencies:
     "@types/express" "*"
 
+"@types/http-errors@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@types/http-errors/-/http-errors-1.6.1.tgz#367744a6c04b833383f497f647cc3690b0cd4055"
+
 "@types/inquirer@^0.0.43":
   version "0.0.43"
   resolved "https://registry.yarnpkg.com/@types/inquirer/-/inquirer-0.0.43.tgz#1eb0bbb4648e6cc568bd396c1e989f620ad01273"
@@ -6265,13 +6269,6 @@ origami-plugin-media@^2.0.0-alpha.2:
     aws-sdk "^2.337.0"
     mkdir-recursive "^0.4.0"
 
-origami-plugin-setup@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/origami-plugin-setup/-/origami-plugin-setup-0.0.1.tgz#0cebc8d1b593cc49b99b4f9964c1226685221b11"
-  dependencies:
-    http-errors "^1.7.1"
-    origami-core-lib "^0.3.15-alpha.3"
-
 origami-plugin-user-profiles@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/origami-plugin-user-profiles/-/origami-plugin-user-profiles-1.0.1.tgz#186f4d078c45c81a4ae95b4a07fbf258fd777a78"
@@ -6306,6 +6303,10 @@ origami-store-lowdb@^0.0.1-alpha.5:
     origami-store-base "^0.0.1-alpha.1"
     uuid "^3.3.2"
     validator "^10.7.1"
+
+origami-zen@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/origami-zen/-/origami-zen-0.4.1.tgz#f1bd67f8a107bb4231f0041bbba2a574370cac01"
 
 origami-zen@^0.4.3-alpha.2:
   version "0.4.3-alpha.2"
@@ -8828,3 +8829,7 @@ yauzl@2.4.1:
 yn@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
+
+zen-css@^1.1.16:
+  version "1.1.17"
+  resolved "https://registry.yarnpkg.com/zen-css/-/zen-css-1.1.17.tgz#7bceb730169ac4049132ec46ae41f2bbc6da6138"

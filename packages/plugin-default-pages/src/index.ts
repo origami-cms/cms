@@ -1,4 +1,5 @@
 import { Origami, Renderer, Route } from '@origami/core-lib';
+import {FORBIDDEN, INTERNAL_SERVER_ERROR, NOT_FOUND} from 'http-status-codes';
 import path from 'path';
 
 const index: Origami.Server.RequestHandler = async (req, res, next) => {
@@ -34,16 +35,19 @@ const index: Origami.Server.RequestHandler = async (req, res, next) => {
     case '/forbidden':
     case '/403':
       file = 'forbidden.html';
+      res.status(FORBIDDEN);
       break;
 
     case '/500':
       file = 'internal-error.html';
+      res.status(INTERNAL_SERVER_ERROR);
       break;
 
     default:
     case '/404':
       file = 'not-found.html';
       data = { title: 'Page not found' };
+      res.status(NOT_FOUND);
   }
 
 
