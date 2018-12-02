@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.4](https://github.com/origami-cms/core/tree/master/packages/core-lib/compare/v0.0.3-alpha.3...v0.0.3-alpha.4) (2018-12-02)
+
+
+### Bug Fixes
+
+* **core-server:** improvements to response return type headers data etc ([e9f295a](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/e9f295a))
+
+
+
+
+
 ## [0.0.3-alpha.3](https://github.com/origami-cms/core/tree/master/packages/core-lib/compare/v0.0.3-alpha.2...v0.0.3-alpha.3) (2018-11-28)
 
 **Note:** Version bump only for package @origami/core-server

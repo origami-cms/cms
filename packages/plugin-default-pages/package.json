@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-default-pages",
-  "version": "0.0.3-alpha.3",
+  "version": "0.0.3-alpha.4",
   "description": "Default pages and assets for the Origami platform",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages",
   "homepage": "http://www.origami.so",
