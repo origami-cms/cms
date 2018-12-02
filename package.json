@@ -6,7 +6,7 @@
     "lint": "lerna exec --bail=false --ignore @origami/tslint-config -- tslint -t stylish --project ./",
     "lint:fix": "yarn lint --fix",
     "build": "lerna run build",
-    "postbuild": "leasot -x --reporter vscode 'packages/**/*.ts' > TODO.md",
+    "postbuild": "leasot -x --reporter vscode --ignore 'packages/*/node_modules/**/*'  'packages/**/*.ts' > TODO.md",
     "watch": "lerna run build -- -w",
     "test": "LOG_LEVEL=none jest --notify",
     "test:watch": "yarn test --watch",
