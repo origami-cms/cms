@@ -1,0 +1,28 @@
+{
+  "name": "@origami/plugin-setup",
+  "version": "0.0.0",
+  "description": "Setup initial user plugin for Origami",
+  "repository": "https://github.com/origami-cms/core/tree/master/packages/origami",
+  "homepage": "http://www.origami.so",
+  "author": "Tristan Matthias <tristan@origami.so>",
+  "license": "MIT",
+  "main": "./build/plugin.js",
+  "typings": "./build/plugin.d.ts",
+  "scripts": {
+    "clean": "rm -rf build",
+    "build:js": "tsc",
+    "build:sass": "node-sass sass/ -o public/ --include-path ../../node_modules",
+    "build": "yarn build:js & yarn build:sass",
+    "watch": "yarn build:js -w & yarn build:sass -w"
+  },
+  "devDependencies": {
+    "@types/http-errors": "^1.6.1",
+    "origami-zen": "^0.4.1",
+    "typescript": "^3.0.3",
+    "zen-css": "^1.1.16"
+  },
+  "dependencies": {
+    "@origami/core": "0.0.3-alpha.3",
+    "http-errors": "^1.7.1"
+  }
+}

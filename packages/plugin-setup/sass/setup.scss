@@ -1,0 +1,124 @@
+@import 'zen-css/import';
+
+$easing: cubic-bezier(0, 0, 0, 1);
+
+body {
+    --input-height: var(--size-main);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &:before {
+        background: url(/origami/waves.svg);
+        animation: fade-in 4s;
+    }
+    &:after {
+        background: radial-gradient(var(--color-white), transparent 40% );
+    }
+
+}
+
+.welcome {
+    transition: all 0.35s $easing;
+
+    zen-button {
+        opacity: 0;
+        animation: slide-up 2s forwards $easing;
+        animation-delay: 1.25s;
+    }
+    &.up {
+        transform: translate(-50%, -70%) scale(1.1);
+        opacity: 0;
+    }
+}
+
+.create-user.card {
+    width: 100%;
+    max-width: 40rem;
+    min-height: 58rem;
+    opacity: 0;
+    animation: form-enter 0.35s forwards $easing;
+    animation-delay: 0.1s;
+
+    .form, .success, .fail {
+        @extend %cover;
+        padding: var(--card-padding);
+        overflow: auto;
+        transition: all 0.5s $easing;
+    }
+
+    %next {
+        transform: translateX(var(--size-small));
+        opacity: 0;
+        animation: hide forwards var(--transition-time);
+    }
+    %current {
+        animation: hide reverse forwards;
+        opacity: 1;
+        transform: none;
+    }
+    %prev {
+        transform: translateX(calc(var(--size-small) * -1));
+        opacity: 0;
+        animation: hide forwards var(--transition-time);
+    }
+
+
+    .success,
+    .fail { @extend %next; }
+
+
+    &.successful {
+        .form { @extend %prev; }
+        .success { @extend %current; }
+    }
+    &.failure {
+        .form { @extend %prev; }
+        .fail { @extend %current; }
+    }
+}
+
+@keyframes slide-up {
+    from {transform: translateY(2rem); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes slide-up-exit {
+    from {transform: translateY(0); opacity: 1;}
+    to {transform: translateY(-2rem); opacity: 0;}
+}
+
+@keyframes form-enter {
+    from {
+        transform: translate(-50%, -40%) scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
+}

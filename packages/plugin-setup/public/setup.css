@@ -1,0 +1,93 @@
+.create-user.card .form, .create-user.card .success, .create-user.card .fail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+body {
+  --input-height: var(--size-main); }
+  body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  body:before, body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; }
+  body:before {
+    background: url(/origami/waves.svg);
+    animation: fade-in 4s; }
+  body:after {
+    background: radial-gradient(var(--color-white), transparent 40%); }
+
+.welcome {
+  transition: all 0.35s cubic-bezier(0, 0, 0, 1); }
+  .welcome zen-button {
+    opacity: 0;
+    animation: slide-up 2s forwards cubic-bezier(0, 0, 0, 1);
+    animation-delay: 1.25s; }
+  .welcome.up {
+    transform: translate(-50%, -70%) scale(1.1);
+    opacity: 0; }
+
+.create-user.card {
+  width: 100%;
+  max-width: 40rem;
+  min-height: 58rem;
+  opacity: 0;
+  animation: form-enter 0.35s forwards cubic-bezier(0, 0, 0, 1);
+  animation-delay: 0.1s; }
+  .create-user.card .form, .create-user.card .success, .create-user.card .fail {
+    padding: var(--card-padding);
+    overflow: auto;
+    transition: all 0.5s cubic-bezier(0, 0, 0, 1); }
+  .create-user.card .success, .create-user.card .fail {
+    transform: translateX(var(--size-small));
+    opacity: 0;
+    animation: hide forwards var(--transition-time); }
+  .create-user.card.successful .success, .create-user.card.failure .fail {
+    animation: hide reverse forwards;
+    opacity: 1;
+    transform: none; }
+  .create-user.card.successful .form, .create-user.card.failure .form {
+    transform: translateX(calc(var(--size-small) * -1));
+    opacity: 0;
+    animation: hide forwards var(--transition-time); }
+
+@keyframes slide-up {
+  from {
+    transform: translateY(2rem);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes slide-up-exit {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(-2rem);
+    opacity: 0; } }
+
+@keyframes form-enter {
+  from {
+    transform: translate(-50%, -40%) scale(0.9);
+    opacity: 0; }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1; } }
+
+@keyframes hide {
+  from {
+    visibility: visible; }
+  to {
+    visibility: hidden; } }

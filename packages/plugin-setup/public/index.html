@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Origami</title>
+    <link rel="stylesheet" href="/origami/zen.css">
+    <script src="/origami/zen.min.js"></script>
+    <link rel="stylesheet" href="/setup/setup.css">
+    <script src="/setup/setup.js"></script>
+</head>
+
+<body>
+    <zen-icon-set></zen-icon-set>
+    <div class="welcome center position-r">
+        <div class="margin-t-large">
+           <img src="/setup/logo.svg" class="width-hero"/>
+        </div>
+        <zen-button class="display-b margin-t-small">Get started</zen-button>
+    </div>
+    <div class="card center create-user hide">
+        <div class="form">
+            <div class="text-center margin-b-small">
+                <img class="width-super margin-b-small" src="/setup/illustrations/new-user.svg">
+                <h3 class="text-center">Let's get you setup.</h3>
+                <p>To begin with, let's create your account.</p>
+            </div>
+            <zen-form></zen-form>
+        </div>
+
+        <div class="success text-center">
+            <div class="center width-70">
+                <img class="width-super margin-b-small" src="/setup/illustrations/success.svg">
+                <h3 class="green">Setup complete!</h3>
+                <p>Go you 🎉! Origami is now setup for you to use. Click the button below to go to the dashboard.</p>
+                <a href="/admin/" class="button">Go to dashboard</a>
+            </div>
+        </div>
+
+        <div class="fail text-center">
+            <div class="center width-70">
+                <img class="width-super margin-b-small" src="/setup/illustrations/fail.svg">
+                <h3 class="error">Something went wrong</h3>
+                <p>Unfortunately something happened when setting up your account. Please try again.</p>
+                <zen-button icon="arrow-left">Go back</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -11,13 +11,14 @@
   "scripts": {
     "clean": "rm -rf build",
     "watch": "tsc -w",
-    "prebuild": "cp ../../node_modules/origami-zen/dist/zen.js static/zen.min.js",
+    "prebuild": "cp ./node_modules/origami-zen/dist/zen.js static/zen.min.js",
     "build": "yarn clean && tsc"
   },
   "devDependencies": {
     "origami-zen": "^0.4.3-alpha.2"
   },
   "dependencies": {
-    "@origami/core-lib": "0.0.3-alpha.3"
+    "@origami/core-lib": "0.0.3-alpha.3",
+    "http-status-codes": "^1.3.0"
   }
 }
