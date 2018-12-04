@@ -133,7 +133,7 @@ export class Resource {
     }
 
     res.locals.content.set(data);
-    res.locals.responseCode = `resource.success.${resourceId ? 'foundOne' : 'foundList'}`;
+    res.locals.content.responseCode = `resource.success.${resourceId ? 'foundOne' : 'foundList'}`;
     if (next) next();
   }
 
@@ -146,7 +146,7 @@ export class Resource {
     try {
       const { model } = await this._getModel(req, res);
       res.locals.content.set(await model.create(req.body));
-      res.locals.responseCode = 'resource.success.created';
+      res.locals.content.responseCode = 'resource.success.created';
     } catch (e) {
       if (next) {
         next(e);
@@ -167,7 +167,7 @@ export class Resource {
     try {
       const { model, resourceId } = await this._getModel(req, res);
       res.locals.content.set(await model.update(resourceId, req.body));
-      res.locals.responseCode = 'resource.success.updated';
+      res.locals.content.responseCode = 'resource.success.updated';
     } catch (e) {
       if (next) {
         next(e);
@@ -190,11 +190,11 @@ export class Resource {
       try {
         await model.delete(resourceId);
         res.locals.content.clear();
-        res.locals.responseCode = 'resource.success.deleted';
+        res.locals.content.responseCode = 'resource.success.deleted';
       } catch (e) {
         const [data] = e.data;
         if (data.rule === 'notFoundID' || data.rule === 'notFound') {
-          res.locals.responseCode = 'resource.errors.notFound';
+          res.locals.content.responseCode = 'resource.errors.notFound';
         }
       }
     } catch (e) {

@@ -13,7 +13,7 @@ r
   .get(async (req, res, next) => {
     auth.jwtVerify(req.jwt.token, req.app.get('secret'));
 
-    res.locals.responseCode = 'auth.success.verified';
+    res.locals.content.responseCode = 'auth.success.verified';
     res.locals.content.set({ valid: true });
 
     next();

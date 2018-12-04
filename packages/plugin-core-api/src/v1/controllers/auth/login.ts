@@ -34,7 +34,7 @@ r.post(async (req, res, next) => {
 
 
     res.locals.content.set({ token, expires });
-    res.locals.responseCode = 'auth.success.login';
+    res.locals.content.responseCode = 'auth.success.login';
 
     next();
 

@@ -32,7 +32,7 @@ module.exports = async (app: any, options: any) => {
     .position('pre-render')
     .use((req, res, next) => {
       if (!res.locals.content.hasContent) {
-        res.locals.responseCode = 'general.errors.notFound';
+        res.locals.content.responseCode = 'general.errors.notFound';
       }
       next();
     });
