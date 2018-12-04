@@ -1,5 +1,5 @@
 import { Origami, Renderer, Route } from '@origami/core-lib';
-import {FORBIDDEN, INTERNAL_SERVER_ERROR, NOT_FOUND} from 'http-status-codes';
+import {FORBIDDEN, INTERNAL_SERVER_ERROR, NOT_FOUND, UNAUTHORIZED} from 'http-status-codes';
 import path from 'path';
 
 const index: Origami.Server.RequestHandler = async (req, res, next) => {
@@ -30,6 +30,12 @@ const index: Origami.Server.RequestHandler = async (req, res, next) => {
     case '/':
       file = 'index.html';
       data = { title: 'Origami' };
+      break;
+
+    case '/unauthorized':
+    case '/401':
+      file = 'unauthorized.html';
+      res.status(UNAUTHORIZED);
       break;
 
     case '/forbidden':

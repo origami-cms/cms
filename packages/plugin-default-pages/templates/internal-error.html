@@ -7,42 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Unknown Error - Origami</title>
   <link rel="stylesheet" href="/origami/zen.css">
-  <style>
-    body {
-      background: var(--color-white);
-      padding: var(--size-main);
-    }
-
-    a.logo {
-      position: fixed;
-      top: var(--size-small);
-      left: var(--size-small);
-      z-index: 100;
-    }
-
-    p {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 50rem;
-    }
-
-    img.banner {
-      max-width: 68rem;
-      margin-top: 20%;
-    }
-
-    @media screen and (min-width: 640px) {
-      img.banner {
-        margin-top: 5vh;
-      }
-
-      a.logo {
-        top: var(--size-large);
-        left: var(--size-large);
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="/origami/error.css">
 </head>
 
 <body class="text-center">
@@ -51,10 +16,11 @@
   </a>
 
   <img class="banner" src="/origami/500/background.svg">
-  <h3 class="margin-t-main">Oops! Something went wrong</h3>
+  <h1 class="margin-t-main">Oops! Something went wrong.</h1>
   <p>
     We're very sorry, however something went wrong when trying to load this page.
-    Please try again or <a class="color-alt" href="https://github.com/origami-cms/cms/issues/new" target="_blank">contact support</a>.
+Please try again or <br /><a class="color-alt" href="https://github.com/origami-cms/cms/issues/new" target="_blank">contact
+  support</a>.
   </p>
   <a href="/" class="button">Return home</a>
 </body>

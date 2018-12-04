@@ -1,0 +1,45 @@
+body {
+  background: var(--color-white);
+  padding: var(--size-main);
+}
+
+a.logo {
+  position: fixed;
+  top: var(--size-small);
+  left: var(--size-small);
+  z-index: 100;
+}
+a.button {
+  padding: 0 var(--size-main);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+}
+
+p {
+  margin: 1rem auto;
+  margin-bottom: var(--size-medium);
+  max-width: 68rem;
+  font-size: var(--font-size-large);
+  color: var(--color-grey-500);
+}
+
+img.banner {
+  max-width: 68rem;
+  margin-top: 20%;
+}
+
+
+@media screen and (min-width: 640px) {
+  img.banner {
+    margin-top: 5vh;
+  }
+
+  a.logo {
+    top: var(--size-large);
+    left: var(--size-large);
+  }
+}
+
