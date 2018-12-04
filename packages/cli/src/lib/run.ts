@@ -32,11 +32,10 @@ export const run = async (entry: string, open: boolean) => {
 
     // Run Origami
     const o = new origami(c);
-    const port = c.server.port;
 
     // If there's a server port and the open option, load the project in
     // the browser
-    if (port && open) {
+    if (open) {
       o.ready(async () =>
         opn(`http://localhost:${(c as Origami.Config).server.port}/`)
       );
