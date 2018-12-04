@@ -1,15 +1,24 @@
 // tslint:disable no-console no-http-string
 import { bird } from '@origami/bird';
 import {
-  colors, config, error, log, Origami as OrigamiNS, OrigamiError, requireLib, Server, success, warn
+  colors,
+  config,
+  error,
+  log,
+  Origami as OrigamiNS,
+  OrigamiError,
+  requireLib,
+  Server,
+  success,
+  warn
 } from '@origami/core';
 import path from 'path';
 // @ts-ignore
 import onExit from 'signal-exit';
 import { defaultPlugins } from './defaultPlugins';
+import { ErrorNoStoreType, ErrorStoreTypeNotFound } from './errors';
 
 const URL_ERROR_DOCS = 'http://docs.origami.so/docs/errors';
-
 
 interface AnyError extends Error {
   errno?: string;
@@ -18,9 +27,7 @@ interface AnyError extends Error {
 const handleErr = (err: AnyError) => {
   let name = err.name;
   const message = err.message;
-  const code = (err as any).code
-    ? colors.grey(`[${(err as any).code}]`)
-    : '';
+  const code = (err as any).code ? colors.grey(`[${(err as any).code}]`) : '';
   let footer = '';
 
   const padSize = 2;
@@ -32,19 +39,21 @@ const handleErr = (err: AnyError) => {
       .split('\n')
       .slice(1)
       .map((l) => padding.repeat(2) + l.trim())
-      .join('\n')
-      }`;
+      .join('\n')}`;
   }
 
   if (err instanceof OrigamiError) {
     name = `Origami Error: ${err.namespace}.${err.name}`;
     footer += colors.grey.bold(`\n\n\n${padding}📕 Further reading:\n`);
-    footer += padding + colors.grey(`Learn more about this error here: ${
-      colors.yellow.underline(`${URL_ERROR_DOCS}#${err.code}`)
-      }`);
+    footer +=
+      padding +
+      colors.grey(
+        `Learn more about this error here: ${colors.yellow.underline(
+          `${URL_ERROR_DOCS}#${err.code}`
+        )}`
+      );
 
     if (!err.showTrace) stack = '';
-
   } else name = `Error: ${err.name}`;
 
   console.log(
@@ -72,7 +81,6 @@ export class Origami {
   private _admin: Function | null = null;
   private _ready: boolean = false;
 
-
   constructor(conf: OrigamiNS.Config) {
     // tslint:disable no-floating-promises
     this._init(conf);
@@ -84,12 +92,10 @@ export class Origami {
     });
   }
 
-
   public ready(func: Function) {
     if (this._ready) func();
     else this._readyFuncs.push(func);
   }
-
 
   private async _init(c: OrigamiNS.Config) {
     const origamiFile = (await config.read()) || {};
@@ -98,12 +104,10 @@ export class Origami {
     // config.validate(combined);
     this._config = combined;
 
-
     this._setup();
 
     bird();
   }
-
 
   private async _setup() {
     await this._setupStore();
@@ -113,7 +117,6 @@ export class Origami {
     this._ready = true;
     this._readyFuncs.forEach((f) => f());
   }
-
 
   private async _setupStore() {
     if (!this._config) {
@@ -127,15 +130,26 @@ export class Origami {
       return;
     }
 
-    const store = await requireLib(
-      c.store.type, __dirname, ['@origami/store-', 'origami-store-']
-    );
+    if (!c.store.type) throw new ErrorNoStoreType();
 
-    const s = this._store = new store(c.store);
+    let store;
+    try {
+      store = await requireLib(c.store.type, __dirname, [
+        '@origami/store-',
+        'origami-store-'
+      ]);
+    } catch (e) {
+      throw new ErrorStoreTypeNotFound(c.store.type);
+    }
+
+    const s = (this._store = new store(c.store));
     await s.connect();
-    success('Store', 'Successfully connected to store', colors.yellow(c.store.type));
+    success(
+      'Store',
+      'Successfully connected to store',
+      colors.yellow(c.store.type)
+    );
   }
-
 
   private async _setupAdmin() {
     if (!this._config) {
@@ -147,10 +161,12 @@ export class Origami {
     let { admin } = this._config;
     if (admin === true) admin = 'zen';
 
-    this._admin = await requireLib(admin, __dirname, ['@origami/admin-', 'origami-admin-']);
+    this._admin = await requireLib(admin, __dirname, [
+      '@origami/admin-',
+      'origami-admin-'
+    ]);
     log(colors.green('Using admin interface'), colors.blue(admin));
   }
-
 
   private async _setupServer() {
     if (!this._config) {
@@ -158,25 +174,30 @@ export class Origami {
       return;
     }
 
-    const s = this.server = new Server(
-      this._config.server,
-      this._store
-    );
+    const s = (this.server = new Server(this._config.server, this._store));
 
     if (this._store && this._admin) this._admin(this.server, {});
 
     // Setup the default and user defined plugins for the server
     const plugins = { ...defaultPlugins, ...this._config.plugins };
-    await config.setupPlugins({ plugins }, this.server, path.resolve(__dirname, '../'));
+    await config.setupPlugins(
+      { plugins },
+      this.server,
+      path.resolve(__dirname, '../')
+    );
 
     // Setup the apps for the server
     if (this._config.apps) config.setupApps(this._config, this.server);
 
     // Setup the resources for the server API
-    if (this._config.resources) config.setupResources(this._config, this.server);
+    if (this._config.resources) {
+      config.setupResources(this._config, this.server);
+    }
 
     // Setup the controllers for the server API
-    if (this._config.controllers) config.setupControllers(this._config, this.server);
+    if (this._config.controllers) {
+      config.setupControllers(this._config, this.server);
+    }
 
     // Serve the app
     await s.serve();
