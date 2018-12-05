@@ -19,7 +19,7 @@ import { App } from './lib/App';
 import { Resource, ResourceOptions } from './lib/Resource/Resource';
 import { content } from './middleware/content';
 import { error as mwErrors } from './middleware/errors';
-import { format as mwFormat } from './middleware/format';
+import { format as mwFormat } from './middleware/format/format';
 import { runScripts } from './scripts/runScripts';
 const statAsync = promisify(stat);
 

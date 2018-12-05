@@ -16,8 +16,6 @@ export const install = async (config: Origami.Config): Promise<void> => {
   const existing = p.dependencies || {};
 
   // Required dependencies for Origami to run
-  // TODO: Move to real namespace
-  // let dependencies = ['@origami/origami'];
   let dependencies = ['@origami/origami'];
 
   if (config.store && config.store.type) {

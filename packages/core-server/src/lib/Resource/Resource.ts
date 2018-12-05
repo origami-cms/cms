@@ -6,12 +6,8 @@ export type controllers = 'list' | 'create' | 'get' | 'update' | 'delete';
 
 export interface ResourceOptions {
   model: Origami.Store.Schema;
-  auth?: boolean | {
-    [key in controllers]: boolean
-  };
-  controllers?: {
-    [key in controllers]?: Origami.Server.RequestHandler
-  };
+  auth?: boolean | { [key in controllers]: boolean };
+  controllers?: { [key in controllers]?: Origami.Server.RequestHandler };
 }
 
 const MW_SKIP: Origami.Server.RequestHandler = (req, res, next) => {
@@ -25,38 +21,45 @@ export class Resource {
   public router: Route;
   public subRouter: Route;
 
-
-  constructor(public resource: string, public store: any, public options: ResourceOptions) {
+  constructor(
+    public resource: string,
+    public store: any,
+    public options: ResourceOptions
+  ) {
     this.resourcePlural = pluralize(resource);
     this.resource = pluralize.singular(resource);
 
-    this.router = new Route(`/api/v1/${this.resourcePlural}`)
-      .position('store');
-    this.subRouter = this.router.route(`/:${this.resource}Id`)
+    this.router = new Route(`/api/v1/${this.resourcePlural}`).position('store');
+    this.subRouter = this.router
+      .route(`/:${this.resource}Id`)
       .position('store');
 
-    if (options.auth === undefined) { options.auth = true; }
-
+    if (options.auth === undefined) {
+      options.auth = true;
+    }
 
     (['get', 'post'] as methods[]).forEach((m) => {
       const rMethod = this.router[m as keyof Route] as Function;
       let cMethod = this[m as keyof Resource] as Function;
-      let auth: Origami.Server.RequestHandler | string = options.auth ? MW_SKIP : MW_SKIP;
+      let auth: Origami.Server.RequestHandler | string = options.auth
+        ? MW_SKIP
+        : MW_SKIP;
 
       switch (m) {
         case 'get':
-          if (options.controllers) { cMethod = options.controllers.list || cMethod; }
+          if (options.controllers) {
+            cMethod = options.controllers.list || cMethod;
+          }
           auth = this._auth('list');
           break;
         case 'post':
-          if (options.controllers) { cMethod = options.controllers.create || cMethod; }
+          if (options.controllers) {
+            cMethod = options.controllers.create || cMethod;
+          }
           auth = this._auth('create');
       }
 
-      rMethod.bind(this.router)(
-        auth,
-        cMethod.bind(this)
-      );
+      rMethod.bind(this.router)(auth, cMethod.bind(this));
     });
 
     (['get', 'delete', 'put'] as methods[]).forEach((m) => {
@@ -66,26 +69,30 @@ export class Resource {
 
       switch (m) {
         case 'get':
-          if (options.controllers) { cMethod = options.controllers.get || cMethod; }
+          if (options.controllers) {
+            cMethod = options.controllers.get || cMethod;
+          }
           auth = this._auth('get');
           break;
         case 'put':
-          if (options.controllers) { cMethod = options.controllers.update || cMethod; }
+          if (options.controllers) {
+            cMethod = options.controllers.update || cMethod;
+          }
           auth = this._auth('update');
           break;
         case 'delete':
-          if (options.controllers) { cMethod = options.controllers.delete || cMethod; }
+          if (options.controllers) {
+            cMethod = options.controllers.delete || cMethod;
+          }
           auth = this._auth('delete');
       }
 
-
-      rMethod.bind(this.subRouter)(
-        auth,
-        cMethod.bind(this)
-      );
+      rMethod.bind(this.subRouter)(auth, cMethod.bind(this));
     });
 
-    if (!this.store.models[resource]) { this.store.model(resource, options.model); }
+    if (!this.store.models[resource]) {
+      this.store.model(resource, options.model);
+    }
   }
 
   /**
@@ -96,13 +103,11 @@ export class Resource {
     return req.params[`${this.resource}Id`];
   }
 
-
   public async get(
     req: Origami.Server.Request,
     res: Origami.Server.Response,
     next: Origami.Server.NextFunction
   ) {
-
     // If there is already data passed, skip
     if (res.locals.content.hasContent) {
       next();
@@ -124,7 +129,7 @@ export class Resource {
 
     const filter = resourceId ? { id: resourceId } : null;
 
-    const data = await model.find(filter);
+    let data = await model.find(filter);
 
     // If getting a single resource, and there is none, 404
     if (!data && resourceId) {
@@ -132,11 +137,20 @@ export class Resource {
       return;
     }
 
+    if (resourceId && data && data.toObject) data = data.toObject();
+    else if (data instanceof Array) {
+      data = data.map((d) => {
+        if (d.toObject) return d.toObject();
+        else return d;
+      });
+    }
+
     res.locals.content.set(data);
-    res.locals.content.responseCode = `resource.success.${resourceId ? 'foundOne' : 'foundList'}`;
+    res.locals.content.responseCode = `resource.success.${
+      resourceId ? 'foundOne' : 'foundList'
+    }`;
     if (next) next();
   }
-
 
   public async post(
     req: Origami.Server.Request,
@@ -158,7 +172,6 @@ export class Resource {
     if (next) next();
   }
 
-
   public async put(
     req: Origami.Server.Request,
     res: Origami.Server.Response,
@@ -178,7 +191,6 @@ export class Resource {
     if (next) next();
   }
 
-  // TODO: Delete resource
   public async delete(
     req: Origami.Server.Request,
     res: Origami.Server.Response,
@@ -208,21 +220,22 @@ export class Resource {
     if (next) next();
   }
 
-
-  private async _getModel(req: Origami.Server.Request, res: Origami.Server.Response) {
+  private async _getModel(
+    req: Origami.Server.Request,
+    res: Origami.Server.Response
+  ) {
     const resourceId = await this.id(req);
     const model = await res.app.get('store').model(this.resource);
 
     return { resourceId, model };
   }
 
-
   private _auth(type: controllers) {
     if (this.options.auth) {
-      if (this.options.auth === true) { return MW_AUTH; }
+      if (this.options.auth === true) return MW_AUTH;
       return !this.options.auth[type] ? MW_SKIP : MW_AUTH;
     }
-    if (this.options.auth === false) { return MW_SKIP; }
+    if (this.options.auth === false) return MW_SKIP;
 
     return MW_AUTH;
   }
