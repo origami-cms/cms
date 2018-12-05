@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.5](https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages/compare/v0.0.3-alpha.4...v0.0.3-alpha.5) (2018-12-05)
+
+
+### Features
+
+* **plugin-default-pages:** added unauthorized page and optimised styles ([87a88f7](https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages/commit/87a88f7))
+
+
+
+
+
 ## [0.0.3-alpha.4](https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages/compare/v0.0.3-alpha.3...v0.0.3-alpha.4) (2018-12-02)
 
 

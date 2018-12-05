@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.5](https://github.com/origami-cms/core/tree/master/packages/core-lib/compare/v0.0.3-alpha.4...v0.0.3-alpha.5) (2018-12-05)
+
+
+### Bug Fixes
+
+* **core-server:** fixes for response format ([87c91fc](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/87c91fc))
+* renamed res.local.responseCode to res.local.content.responseCode ([db7997e](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/db7997e))
+
+
+### Features
+
+* **core-server:** greatly improved formatting of response and casting ([50587d7](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/50587d7))
+* **core-server:** status with unknown ln throws ErrorStatusLookup ([f3dc0e3](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/f3dc0e3))
+* **plugin-core-api:** added format option in query string ([aa2e6b9](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/aa2e6b9))
+
+
+
+
+
 ## [0.0.3-alpha.4](https://github.com/origami-cms/core/tree/master/packages/core-lib/compare/v0.0.3-alpha.3...v0.0.3-alpha.4) (2018-12-02)
 
 

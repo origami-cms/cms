@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.5](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.4...v0.0.3-alpha.5) (2018-12-05)
+
+
+### Bug Fixes
+
+* **cli:** fixed bug when running with no port configured or default port ([a672541](https://github.com/origami-cms/cms/commit/a672541))
+
+
+### Features
+
+* **core-server:** greatly improved formatting of response and casting ([50587d7](https://github.com/origami-cms/cms/commit/50587d7))
+
+
+
+
+
 ## [0.0.3-alpha.4](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.3...v0.0.3-alpha.4) (2018-12-02)
 
 **Note:** Version bump only for package @origami/cli

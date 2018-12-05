@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.5](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.4...v0.0.3-alpha.5) (2018-12-05)
+
+
+### Bug Fixes
+
+* **cli:** fixed bug when running with no port configured or default port ([a672541](https://github.com/origami-cms/cms/commit/a672541))
+* **core-server:** fixes for response format ([87c91fc](https://github.com/origami-cms/cms/commit/87c91fc))
+* renamed res.local.responseCode to res.local.content.responseCode ([db7997e](https://github.com/origami-cms/cms/commit/db7997e))
+
+
+### Features
+
+* **core-server:** greatly improved formatting of response and casting ([50587d7](https://github.com/origami-cms/cms/commit/50587d7))
+* **core-server:** status with unknown ln throws ErrorStatusLookup ([f3dc0e3](https://github.com/origami-cms/cms/commit/f3dc0e3))
+* **origami:** added custom errors for no store type or unknown store ([89fe722](https://github.com/origami-cms/cms/commit/89fe722))
+* **plugin-core-api:** added format option in query string ([aa2e6b9](https://github.com/origami-cms/cms/commit/aa2e6b9))
+* **plugin-default-pages:** added unauthorized page and optimised styles ([87a88f7](https://github.com/origami-cms/cms/commit/87a88f7))
+
+
+
+
+
 ## [0.0.3-alpha.4](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.3...v0.0.3-alpha.4) (2018-12-02)
 
 

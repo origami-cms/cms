@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.5](https://github.com/origami-cms/core/tree/master/packages/origami/compare/v0.0.3-alpha.4...v0.0.3-alpha.5) (2018-12-05)
+
+
+### Features
+
+* **origami:** added custom errors for no store type or unknown store ([89fe722](https://github.com/origami-cms/core/tree/master/packages/origami/commit/89fe722))
+
+
+
+
+
 ## [0.0.3-alpha.4](https://github.com/origami-cms/core/tree/master/packages/origami/compare/v0.0.3-alpha.3...v0.0.3-alpha.4) (2018-12-02)
 
 
