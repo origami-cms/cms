@@ -12,6 +12,33 @@ module.exports = async (app: any, options: any) => {
 
   // ------------------------------------------------------------ Setup models
   const api = new Route('/api/v1');
+  const contentType = new Route();
+
+  // Enforce all requests to be JSON by default (even errors)
+  // This can be overridden by the Accepts header on the request
+
+  contentType
+    .position('init')
+    .use((req, res, next) => {
+      if (req.originalUrl.match(/^\/api\/v1\//)) res.contentType('json');
+      if (req.query.format) {
+        switch (req.query.format) {
+          case 'json':
+            res.contentType('json');
+            break;
+          case 'html':
+            res.contentType('html');
+            break;
+          case 'xml':
+            res.contentType('xml');
+            break;
+          case 'csv':
+            res.contentType('text/csv');
+        }
+      }
+
+      next();
+    });
 
   // If the body has a password, hash it for all routes
   api
@@ -37,5 +64,6 @@ module.exports = async (app: any, options: any) => {
       next();
     });
 
+  app.useRouter(contentType);
   app.useRouter(api);
 };
