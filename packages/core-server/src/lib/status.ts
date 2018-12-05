@@ -1,3 +1,4 @@
+import { OrigamiError } from '@origami/core-lib';
 import { OK } from 'http-status-codes';
 import JsonQuery from 'json-query';
 import { statuses } from '../statuses';
@@ -8,6 +9,12 @@ interface Status {
   code: number;
 }
 
+export class ErrorStatusLookup extends OrigamiError {
+  constructor(ln: string) {
+    super('Server', 'StatusLookup', `Could not find language file for '${ln}'`);
+  }
+}
+
 /**
  * Lookup a status message from the language file based on the message id,
  * and update the server response.
@@ -16,8 +23,9 @@ interface Status {
  * @param code Status code (will be potentially overridden)
  * @return The message object
  */
-export const status = (ln: string, message: string, code: number = OK): Status => {
+export const status = (ln: string = 'enUS', message: string, code: number = OK): Status => {
   const data = statuses[ln];
+  if (!data) throw new ErrorStatusLookup(ln);
   let m = JsonQuery(message, { data }).value;
   let c = code;
 
