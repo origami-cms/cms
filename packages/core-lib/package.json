@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@origami/tslint-config": "0.0.3-alpha.3",
+    "@types/express": "^4.16.0",
     "bcrypt": "^2.0.1",
     "chalk": "^2.4.1",
     "deepmerge": "^2.1.1",
