@@ -1,0 +1,158 @@
+{
+  "id": 0,
+  "name": "@origami/plugin-setup",
+  "kind": 0,
+  "flags": {},
+  "children": [
+    {
+      "id": 6,
+      "name": "\"plugin\"",
+      "kind": 1,
+      "kindString": "External module",
+      "flags": {
+        "isExported": true
+      },
+      "originalName": "@origami/plugin-setup/src/plugin.ts",
+      "sources": [
+        {
+          "fileName": "plugin.ts",
+          "line": 1,
+          "character": 0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "\"routes/api\"",
+      "kind": 1,
+      "kindString": "External module",
+      "flags": {
+        "isExported": true
+      },
+      "originalName": "@origami/plugin-setup/src/routes/api.ts",
+      "children": [
+        {
+          "id": 2,
+          "name": "api",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isExported": true,
+            "isConst": true
+          },
+          "sources": [
+            {
+              "fileName": "routes/api.ts",
+              "line": 5,
+              "character": 16
+            }
+          ],
+          "type": {
+            "type": "reference",
+            "name": "Route"
+          },
+          "defaultValue": " new Route('/api/v1/setup')\n  .position('store')\n  .post(async (req, res, next) => {\n    const user = (await res.app\n      .get('store')\n      .model('user')) as Origami.Store.Model;\n    const users = await user.find({});\n\n    if (!users || users.length) {\n      // tslint:disable-next-line\n      return next(createError(401, \"Origami is already setup\"));\n    }\n\n    try {\n      const newUser = user.create(req.body);\n      const secret = res.app.get('secret');\n\n      const token = auth.jwtSign(\n        {\n          userId: newUser.id,\n          email: newUser.email\n        },\n        secret\n      );\n\n      const { iat: expires } = auth.jwtVerify(token, secret);\n\n      res.locals.content.set({ token, expires });\n      // res.text = 'Successfully setup new user';\n      next();\n    } catch (e) {\n      next(e);\n    }\n  })"
+        }
+      ],
+      "groups": [
+        {
+          "title": "Variables",
+          "kind": 32,
+          "children": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "routes/api.ts",
+          "line": 1,
+          "character": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "\"routes/redirect\"",
+      "kind": 1,
+      "kindString": "External module",
+      "flags": {
+        "isExported": true
+      },
+      "originalName": "@origami/plugin-setup/src/routes/redirect.ts",
+      "children": [
+        {
+          "id": 4,
+          "name": "REDIRECT",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isConst": true
+          },
+          "sources": [
+            {
+              "fileName": "routes/redirect.ts",
+              "line": 3,
+              "character": 14
+            }
+          ],
+          "type": {
+            "type": "unknown",
+            "name": "303"
+          },
+          "defaultValue": "303"
+        },
+        {
+          "id": 5,
+          "name": "redirect",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isExported": true,
+            "isConst": true
+          },
+          "sources": [
+            {
+              "fileName": "routes/redirect.ts",
+              "line": 6,
+              "character": 21
+            }
+          ],
+          "type": {
+            "type": "reference",
+            "name": "Route"
+          },
+          "defaultValue": " new Route('/setup')\n  .position('init')\n  .get(async (req, res, next) => {\n    const user = (await res.app\n      .get('store')\n      .model('user')) as Origami.Store.Model;\n    const users = await user.find({});\n\n    if (users && users.length) res.redirect(REDIRECT, '/');\n    else next();\n  })"
+        }
+      ],
+      "groups": [
+        {
+          "title": "Variables",
+          "kind": 32,
+          "children": [
+            4,
+            5
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "routes/redirect.ts",
+          "line": 1,
+          "character": 0
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "title": "External modules",
+      "kind": 1,
+      "children": [
+        6,
+        1,
+        3
+      ]
+    }
+  ]
+}
