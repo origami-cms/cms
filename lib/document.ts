@@ -11,6 +11,7 @@ const exclude = ['@origami/bird', '@origami/cli', '@origami/tslint-config'];
  * @param obj Typedoc JSON result
  */
 const removeLocalSources = (obj: any) => {
+
   const relative = path.resolve(__dirname, '../packages');
 
   if (obj.originalName && obj.originalName.startsWith(relative)) {
@@ -19,9 +20,18 @@ const removeLocalSources = (obj: any) => {
   if (obj.fileName && obj.fileName.includes('node_modules')) {
     obj.fileName = obj.fileName.split('node_modules')[1].slice(1);
   }
+  if (obj.type && obj.type.name && obj.type.name.includes('node_modules')) {
+    obj.type.name = obj.type.name.split('node_modules')[1].slice(1);
+  }
 
   if (obj.children) obj.children.forEach(removeLocalSources);
-  if (obj.sources) obj.sources.forEach(removeLocalSources);
+  if (obj.sources) obj.sources.forEach((s: any) => removeLocalSources(s));
+  if (obj.signatures) obj.signatures.forEach((s: any) => removeLocalSources(s));
+  if (obj.parameters) obj.parameters.forEach((s: any) => removeLocalSources(s));
+  if (obj.types) obj.types.forEach((s: any) => removeLocalSources(s));
+  if (obj.typeArguments) obj.typeArguments.forEach((s: any) => removeLocalSources(s));
+  if (obj.declaration) removeLocalSources(obj.declaration);
+  if (obj.type) removeLocalSources(obj.type);
 };
 
 /**

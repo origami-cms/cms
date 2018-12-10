@@ -4709,7 +4709,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -4778,7 +4778,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -4847,7 +4847,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -4916,7 +4916,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -4985,7 +4985,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -5054,7 +5054,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -5123,7 +5123,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -5192,7 +5192,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -5261,7 +5261,7 @@
                           "flags": {},
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/chalk/types/index.d.ts",
+                              "fileName": "chalk/types/index.d.ts",
                               "line": 95,
                               "character": 44
                             }
@@ -9809,7 +9809,7 @@
                           },
                           "sources": [
                             {
-                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                              "fileName": "@types/node/index.d.ts",
                               "line": 1265,
                               "character": 17
                             }
@@ -10031,7 +10031,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6645,
                                       "character": 51
                                     }
@@ -10883,7 +10883,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6657,
                                       "character": 49
                                     }
@@ -10965,7 +10965,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6658,
                                       "character": 48
                                     }
@@ -11034,7 +11034,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6659,
                                       "character": 47
                                     }
@@ -11103,7 +11103,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6660,
                                       "character": 52
                                     }
@@ -11185,7 +11185,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6661,
                                       "character": 49
                                     }
@@ -11281,7 +11281,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6662,
                                       "character": 57
                                     }
@@ -12399,7 +12399,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 1097,
                                       "character": 49
                                     }
@@ -12494,7 +12494,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6671,
                                       "character": 40
                                     }
@@ -12576,7 +12576,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6672,
                                       "character": 39
                                     }
@@ -12645,7 +12645,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6673,
                                       "character": 38
                                     }
@@ -12714,7 +12714,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6674,
                                       "character": 43
                                     }
@@ -12796,7 +12796,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6675,
                                       "character": 40
                                     }
@@ -12892,7 +12892,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6676,
                                       "character": 48
                                     }
@@ -13012,7 +13012,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6678,
                                       "character": 42
                                     }
@@ -13094,7 +13094,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6679,
                                       "character": 41
                                     }
@@ -13163,7 +13163,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6680,
                                       "character": 40
                                     }
@@ -13232,7 +13232,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6681,
                                       "character": 45
                                     }
@@ -13314,7 +13314,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6682,
                                       "character": 42
                                     }
@@ -13410,7 +13410,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6683,
                                       "character": 50
                                     }
@@ -13660,7 +13660,7 @@
                                           },
                                           "sources": [
                                             {
-                                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                              "fileName": "@types/node/index.d.ts",
                                               "line": 6616,
                                               "character": 77
                                             }
@@ -13781,7 +13781,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6685,
                                       "character": 53
                                     }
@@ -13863,7 +13863,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6686,
                                       "character": 52
                                     }
@@ -13932,7 +13932,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6687,
                                       "character": 51
                                     }
@@ -14001,7 +14001,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6688,
                                       "character": 56
                                     }
@@ -14083,7 +14083,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6689,
                                       "character": 53
                                     }
@@ -14179,7 +14179,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6690,
                                       "character": 61
                                     }
@@ -14299,7 +14299,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6692,
                                       "character": 57
                                     }
@@ -14381,7 +14381,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6693,
                                       "character": 56
                                     }
@@ -14450,7 +14450,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6694,
                                       "character": 55
                                     }
@@ -14519,7 +14519,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6695,
                                       "character": 60
                                     }
@@ -14601,7 +14601,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6696,
                                       "character": 57
                                     }
@@ -14697,7 +14697,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6697,
                                       "character": 65
                                     }
@@ -15169,7 +15169,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6699,
                                       "character": 52
                                     }
@@ -15251,7 +15251,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6700,
                                       "character": 51
                                     }
@@ -15320,7 +15320,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6701,
                                       "character": 50
                                     }
@@ -15389,7 +15389,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6702,
                                       "character": 55
                                     }
@@ -15471,7 +15471,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6703,
                                       "character": 52
                                     }
@@ -15567,7 +15567,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6704,
                                       "character": 60
                                     }
@@ -15832,7 +15832,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 1267,
                                       "character": 43
                                     }
@@ -16998,7 +16998,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6726,
                                       "character": 51
                                     }
@@ -17098,7 +17098,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6727,
                                       "character": 28
                                     }
@@ -17220,7 +17220,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6724,
                                       "character": 58
                                     }
@@ -17295,7 +17295,7 @@
                                           "flags": {},
                                           "sources": [
                                             {
-                                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                              "fileName": "@types/node/index.d.ts",
                                               "line": 6725,
                                               "character": 42
                                             }
@@ -17313,7 +17313,7 @@
                                           "flags": {},
                                           "sources": [
                                             {
-                                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                              "fileName": "@types/node/index.d.ts",
                                               "line": 6725,
                                               "character": 57
                                             }
@@ -17336,7 +17336,7 @@
                                       ],
                                       "sources": [
                                         {
-                                          "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                          "fileName": "@types/node/index.d.ts",
                                           "line": 6725,
                                           "character": 35
                                         }
@@ -17399,7 +17399,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6725,
                                       "character": 79
                                     }
@@ -17489,7 +17489,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6748,
                                       "character": 49
                                     }
@@ -17558,7 +17558,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6749,
                                       "character": 49
                                     }
@@ -17640,7 +17640,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6750,
                                       "character": 49
                                     }
@@ -17709,7 +17709,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6751,
                                       "character": 50
                                     }
@@ -17791,7 +17791,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6752,
                                       "character": 48
                                     }
@@ -17873,7 +17873,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6753,
                                       "character": 50
                                     }
@@ -17969,7 +17969,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6754,
                                       "character": 57
                                     }
@@ -20410,7 +20410,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 1097,
                                       "character": 49
                                     }
@@ -20505,7 +20505,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6764,
                                       "character": 40
                                     }
@@ -20574,7 +20574,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6765,
                                       "character": 40
                                     }
@@ -20656,7 +20656,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6766,
                                       "character": 40
                                     }
@@ -20725,7 +20725,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6767,
                                       "character": 41
                                     }
@@ -20807,7 +20807,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6768,
                                       "character": 39
                                     }
@@ -20889,7 +20889,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6769,
                                       "character": 41
                                     }
@@ -20985,7 +20985,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6770,
                                       "character": 48
                                     }
@@ -21110,7 +21110,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6772,
                                       "character": 42
                                     }
@@ -21179,7 +21179,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6773,
                                       "character": 42
                                     }
@@ -21261,7 +21261,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6774,
                                       "character": 42
                                     }
@@ -21330,7 +21330,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6775,
                                       "character": 43
                                     }
@@ -21412,7 +21412,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6776,
                                       "character": 41
                                     }
@@ -21494,7 +21494,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6777,
                                       "character": 43
                                     }
@@ -21590,7 +21590,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6778,
                                       "character": 50
                                     }
@@ -21737,7 +21737,7 @@
                                           },
                                           "sources": [
                                             {
-                                              "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                              "fileName": "@types/node/index.d.ts",
                                               "line": 6616,
                                               "character": 77
                                             }
@@ -21858,7 +21858,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6780,
                                       "character": 53
                                     }
@@ -21927,7 +21927,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6781,
                                       "character": 53
                                     }
@@ -22009,7 +22009,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6782,
                                       "character": 53
                                     }
@@ -22078,7 +22078,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6783,
                                       "character": 54
                                     }
@@ -22160,7 +22160,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6784,
                                       "character": 52
                                     }
@@ -22242,7 +22242,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6785,
                                       "character": 54
                                     }
@@ -22338,7 +22338,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6786,
                                       "character": 61
                                     }
@@ -22463,7 +22463,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6788,
                                       "character": 57
                                     }
@@ -22532,7 +22532,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6789,
                                       "character": 57
                                     }
@@ -22614,7 +22614,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6790,
                                       "character": 57
                                     }
@@ -22683,7 +22683,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6791,
                                       "character": 58
                                     }
@@ -22765,7 +22765,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6792,
                                       "character": 56
                                     }
@@ -22847,7 +22847,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6793,
                                       "character": 58
                                     }
@@ -22943,7 +22943,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6794,
                                       "character": 65
                                     }
@@ -23399,7 +23399,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6796,
                                       "character": 52
                                     }
@@ -23468,7 +23468,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6797,
                                       "character": 52
                                     }
@@ -23550,7 +23550,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6798,
                                       "character": 52
                                     }
@@ -23619,7 +23619,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6799,
                                       "character": 53
                                     }
@@ -23701,7 +23701,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6800,
                                       "character": 51
                                     }
@@ -23783,7 +23783,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6801,
                                       "character": 53
                                     }
@@ -23879,7 +23879,7 @@
                                   ],
                                   "sources": [
                                     {
-                                      "fileName": "/Users/tristanmatthias/projects/origami/cms/node_modules/@types/node/index.d.ts",
+                                      "fileName": "@types/node/index.d.ts",
                                       "line": 6802,
                                       "character": 60
                                     }

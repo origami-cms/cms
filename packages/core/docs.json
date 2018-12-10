@@ -39,7 +39,7 @@
               ],
               "type": {
                 "type": "reference",
-                "name": "\"/Users/tristanmatthias/projects/origami/cms/packages/core/node_modules/@origami/plugin-core-api/build/index\""
+                "name": "@origami/plugin-core-api/build/index\""
               },
               "defaultValue": " pluginCoreAPI"
             }
