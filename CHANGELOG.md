@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.6](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.5...v0.0.3-alpha.6) (2018-12-11)
+
+
+### Bug Fixes
+
+* **core-lib:** fixed bug with type definition files in colors ([b07dadb](https://github.com/origami-cms/cms/commit/b07dadb))
+* fixed local sourcing in docs ([8ecd751](https://github.com/origami-cms/cms/commit/8ecd751))
+
+
+### Features
+
+* added documentation json files ([9478f13](https://github.com/origami-cms/cms/commit/9478f13))
+* **core-server:** changed server.static to use post-render position ([3a8153d](https://github.com/origami-cms/cms/commit/3a8153d))
+
+
+
+
+
 ## [0.0.3-alpha.5](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.4...v0.0.3-alpha.5) (2018-12-05)
 
 

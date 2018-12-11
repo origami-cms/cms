@@ -1,6 +1,6 @@
 {
   "name": "@origami/cli",
-  "version": "0.0.3-alpha.5",
+  "version": "0.0.3-alpha.6",
   "author": "Tristan Matthias <tristan@origami.so>",
   "bin": {
     "origami": "./bin/run"
@@ -11,10 +11,10 @@
     "@oclif/config": "^1",
     "@oclif/errors": "^1.2.2",
     "@oclif/plugin-help": "^2",
-    "@origami/bird": "0.0.3-alpha.3",
-    "@origami/core": "0.0.3-alpha.5",
-    "@origami/core-lib": "0.0.3-alpha.3",
-    "@origami/origami": "0.0.3-alpha.5",
+    "@origami/bird": "0.0.3-alpha.6",
+    "@origami/core": "0.0.3-alpha.6",
+    "@origami/core-lib": "0.0.3-alpha.6",
+    "@origami/origami": "0.0.3-alpha.6",
     "@origami/tslint-config": "0.0.3-alpha.3",
     "cli-ux": "^4.9.3",
     "dot-object": "^1.7.1",
