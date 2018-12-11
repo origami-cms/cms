@@ -5,2762 +5,676 @@
   "flags": {},
   "children": [
     {
-      "id": 10,
-      "name": "\"index\"",
-      "kind": 1,
-      "kindString": "External module",
+      "id": 7,
+      "name": "NPMSearchResult",
+      "kind": 256,
+      "kindString": "Interface",
       "flags": {
         "isExported": true
       },
-      "originalName": "@origami/plugin-core-api/src/index.ts",
-      "sources": [
-        {
-          "fileName": "index.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "name": "\"lib/npm\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/lib/npm.ts",
       "children": [
         {
-          "id": 15,
-          "name": "NPMSearchResult",
-          "kind": 256,
-          "kindString": "Interface",
+          "id": 10,
+          "name": "flags",
+          "kind": 1024,
+          "kindString": "Property",
           "flags": {
             "isExported": true
           },
-          "children": [
+          "sources": [
             {
-              "id": 42,
-              "name": "flags",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
+              "fileName": "lib/npm.ts",
+              "line": 64,
+              "character": 7
+            }
+          ],
+          "type": {
+            "type": "reflection",
+            "declaration": {
+              "id": 11,
+              "name": "__type",
+              "kind": 65536,
+              "kindString": "Type literal",
+              "flags": {},
               "sources": [
                 {
                   "fileName": "lib/npm.ts",
                   "line": 64,
-                  "character": 7
+                  "character": 8
                 }
-              ],
-              "type": {
-                "type": "reflection",
-                "declaration": {
-                  "id": 43,
-                  "name": "__type",
-                  "kind": 65536,
-                  "kindString": "Type literal",
-                  "flags": {},
-                  "children": [
-                    {
-                      "id": 44,
-                      "name": "unstable",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 65,
-                          "character": 12
-                        }
-                      ],
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "boolean"
-                      }
-                    }
-                  ],
-                  "groups": [
-                    {
-                      "title": "Variables",
-                      "kind": 32,
-                      "children": [
-                        44
-                      ]
-                    }
-                  ],
-                  "sources": [
-                    {
-                      "fileName": "lib/npm.ts",
-                      "line": 64,
-                      "character": 8
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "id": 16,
-              "name": "package",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "lib/npm.ts",
-                  "line": 36,
-                  "character": 9
-                }
-              ],
-              "type": {
-                "type": "reflection",
-                "declaration": {
-                  "id": 17,
-                  "name": "__type",
-                  "kind": 65536,
-                  "kindString": "Type literal",
-                  "flags": {},
-                  "children": [
-                    {
-                      "id": 29,
-                      "name": "author",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 48,
-                          "character": 10
-                        }
-                      ],
-                      "type": {
-                        "type": "reflection",
-                        "declaration": {
-                          "id": 30,
-                          "name": "__type",
-                          "kind": 65536,
-                          "kindString": "Type literal",
-                          "flags": {},
-                          "children": [
-                            {
-                              "id": 32,
-                              "name": "email",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 50,
-                                  "character": 11
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            },
-                            {
-                              "id": 31,
-                              "name": "name",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 49,
-                                  "character": 10
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            },
-                            {
-                              "id": 33,
-                              "name": "username",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 51,
-                                  "character": 14
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            }
-                          ],
-                          "groups": [
-                            {
-                              "title": "Variables",
-                              "kind": 32,
-                              "children": [
-                                32,
-                                31,
-                                33
-                              ]
-                            }
-                          ],
-                          "sources": [
-                            {
-                              "fileName": "lib/npm.ts",
-                              "line": 48,
-                              "character": 11
-                            }
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "id": 22,
-                      "name": "date",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 41,
-                          "character": 8
-                        }
-                      ],
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "string"
-                      }
-                    },
-                    {
-                      "id": 21,
-                      "name": "description",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 40,
-                          "character": 15
-                        }
-                      ],
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "string"
-                      }
-                    },
-                    {
-                      "id": 23,
-                      "name": "links",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 42,
-                          "character": 9
-                        }
-                      ],
-                      "type": {
-                        "type": "reflection",
-                        "declaration": {
-                          "id": 24,
-                          "name": "__type",
-                          "kind": 65536,
-                          "kindString": "Type literal",
-                          "flags": {},
-                          "children": [
-                            {
-                              "id": 28,
-                              "name": "bugs",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 46,
-                                  "character": 10
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            },
-                            {
-                              "id": 26,
-                              "name": "homepage",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 44,
-                                  "character": 14
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            },
-                            {
-                              "id": 25,
-                              "name": "npm",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 43,
-                                  "character": 9
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            },
-                            {
-                              "id": 27,
-                              "name": "repository",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 45,
-                                  "character": 16
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            }
-                          ],
-                          "groups": [
-                            {
-                              "title": "Variables",
-                              "kind": 32,
-                              "children": [
-                                28,
-                                26,
-                                25,
-                                27
-                              ]
-                            }
-                          ],
-                          "sources": [
-                            {
-                              "fileName": "lib/npm.ts",
-                              "line": 42,
-                              "character": 10
-                            }
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "id": 38,
-                      "name": "maintainers",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 57,
-                          "character": 15
-                        }
-                      ],
-                      "type": {
-                        "type": "tuple",
-                        "elements": [
-                          {
-                            "type": "reflection",
-                            "declaration": {
-                              "id": 39,
-                              "name": "__type",
-                              "kind": 65536,
-                              "kindString": "Type literal",
-                              "flags": {},
-                              "children": [
-                                {
-                                  "id": 41,
-                                  "name": "email",
-                                  "kind": 32,
-                                  "kindString": "Variable",
-                                  "flags": {},
-                                  "sources": [
-                                    {
-                                      "fileName": "lib/npm.ts",
-                                      "line": 60,
-                                      "character": 13
-                                    }
-                                  ],
-                                  "type": {
-                                    "type": "intrinsic",
-                                    "name": "string"
-                                  }
-                                },
-                                {
-                                  "id": 40,
-                                  "name": "username",
-                                  "kind": 32,
-                                  "kindString": "Variable",
-                                  "flags": {},
-                                  "sources": [
-                                    {
-                                      "fileName": "lib/npm.ts",
-                                      "line": 59,
-                                      "character": 16
-                                    }
-                                  ],
-                                  "type": {
-                                    "type": "intrinsic",
-                                    "name": "string"
-                                  }
-                                }
-                              ],
-                              "groups": [
-                                {
-                                  "title": "Variables",
-                                  "kind": 32,
-                                  "children": [
-                                    41,
-                                    40
-                                  ]
-                                }
-                              ],
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 57,
-                                  "character": 18
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "id": 18,
-                      "name": "name",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 37,
-                          "character": 8
-                        }
-                      ],
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "string"
-                      }
-                    },
-                    {
-                      "id": 34,
-                      "name": "publisher",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 53,
-                          "character": 13
-                        }
-                      ],
-                      "type": {
-                        "type": "reflection",
-                        "declaration": {
-                          "id": 35,
-                          "name": "__type",
-                          "kind": 65536,
-                          "kindString": "Type literal",
-                          "flags": {},
-                          "children": [
-                            {
-                              "id": 37,
-                              "name": "email",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 55,
-                                  "character": 11
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            },
-                            {
-                              "id": 36,
-                              "name": "username",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 54,
-                                  "character": 14
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              }
-                            }
-                          ],
-                          "groups": [
-                            {
-                              "title": "Variables",
-                              "kind": 32,
-                              "children": [
-                                37,
-                                36
-                              ]
-                            }
-                          ],
-                          "sources": [
-                            {
-                              "fileName": "lib/npm.ts",
-                              "line": 53,
-                              "character": 14
-                            }
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "id": 19,
-                      "name": "scope",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 38,
-                          "character": 9
-                        }
-                      ],
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "string"
-                      }
-                    },
-                    {
-                      "id": 20,
-                      "name": "version",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 39,
-                          "character": 11
-                        }
-                      ],
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "string"
-                      }
-                    }
-                  ],
-                  "groups": [
-                    {
-                      "title": "Variables",
-                      "kind": 32,
-                      "children": [
-                        29,
-                        22,
-                        21,
-                        23,
-                        38,
-                        18,
-                        34,
-                        19,
-                        20
-                      ]
-                    }
-                  ],
-                  "sources": [
-                    {
-                      "fileName": "lib/npm.ts",
-                      "line": 36,
-                      "character": 10
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "id": 45,
-              "name": "score",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "lib/npm.ts",
-                  "line": 67,
-                  "character": 7
-                }
-              ],
-              "type": {
-                "type": "reflection",
-                "declaration": {
-                  "id": 46,
-                  "name": "__type",
-                  "kind": 65536,
-                  "kindString": "Type literal",
-                  "flags": {},
-                  "children": [
-                    {
-                      "id": 48,
-                      "name": "detail",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 69,
-                          "character": 10
-                        }
-                      ],
-                      "type": {
-                        "type": "reflection",
-                        "declaration": {
-                          "id": 49,
-                          "name": "__type",
-                          "kind": 65536,
-                          "kindString": "Type literal",
-                          "flags": {},
-                          "children": [
-                            {
-                              "id": 52,
-                              "name": "maintenance",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 72,
-                                  "character": 17
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "number"
-                              }
-                            },
-                            {
-                              "id": 51,
-                              "name": "popularity",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 71,
-                                  "character": 16
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "number"
-                              }
-                            },
-                            {
-                              "id": 50,
-                              "name": "quality",
-                              "kind": 32,
-                              "kindString": "Variable",
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "lib/npm.ts",
-                                  "line": 70,
-                                  "character": 13
-                                }
-                              ],
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "number"
-                              }
-                            }
-                          ],
-                          "groups": [
-                            {
-                              "title": "Variables",
-                              "kind": 32,
-                              "children": [
-                                52,
-                                51,
-                                50
-                              ]
-                            }
-                          ],
-                          "sources": [
-                            {
-                              "fileName": "lib/npm.ts",
-                              "line": 69,
-                              "character": 11
-                            }
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "id": 47,
-                      "name": "final",
-                      "kind": 32,
-                      "kindString": "Variable",
-                      "flags": {},
-                      "sources": [
-                        {
-                          "fileName": "lib/npm.ts",
-                          "line": 68,
-                          "character": 9
-                        }
-                      ],
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "number"
-                      }
-                    }
-                  ],
-                  "groups": [
-                    {
-                      "title": "Variables",
-                      "kind": 32,
-                      "children": [
-                        48,
-                        47
-                      ]
-                    }
-                  ],
-                  "sources": [
-                    {
-                      "fileName": "lib/npm.ts",
-                      "line": 67,
-                      "character": 8
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "id": 53,
-              "name": "searchScore",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "lib/npm.ts",
-                  "line": 75,
-                  "character": 13
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "number"
-              }
-            }
-          ],
-          "groups": [
-            {
-              "title": "Properties",
-              "kind": 1024,
-              "children": [
-                42,
-                16,
-                45,
-                53
               ]
             }
-          ],
-          "sources": [
-            {
-              "fileName": "lib/npm.ts",
-              "line": 35,
-              "character": 32
-            }
-          ]
+          }
         },
         {
-          "id": 12,
-          "name": "NPMSearchResults",
-          "kind": 256,
-          "kindString": "Interface",
+          "id": 8,
+          "name": "package",
+          "kind": 1024,
+          "kindString": "Property",
           "flags": {
             "isExported": true
           },
-          "children": [
-            {
-              "id": 14,
-              "name": "results",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "lib/npm.ts",
-                  "line": 32,
-                  "character": 9
-                }
-              ],
-              "type": {
-                "type": "array",
-                "elementType": {
-                  "type": "reference",
-                  "name": "NPMSearchResult",
-                  "id": 15
-                }
-              }
-            },
-            {
-              "id": 13,
-              "name": "total",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "lib/npm.ts",
-                  "line": 31,
-                  "character": 7
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "number"
-              }
-            }
-          ],
-          "groups": [
-            {
-              "title": "Properties",
-              "kind": 1024,
-              "children": [
-                14,
-                13
-              ]
-            }
-          ],
           "sources": [
             {
               "fileName": "lib/npm.ts",
-              "line": 30,
-              "character": 33
-            }
-          ]
-        },
-        {
-          "id": 54,
-          "name": "npm",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "lib/npm.ts",
-              "line": 6,
+              "line": 36,
               "character": 9
             }
           ],
           "type": {
+            "type": "reflection",
+            "declaration": {
+              "id": 9,
+              "name": "__type",
+              "kind": 65536,
+              "kindString": "Type literal",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "lib/npm.ts",
+                  "line": 36,
+                  "character": 10
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 12,
+          "name": "score",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "lib/npm.ts",
+              "line": 67,
+              "character": 7
+            }
+          ],
+          "type": {
+            "type": "reflection",
+            "declaration": {
+              "id": 13,
+              "name": "__type",
+              "kind": 65536,
+              "kindString": "Type literal",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "lib/npm.ts",
+                  "line": 67,
+                  "character": 8
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 14,
+          "name": "searchScore",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "lib/npm.ts",
+              "line": 75,
+              "character": 13
+            }
+          ],
+          "type": {
             "type": "intrinsic",
-            "name": "any"
-          },
-          "defaultValue": " require('npm-programmatic')"
-        },
-        {
-          "id": 55,
-          "name": "list",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isExported": true,
-            "isConst": true
-          },
-          "comment": {
-            "shortText": "Get's a list of origami modules with a specific type"
-          },
-          "signatures": [
-            {
-              "id": 56,
-              "name": "list",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Get's a list of origami modules with a specific type"
-              },
-              "parameters": [
-                {
-                  "id": 57,
-                  "name": "type",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "comment": {
-                    "shortText": "Type of module to find\n"
-                  },
-                  "type": {
-                    "type": "reference",
-                    "name": "Origami.ModuleType"
-                  }
-                }
-              ],
-              "type": {
-                "type": "array",
-                "elementType": {
-                  "type": "intrinsic",
-                  "name": "string"
-                }
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "lib/npm.ts",
-              "line": 12,
-              "character": 17
-            }
-          ]
-        },
-        {
-          "id": 58,
-          "name": "search",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isExported": true,
-            "isConst": true
-          },
-          "signatures": [
-            {
-              "id": 59,
-              "name": "search",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "parameters": [
-                {
-                  "id": 60,
-                  "name": "type",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "defaultValue": "\"\""
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "name": "Promise",
-                "typeArguments": [
-                  {
-                    "type": "array",
-                    "elementType": {
-                      "type": "reflection",
-                      "declaration": {
-                        "id": 61,
-                        "name": "__type",
-                        "kind": 65536,
-                        "kindString": "Type literal",
-                        "flags": {},
-                        "children": [
-                          {
-                            "id": 73,
-                            "name": "author",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 48,
-                                "character": 10
-                              }
-                            ],
-                            "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                "id": 74,
-                                "name": "__type",
-                                "kind": 65536,
-                                "kindString": "Type literal",
-                                "flags": {},
-                                "children": [
-                                  {
-                                    "id": 76,
-                                    "name": "email",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 50,
-                                        "character": 11
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  },
-                                  {
-                                    "id": 75,
-                                    "name": "name",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 49,
-                                        "character": 10
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  },
-                                  {
-                                    "id": 77,
-                                    "name": "username",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 51,
-                                        "character": 14
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  }
-                                ],
-                                "groups": [
-                                  {
-                                    "title": "Variables",
-                                    "kind": 32,
-                                    "children": [
-                                      76,
-                                      75,
-                                      77
-                                    ]
-                                  }
-                                ],
-                                "sources": [
-                                  {
-                                    "fileName": "lib/npm.ts",
-                                    "line": 48,
-                                    "character": 11
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            "id": 66,
-                            "name": "date",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 41,
-                                "character": 8
-                              }
-                            ],
-                            "type": {
-                              "type": "intrinsic",
-                              "name": "string"
-                            }
-                          },
-                          {
-                            "id": 65,
-                            "name": "description",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 40,
-                                "character": 15
-                              }
-                            ],
-                            "type": {
-                              "type": "intrinsic",
-                              "name": "string"
-                            }
-                          },
-                          {
-                            "id": 67,
-                            "name": "links",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 42,
-                                "character": 9
-                              }
-                            ],
-                            "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                "id": 68,
-                                "name": "__type",
-                                "kind": 65536,
-                                "kindString": "Type literal",
-                                "flags": {},
-                                "children": [
-                                  {
-                                    "id": 72,
-                                    "name": "bugs",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 46,
-                                        "character": 10
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  },
-                                  {
-                                    "id": 70,
-                                    "name": "homepage",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 44,
-                                        "character": 14
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  },
-                                  {
-                                    "id": 69,
-                                    "name": "npm",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 43,
-                                        "character": 9
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  },
-                                  {
-                                    "id": 71,
-                                    "name": "repository",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 45,
-                                        "character": 16
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  }
-                                ],
-                                "groups": [
-                                  {
-                                    "title": "Variables",
-                                    "kind": 32,
-                                    "children": [
-                                      72,
-                                      70,
-                                      69,
-                                      71
-                                    ]
-                                  }
-                                ],
-                                "sources": [
-                                  {
-                                    "fileName": "lib/npm.ts",
-                                    "line": 42,
-                                    "character": 10
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            "id": 82,
-                            "name": "maintainers",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 57,
-                                "character": 15
-                              }
-                            ],
-                            "type": {
-                              "type": "tuple",
-                              "elements": [
-                                {
-                                  "type": "reflection",
-                                  "declaration": {
-                                    "id": 83,
-                                    "name": "__type",
-                                    "kind": 65536,
-                                    "kindString": "Type literal",
-                                    "flags": {},
-                                    "children": [
-                                      {
-                                        "id": 85,
-                                        "name": "email",
-                                        "kind": 32,
-                                        "kindString": "Variable",
-                                        "flags": {},
-                                        "sources": [
-                                          {
-                                            "fileName": "lib/npm.ts",
-                                            "line": 60,
-                                            "character": 13
-                                          }
-                                        ],
-                                        "type": {
-                                          "type": "intrinsic",
-                                          "name": "string"
-                                        }
-                                      },
-                                      {
-                                        "id": 84,
-                                        "name": "username",
-                                        "kind": 32,
-                                        "kindString": "Variable",
-                                        "flags": {},
-                                        "sources": [
-                                          {
-                                            "fileName": "lib/npm.ts",
-                                            "line": 59,
-                                            "character": 16
-                                          }
-                                        ],
-                                        "type": {
-                                          "type": "intrinsic",
-                                          "name": "string"
-                                        }
-                                      }
-                                    ],
-                                    "groups": [
-                                      {
-                                        "title": "Variables",
-                                        "kind": 32,
-                                        "children": [
-                                          85,
-                                          84
-                                        ]
-                                      }
-                                    ],
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 57,
-                                        "character": 18
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "id": 62,
-                            "name": "name",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 37,
-                                "character": 8
-                              }
-                            ],
-                            "type": {
-                              "type": "intrinsic",
-                              "name": "string"
-                            }
-                          },
-                          {
-                            "id": 78,
-                            "name": "publisher",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 53,
-                                "character": 13
-                              }
-                            ],
-                            "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                "id": 79,
-                                "name": "__type",
-                                "kind": 65536,
-                                "kindString": "Type literal",
-                                "flags": {},
-                                "children": [
-                                  {
-                                    "id": 81,
-                                    "name": "email",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 55,
-                                        "character": 11
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  },
-                                  {
-                                    "id": 80,
-                                    "name": "username",
-                                    "kind": 32,
-                                    "kindString": "Variable",
-                                    "flags": {},
-                                    "sources": [
-                                      {
-                                        "fileName": "lib/npm.ts",
-                                        "line": 54,
-                                        "character": 14
-                                      }
-                                    ],
-                                    "type": {
-                                      "type": "intrinsic",
-                                      "name": "string"
-                                    }
-                                  }
-                                ],
-                                "groups": [
-                                  {
-                                    "title": "Variables",
-                                    "kind": 32,
-                                    "children": [
-                                      81,
-                                      80
-                                    ]
-                                  }
-                                ],
-                                "sources": [
-                                  {
-                                    "fileName": "lib/npm.ts",
-                                    "line": 53,
-                                    "character": 14
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            "id": 63,
-                            "name": "scope",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 38,
-                                "character": 9
-                              }
-                            ],
-                            "type": {
-                              "type": "intrinsic",
-                              "name": "string"
-                            }
-                          },
-                          {
-                            "id": 64,
-                            "name": "version",
-                            "kind": 32,
-                            "kindString": "Variable",
-                            "flags": {},
-                            "sources": [
-                              {
-                                "fileName": "lib/npm.ts",
-                                "line": 39,
-                                "character": 11
-                              }
-                            ],
-                            "type": {
-                              "type": "intrinsic",
-                              "name": "string"
-                            }
-                          }
-                        ],
-                        "groups": [
-                          {
-                            "title": "Variables",
-                            "kind": 32,
-                            "children": [
-                              73,
-                              66,
-                              65,
-                              67,
-                              82,
-                              62,
-                              78,
-                              63,
-                              64
-                            ]
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "lib/npm.ts",
-              "line": 79,
-              "character": 19
-            }
-          ]
+            "name": "number"
+          }
         }
       ],
       "groups": [
         {
-          "title": "Interfaces",
-          "kind": 256,
+          "title": "Properties",
+          "kind": 1024,
           "children": [
-            15,
-            12
-          ]
-        },
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            54
-          ]
-        },
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [
-            55,
-            58
+            10,
+            8,
+            12,
+            14
           ]
         }
       ],
       "sources": [
         {
           "fileName": "lib/npm.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 86,
-      "name": "\"v1/controllers/apps/index\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/apps/index.ts",
-      "children": [
-        {
-          "id": 87,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/apps/index.ts",
-              "line": 4,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route()"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            87
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/apps/index.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 88,
-      "name": "\"v1/controllers/auth/login\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/auth/login.ts",
-      "children": [
-        {
-          "id": 89,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/auth/login.ts",
-              "line": 3,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/login')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            89
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/auth/login.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 90,
-      "name": "\"v1/controllers/auth/refresh\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/auth/refresh.ts",
-      "children": [
-        {
-          "id": 91,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/auth/refresh.ts",
-              "line": 3,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/refresh')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            91
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/auth/refresh.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 92,
-      "name": "\"v1/controllers/auth/verify\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/auth/verify.ts",
-      "children": [
-        {
-          "id": 93,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/auth/verify.ts",
-              "line": 3,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/verify')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            93
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/auth/verify.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 94,
-      "name": "\"v1/controllers/pages/:pageId/move\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/pages/:pageId/move.ts",
-      "children": [
-        {
-          "id": 95,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/pages/:pageId/move.ts",
-              "line": 3,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/move')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            95
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/pages/:pageId/move.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 96,
-      "name": "\"v1/controllers/pages/tree/:pageId\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/pages/tree/:pageId.ts",
-      "children": [
-        {
-          "id": 97,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/pages/tree/:pageId.ts",
-              "line": 3,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/:pageId')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            97
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/pages/tree/:pageId.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 98,
-      "name": "\"v1/controllers/pages/tree/index\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/pages/tree/index.ts",
-      "children": [
-        {
-          "id": 99,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/pages/tree/index.ts",
-              "line": 3,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/tree')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            99
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/pages/tree/index.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 100,
-      "name": "\"v1/controllers/themes/index\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/themes/index.ts",
-      "children": [
-        {
-          "id": 101,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/themes/index.ts",
-              "line": 4,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/themes')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            101
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/themes/index.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 102,
-      "name": "\"v1/controllers/themes/installed\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/themes/installed.ts",
-      "children": [
-        {
-          "id": 103,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/themes/installed.ts",
-              "line": 4,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/installed')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            103
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/themes/installed.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 104,
-      "name": "\"v1/controllers/users/me\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/controllers/users/me.ts",
-      "children": [
-        {
-          "id": 105,
-          "name": "r",
-          "kind": 32,
-          "kindString": "Variable",
-          "flags": {
-            "isConst": true
-          },
-          "sources": [
-            {
-              "fileName": "v1/controllers/users/me.ts",
-              "line": 3,
-              "character": 7
-            }
-          ],
-          "type": {
-            "type": "reference",
-            "name": "Route"
-          },
-          "defaultValue": " new Route('/me')"
-        }
-      ],
-      "groups": [
-        {
-          "title": "Variables",
-          "kind": 32,
-          "children": [
-            105
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/controllers/users/me.ts",
-          "line": 1,
-          "character": 0
+          "line": 35,
+          "character": 32
         }
       ]
     },
     {
       "id": 4,
-      "name": "\"v1/models/index\"",
-      "kind": 1,
-      "kindString": "External module",
+      "name": "NPMSearchResults",
+      "kind": 256,
+      "kindString": "Interface",
       "flags": {
         "isExported": true
       },
-      "originalName": "@origami/plugin-core-api/src/v1/models/index.ts",
+      "children": [
+        {
+          "id": 6,
+          "name": "results",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "lib/npm.ts",
+              "line": 32,
+              "character": 9
+            }
+          ],
+          "type": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "name": "NPMSearchResult",
+              "id": 7
+            }
+          }
+        },
+        {
+          "id": 5,
+          "name": "total",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "lib/npm.ts",
+              "line": 31,
+              "character": 7
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "number"
+          }
+        }
+      ],
+      "groups": [
+        {
+          "title": "Properties",
+          "kind": 1024,
+          "children": [
+            6,
+            5
+          ]
+        }
+      ],
       "sources": [
         {
-          "fileName": "v1/models/index.ts",
-          "line": 1,
-          "character": 0
+          "fileName": "lib/npm.ts",
+          "line": 30,
+          "character": 33
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "create",
+      "kind": 64,
+      "kindString": "Function",
+      "flags": {
+        "isExported": true,
+        "isConst": true
+      },
+      "signatures": [
+        {
+          "id": 27,
+          "name": "create",
+          "kind": 4096,
+          "kindString": "Call signature",
+          "flags": {},
+          "parameters": [
+            {
+              "id": 28,
+              "name": "req",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "Request"
+              }
+            },
+            {
+              "id": 29,
+              "name": "res",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "Response"
+              }
+            },
+            {
+              "id": 30,
+              "name": "next",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "NextFunction"
+              }
+            }
+          ],
+          "type": {
+            "type": "reference",
+            "name": "Promise",
+            "typeArguments": [
+              {
+                "type": "intrinsic",
+                "name": "void"
+              }
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "v1/resources/setting.ts",
+          "line": 35,
+          "character": 19
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "get",
+      "kind": 64,
+      "kindString": "Function",
+      "flags": {
+        "isExported": true,
+        "isConst": true
+      },
+      "signatures": [
+        {
+          "id": 32,
+          "name": "get",
+          "kind": 4096,
+          "kindString": "Call signature",
+          "flags": {},
+          "parameters": [
+            {
+              "id": 33,
+              "name": "req",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "Request"
+              }
+            },
+            {
+              "id": 34,
+              "name": "res",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "Response"
+              }
+            },
+            {
+              "id": 35,
+              "name": "next",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "NextFunction"
+              }
+            }
+          ],
+          "type": {
+            "type": "reference",
+            "name": "Promise",
+            "typeArguments": [
+              {
+                "type": "intrinsic",
+                "name": "void"
+              }
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "v1/resources/setting.ts",
+          "line": 59,
+          "character": 16
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "list",
+      "kind": 64,
+      "kindString": "Function",
+      "flags": {
+        "isExported": true,
+        "isConst": true
+      },
+      "comment": {
+        "shortText": "Get's a list of origami modules with a specific type"
+      },
+      "signatures": [
+        {
+          "id": 16,
+          "name": "list",
+          "kind": 4096,
+          "kindString": "Call signature",
+          "flags": {},
+          "comment": {
+            "shortText": "Get's a list of origami modules with a specific type"
+          },
+          "parameters": [
+            {
+              "id": 17,
+              "name": "type",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "comment": {
+                "shortText": "Type of module to find\n"
+              },
+              "type": {
+                "type": "reference",
+                "name": "Origami.ModuleType"
+              }
+            }
+          ],
+          "type": {
+            "type": "array",
+            "elementType": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          }
+        },
+        {
+          "id": 22,
+          "name": "list",
+          "kind": 4096,
+          "kindString": "Call signature",
+          "flags": {},
+          "comment": {
+            "shortText": "Get's a list of origami modules with a specific type"
+          },
+          "parameters": [
+            {
+              "id": 23,
+              "name": "req",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "Request"
+              }
+            },
+            {
+              "id": 24,
+              "name": "res",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "Response"
+              }
+            },
+            {
+              "id": 25,
+              "name": "next",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "NextFunction"
+              }
+            }
+          ],
+          "type": {
+            "type": "reference",
+            "name": "Promise",
+            "typeArguments": [
+              {
+                "type": "intrinsic",
+                "name": "void"
+              }
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "lib/npm.ts",
+          "line": 12,
+          "character": 17
+        },
+        {
+          "fileName": "v1/resources/setting.ts",
+          "line": 13,
+          "character": 17
         }
       ]
     },
     {
       "id": 1,
-      "name": "\"v1/models/setting\"",
-      "kind": 1,
-      "kindString": "External module",
+      "name": "resources",
+      "kind": 64,
+      "kindString": "Function",
       "flags": {
-        "isExported": true
+        "isExported": true,
+        "isConst": true
       },
-      "originalName": "@origami/plugin-core-api/src/v1/models/setting.ts",
-      "sources": [
+      "signatures": [
         {
-          "fileName": "v1/models/setting.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "\"v1/models/theme\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/models/theme.ts",
-      "sources": [
-        {
-          "fileName": "v1/models/theme.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "\"v1/models/user\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/models/user.ts",
-      "sources": [
-        {
-          "fileName": "v1/models/user.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "\"v1/resources/index\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/resources/index.ts",
-      "sources": [
-        {
-          "fileName": "v1/resources/index.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "\"v1/resources/resources\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/resources/resources.ts",
-      "children": [
-        {
-          "id": 6,
+          "id": 2,
           "name": "resources",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isExported": true,
-            "isConst": true
-          },
-          "signatures": [
-            {
-              "id": 7,
-              "name": "resources",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "parameters": [
-                {
-                  "id": 8,
-                  "name": "app",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "any"
-                  }
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "void"
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "v1/resources/resources.ts",
-              "line": 3,
-              "character": 22
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [
-            6
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "v1/resources/resources.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 106,
-      "name": "\"v1/resources/setting\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/plugin-core-api/src/v1/resources/setting.ts",
-      "children": [
-        {
-          "id": 110,
-          "name": "Setting",
-          "kind": 256,
-          "kindString": "Interface",
+          "kind": 4096,
+          "kindString": "Call signature",
           "flags": {},
-          "children": [
+          "parameters": [
             {
-              "id": 111,
-              "name": "setting",
-              "kind": 1024,
-              "kindString": "Property",
+              "id": 3,
+              "name": "app",
+              "kind": 32768,
+              "kindString": "Parameter",
               "flags": {},
-              "sources": [
-                {
-                  "fileName": "v1/resources/setting.ts",
-                  "line": 8,
-                  "character": 11
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              }
-            },
-            {
-              "id": 112,
-              "name": "value",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {},
-              "sources": [
-                {
-                  "fileName": "v1/resources/setting.ts",
-                  "line": 9,
-                  "character": 9
-                }
-              ],
               "type": {
                 "type": "intrinsic",
                 "name": "any"
               }
             }
           ],
-          "groups": [
-            {
-              "title": "Properties",
-              "kind": 1024,
-              "children": [
-                111,
-                112
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "v1/resources/setting.ts",
-              "line": 7,
-              "character": 17
-            }
-          ]
-        },
-        {
-          "id": 107,
-          "name": "Settings",
-          "kind": 256,
-          "kindString": "Interface",
-          "flags": {},
-          "indexSignature": {
-            "id": 108,
-            "name": "__index",
-            "kind": 8192,
-            "kindString": "Index signature",
-            "flags": {},
-            "parameters": [
-              {
-                "id": 109,
-                "name": "key",
-                "kind": 32768,
-                "kindString": "Parameter",
-                "flags": {},
-                "type": {
-                  "type": "intrinsic",
-                  "name": "string"
-                }
-              }
-            ],
-            "type": {
-              "type": "intrinsic",
-              "name": "any"
-            }
-          },
-          "sources": [
-            {
-              "fileName": "v1/resources/setting.ts",
-              "line": 4,
-              "character": 18
-            }
-          ]
-        },
-        {
-          "id": 118,
-          "name": "create",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isExported": true,
-            "isConst": true
-          },
-          "signatures": [
-            {
-              "id": 119,
-              "name": "create",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "parameters": [
-                {
-                  "id": 120,
-                  "name": "req",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Request"
-                  }
-                },
-                {
-                  "id": 121,
-                  "name": "res",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Response"
-                  }
-                },
-                {
-                  "id": 122,
-                  "name": "next",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "NextFunction"
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "name": "Promise",
-                "typeArguments": [
-                  {
-                    "type": "intrinsic",
-                    "name": "void"
-                  }
-                ]
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "v1/resources/setting.ts",
-              "line": 35,
-              "character": 19
-            }
-          ]
-        },
-        {
-          "id": 123,
-          "name": "find",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isConst": true
-          },
-          "signatures": [
-            {
-              "id": 124,
-              "name": "find",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "parameters": [
-                {
-                  "id": 125,
-                  "name": "req",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Request"
-                  }
-                },
-                {
-                  "id": 126,
-                  "name": "res",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Response"
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "name": "Promise",
-                "typeArguments": [
-                  {
-                    "type": "reflection",
-                    "declaration": {
-                      "id": 127,
-                      "name": "__type",
-                      "kind": 65536,
-                      "kindString": "Type literal",
-                      "flags": {},
-                      "children": [
-                        {
-                          "id": 129,
-                          "name": "model",
-                          "kind": 32,
-                          "kindString": "Variable",
-                          "flags": {},
-                          "sources": [
-                            {
-                              "fileName": "v1/resources/setting.ts",
-                              "line": 54,
-                              "character": 13
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "any"
-                          }
-                        },
-                        {
-                          "id": 128,
-                          "name": "value",
-                          "kind": 32,
-                          "kindString": "Variable",
-                          "flags": {},
-                          "sources": [
-                            {
-                              "fileName": "v1/resources/setting.ts",
-                              "line": 53,
-                              "character": 13
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "any"
-                          },
-                          "defaultValue": " setting.value"
-                        }
-                      ],
-                      "groups": [
-                        {
-                          "title": "Variables",
-                          "kind": 32,
-                          "children": [
-                            129,
-                            128
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "v1/resources/setting.ts",
-              "line": 46,
-              "character": 10
-            }
-          ]
-        },
-        {
-          "id": 130,
-          "name": "get",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isExported": true,
-            "isConst": true
-          },
-          "signatures": [
-            {
-              "id": 131,
-              "name": "get",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "parameters": [
-                {
-                  "id": 132,
-                  "name": "req",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Request"
-                  }
-                },
-                {
-                  "id": 133,
-                  "name": "res",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Response"
-                  }
-                },
-                {
-                  "id": 134,
-                  "name": "next",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "NextFunction"
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "name": "Promise",
-                "typeArguments": [
-                  {
-                    "type": "intrinsic",
-                    "name": "void"
-                  }
-                ]
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "v1/resources/setting.ts",
-              "line": 59,
-              "character": 16
-            }
-          ]
-        },
-        {
-          "id": 113,
-          "name": "list",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isExported": true,
-            "isConst": true
-          },
-          "signatures": [
-            {
-              "id": 114,
-              "name": "list",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "parameters": [
-                {
-                  "id": 115,
-                  "name": "req",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Request"
-                  }
-                },
-                {
-                  "id": 116,
-                  "name": "res",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Response"
-                  }
-                },
-                {
-                  "id": 117,
-                  "name": "next",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "NextFunction"
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "name": "Promise",
-                "typeArguments": [
-                  {
-                    "type": "intrinsic",
-                    "name": "void"
-                  }
-                ]
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "v1/resources/setting.ts",
-              "line": 13,
-              "character": 17
-            }
-          ]
-        },
-        {
-          "id": 135,
-          "name": "update",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isExported": true,
-            "isConst": true
-          },
-          "signatures": [
-            {
-              "id": 136,
-              "name": "update",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "parameters": [
-                {
-                  "id": 137,
-                  "name": "req",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Request"
-                  }
-                },
-                {
-                  "id": 138,
-                  "name": "res",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Response"
-                  }
-                },
-                {
-                  "id": 139,
-                  "name": "next",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "NextFunction"
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "name": "Promise",
-                "typeArguments": [
-                  {
-                    "type": "intrinsic",
-                    "name": "void"
-                  }
-                ]
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "v1/resources/setting.ts",
-              "line": 71,
-              "character": 19
-            }
-          ]
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
         }
       ],
-      "groups": [
+      "sources": [
         {
-          "title": "Interfaces",
-          "kind": 256,
-          "children": [
-            110,
-            107
-          ]
-        },
+          "fileName": "v1/resources/resources.ts",
+          "line": 3,
+          "character": 22
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "search",
+      "kind": 64,
+      "kindString": "Function",
+      "flags": {
+        "isExported": true,
+        "isConst": true
+      },
+      "signatures": [
         {
-          "title": "Functions",
-          "kind": 64,
-          "children": [
-            118,
-            123,
-            130,
-            113,
-            135
-          ]
+          "id": 19,
+          "name": "search",
+          "kind": 4096,
+          "kindString": "Call signature",
+          "flags": {},
+          "parameters": [
+            {
+              "id": 20,
+              "name": "type",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              },
+              "defaultValue": "\"\""
+            }
+          ],
+          "type": {
+            "type": "reference",
+            "name": "Promise",
+            "typeArguments": [
+              {
+                "type": "array",
+                "elementType": {
+                  "type": "reflection",
+                  "declaration": {
+                    "id": 21,
+                    "name": "__type",
+                    "kind": 65536,
+                    "kindString": "Type literal",
+                    "flags": {}
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "lib/npm.ts",
+          "line": 79,
+          "character": 19
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "update",
+      "kind": 64,
+      "kindString": "Function",
+      "flags": {
+        "isExported": true,
+        "isConst": true
+      },
+      "signatures": [
+        {
+          "id": 37,
+          "name": "update",
+          "kind": 4096,
+          "kindString": "Call signature",
+          "flags": {},
+          "parameters": [
+            {
+              "id": 38,
+              "name": "req",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "Request"
+              }
+            },
+            {
+              "id": 39,
+              "name": "res",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "Response"
+              }
+            },
+            {
+              "id": 40,
+              "name": "next",
+              "kind": 32768,
+              "kindString": "Parameter",
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "name": "NextFunction"
+              }
+            }
+          ],
+          "type": {
+            "type": "reference",
+            "name": "Promise",
+            "typeArguments": [
+              {
+                "type": "intrinsic",
+                "name": "void"
+              }
+            ]
+          }
         }
       ],
       "sources": [
         {
           "fileName": "v1/resources/setting.ts",
-          "line": 1,
-          "character": 0
+          "line": 71,
+          "character": 19
         }
       ]
     }
   ],
   "groups": [
     {
-      "title": "External modules",
-      "kind": 1,
+      "title": "Interfaces",
+      "kind": 256,
       "children": [
-        10,
-        11,
-        86,
-        88,
-        90,
-        92,
-        94,
-        96,
-        98,
-        100,
-        102,
-        104,
-        4,
+        7,
+        4
+      ]
+    },
+    {
+      "title": "Functions",
+      "kind": 64,
+      "children": [
+        26,
+        31,
+        15,
         1,
-        2,
-        3,
-        9,
-        5,
-        106
+        18,
+        36
       ]
     }
   ]

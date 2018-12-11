@@ -5,726 +5,625 @@
   "flags": {},
   "children": [
     {
-      "id": 32,
-      "name": "\"Origami\"",
-      "kind": 1,
-      "kindString": "External module",
+      "id": 11,
+      "name": "ErrorNoStoreType",
+      "kind": 128,
+      "kindString": "Class",
       "flags": {
         "isExported": true
       },
-      "originalName": "@origami/origami/src/Origami.ts",
       "children": [
         {
-          "id": 39,
-          "name": "Origami",
-          "kind": 128,
-          "kindString": "Class",
+          "id": 12,
+          "name": "constructor",
+          "kind": 512,
+          "kindString": "Constructor",
           "flags": {
             "isExported": true
           },
-          "children": [
+          "signatures": [
             {
-              "id": 46,
-              "name": "constructor",
-              "kind": 512,
-              "kindString": "Constructor",
-              "flags": {
-                "isExported": true
-              },
-              "signatures": [
-                {
-                  "id": 47,
-                  "name": "new Origami",
-                  "kind": 16384,
-                  "kindString": "Constructor signature",
-                  "flags": {},
-                  "parameters": [
-                    {
-                      "id": 48,
-                      "name": "conf",
-                      "kind": 32768,
-                      "kindString": "Parameter",
-                      "flags": {},
-                      "type": {
-                        "type": "reference",
-                        "name": "OrigamiNS.Config"
-                      }
-                    }
-                  ],
-                  "type": {
-                    "type": "reference",
-                    "name": "Origami",
-                    "id": 39
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 82,
-                  "character": 34
-                }
-              ]
-            },
-            {
-              "id": 44,
-              "name": "_admin",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 81,
-                  "character": 16
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "reference",
-                    "name": "Function"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "null"
-                  }
-                ]
-              },
-              "defaultValue": " null"
-            },
-            {
-              "id": 42,
-              "name": "_config",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 79,
-                  "character": 17
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "reference",
-                    "name": "OrigamiNS.Config"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "null"
-                  }
-                ]
-              },
-              "defaultValue": " null"
-            },
-            {
-              "id": 45,
-              "name": "_ready",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 82,
-                  "character": 16
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              },
-              "defaultValue": "false"
-            },
-            {
-              "id": 41,
-              "name": "_readyFuncs",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 78,
-                  "character": 21
-                }
-              ],
-              "type": {
-                "type": "array",
-                "elementType": {
-                  "type": "reference",
-                  "name": "Function"
-                }
-              },
-              "defaultValue": " []"
-            },
-            {
-              "id": 43,
-              "name": "_store",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 80,
-                  "character": 16
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "intrinsic",
-                    "name": "any"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "null"
-                  }
-                ]
-              },
-              "defaultValue": " null"
-            },
-            {
-              "id": 40,
-              "name": "server",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true,
-                "isPublic": true
-              },
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 76,
-                  "character": 15
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "reference",
-                    "name": "Server"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "null"
-                  }
-                ]
-              },
-              "defaultValue": " null"
-            },
-            {
-              "id": 52,
-              "name": "_init",
-              "kind": 2048,
-              "kindString": "Method",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "signatures": [
-                {
-                  "id": 53,
-                  "name": "_init",
-                  "kind": 4096,
-                  "kindString": "Call signature",
-                  "flags": {},
-                  "parameters": [
-                    {
-                      "id": 54,
-                      "name": "c",
-                      "kind": 32768,
-                      "kindString": "Parameter",
-                      "flags": {},
-                      "type": {
-                        "type": "reference",
-                        "name": "OrigamiNS.Config"
-                      }
-                    }
-                  ],
-                  "type": {
-                    "type": "reference",
-                    "name": "Promise",
-                    "typeArguments": [
-                      {
-                        "type": "intrinsic",
-                        "name": "void"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 100,
-                  "character": 21
-                }
-              ]
-            },
-            {
-              "id": 55,
-              "name": "_setup",
-              "kind": 2048,
-              "kindString": "Method",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "signatures": [
-                {
-                  "id": 56,
-                  "name": "_setup",
-                  "kind": 4096,
-                  "kindString": "Call signature",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Promise",
-                    "typeArguments": [
-                      {
-                        "type": "intrinsic",
-                        "name": "void"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 112,
-                  "character": 22
-                }
-              ]
-            },
-            {
-              "id": 59,
-              "name": "_setupAdmin",
-              "kind": 2048,
-              "kindString": "Method",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "signatures": [
-                {
-                  "id": 60,
-                  "name": "_setupAdmin",
-                  "kind": 4096,
-                  "kindString": "Call signature",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Promise",
-                    "typeArguments": [
-                      {
-                        "type": "intrinsic",
-                        "name": "void"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 154,
-                  "character": 27
-                }
-              ]
-            },
-            {
-              "id": 61,
-              "name": "_setupServer",
-              "kind": 2048,
-              "kindString": "Method",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "signatures": [
-                {
-                  "id": 62,
-                  "name": "_setupServer",
-                  "kind": 4096,
-                  "kindString": "Call signature",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Promise",
-                    "typeArguments": [
-                      {
-                        "type": "intrinsic",
-                        "name": "void"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 171,
-                  "character": 28
-                }
-              ]
-            },
-            {
-              "id": 57,
-              "name": "_setupStore",
-              "kind": 2048,
-              "kindString": "Method",
-              "flags": {
-                "isPrivate": true,
-                "isExported": true
-              },
-              "signatures": [
-                {
-                  "id": 58,
-                  "name": "_setupStore",
-                  "kind": 4096,
-                  "kindString": "Call signature",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Promise",
-                    "typeArguments": [
-                      {
-                        "type": "intrinsic",
-                        "name": "void"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 121,
-                  "character": 27
-                }
-              ]
-            },
-            {
-              "id": 49,
-              "name": "ready",
-              "kind": 2048,
-              "kindString": "Method",
-              "flags": {
-                "isExported": true,
-                "isPublic": true
-              },
-              "signatures": [
-                {
-                  "id": 50,
-                  "name": "ready",
-                  "kind": 4096,
-                  "kindString": "Call signature",
-                  "flags": {},
-                  "parameters": [
-                    {
-                      "id": 51,
-                      "name": "func",
-                      "kind": 32768,
-                      "kindString": "Parameter",
-                      "flags": {},
-                      "type": {
-                        "type": "reference",
-                        "name": "Function"
-                      }
-                    }
-                  ],
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "void"
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 95,
-                  "character": 14
-                }
-              ]
-            }
-          ],
-          "groups": [
-            {
-              "title": "Constructors",
-              "kind": 512,
-              "children": [
-                46
-              ]
-            },
-            {
-              "title": "Properties",
-              "kind": 1024,
-              "children": [
-                44,
-                42,
-                45,
-                41,
-                43,
-                40
-              ]
-            },
-            {
-              "title": "Methods",
-              "kind": 2048,
-              "children": [
-                52,
-                55,
-                59,
-                61,
-                57,
-                49
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "Origami.ts",
-              "line": 75,
-              "character": 20
-            }
-          ]
-        },
-        {
-          "id": 33,
-          "name": "AnyError",
-          "kind": 256,
-          "kindString": "Interface",
-          "flags": {},
-          "children": [
-            {
-              "id": 38,
-              "name": "Error",
-              "kind": 1024,
-              "kindString": "Property",
+              "id": 13,
+              "name": "new ErrorNoStoreType",
+              "kind": 16384,
+              "kindString": "Constructor signature",
               "flags": {},
-              "sources": [
-                {
-                  "fileName": "typescript/lib/lib.es5.d.ts",
-                  "line": 914,
-                  "character": 19
-                }
-              ],
               "type": {
                 "type": "reference",
-                "name": "ErrorConstructor"
-              }
-            },
-            {
-              "id": 34,
-              "name": "errno",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isOptional": true
-              },
-              "sources": [
-                {
-                  "fileName": "Origami.ts",
-                  "line": 24,
-                  "character": 7
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "intrinsic",
-                    "name": "undefined"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 36,
-              "name": "message",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {},
-              "sources": [
-                {
-                  "fileName": "typescript/lib/lib.es5.d.ts",
-                  "line": 904,
-                  "character": 11
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "Error.message"
-              }
-            },
-            {
-              "id": 35,
-              "name": "name",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {},
-              "sources": [
-                {
-                  "fileName": "typescript/lib/lib.es5.d.ts",
-                  "line": 903,
-                  "character": 8
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "Error.name"
-              }
-            },
-            {
-              "id": 37,
-              "name": "stack",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isOptional": true
-              },
-              "sources": [
-                {
-                  "fileName": "typescript/lib/lib.es5.d.ts",
-                  "line": 905,
-                  "character": 9
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "intrinsic",
-                    "name": "undefined"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                ]
+                "name": "ErrorNoStoreType",
+                "id": 11
               },
               "overwrites": {
                 "type": "reference",
-                "name": "Error.stack"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "Error.stack"
+                "name": "OrigamiError.__constructor"
               }
             }
           ],
-          "groups": [
-            {
-              "title": "Properties",
-              "kind": 1024,
-              "children": [
-                38,
-                34,
-                36,
-                35,
-                37
-              ]
-            }
-          ],
           "sources": [
             {
-              "fileName": "Origami.ts",
-              "line": 23,
-              "character": 18
+              "fileName": "errors.ts",
+              "line": 4,
+              "character": 52
             }
           ],
-          "extendedTypes": [
-            {
-              "type": "reference",
-              "name": "Error"
-            }
-          ]
+          "overwrites": {
+            "type": "reference",
+            "name": "OrigamiError.__constructor"
+          }
         },
         {
-          "id": 63,
-          "name": "URL_ERROR_DOCS",
-          "kind": 32,
-          "kindString": "Variable",
+          "id": 17,
+          "name": "code",
+          "kind": 1024,
+          "kindString": "Property",
           "flags": {
-            "isConst": true
+            "isExported": true
           },
           "sources": [
             {
-              "fileName": "Origami.ts",
-              "line": 21,
-              "character": 20
+              "fileName": "@origami/core/",
+              "line": 5,
+              "character": 8
             }
           ],
           "type": {
-            "type": "stringLiteral",
-            "value": "http://docs.origami.so/docs/errors"
+            "type": "intrinsic",
+            "name": "string"
           },
-          "defaultValue": "\"http://docs.origami.so/docs/errors\""
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.code"
+          }
         },
         {
-          "id": 64,
-          "name": "handleErr",
-          "kind": 64,
-          "kindString": "Function",
+          "id": 16,
+          "name": "message",
+          "kind": 1024,
+          "kindString": "Property",
           "flags": {
-            "isConst": true
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 4,
+              "character": 11
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          },
+          "overwrites": {
+            "type": "reference",
+            "name": "Error.message"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.message"
+          }
+        },
+        {
+          "id": 15,
+          "name": "name",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 3,
+              "character": 8
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          },
+          "overwrites": {
+            "type": "reference",
+            "name": "Error.name"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.name"
+          }
+        },
+        {
+          "id": 14,
+          "name": "namespace",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 2,
+              "character": 13
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.namespace"
+          }
+        },
+        {
+          "id": 18,
+          "name": "showTrace",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 6,
+              "character": 13
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.showTrace"
+          }
+        },
+        {
+          "id": 19,
+          "name": "stack",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true,
+            "isOptional": true
+          },
+          "sources": [
+            {
+              "fileName": "typescript/lib/lib.es5.d.ts",
+              "line": 905,
+              "character": 9
+            }
+          ],
+          "type": {
+            "type": "union",
+            "types": [
+              {
+                "type": "intrinsic",
+                "name": "undefined"
+              },
+              {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            ]
+          },
+          "overwrites": {
+            "type": "reference",
+            "name": "Error.stack"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "Error.stack"
+          }
+        }
+      ],
+      "groups": [
+        {
+          "title": "Constructors",
+          "kind": 512,
+          "children": [
+            12
+          ]
+        },
+        {
+          "title": "Properties",
+          "kind": 1024,
+          "children": [
+            17,
+            16,
+            15,
+            14,
+            18,
+            19
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "errors.ts",
+          "line": 4,
+          "character": 29
+        }
+      ],
+      "extendedTypes": [
+        {
+          "type": "reference",
+          "name": "OrigamiError"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "ErrorStoreTypeNotFound",
+      "kind": 128,
+      "kindString": "Class",
+      "flags": {
+        "isExported": true
+      },
+      "children": [
+        {
+          "id": 21,
+          "name": "constructor",
+          "kind": 512,
+          "kindString": "Constructor",
+          "flags": {
+            "isExported": true
           },
           "signatures": [
             {
-              "id": 65,
-              "name": "handleErr",
-              "kind": 4096,
-              "kindString": "Call signature",
+              "id": 22,
+              "name": "new ErrorStoreTypeNotFound",
+              "kind": 16384,
+              "kindString": "Constructor signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 66,
-                  "name": "err",
+                  "id": 23,
+                  "name": "storeType",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "name": "ErrorStoreTypeNotFound",
+                "id": 20
+              },
+              "overwrites": {
+                "type": "reference",
+                "name": "OrigamiError.__constructor"
+              }
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "errors.ts",
+              "line": 10,
+              "character": 58
+            }
+          ],
+          "overwrites": {
+            "type": "reference",
+            "name": "OrigamiError.__constructor"
+          }
+        },
+        {
+          "id": 27,
+          "name": "code",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 5,
+              "character": 8
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.code"
+          }
+        },
+        {
+          "id": 26,
+          "name": "message",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 4,
+              "character": 11
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          },
+          "overwrites": {
+            "type": "reference",
+            "name": "Error.message"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.message"
+          }
+        },
+        {
+          "id": 25,
+          "name": "name",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 3,
+              "character": 8
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          },
+          "overwrites": {
+            "type": "reference",
+            "name": "Error.name"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.name"
+          }
+        },
+        {
+          "id": 24,
+          "name": "namespace",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 2,
+              "character": 13
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.namespace"
+          }
+        },
+        {
+          "id": 28,
+          "name": "showTrace",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "@origami/core/",
+              "line": 6,
+              "character": 13
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "OrigamiError.showTrace"
+          }
+        },
+        {
+          "id": 29,
+          "name": "stack",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true,
+            "isOptional": true
+          },
+          "sources": [
+            {
+              "fileName": "typescript/lib/lib.es5.d.ts",
+              "line": 905,
+              "character": 9
+            }
+          ],
+          "type": {
+            "type": "union",
+            "types": [
+              {
+                "type": "intrinsic",
+                "name": "undefined"
+              },
+              {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            ]
+          },
+          "overwrites": {
+            "type": "reference",
+            "name": "Error.stack"
+          },
+          "inheritedFrom": {
+            "type": "reference",
+            "name": "Error.stack"
+          }
+        }
+      ],
+      "groups": [
+        {
+          "title": "Constructors",
+          "kind": 512,
+          "children": [
+            21
+          ]
+        },
+        {
+          "title": "Properties",
+          "kind": 1024,
+          "children": [
+            27,
+            26,
+            25,
+            24,
+            28,
+            29
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "errors.ts",
+          "line": 10,
+          "character": 35
+        }
+      ],
+      "extendedTypes": [
+        {
+          "type": "reference",
+          "name": "OrigamiError"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Origami",
+      "kind": 128,
+      "kindString": "Class",
+      "flags": {
+        "isExported": true
+      },
+      "children": [
+        {
+          "id": 32,
+          "name": "constructor",
+          "kind": 512,
+          "kindString": "Constructor",
+          "flags": {
+            "isExported": true
+          },
+          "signatures": [
+            {
+              "id": 33,
+              "name": "new Origami",
+              "kind": 16384,
+              "kindString": "Constructor signature",
+              "flags": {},
+              "parameters": [
+                {
+                  "id": 34,
+                  "name": "conf",
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
                   "type": {
                     "type": "reference",
-                    "name": "AnyError",
-                    "id": 33
+                    "name": "OrigamiNS.Config"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "name": "Origami",
+                "id": 30
+              }
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "Origami.ts",
+              "line": 82,
+              "character": 34
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "server",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true,
+            "isPublic": true
+          },
+          "sources": [
+            {
+              "fileName": "Origami.ts",
+              "line": 76,
+              "character": 15
+            }
+          ],
+          "type": {
+            "type": "union",
+            "types": [
+              {
+                "type": "reference",
+                "name": "Server"
+              },
+              {
+                "type": "intrinsic",
+                "name": "null"
+              }
+            ]
+          },
+          "defaultValue": " null"
+        },
+        {
+          "id": 35,
+          "name": "ready",
+          "kind": 2048,
+          "kindString": "Method",
+          "flags": {
+            "isExported": true,
+            "isPublic": true
+          },
+          "signatures": [
+            {
+              "id": 36,
+              "name": "ready",
+              "kind": 4096,
+              "kindString": "Call signature",
+              "flags": {},
+              "parameters": [
+                {
+                  "id": 37,
+                  "name": "func",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "name": "Function"
                   }
                 }
               ],
@@ -737,73 +636,191 @@
           "sources": [
             {
               "fileName": "Origami.ts",
-              "line": 27,
-              "character": 15
+              "line": 95,
+              "character": 14
             }
           ]
         }
       ],
       "groups": [
         {
-          "title": "Classes",
-          "kind": 128,
+          "title": "Constructors",
+          "kind": 512,
           "children": [
-            39
+            32
           ]
         },
         {
-          "title": "Interfaces",
-          "kind": 256,
+          "title": "Properties",
+          "kind": 1024,
           "children": [
-            33
+            31
           ]
         },
         {
-          "title": "Variables",
-          "kind": 32,
+          "title": "Methods",
+          "kind": 2048,
           "children": [
-            63
-          ]
-        },
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [
-            64
+            35
           ]
         }
       ],
       "sources": [
         {
           "fileName": "Origami.ts",
-          "line": 1,
-          "character": 0
+          "line": 75,
+          "character": 20
         }
       ]
     },
     {
       "id": 1,
-      "name": "\"defaultPlugins\"",
-      "kind": 1,
-      "kindString": "External module",
+      "name": "defaultPlugins",
+      "kind": 2097152,
+      "kindString": "Object literal",
       "flags": {
-        "isExported": true
+        "isExported": true,
+        "isConst": true
       },
-      "originalName": "@origami/origami/src/defaultPlugins.ts",
       "children": [
         {
+          "id": 3,
+          "name": "auth",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "defaultPlugins.ts",
+              "line": 6,
+              "character": 6
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          },
+          "defaultValue": "true"
+        },
+        {
+          "id": 5,
+          "name": "core-api",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "defaultPlugins.ts",
+              "line": 11,
+              "character": 12
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          },
+          "defaultValue": "true"
+        },
+        {
+          "id": 10,
+          "name": "default-pages",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "defaultPlugins.ts",
+              "line": 20,
+              "character": 17
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          },
+          "defaultValue": "true"
+        },
+        {
           "id": 2,
-          "name": "defaultPlugins",
+          "name": "favicon",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "defaultPlugins.ts",
+              "line": 4,
+              "character": 9
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          },
+          "defaultValue": "true"
+        },
+        {
+          "id": 4,
+          "name": "setup",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "defaultPlugins.ts",
+              "line": 9,
+              "character": 7
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          },
+          "defaultValue": "true"
+        },
+        {
+          "id": 6,
+          "name": "user-profiles",
+          "kind": 32,
+          "kindString": "Variable",
+          "flags": {
+            "isExported": true
+          },
+          "sources": [
+            {
+              "fileName": "defaultPlugins.ts",
+              "line": 13,
+              "character": 17
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          },
+          "defaultValue": "true"
+        },
+        {
+          "id": 7,
+          "name": "media",
           "kind": 2097152,
           "kindString": "Object literal",
           "flags": {
-            "isExported": true,
-            "isConst": true
+            "isExported": true
           },
           "children": [
             {
-              "id": 4,
-              "name": "auth",
+              "id": 9,
+              "name": "location",
               "kind": 32,
               "kindString": "Variable",
               "flags": {
@@ -812,194 +829,36 @@
               "sources": [
                 {
                   "fileName": "defaultPlugins.ts",
-                  "line": 6,
-                  "character": 6
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              },
-              "defaultValue": "true"
-            },
-            {
-              "id": 6,
-              "name": "core-api",
-              "kind": 32,
-              "kindString": "Variable",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "defaultPlugins.ts",
-                  "line": 11,
+                  "line": 17,
                   "character": 12
                 }
               ],
               "type": {
                 "type": "intrinsic",
-                "name": "boolean"
+                "name": "string"
               },
-              "defaultValue": "true"
-            },
-            {
-              "id": 11,
-              "name": "default-pages",
-              "kind": 32,
-              "kindString": "Variable",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "defaultPlugins.ts",
-                  "line": 20,
-                  "character": 17
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              },
-              "defaultValue": "true"
-            },
-            {
-              "id": 3,
-              "name": "favicon",
-              "kind": 32,
-              "kindString": "Variable",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "defaultPlugins.ts",
-                  "line": 4,
-                  "character": 9
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              },
-              "defaultValue": "true"
-            },
-            {
-              "id": 5,
-              "name": "setup",
-              "kind": 32,
-              "kindString": "Variable",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "defaultPlugins.ts",
-                  "line": 9,
-                  "character": 7
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              },
-              "defaultValue": "true"
-            },
-            {
-              "id": 7,
-              "name": "user-profiles",
-              "kind": 32,
-              "kindString": "Variable",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "defaultPlugins.ts",
-                  "line": 13,
-                  "character": 17
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              },
-              "defaultValue": "true"
+              "defaultValue": "\"./media\""
             },
             {
               "id": 8,
-              "name": "media",
-              "kind": 2097152,
-              "kindString": "Object literal",
+              "name": "provider",
+              "kind": 32,
+              "kindString": "Variable",
               "flags": {
                 "isExported": true
               },
-              "children": [
-                {
-                  "id": 10,
-                  "name": "location",
-                  "kind": 32,
-                  "kindString": "Variable",
-                  "flags": {
-                    "isExported": true
-                  },
-                  "sources": [
-                    {
-                      "fileName": "defaultPlugins.ts",
-                      "line": 17,
-                      "character": 12
-                    }
-                  ],
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "defaultValue": "\"./media\""
-                },
-                {
-                  "id": 9,
-                  "name": "provider",
-                  "kind": 32,
-                  "kindString": "Variable",
-                  "flags": {
-                    "isExported": true
-                  },
-                  "sources": [
-                    {
-                      "fileName": "defaultPlugins.ts",
-                      "line": 16,
-                      "character": 12
-                    }
-                  ],
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "defaultValue": "\"filesystem\""
-                }
-              ],
-              "groups": [
-                {
-                  "title": "Variables",
-                  "kind": 32,
-                  "children": [
-                    10,
-                    9
-                  ]
-                }
-              ],
               "sources": [
                 {
                   "fileName": "defaultPlugins.ts",
-                  "line": 15,
-                  "character": 7
+                  "line": 16,
+                  "character": 12
                 }
               ],
               "type": {
                 "type": "intrinsic",
-                "name": "object"
-              }
+                "name": "string"
+              },
+              "defaultValue": "\"filesystem\""
             }
           ],
           "groups": [
@@ -1007,18 +866,7 @@
               "title": "Variables",
               "kind": 32,
               "children": [
-                4,
-                6,
-                11,
-                3,
-                5,
-                7
-              ]
-            },
-            {
-              "title": "Object literals",
-              "kind": 2097152,
-              "children": [
+                9,
                 8
               ]
             }
@@ -1026,8 +874,8 @@
           "sources": [
             {
               "fileName": "defaultPlugins.ts",
-              "line": 3,
-              "character": 27
+              "line": 15,
+              "character": 7
             }
           ],
           "type": {
@@ -1038,588 +886,53 @@
       ],
       "groups": [
         {
+          "title": "Variables",
+          "kind": 32,
+          "children": [
+            3,
+            5,
+            10,
+            2,
+            4,
+            6
+          ]
+        },
+        {
           "title": "Object literals",
           "kind": 2097152,
           "children": [
-            2
+            7
           ]
         }
       ],
       "sources": [
         {
           "fileName": "defaultPlugins.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "name": "\"errors\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/origami/src/errors.ts",
-      "children": [
-        {
-          "id": 13,
-          "name": "ErrorNoStoreType",
-          "kind": 128,
-          "kindString": "Class",
-          "flags": {
-            "isExported": true
-          },
-          "children": [
-            {
-              "id": 14,
-              "name": "constructor",
-              "kind": 512,
-              "kindString": "Constructor",
-              "flags": {
-                "isExported": true
-              },
-              "signatures": [
-                {
-                  "id": 15,
-                  "name": "new ErrorNoStoreType",
-                  "kind": 16384,
-                  "kindString": "Constructor signature",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "ErrorNoStoreType",
-                    "id": 13
-                  },
-                  "overwrites": {
-                    "type": "reference",
-                    "name": "OrigamiError.__constructor"
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "errors.ts",
-                  "line": 4,
-                  "character": 52
-                }
-              ],
-              "overwrites": {
-                "type": "reference",
-                "name": "OrigamiError.__constructor"
-              }
-            },
-            {
-              "id": 19,
-              "name": "code",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 5,
-                  "character": 8
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.code"
-              }
-            },
-            {
-              "id": 18,
-              "name": "message",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 4,
-                  "character": 11
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "overwrites": {
-                "type": "reference",
-                "name": "Error.message"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.message"
-              }
-            },
-            {
-              "id": 17,
-              "name": "name",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 3,
-                  "character": 8
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "overwrites": {
-                "type": "reference",
-                "name": "Error.name"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.name"
-              }
-            },
-            {
-              "id": 16,
-              "name": "namespace",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 2,
-                  "character": 13
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.namespace"
-              }
-            },
-            {
-              "id": 20,
-              "name": "showTrace",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 6,
-                  "character": 13
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.showTrace"
-              }
-            },
-            {
-              "id": 21,
-              "name": "stack",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true,
-                "isOptional": true
-              },
-              "sources": [
-                {
-                  "fileName": "typescript/lib/lib.es5.d.ts",
-                  "line": 905,
-                  "character": 9
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "intrinsic",
-                    "name": "undefined"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                ]
-              },
-              "overwrites": {
-                "type": "reference",
-                "name": "Error.stack"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "Error.stack"
-              }
-            }
-          ],
-          "groups": [
-            {
-              "title": "Constructors",
-              "kind": 512,
-              "children": [
-                14
-              ]
-            },
-            {
-              "title": "Properties",
-              "kind": 1024,
-              "children": [
-                19,
-                18,
-                17,
-                16,
-                20,
-                21
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "errors.ts",
-              "line": 4,
-              "character": 29
-            }
-          ],
-          "extendedTypes": [
-            {
-              "type": "reference",
-              "name": "OrigamiError"
-            }
-          ]
-        },
-        {
-          "id": 22,
-          "name": "ErrorStoreTypeNotFound",
-          "kind": 128,
-          "kindString": "Class",
-          "flags": {
-            "isExported": true
-          },
-          "children": [
-            {
-              "id": 23,
-              "name": "constructor",
-              "kind": 512,
-              "kindString": "Constructor",
-              "flags": {
-                "isExported": true
-              },
-              "signatures": [
-                {
-                  "id": 24,
-                  "name": "new ErrorStoreTypeNotFound",
-                  "kind": 16384,
-                  "kindString": "Constructor signature",
-                  "flags": {},
-                  "parameters": [
-                    {
-                      "id": 25,
-                      "name": "storeType",
-                      "kind": 32768,
-                      "kindString": "Parameter",
-                      "flags": {},
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "string"
-                      }
-                    }
-                  ],
-                  "type": {
-                    "type": "reference",
-                    "name": "ErrorStoreTypeNotFound",
-                    "id": 22
-                  },
-                  "overwrites": {
-                    "type": "reference",
-                    "name": "OrigamiError.__constructor"
-                  }
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "errors.ts",
-                  "line": 10,
-                  "character": 58
-                }
-              ],
-              "overwrites": {
-                "type": "reference",
-                "name": "OrigamiError.__constructor"
-              }
-            },
-            {
-              "id": 29,
-              "name": "code",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 5,
-                  "character": 8
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.code"
-              }
-            },
-            {
-              "id": 28,
-              "name": "message",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 4,
-                  "character": 11
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "overwrites": {
-                "type": "reference",
-                "name": "Error.message"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.message"
-              }
-            },
-            {
-              "id": 27,
-              "name": "name",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 3,
-                  "character": 8
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "overwrites": {
-                "type": "reference",
-                "name": "Error.name"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.name"
-              }
-            },
-            {
-              "id": 26,
-              "name": "namespace",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 2,
-                  "character": 13
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.namespace"
-              }
-            },
-            {
-              "id": 30,
-              "name": "showTrace",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true
-              },
-              "sources": [
-                {
-                  "fileName": "@origami/core/",
-                  "line": 6,
-                  "character": 13
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "OrigamiError.showTrace"
-              }
-            },
-            {
-              "id": 31,
-              "name": "stack",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true,
-                "isOptional": true
-              },
-              "sources": [
-                {
-                  "fileName": "typescript/lib/lib.es5.d.ts",
-                  "line": 905,
-                  "character": 9
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "intrinsic",
-                    "name": "undefined"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                ]
-              },
-              "overwrites": {
-                "type": "reference",
-                "name": "Error.stack"
-              },
-              "inheritedFrom": {
-                "type": "reference",
-                "name": "Error.stack"
-              }
-            }
-          ],
-          "groups": [
-            {
-              "title": "Constructors",
-              "kind": 512,
-              "children": [
-                23
-              ]
-            },
-            {
-              "title": "Properties",
-              "kind": 1024,
-              "children": [
-                29,
-                28,
-                27,
-                26,
-                30,
-                31
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "errors.ts",
-              "line": 10,
-              "character": 35
-            }
-          ],
-          "extendedTypes": [
-            {
-              "type": "reference",
-              "name": "OrigamiError"
-            }
-          ]
+          "line": 3,
+          "character": 27
         }
       ],
-      "groups": [
-        {
-          "title": "Classes",
-          "kind": 128,
-          "children": [
-            13,
-            22
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "fileName": "errors.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
-    },
-    {
-      "id": 67,
-      "name": "\"index\"",
-      "kind": 1,
-      "kindString": "External module",
-      "flags": {
-        "isExported": true
-      },
-      "originalName": "@origami/origami/src/index.ts",
-      "sources": [
-        {
-          "fileName": "index.ts",
-          "line": 1,
-          "character": 0
-        }
-      ]
+      "type": {
+        "type": "intrinsic",
+        "name": "object"
+      }
     }
   ],
   "groups": [
     {
-      "title": "External modules",
-      "kind": 1,
+      "title": "Classes",
+      "kind": 128,
       "children": [
-        32,
-        1,
-        12,
-        67
+        11,
+        20,
+        30
+      ]
+    },
+    {
+      "title": "Object literals",
+      "kind": 2097152,
+      "children": [
+        1
       ]
     }
   ]

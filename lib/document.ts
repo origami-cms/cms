@@ -47,7 +47,12 @@ const generateJSON = (jsonFile: string, module: string) =>
       '--json',
       jsonFile,
       '--tsconfig',
-      `./packages/${module}/tsconfig.json`
+      `./packages/${module}/tsconfig.json`,
+      '--mode',
+      'file',
+      '--excludeNotExported',
+      '--excludeExternals',
+      '--excludePrivate'
     ],
     { cwd: path.resolve(__dirname, '../') }
   );

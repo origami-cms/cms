@@ -6,171 +6,66 @@
   "children": [
     {
       "id": 1,
-      "name": "\"index\"",
-      "kind": 1,
-      "kindString": "External module",
+      "name": "Options",
+      "kind": 256,
+      "kindString": "Interface",
       "flags": {
         "isExported": true
       },
-      "originalName": "@origami/plugin-default-pages/src/index.ts",
       "children": [
         {
           "id": 2,
-          "name": "Options",
-          "kind": 256,
-          "kindString": "Interface",
+          "name": "static",
+          "kind": 1024,
+          "kindString": "Property",
           "flags": {
-            "isExported": true
+            "isExported": true,
+            "isOptional": true
           },
-          "children": [
+          "sources": [
             {
-              "id": 3,
-              "name": "static",
-              "kind": 1024,
-              "kindString": "Property",
-              "flags": {
-                "isExported": true,
-                "isOptional": true
+              "fileName": "index.ts",
+              "line": 70,
+              "character": 8
+            }
+          ],
+          "type": {
+            "type": "union",
+            "types": [
+              {
+                "type": "intrinsic",
+                "name": "undefined"
               },
-              "sources": [
-                {
-                  "fileName": "index.ts",
-                  "line": 70,
-                  "character": 8
-                }
-              ],
-              "type": {
-                "type": "union",
-                "types": [
-                  {
-                    "type": "intrinsic",
-                    "name": "undefined"
-                  },
-                  {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                ]
+              {
+                "type": "intrinsic",
+                "name": "string"
               }
-            }
-          ],
-          "groups": [
-            {
-              "title": "Properties",
-              "kind": 1024,
-              "children": [
-                3
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "index.ts",
-              "line": 69,
-              "character": 24
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "name": "index",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {
-            "isConst": true
-          },
-          "signatures": [
-            {
-              "id": 5,
-              "name": "index",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "parameters": [
-                {
-                  "id": 6,
-                  "name": "req",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Request"
-                  }
-                },
-                {
-                  "id": 7,
-                  "name": "res",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "Response"
-                  }
-                },
-                {
-                  "id": 8,
-                  "name": "next",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "reference",
-                    "name": "NextFunction"
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "name": "Promise",
-                "typeArguments": [
-                  {
-                    "type": "intrinsic",
-                    "name": "void"
-                  }
-                ]
-              }
-            }
-          ],
-          "sources": [
-            {
-              "fileName": "index.ts",
-              "line": 5,
-              "character": 11
-            }
-          ]
+            ]
+          }
         }
       ],
       "groups": [
         {
-          "title": "Interfaces",
-          "kind": 256,
+          "title": "Properties",
+          "kind": 1024,
           "children": [
             2
-          ]
-        },
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [
-            4
           ]
         }
       ],
       "sources": [
         {
           "fileName": "index.ts",
-          "line": 1,
-          "character": 0
+          "line": 69,
+          "character": 24
         }
       ]
     }
   ],
   "groups": [
     {
-      "title": "External modules",
-      "kind": 1,
+      "title": "Interfaces",
+      "kind": 256,
       "children": [
         1
       ]
