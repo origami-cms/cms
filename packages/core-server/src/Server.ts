@@ -207,6 +207,8 @@ export class Server {
           'origami-plugin-'
         ]);
       } catch (e) {
+        // TODO: Check if know error, or throw otherwise (should NOT catch
+        // broken code in found plugin)
         throw new err.ErrorServerUnknownPlugin(name);
       }
 

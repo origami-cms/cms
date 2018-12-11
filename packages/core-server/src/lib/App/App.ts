@@ -10,7 +10,10 @@ import * as err from './errors';
 const readDir = promisify(fs.readdir);
 const stat = promisify(fs.stat);
 
-
+const resetContentType: Origami.Server.RequestHandler = (req, res, next) => {
+  res.removeHeader('content-type');
+  next();
+};
 export namespace App {
   export interface EntryResponse {
     name: string;
@@ -180,8 +183,10 @@ export namespace App {
         .forEach((dir) => this.router!
           .route(`/${dir.split('/').pop()}`)
           // TODO: convert to gzip serve
-          // @ts-ignore Is a valid request handler
-          .use(express.static(dir))
+          .use(
+            resetContentType,
+            express.static(dir)
+          )
         );
 
 
@@ -197,7 +202,7 @@ export namespace App {
       const icon = this.icon;
       if (icon) {
         this.router.route('/icon').use(
-          // @ts-ignore Is a valid request handler
+          resetContentType,
           express.static(icon)
         );
       }
