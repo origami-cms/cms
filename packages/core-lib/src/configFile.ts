@@ -12,9 +12,8 @@ const fsReadFile = promisify(readFile);
 const fsWriteFile = promisify(writeFile);
 const fsStat = promisify(stat);
 
-
-const CONFIG_FILE = (): string => path.resolve(process.env.CLI_CWD || './', '.origami');
-
+const CONFIG_FILE = (): string =>
+  path.resolve(process.env.CLI_CWD || './', '.origami');
 
 export class ErrorResourceNotFound extends OrigamiError {
   constructor(name: string, resource: string) {
@@ -26,9 +25,7 @@ export class ErrorResourceNotFound extends OrigamiError {
   }
 }
 
-
 export namespace config {
-
   /**
    * Injects origami_x_y environment variables into a Origami.config and replaces
    * aliased keys in objects (eg: {'/path/to/plugin.js:myPlugin': true})
@@ -66,36 +63,47 @@ export namespace config {
       // Find only env variables prefixed with 'origami'
       .filter(([key, value]) => /^origami_.*$/.test(key.toLowerCase()))
 
-      // Replace '_' with '.' and remove 'origami_'
-      .map(([key, value]) => [
-        key.toLowerCase()
-          // Replace _ with .
+      // Replace '_' with '.', remove 'origami_', and lowercase all items except last
+      .map(([key, value]) => {
+        // Replace _ with .
+        let split = key
           .replace(/_/g, '.')
+          .split('.')
           // Remove preceding 'origami.'
-          .split('.').slice(1).join('.'),
-        value
-      ])
+          .slice(1);
 
+        // Lowercase all items except last one (the actual key)
+        // IMPORTANT: If the last key is ALL UPPERCASE, it will be lowercased
+        split = split.map((item, i) => {
+          const allUpper = /^[A-Z0-9\s]*$/;
+          if (i === split.length - 1 && !allUpper.test(item)) return item;
+          else return item.toLowerCase();
+        });
+
+        return [split.join('.'), value as string];
+      })
       .forEach(([key, value]) => {
         let _key = key;
         let _obj: Partial<Origami.Config> | boolean = obj;
         // If the variable is a plugin setting that is contained in aliases
         // Then update the config via the filename not the alias
-        const res = /plugins\.([\w-]+)/.exec(key!);
+        const res = /plugins\.([\w-]+)/.exec(key);
         if (res && aliases.plugins[res[1]]) {
-          _key = key!.split('.').slice(2).join('.');
+          _key = key
+            .split('.')
+            .slice(2)
+            .join('.');
           _obj = obj.plugins![aliases.plugins[res[1]]];
         }
 
         // Try set the key, however current value may be a boolean or undefined
         // meaning that deeper keys may throw error. If that's the case,
         // then set the value to an empty object, and try again
-        dot.str(_key as string, value, _obj);
+        dot.str(_key, value, _obj);
       });
 
     return obj;
   };
-
 
   /**
    * Attempt to load the .origami file at the current directory. Overwrites with any ENV variables
@@ -155,19 +163,14 @@ export namespace config {
     return c;
   };
 
-
   /**
    * Override/write the .origami file
    * @param file JSON config for Origami app to override
    */
   export const write = async (file: Partial<Origami.Config>): Promise<void> => {
     const TAB_SIZE = 4;
-    return fsWriteFile(
-      CONFIG_FILE(),
-      JSON.stringify(file, null, TAB_SIZE)
-    );
+    return fsWriteFile(CONFIG_FILE(), JSON.stringify(file, null, TAB_SIZE));
   };
-
 
   // export const validate = (config: Origami.Config) => {
   //     try {
@@ -177,7 +180,6 @@ export namespace config {
   //     } catch (e) {
   //         return error(new Error(`Origami: Missing '${e.key}' setting`));
   //     }
-
 
   // ------------------------------------------------------ Validate store
   // const store = `origami-store-${config.store.type}`;
@@ -198,7 +200,6 @@ export namespace config {
   // }
   // };
 
-
   // Setup the plugins for the server
   export const setupPlugins = async (
     conf: Partial<Origami.Config>,
@@ -213,7 +214,6 @@ export namespace config {
     );
   };
 
-
   // Setup the apps for the server
   export const setupApps = async (
     conf: Partial<Origami.Config>,
@@ -226,7 +226,6 @@ export namespace config {
       )
     );
   };
-
 
   // Setup the resources for the server API
   export const setupResources = async (
@@ -266,7 +265,6 @@ export namespace config {
     );
   };
 
-
   // Setup the controllers for the server API
   export const setupControllers = async (
     conf: Partial<Origami.Config>,
@@ -285,21 +283,17 @@ export namespace config {
         else if (c instanceof Object) {
           _conf = {
             ..._conf,
-            ...c as Origami.ConfigController
+            ...(c as Origami.ConfigController)
           };
         }
         const route = new Route(_conf.prefix);
-        await route.include(
-          path.resolve(context, _path),
-          false, true, false
-        );
+        await route.include(path.resolve(context, _path), false, true, false);
         server.useRouter(route);
 
         return true;
       })
     );
   };
-
 
   // Load a directory of routes, models, config files, etc, and automatically
   // add everything into the server (EG: calling useRouter(), resource(), etc)
