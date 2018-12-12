@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.8](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.7...v0.0.3-alpha.8) (2018-12-12)
+
+
+### Bug Fixes
+
+* **cli:** readded files in cli npm dist ([e052e70](https://github.com/origami-cms/cms/commit/e052e70))
+
+
+
+
+
 ## [0.0.3-alpha.7](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.6...v0.0.3-alpha.7) (2018-12-12)
 
 
