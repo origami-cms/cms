@@ -1,5 +1,6 @@
 import { colors, info, Origami, PackageJson, pkgjson } from '@origami/core';
 import execa from 'execa';
+import { installPackages } from '../installPackages';
 
 /**
  * Installs the necessary node modules that are specified in the config
@@ -19,9 +20,7 @@ export const install = async (config: Origami.Config): Promise<void> => {
   let dependencies = ['@origami/origami'];
 
   if (config.store && config.store.type) {
-    dependencies.push(
-      `origami-store-${config.store.type}`
-    );
+    dependencies.push(`origami-store-${config.store.type}`);
   }
 
   // Filter with what's currently installed
@@ -32,13 +31,21 @@ export const install = async (config: Origami.Config): Promise<void> => {
     return;
   }
 
-  let colorDeps = dependencies.map((d) => colors.blue(d)).slice(0, -1).join(colors.white(', '));
-  colorDeps += colors.white(' and ') + colors.blue(dependencies.slice(-1).pop()!);
+  let colorDeps = dependencies
+    .map((d) => colors.blue(d))
+    .slice(0, -1)
+    .join(colors.white(', '));
+  colorDeps +=
+    colors.white(' and ') + colors.blue(dependencies.slice(-1).pop()!);
   // Install the rest
-  info(`Installing ${dependencies.length} package${dependencies.length > 1 ? 's' : ''}:`);
+  info(
+    `Installing ${dependencies.length} package${
+      dependencies.length > 1 ? 's' : ''
+    }:`
+  );
   info(colorDeps);
   try {
-    await execa('yarn', { cwd: process.env.CLI_CWD });
+    await installPackages(dependencies);
     info(colors.green('Done!'));
   } catch (e) {
     info(colors.red(e.message));

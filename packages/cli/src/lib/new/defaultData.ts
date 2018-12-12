@@ -5,6 +5,6 @@ export type defaultData = {
 };
 
 export const defaultData = {
-  store: ['MongoDB', 'Postgres', 'MySQL', 'Microsoft SQL', 'MariaDB', 'Other', 'None'],
+  store: ['LowDB', 'MongoDB', 'Postgres', 'MySQL', 'Microsoft SQL', 'MariaDB', 'Other', 'None'],
   theme: ['None', 'Snow']
 } as defaultData;

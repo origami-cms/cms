@@ -132,7 +132,7 @@ export const prompt = async (
       },
 
       // ----------------------------------------------------------- Store
-      ...listOther(p, 'store', 'Store (Database) type', 'mongodb'),
+      ...listOther(p, 'store', 'Store (Database) type', 'lowdb'),
       {
         when: when('store'),
         name: 'store.host',
