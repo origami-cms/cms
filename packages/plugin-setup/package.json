@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-setup",
-  "version": "0.0.3-alpha.6",
+  "version": "0.0.3-alpha.7",
   "description": "Setup initial user plugin for Origami",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/origami",
   "homepage": "http://www.origami.so",
@@ -22,7 +22,7 @@
     "zen-css": "^1.1.16"
   },
   "dependencies": {
-    "@origami/core": "0.0.3-alpha.6",
+    "@origami/core": "0.0.3-alpha.7",
     "http-errors": "^1.7.1"
   }
 }
