@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-auth",
-  "version": "0.0.0",
+  "version": "0.0.3-alpha.9",
   "description": "Authentication plugin for the Origami platform",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-auth",
   "homepage": "http://www.origami.so",

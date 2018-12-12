@@ -1,6 +1,6 @@
 {
   "name": "@origami/cli",
-  "version": "0.0.3-alpha.8",
+  "version": "0.0.3-alpha.9",
   "author": "Tristan Matthias <tristan@origami.so>",
   "bin": {
     "origami": "./bin/run"
@@ -14,7 +14,7 @@
     "@origami/bird": "0.0.3-alpha.7",
     "@origami/core": "0.0.3-alpha.7",
     "@origami/core-lib": "0.0.3-alpha.7",
-    "@origami/origami": "0.0.3-alpha.7",
+    "@origami/origami": "0.0.3-alpha.9",
     "@origami/tslint-config": "0.0.3-alpha.3",
     "cli-ux": "^4.9.3",
     "dot-object": "^1.7.1",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.9](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.8...v0.0.3-alpha.9) (2018-12-12)
+
+
+### Features
+
+* **plugin-auth:** added plugin auth ([65762b9](https://github.com/origami-cms/cms/commit/65762b9))
+
+
+
+
+
 ## [0.0.3-alpha.8](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.7...v0.0.3-alpha.8) (2018-12-12)
 
 
