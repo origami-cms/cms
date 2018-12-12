@@ -6330,10 +6330,11 @@ origami-plugin-favicon@^0.0.1:
     serve-favicon "^2.5.0"
     to-ico "^1.1.5"
 
-origami-plugin-media@^2.0.0-alpha.2:
-  version "2.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/origami-plugin-media/-/origami-plugin-media-2.0.0-alpha.2.tgz#e6b93aa7ffda4a4c8f6d5ed29b45f4bd8d7dd99c"
+origami-plugin-media@^2.0.0-alpha.3:
+  version "2.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/origami-plugin-media/-/origami-plugin-media-2.0.0-alpha.3.tgz#23c57974f350adc4969e187ee1cbe64216cec17c"
   dependencies:
+    "@origami/core" "^0.0.3-alpha.6"
     aws-sdk "^2.337.0"
     mkdir-recursive "^0.4.0"
 

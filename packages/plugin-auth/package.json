@@ -1,0 +1,19 @@
+{
+  "name": "@origami/plugin-auth",
+  "version": "0.0.0",
+  "description": "Authentication plugin for the Origami platform",
+  "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-auth",
+  "homepage": "http://www.origami.so",
+  "author": "Tristan Matthias <tristan@origami.so>",
+  "license": "MIT",
+  "main": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf build",
+    "watch": "tsc -w",
+    "build": "yarn clean && tsc"
+  },
+  "dependencies": {
+    "@origami/core": "0.0.3-alpha.7"
+  }
+}
