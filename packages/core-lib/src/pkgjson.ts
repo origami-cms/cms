@@ -24,7 +24,7 @@ export namespace pkgjson {
           res(false);
         })
         .then((json) => {
-          if (json) res(json.toJSON());
+          if (json) res(json.toJSON() as PackageJson);
           else return false;
         })
     );
