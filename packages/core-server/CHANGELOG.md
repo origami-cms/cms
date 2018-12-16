@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.10](https://github.com/origami-cms/core/tree/master/packages/core-lib/compare/v0.0.3-alpha.9...v0.0.3-alpha.10) (2018-12-16)
+
+
+### Bug Fixes
+
+* **core-server:** updated false return on formatter ([6aca57d](https://github.com/origami-cms/core/tree/master/packages/core-lib/commit/6aca57d))
+
+
+
+
+
 ## [0.0.3-alpha.7](https://github.com/origami-cms/core/tree/master/packages/core-lib/compare/v0.0.3-alpha.6...v0.0.3-alpha.7) (2018-12-12)
 
 
