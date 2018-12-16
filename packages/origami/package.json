@@ -33,7 +33,7 @@
     "origami-admin-zen": "^0.0.10-alpha.8",
     "origami-core-server": "^0.5.4",
     "origami-plugin-favicon": "^0.0.1",
-    "origami-plugin-media": "^2.0.0-alpha.3",
+    "origami-plugin-media": "^2.0.0",
     "origami-plugin-user-profiles": "^1.0.1",
     "signal-exit": "^3.0.2"
   },
