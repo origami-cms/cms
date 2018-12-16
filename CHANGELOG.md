@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.11](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.10...v0.0.3-alpha.11) (2018-12-16)
+
+
+### Bug Fixes
+
+* **core-lib:** fixing type on pkgjson ([b66e172](https://github.com/origami-cms/cms/commit/b66e172))
+
+
+
+
+
 ## [0.0.3-alpha.10](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.9...v0.0.3-alpha.10) (2018-12-16)
 
 

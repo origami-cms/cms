@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-default-pages",
-  "version": "0.0.3-alpha.10",
+  "version": "0.0.3-alpha.11",
   "description": "Default pages and assets for the Origami platform",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages",
   "homepage": "http://www.origami.so",
@@ -18,7 +18,7 @@
     "origami-zen": "^0.4.3-alpha.2"
   },
   "dependencies": {
-    "@origami/core-lib": "0.0.3-alpha.10",
+    "@origami/core-lib": "0.0.3-alpha.11",
     "http-status-codes": "^1.3.0"
   }
 }

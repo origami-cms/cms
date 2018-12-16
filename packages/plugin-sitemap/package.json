@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-sitemap",
-  "version": "0.0.3-alpha.10",
+  "version": "0.0.3-alpha.11",
   "description": "Automatic sitemap generator for Origami",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-sitemap",
   "homepage": "http://www.origami.so",
@@ -14,7 +14,7 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/core": "0.0.3-alpha.10",
+    "@origami/core": "0.0.3-alpha.11",
     "sitemap": "^2.1.0"
   }
 }
