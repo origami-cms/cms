@@ -1,8 +1,8 @@
 {
-  "name": "@origami/plugin-sitemap",
-  "version": "0.0.3-alpha.11",
-  "description": "Automatic sitemap generator for Origami",
-  "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-sitemap",
+  "name": "@origami/plugin-social-login",
+  "version": "0.0.0",
+  "description": "Social login plugin for the Origami platform",
+  "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-social-login",
   "homepage": "http://www.origami.so",
   "author": "Tristan Matthias <tristan@origami.so>",
   "license": "MIT",
@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "@origami/core": "0.0.3-alpha.11",
-    "sitemap": "^2.1.0"
+    "request-promise-native": "^1.0.5"
   }
 }
