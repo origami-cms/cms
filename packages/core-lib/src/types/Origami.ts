@@ -7,121 +7,120 @@ export namespace Origami {
     /**
      * Settings for the overall project
      */
-    'app': ConfigApp;
+    app: ConfigApp;
 
     /**
      * Settings for the store/database
      */
-    'store'?: ConfigStore;
+    store?: ConfigStore;
 
     /**
      * Settings for the server setup
      */
-    'server': ConfigServer;
+    server: ConfigServer;
 
     /**
      * Admin node module
      */
-    'admin'?: boolean | string;
+    admin?: boolean | string;
 
     /**
      * Model/Controller resources to automatically create
      */
-    'resources'?: {
+    resources?: {
       [name: string]: ConfigResource | string;
     };
 
     /**
      * Plugins to integrate into Origami
      */
-    'plugins'?: {
+    plugins?: {
       [name: string]: boolean | object;
     };
 
     /**
      * Add controllers by individual files or directories
      */
-    'controllers'?: {
+    controllers?: {
       [path: string]: ConfigController | string | boolean;
     };
 
     /**
      * Applications to install into Origami
      */
-    'apps'?: {
+    apps?: {
       [name: string]: boolean | object;
     };
   }
-
 
   export interface ConfigApp {
     /**
      * Name of the project
      */
-    'name': string;
+    name: string;
   }
-
 
   export interface ConfigStore {
     /**
      * Store/Database type to integrate with
      */
-    'type': string;
+    type: string;
     /**
      * Store/Database hostname to connect with
      */
-    'host': string;
+    host: string;
     /**
      * Store/Database port to connect with
      */
-    'port': number;
+    port: number;
     /**
      * Store/Database db name to connect with
      */
-    'database': string;
+    database: string;
     /**
      * Store/Database username to connect with
      */
-    'username': string;
+    username: string;
     /**
      * Store/Database password to connect with
      */
-    'password': string;
+    password: string;
   }
 
   export interface ConfigTheme {
     /**
      * Theme name to run
      */
-    'name'?: string;
-    'path'?: string;
+    name?: string;
+    path?: string;
   }
 
   export interface ConfigServer {
     /**
      * Secret code to encrypt data and authentication tokens with
      */
-    'secret'?: string;
+    secret?: string;
     /**
      * Port number to run the server on
      */
-    'port'?: number;
+    port?: number;
     /**
      * Server language
      */
-    'ln'?: string;
+    ln?: string;
     /**
      * Static directories to serve
      */
-    'static'?: string | string[] | boolean;
+    static?: string | string[] | boolean;
   }
-
 
   export interface ConfigResource {
     model: string;
-    auth?: boolean | {
-      [key in 'get' | 'head' | 'post' | 'put' | 'delete' | 'list']: boolean
-    };
+    auth?:
+      | boolean
+      | {
+          [key in 'get' | 'head' | 'post' | 'put' | 'delete' | 'list']: boolean
+        };
   }
 
   export interface ConfigController {
@@ -131,41 +130,57 @@ export namespace Origami {
     prefix?: string;
   }
 
-
   /**
    * Valid types of Origami modules to install via NPM
    * @example origami-theme-snow, origami-store-mongodb, origami-plugin-facebook
    */
   export type ModuleType = 'theme' | 'store' | 'plugin' | 'admin';
 
-
   export namespace Server {
-
-    export type Position = 'init' | 'pre-store' | 'store' | 'post-store' |
-      'pre-render' | 'render' | 'post-render' | 'pre-send';
+    export type Position =
+      | 'init'
+      | 'pre-store'
+      | 'store'
+      | 'post-store'
+      | 'pre-render'
+      | 'render'
+      | 'post-render'
+      | 'pre-send';
 
     export type URL = string | null | RegExp;
 
-    export type Method = 'GET' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' |
-      'CONNECT' | 'OPTIONS' | 'PATCH' | 'USE';
+    export type Method =
+      | 'GET'
+      | 'HEAD'
+      | 'POST'
+      | 'PUT'
+      | 'DELETE'
+      | 'CONNECT'
+      | 'OPTIONS'
+      | 'PATCH'
+      | 'USE';
 
     // tslint:disable-next-line no-shadowed-variable
     export interface Config {
       /**
        * Secret code to encrypt data and authentication tokens with
        */
-      'secret': string;
+      secret: string;
       /**
        * Port number to run the server on
        */
-      'port': number;
+      port: number;
       /**
        * Server language
        */
-      'ln': string;
+      ln: string;
     }
 
-    export type RequestHandler = (req: Request, res: Response, next: express.NextFunction) => any;
+    export type RequestHandler = (
+      req: Request,
+      res: Response,
+      next: express.NextFunction
+    ) => any;
 
     export interface Request extends express.Request {
       jwt: {
@@ -187,14 +202,13 @@ export namespace Origami {
     }
 
     // tslint:disable-next-line no-empty-interface
-    export interface NextFunction extends express.NextFunction { }
+    export interface NextFunction extends express.NextFunction {}
 
     export interface DataError extends Error {
       data: object;
       statusCode?: number;
     }
   }
-
 
   export namespace Theme {
     // tslint:disable-next-line no-shadowed-variable
@@ -211,18 +225,15 @@ export namespace Origami {
     }
   }
 
-
   export namespace Store {
     // tslint:disable-next-line no-shadowed-variable
     export declare const Store: {
-      new(options: StoreOptions): Store;
+      new (options: StoreOptions): Store;
     };
     // tslint:disable-next-line no-shadowed-variable
     export interface Store {
-
       models: { [name: string]: Model };
       connURI: string;
-
 
       connect(): Promise<any>;
       model(name: string, schema?: Schema): Model | void;
@@ -236,7 +247,6 @@ export namespace Origami {
       database: string;
     }
 
-
     export interface Schema {
       tree?: boolean;
       properties: {
@@ -244,17 +254,14 @@ export namespace Origami {
       };
     }
 
-
     export declare const Model: {
-      new(name: string, schema: Schema): Model;
+      new (name: string, schema: Schema): Model;
     };
     export interface Model {
       create(resource: Resource): Resource;
 
-      find(query: object, opts?: object):
-        Promise<Resource | Resource[] | null>;
+      find(query: object, opts?: object): Promise<Resource | Resource[] | null>;
     }
-
 
     export interface Resource {
       id?: string;
@@ -263,14 +270,11 @@ export namespace Origami {
 
       [key: string]: any;
     }
-
   }
-
 
   export interface AppManifest {
     name: string;
     icon?: string;
-
 
     admin?: {
       uriBase?: string;
@@ -279,7 +283,6 @@ export namespace Origami {
       entryScripts?: string[];
       public?: string;
     };
-
 
     resources?: object[];
     plugins?: object[];
@@ -296,22 +299,22 @@ export namespace Origami {
     private _content?;
     private _responseCode;
     constructor(req: Server.Request, res: Server.Response);
+    public override(content: ResponseContent): void;
     public set(content: ResponseContent): void;
     public get(): ResponseContent | false;
     public clear(): void;
   }
 }
 
-
 export interface PackageJson {
-  'name'?: string;
-  'dependencies'?: {
+  name?: string;
+  dependencies?: {
     [pkg: string]: string;
   };
-  'devDependencies'?: {
+  devDependencies?: {
     [pkg: string]: string;
   };
-  'scripts'?: {
+  scripts?: {
     [name: string]: string;
   };
 }

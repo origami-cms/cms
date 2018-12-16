@@ -33,8 +33,8 @@ export class Content {
     this._content = content;
   }
 
-  public get(): ResponseContent | void {
-    if (!this.hasContent) { return; }
+  public get(): ResponseContent | false {
+    if (!this.hasContent) { return false; }
     return this._content!;
   }
 

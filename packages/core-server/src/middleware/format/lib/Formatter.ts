@@ -185,9 +185,11 @@ export class Formatter {
 
   private _sendJSON(data: any) {
     const obj = {
-      statusCode: this.res.statusCode,
-      data
+      statusCode: this.res.statusCode
     } as ReturningJSON;
+
+    if (data || data === 0) obj.data = data;
+
     if (this.message) obj.message = this.message;
 
     return this.res.json(obj);
