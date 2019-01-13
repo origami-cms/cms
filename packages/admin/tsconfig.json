@@ -1,0 +1,53 @@
+{
+  "include": [
+    "src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "target": "ES2016",
+    "lib": [
+      "es5",
+      "es6",
+      "es2015.symbol",
+      "es2015.promise",
+      "dom",
+      "es2017.object",
+      "es2016.array.include"
+    ],
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "outDir": ".tsbuild/",
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "actions": [
+        "./src/actions/index.ts"
+      ],
+      "actions/*": [
+        "./src/actions/*"
+      ],
+      "lib/*": [
+        "./src/lib/*"
+      ],
+      "util/*": [
+        "./node_modules/origami-zen/util/*"
+      ],
+      "store": [
+        "./src/store/store.ts"
+      ],
+      "store/state": [
+        "./src/store/state.ts"
+      ],
+      "const": [
+        "./src/const.ts"
+      ],
+    },
+    "typeRoots": [
+      "./src/types"
+    ]
+  }
+}

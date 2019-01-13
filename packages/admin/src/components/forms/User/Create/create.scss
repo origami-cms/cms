@@ -1,0 +1,9 @@
+@import 'zen-css/import';
+@import 'zen-css/classes/import';
+@import 'zen-css/components/type';
+
+:host {
+    .card {
+        max-width: 48rem;
+    }
+}

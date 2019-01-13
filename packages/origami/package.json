@@ -23,6 +23,7 @@
     "dashboard"
   ],
   "dependencies": {
+    "@origami/admin": "0.0.0",
     "@origami/bird": "0.0.3-alpha.11",
     "@origami/core": "0.0.3-alpha.11",
     "@origami/plugin-auth": "0.0.3-alpha.11",
@@ -30,8 +31,6 @@
     "@origami/plugin-default-pages": "0.0.3-alpha.11",
     "@origami/plugin-setup": "0.0.3-alpha.11",
     "@origami/tslint-config": "0.0.3-alpha.3",
-    "origami-admin-zen": "^0.0.10-alpha.8",
-    "origami-core-server": "^0.5.4",
     "origami-plugin-favicon": "^0.0.1",
     "origami-plugin-media": "^2.0.0",
     "origami-plugin-user-profiles": "^1.0.1",

@@ -1,0 +1,7 @@
+@import 'zen-css/classes/positioning';
+
+:host {
+    position: relative;
+    width: var(--header-height);
+    height: var(--header-height);
+}

@@ -158,14 +158,12 @@ export class Origami {
     }
     if (!this._store || !this._config.admin) return;
 
-    let { admin } = this._config;
-    if (admin === true) admin = 'zen';
+    const { admin } = this._config;
 
-    this._admin = await requireLib(admin, __dirname, [
-      '@origami/admin-',
-      'origami-admin-'
-    ]);
-    log(colors.green('Using admin interface'), colors.blue(admin));
+    if (admin === true) {
+      this._admin = await requireLib('@origami/admin', __dirname);
+      log(colors.green('Using admin interface'));
+    }
   }
 
   private async _setupServer() {

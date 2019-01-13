@@ -1,0 +1,24 @@
+@import "~zen-css";
+
+:root {
+    --page-padding: 2rem;
+
+
+    --header-height: 6rem;
+    --header-bg: transparent;
+    --header-shadow: none;
+    --header-divider: none; /* Border color */
+
+    --sidebar-width: 6rem;
+    --sidebar-bg: transparent;
+    --sidebar-shadow: none;
+
+    --side-menu-width: 20rem;
+
+    --h1-font-size: var(--font-size-large);
+}
+
+
+body {
+    padding: var(--size-small);
+}

@@ -1,0 +1,17 @@
+@import 'zen-css/import';
+@import 'zen-css/components/type';
+
+:host {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    height: 100%;
+
+    page-settings-menu {
+        display: inline-block;
+        margin-top: var(--size-small);
+    }
+
+    zen-router {
+        @extend %comp-card;
+    }
+}

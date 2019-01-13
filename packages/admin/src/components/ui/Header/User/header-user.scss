@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    width: var(--header-height);
+    height: var(--header-height);
+    line-height: var(--header-height);
+    text-align: center;
+
+    * {
+        vertical-align: middle;
+    }
+
+    ui-avatar {
+        width: 50%;
+        height: 50%;
+    }
+
+}

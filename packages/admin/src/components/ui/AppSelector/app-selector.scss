@@ -1,0 +1,105 @@
+@import 'zen-css/import';
+@import 'zen-css/classes/gradients';
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+:host {
+    @extend %cover;
+    position: fixed;
+    background-color: var(--color-white);
+    text-align: center;
+    transition: all 0.35s;
+
+    // Closed
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(1rem);
+
+    zen-icon[type="cross"] {
+        position: absolute;
+        right: var(--size-small);
+        top: var(--size-small);
+        animation-delay: 0.1s;
+    }
+
+    h1 {
+        display: inline-block;
+        margin-top: calc(2.5 * var(--size-tiny));
+    }
+
+    h1, zen-icon[type="cross"], zen-input, ul.apps li, span.not-found {
+        opacity: 0;
+        animation-name: fade-up;
+        animation-fill-mode: forwards;
+        animation-duration: 0.35s;
+        animation-timing-function: ease-out;
+    }
+
+    span.not-found {
+        display: inline-block;
+        animation-duration: 0.2s;
+        color: var(--color-grey-500);
+    }
+
+    .wrapper {
+        max-width: 60rem;
+        margin: auto;
+
+        zen-input {
+            margin-top: var(--size-small);
+            margin-bottom: var(--size-main);
+            animation-delay: 0.12s;
+        }
+
+        ul.apps {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: var(--size-small);
+            list-style: none;
+            padding: 0;
+
+            a {
+                width: 100%;
+                display: block;
+            }
+            .app {
+                display: block;
+                position: relative;
+                @extend %rounded;
+
+                &:before {
+                    display: block;
+                    content: '';
+                    padding-bottom: 100%;
+                }
+
+                zen-icon {
+                    @extend %center;
+                    width: 60%;
+                    height: 60%;
+                    transition: all calc(var(--transition-time) / 2);
+                }
+
+                &:hover zen-icon {
+                    transform: translate(-50%, -50%) scale(1.2);
+                }
+            }
+        }
+    }
+
+}
+
+:host-context([open]) {
+    z-index: 999;
+    opacity: 1;
+    transform: none;
+}

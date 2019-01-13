@@ -1,0 +1,28 @@
+@import "zen-css/import";
+@import "zen-css/classes/import";
+@import "../../../styles/lib/extenders";
+
+:host {
+
+    @extend %page;
+    @extend %bg-waves;
+    --input-height: 6rem;
+
+    &, * {
+        @extend %reset;
+    }
+
+    .logo, form {
+        width: 100%;
+    }
+    .center {
+        width: 48rem;
+        text-align: center;
+        background-color: default('card-bg');
+        box-shadow: var(--shadow-main-soft);
+
+        zen-form {
+            text-align: left;
+        }
+    }
+}
