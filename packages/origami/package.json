@@ -29,7 +29,6 @@
     "@origami/plugin-core-api": "0.0.3-alpha.10",
     "@origami/plugin-default-pages": "0.0.3-alpha.10",
     "@origami/plugin-setup": "0.0.3-alpha.10",
-    "@origami/tslint-config": "0.0.3-alpha.3",
     "origami-admin-zen": "^0.0.10-alpha.8",
     "origami-core-server": "^0.5.4",
     "origami-plugin-favicon": "^0.0.1",
@@ -38,6 +37,7 @@
     "signal-exit": "^3.0.2"
   },
   "devDependencies": {
+    "@origami/tslint-config": "0.0.3-alpha.3",
     "tslint": "^5.11.0"
   },
   "publishConfig": {
