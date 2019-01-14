@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.12](https://github.com/origami-cms/core/tree/master/packages/plugin-sitemap/compare/v0.0.3-alpha.11...v0.0.3-alpha.12) (2019-01-14)
+
+
+### Features
+
+* **plugin-sitemap:** added public files to sitemap ([5a6bceb](https://github.com/origami-cms/core/tree/master/packages/plugin-sitemap/commit/5a6bceb))
+
+
+
+
+
 ## [0.0.3-alpha.11](https://github.com/origami-cms/core/tree/master/packages/plugin-sitemap/compare/v0.0.3-alpha.10...v0.0.3-alpha.11) (2018-12-16)
 
 **Note:** Version bump only for package @origami/plugin-sitemap
