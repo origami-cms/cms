@@ -309,7 +309,7 @@ export class Server {
       },
       [] as Function[]
     );
-    return [].concat.apply([], mw);
+    return ([] as Function[]).concat.apply([], mw);
   }
 
   // Wrapper for staticGzip

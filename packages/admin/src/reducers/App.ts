@@ -1,8 +1,15 @@
-import {APP_SELECTOR_SET, APP_TITLE_SET, APP_PATH_UPDATE, APP_SIDEBAR_ITEMS_SET, APP_ACTIONS_SET} from 'actions/App';
-import {TITLE_PREFIX} from 'const';
 import {AnyAction} from 'redux';
+// tslint:disable-next-line match-default-export-name
 import immutable from 'seamless-immutable';
-import {App as StateApp} from 'store/state';
+import {
+  APP_ACTIONS_SET,
+  APP_PATH_UPDATE,
+  APP_SELECTOR_SET,
+  APP_SIDEBAR_ITEMS_SET,
+  APP_TITLE_SET
+} from '../actions/App';
+import {TITLE_PREFIX} from '../const';
+import {App as StateApp} from '../store/state';
 
 const initialState = immutable.from<StateApp>({
     sidebar: {
@@ -28,7 +35,7 @@ export const App = (state = initialState, action: AnyAction) => {
             return state.setIn(['sidebar', 'items'], action.items);
 
         case APP_TITLE_SET:
-            document.title = TITLE_PREFIX + action.title;
+            document.title = `${TITLE_PREFIX}${action.title}`;
             return state.setIn(['page', 'title'], action.title);
 
         case APP_ACTIONS_SET:

@@ -2,7 +2,7 @@ import { ZenRoute } from '@origami/zen';
 import { APIReducer } from '@origami/zen-lib/API';
 import { Field } from '@origami/zen-lib/FormValidator';
 import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import lodash from 'lodash';
+import _ from 'lodash';
 import pluralize from 'pluralize';
 import { injectReducer } from 'redux-injector';
 import { FormResourceCreate, FormResourceEdit } from '../../forms/Resource';
@@ -121,13 +121,14 @@ export class ResourcePage extends LitElement {
 
       field.name = f;
       // @ts-ignore
-      if (!field.placeholder) field.placeholder = lodash.startCase(f);
+      if (!field.placeholder) field.placeholder = _.startCase(f);
       field.validate = { required: field.required };
       return field;
     });
 
 
-    if (list && fieldsList) list.columns = fieldsList;
+    // TODO: Repair list columns on ResourceTable
+    // if (list && fieldsList) list.columns = fieldsList;
     if (create && fieldsCreate) create.fields = getFields(fieldsCreate);
     if (edit && fieldsEdit) edit.fields = getFields(fieldsEdit);
   }

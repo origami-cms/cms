@@ -8388,12 +8388,6 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.
   dependencies:
     glob "^7.1.3"
 
-rollup-plugin-alias@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-alias/-/rollup-plugin-alias-1.5.1.tgz#80cce3a967befda5b09c86abc14a043a78035b46"
-  dependencies:
-    slash "^2.0.0"
-
 rollup-plugin-babel-minify@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-babel-minify/-/rollup-plugin-babel-minify-5.0.0.tgz#deee9c765404b3528a6ea6674ce899ca310dd61c"
@@ -10152,6 +10146,6 @@ yn@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
 
-zen-css@^1.1.13, zen-css@^1.1.16:
+zen-css@^1.1.16, zen-css@^1.1.17:
   version "1.1.17"
   resolved "https://registry.yarnpkg.com/zen-css/-/zen-css-1.1.17.tgz#7bceb730169ac4049132ec46ae41f2bbc6da6138"

@@ -1,5 +1,5 @@
 import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import { BASE_URI } from 'const';
+import { BASE_URI } from '../../../const';
 import CSS from './side-menu-css';
 
 
@@ -27,7 +27,7 @@ export class SideMenu extends LitElement {
     if (links) {
       links = links.map((l) => ({
         ...l,
-        ...{ to: !l.to!.startsWith(BASE_URI) ? BASE_URI + l.to : l.to }
+        ...{ to: !l.to!.startsWith(BASE_URI) ? `${BASE_URI}${l.to}` : l.to }
       }));
     }
     return html`

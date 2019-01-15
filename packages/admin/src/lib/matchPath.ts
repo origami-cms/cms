@@ -71,7 +71,7 @@ const compilePath = (pattern: pathToRegexp.Path, options: CompilePathOptions): C
 /**
  * Public API for matching a URL pathname to a path pattern.
  */
-const matchPath = (pathname: string, options: string | MatchPathOptions = {}): MatchResults | null => {
+export const matchPath = (pathname: string, options: string | MatchPathOptions = {}): MatchResults | null => {
 
     const o = (typeof options === 'string') ? {path: options} : options;
 
@@ -98,5 +98,3 @@ const matchPath = (pathname: string, options: string | MatchPathOptions = {}): M
         }, {} as { [key: string]: any })
     };
 };
-
-export default matchPath;

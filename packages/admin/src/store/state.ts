@@ -1,6 +1,6 @@
+import { App as ServerApp } from '@origami/core-server';
 import { ButtonOptions } from '@origami/zen';
 import { ResourceState } from '@origami/zen-lib/API';
-import { App as ServerApp } from 'origami-core-server';
 
 
 export interface State {
@@ -14,7 +14,7 @@ export interface State {
   Organization: Organization;
   resources: {
     users: Users;
-    [name: string]: any
+    [name: string]: any;
   };
 }
 export interface Loader {
@@ -32,10 +32,10 @@ export interface Setup {
   setup: boolean;
   user: boolean;
   errors: {
-    user: boolean
+    user: boolean;
   };
   loading: {
-    user: boolean
+    user: boolean;
   };
 }
 
@@ -44,26 +44,26 @@ export interface Auth {
   loggedIn: boolean;
   token?: string | null;
   loading: {
-    verifying: boolean,
-    loggingIn: boolean
+    verifying: boolean;
+    loggingIn: boolean;
   };
   errors: {
-    loggingIn: null | string,
-    verify: null | string
+    loggingIn: null | string;
+    verify: null | string;
   };
 }
 
 export interface App {
   page: {
-    title: string,
-    path: string,
-    actions: ButtonOptions[]
+    title: string;
+    path: string;
+    actions: ButtonOptions[];
   };
   sidebar: {
-    items: SidebarItem[]
+    items: SidebarItem[];
   };
   appSelector: {
-    open: boolean
+    open: boolean;
   };
 }
 
@@ -80,7 +80,7 @@ export interface AppsMap {
 }
 
 export interface SidebarItem {
-  icon: string | { type: string, color: string, background: string };
+  icon: string | { type: string; color: string; background: string };
   path: string;
   name: string;
 }
@@ -93,9 +93,9 @@ export interface Quote {
 export interface QuoteDetails {
   quoteId: string | boolean;
   coverages: {
-    excessLimit: number
-    frequency: 'Monthly Premium' | 'Annual Premium'
-    premium: number
+    excessLimit: number;
+    frequency: 'Monthly Premium' | 'Annual Premium';
+    premium: number;
   }[];
 }
 

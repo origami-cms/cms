@@ -1,7 +1,10 @@
-import { SETUP_LOADING_SET, SETUP_SET, SETUP_USER_ERROR_SET, SETUP_USER_SET } from 'actions/Setup';
 import { AnyAction } from 'redux';
+// tslint:disable-next-line match-default-export-name
 import immutable, { ImmutableObjectMixin } from 'seamless-immutable';
-import { Setup as StateSetup } from 'store/state';
+import {
+  SETUP_LOADING_SET, SETUP_SET, SETUP_USER_ERROR_SET, SETUP_USER_SET
+} from '../actions/Setup';
+import { Setup as StateSetup } from '../store/state';
 
 const initialState = immutable.from<StateSetup>({
   setup: false,

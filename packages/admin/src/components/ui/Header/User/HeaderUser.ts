@@ -1,16 +1,12 @@
 import { customElement, html, LitElement, property } from '@polymer/lit-element';
 // @ts-ignore
 import { connect } from 'pwa-helpers/connect-mixin';
-import { State, store } from 'store';
+import { State, store } from '../../../../store/store';
 import CSS from './header-user-css';
-
-interface props {
-  user: string | null;
-}
 
 // @ts-ignore
 @customElement('ui-header-user')
-export class HeaderUser extends connect(store)(LitElement) implements props {
+export class HeaderUser extends connect(store)(LitElement) {
   @property()
   public user: string | null = null;
 

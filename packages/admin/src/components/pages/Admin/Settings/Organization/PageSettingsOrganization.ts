@@ -1,19 +1,17 @@
 import { Form } from '@origami/zen';
 import { Field } from '@origami/zen-lib/FormValidator';
 import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import { setLogo, setTheme } from 'actions/Organization';
 import { connect } from 'pwa-helpers/connect-mixin';
-import { State, store } from 'store';
-import { OrganizationTheme } from 'store/state';
+import { setLogo, setTheme } from '../../../../../actions/Organization';
+import { } from '../../../../../store/state';
+import { OrganizationTheme, State, store } from '../../../../../store/store';
 import CSS from './organization-css';
 
 
 // @ts-ignore
 @customElement('page-settings-organization')
 export class PageSettingsOrganization extends connect(store)(LitElement) {
-  @property()
-  theme?: OrganizationTheme;
-  static _formGeneral: Field[] = [
+  public static _formGeneral: Field[] = [
     {
       type: 'text',
       label: 'Organization name',
@@ -29,7 +27,7 @@ export class PageSettingsOrganization extends connect(store)(LitElement) {
       icon: 'web'
     }
   ];
-  static _formTheme: Field[] = [
+  public static _formTheme: Field[] = [
     {
       type: 'color',
       label: 'Main color',
@@ -50,6 +48,8 @@ export class PageSettingsOrganization extends connect(store)(LitElement) {
       color: 'green'
     }
   ];
+  @property()
+  public theme?: OrganizationTheme;
 
   constructor() {
     super();
@@ -57,11 +57,7 @@ export class PageSettingsOrganization extends connect(store)(LitElement) {
     this._handleUpload = this._handleUpload.bind(this);
   }
 
-  private _stateChanged(s: State) {
-    this.theme = s.Organization.theme;
-  }
-
-  render() {
+  public render() {
     const { theme } = this;
     // @ts-ignore
     const formG: Fields[] = this.constructor._formGeneral;
@@ -69,23 +65,27 @@ export class PageSettingsOrganization extends connect(store)(LitElement) {
     const formT: Fields[] = this.constructor._formTheme;
 
     return html`
-            ${CSS}
-            <div class="general">
-              <h4>General settings</h4>
-              <div class="logo">
-                <zen-button color="blue" icon="upload">Update logo</zen-button>
-                <ui-file-uploader placeholder="/admin/images/logo" @upload=${this._handleUpload}></ui-file-uploader>
-              </div>
-              <zen-form .fields=${formG}></zen-form>
-            </div>
+    ${CSS}
+    <div class="general">
+      <h4>General settings</h4>
+      <div class="logo">
+        <zen-button color="blue" icon="upload">Update logo</zen-button>
+        <ui-file-uploader placeholder="/admin/images/logo" @upload=${this._handleUpload}></ui-file-uploader>
+      </div>
+      <zen-form .fields=${formG}></zen-form>
+    </div>
 
-            <hr />
+    <hr />
 
-            <div class="theme">
-              <h4>Theme</h4>
-              <zen-form .values=${theme} .fields=${formT} @submit=${this._saveTheme}></zen-form>
-            </div>
-        `;
+    <div class="theme">
+      <h4>Theme</h4>
+      <zen-form .values=${theme} .fields=${formT} @submit=${this._saveTheme}></zen-form>
+    </div>
+    `;
+  }
+
+  private _stateChanged(s: State) {
+    this.theme = s.Organization.theme;
   }
 
   private _saveTheme(e: { target: Form }) {

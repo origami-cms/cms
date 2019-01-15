@@ -1,8 +1,9 @@
-import {ME_EMAIL_SET, ME_SET} from 'actions/Me';
-import {LS_EMAIL} from 'const';
 import {AnyAction} from 'redux';
+// tslint:disable-next-line match-default-export-name
 import immutable, {ImmutableObjectMixin} from 'seamless-immutable';
-import {Me as StateMe} from 'store/state';
+import {ME_EMAIL_SET, ME_SET} from '../actions/Me';
+import {LS_EMAIL} from '../const';
+import {Me as StateMe} from '../store/state';
 
 
 const initialState = immutable.from({

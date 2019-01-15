@@ -103,6 +103,7 @@ module.exports = {
       {
         "ignore-module": "(jest)"
       }
-    ]
+    ],
+    "no-this-assignment": false
   },
 }

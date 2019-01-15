@@ -1,7 +1,7 @@
 import { customElement, property } from '@polymer/lit-element';
-import { navigate } from 'actions/App';
-import matchPath from 'lib/Path';
-import { State, store } from 'store';
+import { navigate } from '../../../../actions/App';
+import {matchPath} from '../../../../lib/matchPath';
+import { State, store } from '../../../../store/store';
 import { ResourceFormBase } from '../Base/ResourceFormBase';
 
 // @ts-ignore
@@ -32,7 +32,7 @@ export class FormResourceEdit extends ResourceFormBase {
     this.type = 'edit';
   }
 
-  public _stateChanged(s: State) {
+  protected _stateChanged(s: State) {
     super._stateChanged(s);
     // @ts-ignore
     const res = s.resources[this._resPlural];

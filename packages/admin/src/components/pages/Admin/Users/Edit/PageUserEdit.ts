@@ -1,43 +1,38 @@
-import {html, LitElement, customElement} from '@polymer/lit-element';
-import {Field} from '@origami/zen-lib/FormValidator';
-
-
-
-interface props {
-}
+import { Field } from '@origami/zen-lib/FormValidator';
+import { customElement, html, LitElement } from '@polymer/lit-element';
 
 // @ts-ignore
 @customElement('page-user-edit')
-export default class PageUsersEdit extends LitElement implements props {
-    get fields(): Field[] {
-        return [
-            {
-                name: 'fname',
-                placeholder: 'First name',
-                type: 'text',
-                width: 'half',
-                icon: 'user',
-                iconColor: 'grey-300'
-            },
-            {
-                name: 'lname',
-                placeholder: 'Last name',
-                type: 'text',
-                width: 'half',
-                icon: 'user',
-                iconColor: 'grey-300'
-            },
-            {
-                name: 'email',
-                placeholder: 'Email',
-                type: 'email',
-                icon: 'mail',
-                iconColor: 'grey-300'
-            }
-        ];
-    }
+export class PageUserEdit extends LitElement {
+  get fields(): Field[] {
+    return [
+      {
+        name: 'fname',
+        placeholder: 'First name',
+        type: 'text',
+        width: 'half',
+        icon: 'user',
+        iconColor: 'grey-300'
+      },
+      {
+        name: 'lname',
+        placeholder: 'Last name',
+        type: 'text',
+        width: 'half',
+        icon: 'user',
+        iconColor: 'grey-300'
+      },
+      {
+        name: 'email',
+        placeholder: 'Email',
+        type: 'email',
+        icon: 'mail',
+        iconColor: 'grey-300'
+      }
+    ];
+  }
 
-    render() {
-        return html`<form-resource-edit resource="user" .fields=${this.fields}></form-resource-edit>`;
-    }
+  public render() {
+    return html`<form-resource-edit resource="user" .fields=${this.fields}></form-resource-edit>`;
+  }
 }

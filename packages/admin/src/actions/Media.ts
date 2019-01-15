@@ -1,5 +1,7 @@
-import {API} from 'lib/API';
+// tslint:disable export-name
+
 import {Dispatch} from 'redux';
+import {API} from '../lib/API';
 
 export const upload = (file: File) =>
     async(dispatch: Dispatch) => {

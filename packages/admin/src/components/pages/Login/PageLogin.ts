@@ -1,21 +1,15 @@
 import { Field, FormValues } from '@origami/zen-lib/FormValidator';
 import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import { navigate } from 'actions/App';
-import { login } from 'actions/Auth';
 import { connect } from 'pwa-helpers/connect-mixin';
-import { State, store } from 'store';
+import { navigate } from '../../../actions/App';
+import { login } from '../../../actions/Auth';
+import { State, store } from '../../../store/store';
 import CSS from './page-login-css';
 
-interface props {
-  error?: string | null;
-  loggedIn?: boolean;
-  values?: FormValues;
-  _email?: string | null;
-}
 
 // @ts-ignore
 @customElement('page-login')
-export class PageLogin extends connect(store)(LitElement) implements props {
+export class PageLogin extends connect(store)(LitElement) {
 
   public static fields: Field[] = [
     {
@@ -54,13 +48,7 @@ export class PageLogin extends connect(store)(LitElement) implements props {
     this.submit = this.submit.bind(this);
   }
 
-  public _stateChanged(s: State) {
-    this.error = s.Auth.errors.loggingIn;
-    this.loggedIn = s.Auth.loggedIn;
-    this._email = s.Me.email;
-  }
-
-  public submit(e: { target: { values: { email: string, password: string } } }) {
+  public submit(e: { target: { values: { email: string; password: string } } }) {
     const { email, password } = e.target.values;
     store.dispatch(login(email, password));
   }
@@ -75,17 +63,23 @@ export class PageLogin extends connect(store)(LitElement) implements props {
     const fields = this.constructor.fields;
 
     return html`
-            ${CSS}
-            <div class="center rounded text-center padding-large shadow-shade-1">
-              <img class="logo margin-b-large height-main" src="/admin/images/logo" />
-              <zen-form .fields=${fields} @submit=${this.submit} .error=${error} .values=${v} />
-            </div>
-        `;
+    ${CSS}
+    <div class="center rounded text-center padding-large shadow-shade-1">
+      <img class="logo margin-b-large height-main" src="/admin/images/logo" />
+      <zen-form .fields=${fields} @submit=${this.submit} .error=${error} .values=${v} />
+    </div>
+    `;
   }
 
   public updated(p: any) {
     super.updated(p);
 
     if (this.loggedIn) store.dispatch(navigate('/admin/'));
+  }
+
+  private _stateChanged(s: State) {
+    this.error = s.Auth.errors.loggingIn;
+    this.loggedIn = s.Auth.loggedIn;
+    this._email = s.Me.email;
   }
 }

@@ -1,8 +1,8 @@
 import { customElement, html, LitElement } from '@polymer/lit-element';
-import { navigate } from 'actions/App';
-import { logout } from 'actions/Auth';
+import { navigate } from '../../../actions/App';
+import { logout } from '../../../actions/Auth';
 
-import { store } from 'store';
+import { store } from '../../../store/store';
 
 
 // @ts-ignore

@@ -1,25 +1,26 @@
-import {LitElement, html, customElement} from '@polymer/lit-element';
-import {unsafeHTML} from 'lit-html/directives/unsafe-html';
+import { customElement, html, LitElement } from '@polymer/lit-element';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
+// tslint:disable
 export default (tagName: string, content: string, scripts: string[] = []) => {
-    class GeneratedAppPage extends LitElement {
-        static page = tagName;
+  class GeneratedAppPage extends LitElement {
+    public static page = tagName;
 
-        firstUpdated() {
-            scripts.forEach(s => {
-                // tslint:disable-next-line no-function-constructor-with-string-args
-                const f = new Function(s);
-                f.call(this);
-            });
-        }
+    public firstUpdated() {
+      scripts.forEach((s) => {
+        // tslint:disable-next-line no-function-constructor-with-string-args
+        const f = new Function(s);
+        f.call(this);
+      });
+    }
 
-        render() {
-            return html`
+    public render() {
+      return html`
                 ${unsafeHTML(content)}
             `;
-        }
     }
-    window.customElements.define(tagName, GeneratedAppPage);
+  }
+  window.customElements.define(tagName, GeneratedAppPage);
 
-    return tagName;
+  return tagName;
 };

@@ -1,15 +1,15 @@
 
 import { ZenRoute } from '@origami/zen';
 import { customElement, html, LitElement } from '@polymer/lit-element';
-import { titleSet } from 'lib/decorators';
-import { Me } from 'store/state';
+import { titleSet } from '../../../../lib/decorators/titleSet';
+import { Me } from '../../../../store/state';
 import CSS from './page-settings-css';
 
 interface PageSettingsProps {
   me?: Me;
 }
 
-export * from './Organization';
+export * from './Organization/PageSettingsOrganization';
 export * from './SettingsMenu/SettingsMenu';
 
 // @ts-ignore

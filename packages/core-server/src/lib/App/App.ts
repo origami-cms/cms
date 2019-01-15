@@ -86,6 +86,7 @@ export namespace App {
 
       let manifest: Origami.AppManifest;
       try {
+        // @ts-ignore
         manifest = await requireLib.apply(this, location);
       } catch (e) {
         throw new err.ErrorAppManifestLoad(this.name);
@@ -93,6 +94,7 @@ export namespace App {
 
       if (!manifest.name) { throw new err.ErrorAppManifestPropertyMissing(this.name, 'name'); }
 
+      // @ts-ignore
       this._dir = path.dirname(await resolveLib.apply(this, location) as string);
 
       this.manifest = manifest;

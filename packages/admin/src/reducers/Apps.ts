@@ -1,7 +1,8 @@
-import { APPS_SET, APP_ENTRY_SET } from 'actions/Apps';
 import { AnyAction } from 'redux';
+// tslint:disable-next-line match-default-export-name
 import immutable from 'seamless-immutable';
-import { Apps as StateApps } from 'store/state';
+import { APP_ENTRY_SET, APPS_SET } from '../actions/Apps';
+import { Apps as StateApps } from '../store/state';
 
 
 const initialState = immutable.from<StateApps>({

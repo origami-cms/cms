@@ -1,3 +1,6 @@
+import {AnyAction} from 'redux';
+// tslint:disable-next-line match-default-export-name
+import immutable from 'seamless-immutable';
 import {
     AUTH_CLEAR,
     AUTH_LOADING_SET_LOGGINGIN,
@@ -7,11 +10,9 @@ import {
     AUTH_LOGOUT,
     AUTH_VERIFIED,
     AUTH_VERIFIED_FAILED
-} from 'actions/Auth';
-import {LS_EMAIL, LS_JWT} from 'const';
-import {AnyAction} from 'redux';
-import immutable from 'seamless-immutable';
-import {Auth as StateAuth} from 'store/state';
+} from '../actions/Auth';
+import {LS_EMAIL, LS_JWT} from '../const';
+import {Auth as StateAuth} from '../store/state';
 
 
 const intitialState = immutable.from<StateAuth>({

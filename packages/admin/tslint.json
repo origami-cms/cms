@@ -4,5 +4,8 @@
   "rules": {
     "no-submodule-imports": false,
     "no-implicit-dependencies": false
+  },
+  "linterOptions": {
+    "exclude": ["**/*-css.ts"]
   }
 }

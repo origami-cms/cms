@@ -1,17 +1,18 @@
+// tslint:disable member-order
 import { ButtonOptions } from '@origami/zen';
 import { APIActions } from '@origami/zen-lib/API';
 import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import { navigate } from 'actions/App';
-import {API} from 'lib/API';
 import pluralize from 'pluralize';
 import { connect } from 'pwa-helpers/connect-mixin';
-import { State, store } from 'store';
+import { navigate } from '../../../actions/App';
+import { API } from '../../../lib/API';
+import { State, store } from '../../../store/store';
 import CSS from './resource-table-css';
 
 
 type ResourceTableData = {
   id: string;
-  [key: string]: any
+  [key: string]: any;
 };
 
 // @ts-ignore
@@ -57,12 +58,17 @@ export class ResourceTable extends connect(store)(LitElement) {
 
   public render() {
     return html`
-            ${CSS}
-            <zen-button-group .buttons=${this._buttons}></zen-button-group>
-            <zen-table .data=${this._data} hoverable selectable @rowclick=${this._handleRowClick} @select=${this._handleSelect.bind(this)}>
-              <slot></slot>
-            </zen-table>
-        `;
+        ${CSS}
+        <zen-button-group .buttons=${this._buttons}></zen-button-group>
+        <zen-table
+          .data=${this._data}
+          hoverable
+          selectable
+          @rowclick=${this._handleRowClick} @select=${this._handleSelect.bind(this)}
+        >
+          <slot></slot>
+        </zen-table>
+    `;
   }
 
 
@@ -77,14 +83,14 @@ export class ResourceTable extends connect(store)(LitElement) {
     this._data = s.resources[this._resPlural][this._resPlural].asMutable();
   }
 
-
+  // tslint:disable-next-line function-name
   private firstUpdated() {
     this._updateActions();
     this._get();
   }
 
 
-  private async _get() {
+  private _get() {
     store.dispatch(this._actions.get());
   }
 
@@ -140,7 +146,7 @@ export class ResourceTable extends connect(store)(LitElement) {
       if (s.length === 1) {
         buttons.push({
           icon: 'edit', text: 'Edit', color: 'blue', size: 'medium',
-          onclick: () => this._actionEdit(this._data[s[0]].id)
+          onclick: async() => this._actionEdit(this._data[s[0]].id)
         });
       }
     } else {
@@ -160,10 +166,10 @@ export class ResourceTable extends connect(store)(LitElement) {
   }
 
 
-  private _handleRowClick(e: CustomEvent) {
+  private async _handleRowClick(e: CustomEvent) {
     // Disable opening a row if any rows are selected
     if (this.selected.length) return;
 
-    this._actionEdit(e.detail[this.idKey]);
+    await this._actionEdit(e.detail[this.idKey]);
   }
 }

@@ -1,7 +1,7 @@
 import { InputFile } from '@origami/zen';
 import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import { upload } from 'actions/Media';
-import { store } from 'store';
+import { upload } from '../../../actions/Media';
+import { store } from '../../../store/store';
 import CSS from './file-uploader-css';
 
 

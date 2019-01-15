@@ -10,7 +10,7 @@
     "gzip": "gzip-all 'dist/**/*.*(js|css|svg|png|jpg|jpeg)'",
     "build:ts": "tsc -p .",
     "build:rollup": "rollup -c",
-    "build:sass": "sass-render src/components/**/*.scss --suffix=-css.ts",
+    "build:sass": "sass-render src/components/**/*.scss --suffix=-css.ts -i ../../node_modules",
     "build": "yarn clean; yarn build:sass; yarn build:ts; yarn build:rollup;",
     "build:prod": "yarn clean; yarn build:sass; NODE_ENV=production yarn build:rollup; yarn gzip",
     "watch:ts": "yarn build:ts -w",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@origami/core-lib": "0.0.3-alpha.11",
+    "@origami/core-server": "0.0.3-alpha.11",
     "@polymer/lit-element": "^0.6.2",
     "@types/color": "^3.0.0",
     "@types/deep-equal": "^1.0.1",
@@ -49,7 +50,6 @@
     "redux-injector": "^0.1.0",
     "redux-thunk": "^2.3.0",
     "rollup": "^0.64.1",
-    "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-babel-minify": "^5.0.0",
     "rollup-plugin-commonjs": "^9.1.4",
     "rollup-plugin-copy": "^0.2.3",
@@ -68,6 +68,6 @@
     "tslint-config-origami": "^1.0.3",
     "typescript": "^3.0.1",
     "uglifycss": "^0.0.29",
-    "zen-css": "^1.1.13"
+    "zen-css": "^1.1.17"
   }
 }

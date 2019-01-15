@@ -1,15 +1,14 @@
 import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import { appGetEntry } from 'actions/Apps';
-import { SERVER_API } from 'const';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 import { connect } from 'pwa-helpers/connect-mixin';
-import { State, store } from 'store';
-import { AppConfig } from 'store/state';
+import { appGetEntry } from '../../../../actions/Apps';
+import { SERVER_API } from '../../../../const';
+import { AppConfig, State, store } from '../../../../store/store';
 import CSS from './page-app-css';
 
 // @ts-ignore
 @customElement('page-app')
-export default class PageApp extends connect(store)(LitElement) {
+export class PageApp extends connect(store)(LitElement) {
 
   @property({ reflect: true, type: String })
   public appName?: string;
@@ -26,7 +25,7 @@ export default class PageApp extends connect(store)(LitElement) {
     ${this.entry
       ? unsafeHTML(this.entry)
       : html`<zen-loading></zen-loading>`
-    }
+      }
     `;
   }
 
@@ -38,7 +37,7 @@ export default class PageApp extends connect(store)(LitElement) {
     }
   }
 
-  public _stateChanged(state: State) {
+  private _stateChanged(state: State) {
     if (!this.app && this.appName) this.app = state.Apps.apps[this.appName];
     if (!this.entry && this.appName) this.entry = state.Apps.entries[this.appName];
   }
@@ -48,8 +47,9 @@ export default class PageApp extends connect(store)(LitElement) {
     // @ts-ignore
     const shadow = this.shadowRoot as ShadowRoot;
     const existing = Array.from(
-      (Array.from(shadow.querySelectorAll('scripts[src]'))) as HTMLScriptElement[])
-      .map((s) => s.src);
+      (Array.from(shadow.querySelectorAll('scripts[src]'))))
+      .map((s) => (s as HTMLScriptElement).src);
+
     this.app.scripts
       .filter((s) => !existing.includes(s))
       .forEach((s) => {
@@ -57,7 +57,6 @@ export default class PageApp extends connect(store)(LitElement) {
         script.src = `${SERVER_API}/apps/${this.appName}/public${s}`;
         shadow.appendChild(script);
       });
-
   }
 }
 

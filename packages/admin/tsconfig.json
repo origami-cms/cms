@@ -23,29 +23,6 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "paths": {
-      "actions": [
-        "./src/actions/index.ts"
-      ],
-      "actions/*": [
-        "./src/actions/*"
-      ],
-      "lib/*": [
-        "./src/lib/*"
-      ],
-      "util/*": [
-        "./node_modules/origami-zen/util/*"
-      ],
-      "store": [
-        "./src/store/store.ts"
-      ],
-      "store/state": [
-        "./src/store/state.ts"
-      ],
-      "const": [
-        "./src/const.ts"
-      ],
-    },
     "typeRoots": [
       "./src/types"
     ]

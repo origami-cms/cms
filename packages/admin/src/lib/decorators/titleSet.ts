@@ -1,13 +1,13 @@
-import { State, store } from 'store';
-import {titleSet} from 'actions/App';
+import { titleSet as titleSetAction } from '../../actions/App';
+import { store } from '../../store/store';
 
 
-export default (title: string) =>
-    <T extends { new(...args: any[]): {} }>(constructor: T) =>
-        class TitleSet extends constructor {
-            firstUpdated = () => {
-                // @ts-ignore
-                super.firstUpdated();
-                store.dispatch(titleSet(title));
-            }
-        };
+export const titleSet = (title: string) =>
+  <T extends new(...args: any[]) => {}>(constructor: T) =>
+    class TitleSet extends constructor {
+      public firstUpdated = () => {
+        // @ts-ignore
+        super.firstUpdated();
+        store.dispatch(titleSetAction(title));
+      }
+    };

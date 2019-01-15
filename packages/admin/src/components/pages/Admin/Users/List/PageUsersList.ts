@@ -1,13 +1,12 @@
-import {html, LitElement, customElement} from '@polymer/lit-element';
-
+import {customElement, html, LitElement} from '@polymer/lit-element';
 
 
 // @ts-ignore
 @customElement('page-users-list')
-export default class PageUsersList extends LitElement {
-    static columns = ['fname', 'lname', 'email'];
+export class PageUsersList extends LitElement {
+    public static columns = ['fname', 'lname', 'email'];
 
-    render() {
+    public render() {
         // @ts-ignore
         return html`<ui-resource-table resource="users" .columns=${this.constructor.columns}></ui-resource-table>`;
     }

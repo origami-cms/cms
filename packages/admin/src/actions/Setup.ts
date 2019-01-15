@@ -1,5 +1,5 @@
-import {API} from 'lib/API';
 import {Dispatch} from 'redux';
+import {API} from '../lib/API';
 
 export const SETUP_LOADING_SET = 'SETUP_LOADING_SET';
 export const SETUP_SET = 'SETUP_SET';

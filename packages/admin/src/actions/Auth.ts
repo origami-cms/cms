@@ -1,6 +1,6 @@
-import {Dispatch} from 'redux';
-import {API} from 'lib/API';
 import CODES from 'http-status-codes';
+import {Dispatch} from 'redux';
+import {API} from '../lib/API';
 
 
 export const AUTH_LOADING_SET_VERIFYING = 'AUTH_LOADING_SET_VERIFYING';

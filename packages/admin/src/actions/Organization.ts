@@ -1,5 +1,5 @@
 import {Dispatch} from 'redux';
-import {API} from 'lib/API';
+import {API} from '../lib/API';
 
 export const ORG_LOGO_SET = 'ORG_LOGO_SET';
 export const ORG_THEME_SET = 'ORG_THEME_SET';

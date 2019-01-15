@@ -1,8 +1,10 @@
-import { ORG_LOGO_SET, ORG_THEME_SET } from 'actions/Organization';
+// tslint:disable-next-line match-default-export-name
 import color from 'color';
 import { AnyAction } from 'redux';
+// tslint:disable-next-line match-default-export-name
 import immutable from 'seamless-immutable';
-import { Organization as StateOrganization } from 'store/state';
+import { ORG_LOGO_SET, ORG_THEME_SET } from '../actions/Organization';
+import { Organization as StateOrganization } from '../store/state';
 
 const initialState = immutable.from<StateOrganization>({
   theme: {
@@ -16,7 +18,7 @@ const initialState = immutable.from<StateOrganization>({
 export const Organization = (state = initialState, action: AnyAction) => {
   switch (action.type) {
     case ORG_THEME_SET:
-      const s = document.documentElement!.style;
+      const s = document.documentElement.style;
 
       if (action.theme.colorMain) {
         // tslint:disable no-magic-numbers
