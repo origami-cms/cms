@@ -1,7 +1,7 @@
 import { bindAttributes } from '@origami/zen-lib/decorators';
 import Fuse from 'fuse.js';
 import { customElement, html, LitElement, property } from 'lit-element';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html';
+import { repeat } from 'lit-html/directives/repeat';
 // @ts-ignore
 import { connect } from 'pwa-helpers/connect-mixin';
 import { getSidebarItems, toggleAppSelector } from '../../../actions/App';
@@ -81,23 +81,23 @@ export class AppSelector extends connect(store)(LitElement) {
 
       contents = html`
       <ul class="apps" @click=${this.close}>
-        ${_apps.map((a, i) => {
-        return unsafeHTML(`
-        <li style="animation-delay: ${(i / _apps.length) * totalAniTime + aniDelay}s">
-          <a href=${BASE_URI + a.path}>
-            <ui-app-icon .icon=${a.icon}></ui-app-icon>
-            <small>${a.name}</small>
-          </a>
-        </li>
-        `);
-        })}
+        ${repeat(
+          _apps,
+          (i) => i.path,
+          (a, i) => html`
+            <li style="animation-delay: ${(i / _apps.length) * totalAniTime + aniDelay}s">
+              <a href=${BASE_URI + a.path}>
+                <ui-app-icon .icon=${a.icon} shadow></ui-app-icon>
+                <small>${a.name}</small>
+              </a>
+            </li>
+          `)
+        }
       </ul>
       `;
     }
 
-
-    // TODO: Add click event listener to the list item and not the list
-    return html`
+  return html`
     ${CSS}
     <zen-icon type="cross" @click=${this.close} color="grey-200" size="large"></zen-icon>
     <h1>Applications</h1>
@@ -121,7 +121,12 @@ export class AppSelector extends connect(store)(LitElement) {
 
 
   private _stateChanged(state: State) {
-    this.apps = state.App.sidebar.items;
+    const _apps = Object.entries(state.Apps.apps).map(([name, a]) => ({
+      icon: a.icon,
+      path: a.uriBase,
+      name: a.name
+    }));
+    this.apps = [..._apps, ...state.App.sidebar.items];
     this.open = state.App.appSelector.open;
     this._fuse = new Fuse(this.apps, {
       keys: ['name']

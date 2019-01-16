@@ -2,7 +2,11 @@ import { customElement, html, LitElement, property } from 'lit-element/lit-eleme
 import CSS from './app-icon-css';
 
 
-export type Icon = string | { type: string; color: string; background: string };
+export type Icon = string | {
+  type: string;
+  color: string;
+  background: string;
+};
 
 // @ts-ignore
 @customElement('ui-app-icon')
@@ -17,11 +21,11 @@ export class AppIcon extends LitElement {
     if (!this.icon) return html``;
 
     const icon = typeof this.icon === 'string'
-      ? html`<img src=${this.icon} class="rounded" />`
+      ? html`<img src="${this.icon}" class="rounded" />`
       : html`
         <div class="rounded gradient-${this.icon.background}">
           <zen-icon
-            type=${this.icon.type} color=${this.icon.color || 'white' } class="center" size="main"
+            type="${this.icon.type}" color=${this.icon.color || 'white' } class="center" size="main"
           ></zen-icon>
         </div>
       `;
