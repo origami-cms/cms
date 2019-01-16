@@ -5,7 +5,7 @@ const {
 } = require('@origami/core-lib');
 
 const URI_PREFIX = '/admin';
-const PUBLIC = path.resolve(__dirname, './dist');
+const PUBLIC = path.resolve(__dirname, './build');
 
 module.exports = async (server, options) => {
   server.static(PUBLIC, URI_PREFIX);

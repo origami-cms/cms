@@ -1,4 +1,4 @@
-import { customElement, property } from '@polymer/lit-element';
+import { customElement, property } from 'lit-element';
 import { navigate } from '../../../../actions/App';
 import {matchPath} from '../../../../lib/matchPath';
 import { State, store } from '../../../../store/store';
@@ -39,7 +39,7 @@ export class FormResourceEdit extends ResourceFormBase {
 
     if (this._errorGet && !this._redirecting) {
       this._redirecting = true;
-      if (window.location.pathname !== '/admin/404') store.dispatch(navigate('/admin/404'));
+      if (window.location.pathname !== '/admin/404') store.dispatch<any>(navigate('/admin/404'));
       return;
     }
 
@@ -63,7 +63,7 @@ export class FormResourceEdit extends ResourceFormBase {
     if (!this.id) return;
     if (!this._loadingGet) {
       // @ts-ignore Is a valid resource
-      store.dispatch(this._actions[`${this._resPlural}Get`](this.id))
+      store.dispatch<any>(this._actions[`${this._resPlural}Get`](this.id))
     }
   }
 }

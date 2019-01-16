@@ -1,6 +1,6 @@
 
 import { ZenRoute } from '@origami/zen';
-import { customElement, html, LitElement } from '@polymer/lit-element';
+import { customElement, html, LitElement } from 'lit-element';
 import { titleSet } from '../../../../lib/decorators/titleSet';
 import { Me } from '../../../../store/state';
 import CSS from './page-settings-css';

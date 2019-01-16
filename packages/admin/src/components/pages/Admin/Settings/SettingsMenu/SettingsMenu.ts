@@ -1,4 +1,4 @@
-import { customElement, html, LitElement } from '@polymer/lit-element';
+import { customElement, html, LitElement } from 'lit-element';
 
 import CSS from './page-settings-menu-css';
 

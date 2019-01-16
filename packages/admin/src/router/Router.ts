@@ -1,6 +1,6 @@
 // tslint:disable variable-name
 // import Router, {RouterProps} from 'lib/Router';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { navigate, updatePath } from '../actions/App';
 import { verify } from '../actions/Auth';
@@ -42,14 +42,14 @@ export class Router extends connect(store)(LitElement) {
   public connectedCallback() {
     super.connectedCallback();
     window.addEventListener('RouterPop', () => {
-      store.dispatch(updatePath(window.location.pathname));
+      store.dispatch<any>(updatePath(window.location.pathname));
     });
   }
 
   public firstUpdated() {
     super.firstUpdated();
-    store.dispatch(verify());
-    store.dispatch(getTheme());
+    store.dispatch<any>(verify());
+    store.dispatch<any>(getTheme());
   }
 
   get _verifyError() {
@@ -63,7 +63,7 @@ export class Router extends connect(store)(LitElement) {
     const url = `${BASE_URI}/login`;
 
     // @ts-ignore path added from Router
-    if (v && this.path !== url) store.dispatch(navigate(url));
+    if (v && this.path !== url) store.dispatch<any>(navigate(url));
   }
 
   private _stateChanged(s: State) {

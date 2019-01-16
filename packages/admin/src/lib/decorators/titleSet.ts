@@ -8,6 +8,6 @@ export const titleSet = (title: string) =>
       public firstUpdated = () => {
         // @ts-ignore
         super.firstUpdated();
-        store.dispatch(titleSetAction(title));
+        store.dispatch<any>(titleSetAction(title));
       }
     };

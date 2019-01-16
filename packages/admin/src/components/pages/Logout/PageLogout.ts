@@ -1,4 +1,4 @@
-import { customElement, html, LitElement } from '@polymer/lit-element';
+import { customElement, html, LitElement } from 'lit-element';
 import { navigate } from '../../../actions/App';
 import { logout } from '../../../actions/Auth';
 
@@ -10,8 +10,8 @@ import { store } from '../../../store/store';
 export class PageLogout extends LitElement {
   public async connectedCallback() {
     super.connectedCallback();
-    await store.dispatch(logout());
-    await store.dispatch(navigate('/admin/login'));
+    store.dispatch<any>(logout());
+    store.dispatch<any>(navigate('/admin/login'));
   }
 
   public render() {

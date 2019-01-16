@@ -1,4 +1,4 @@
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { getSidebarItems, toggleAppSelector } from '../../../actions/App';
 import { BASE_URI } from '../../../const';
@@ -18,7 +18,7 @@ export class Sidebar extends connect(store)(LitElement) {
 
   public connectedCallback() {
     super.connectedCallback();
-    store.dispatch(getSidebarItems());
+    store.dispatch<any>(getSidebarItems());
   }
 
   public render() {
@@ -26,18 +26,18 @@ export class Sidebar extends connect(store)(LitElement) {
     return html`
     ${CSS}
 
-    <a href='${BASE_URI}/' class="top-link display-b">
+    <a href='${BASE_URI}/' class="top-link">
       <img class="logo" src="${BASE_URI}/images/logo?${logo}" alt="Logo" />
     </a>
 
-    <div class="search position-r">
-      <zen-icon type="search" color="grey-300" size="main" class="center"></zen-icon>
+    <div class="search">
+      <zen-icon type="search" color="grey-300" size="main"></zen-icon>
     </div>
 
     <ul class="apps">
       ${apps.map((a) => html`
-      <li class="position-r">
-        <a class="covers" href=${BASE_URI + a.path}>
+      <li>
+        <a href=${BASE_URI + a.path}>
           <ui-app-icon .icon=${a.icon} .shadow=${true}></ui-app-icon>
         </a>
       </li>
@@ -45,7 +45,7 @@ export class Sidebar extends connect(store)(LitElement) {
 
     </ul>
 
-    <div class="apps-button" @click=${() => store.dispatch(toggleAppSelector(true))}>
+    <div class="apps-button" @click=${() => store.dispatch<any>(toggleAppSelector(true))}>
       <zen-icon type="grid" size="main" color="grey-300"></zen-icon>
     </div>
     `;

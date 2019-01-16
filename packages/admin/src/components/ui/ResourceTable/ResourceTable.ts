@@ -1,7 +1,7 @@
 // tslint:disable member-order
 import { ButtonOptions } from '@origami/zen';
 import { APIActions } from '@origami/zen-lib/API';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import pluralize from 'pluralize';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { navigate } from '../../../actions/App';
@@ -91,13 +91,13 @@ export class ResourceTable extends connect(store)(LitElement) {
 
 
   private _get() {
-    store.dispatch(this._actions.get());
+    store.dispatch<any>(this._actions.get());
   }
 
 
   private async _actionCreate() {
     const base = `/admin${this.uriBase || `/${this._resPlural}`}`;
-    store.dispatch(navigate(`${base}/create`));
+    store.dispatch<any>(navigate(`${base}/create`));
   }
 
 
@@ -105,12 +105,12 @@ export class ResourceTable extends connect(store)(LitElement) {
     if (!id) throw new Error('No ID specified');
 
     const base = `/admin${this.uriBase || `/${this._resPlural}`}`;
-    store.dispatch(navigate(`${base}/${id}`));
+    store.dispatch<any>(navigate(`${base}/${id}`));
   }
 
 
   private async _actionRemove() {
-    store.dispatch(
+    store.dispatch<any>(
       this._actions.remove(
         this.selected.map((i) => this._data[i][this.idKey])
       )

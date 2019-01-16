@@ -1,4 +1,4 @@
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { appGetEntry } from '../../../../actions/Apps';
@@ -32,7 +32,7 @@ export class PageApp extends connect(store)(LitElement) {
   public async updated(p: any) {
     super.updated(p);
     if (p.has('appName') && this.appName) {
-      await store.dispatch(appGetEntry(this.appName));
+      store.dispatch<any>(appGetEntry(this.appName));
       this._injectScripts();
     }
   }

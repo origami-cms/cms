@@ -1,9 +1,0 @@
-.DS_Store
-*.log
-
-node_modules
-.vscode
-.*_cache
-.vscode
-.tsbuild
-/dist/

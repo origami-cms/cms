@@ -1,12 +1,12 @@
 import { ZenRoute } from '@origami/zen';
 import { APIReducer } from '@origami/zen-lib/API';
 import { Field } from '@origami/zen-lib/FormValidator';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import _ from 'lodash';
+import { customElement, html, LitElement, property } from 'lit-element';
+import startCase from 'lodash-es/startCase';
 import pluralize from 'pluralize';
-import { injectReducer } from 'redux-injector';
+import { injectReducer } from '../../../lib/reduxInjector';
 import { FormResourceCreate, FormResourceEdit } from '../../forms/Resource';
-import {ResourceTable} from '../ResourceTable/ResourceTable';
+import { ResourceTable } from '../ResourceTable/ResourceTable';
 
 interface Schema {
   properties: {
@@ -121,7 +121,7 @@ export class ResourcePage extends LitElement {
 
       field.name = f;
       // @ts-ignore
-      if (!field.placeholder) field.placeholder = _.startCase(f);
+      if (!field.placeholder) field.placeholder = startCase(f);
       field.validate = { required: field.required };
       return field;
     });

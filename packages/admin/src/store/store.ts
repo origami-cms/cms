@@ -1,8 +1,9 @@
-import {applyMiddleware} from 'redux';
-import {createInjectStore} from 'redux-injector';
+import { applyMiddleware } from 'redux';
 // tslint:disable-next-line match-default-export-name
 import thunkMiddleware from 'redux-thunk';
-import {reducers} from '../reducers';
+import { createInjectStore } from '../lib/reduxInjector';
+import { reducers } from '../reducers';
+
 
 export const store = createInjectStore(
     reducers,
@@ -12,3 +13,4 @@ export const store = createInjectStore(
 );
 
 export * from './state';
+

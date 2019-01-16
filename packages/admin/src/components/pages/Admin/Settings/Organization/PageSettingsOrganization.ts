@@ -1,6 +1,6 @@
 import { Form } from '@origami/zen';
 import { Field } from '@origami/zen-lib/FormValidator';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { setLogo, setTheme } from '../../../../../actions/Organization';
 import { } from '../../../../../store/state';
@@ -91,12 +91,12 @@ export class PageSettingsOrganization extends connect(store)(LitElement) {
   private _saveTheme(e: { target: Form }) {
     const { colorMain, colorSecondary } = e.target.values;
 
-    store.dispatch(setTheme(colorMain, colorSecondary));
+    store.dispatch<any>(setTheme(colorMain, colorSecondary));
   }
 
   private async _handleUpload(e: CustomEvent) {
     if (e.detail && e.detail.id) {
-      const setting = await store.dispatch(setLogo(e.detail.id));
+      const setting = store.dispatch<any>(setLogo(e.detail.id));
     }
   }
 }

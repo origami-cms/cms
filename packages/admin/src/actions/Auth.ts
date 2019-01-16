@@ -1,6 +1,6 @@
 import CODES from 'http-status-codes';
-import {Dispatch} from 'redux';
-import {API} from '../lib/API';
+import { Dispatch } from 'redux';
+import { API } from '../lib/API';
 
 
 export const AUTH_LOADING_SET_VERIFYING = 'AUTH_LOADING_SET_VERIFYING';
@@ -17,52 +17,52 @@ export const AUTH_LOGOUT = 'AUTH_LOGOUT';
 
 
 import {
-    ME_EMAIL_SET
+  ME_EMAIL_SET
 } from './Me';
 
 
 export const login = (email: string, password: string) =>
-    async (dispatch: Dispatch) => {
-        dispatch({type: ME_EMAIL_SET, email});
-        dispatch({type: AUTH_LOADING_SET_LOGGINGIN, loading: true});
-        try {
+  async (dispatch: Dispatch) => {
+    dispatch({ type: ME_EMAIL_SET, email });
+    dispatch({ type: AUTH_LOADING_SET_LOGGINGIN, loading: true });
+    try {
 
-            const {data} = await API.post('/auth/login', {
-                email, password
-            });
-            dispatch({type: AUTH_LOGIN, ...data});
-            dispatch({type: AUTH_LOADING_SET_LOGGINGIN, loading: false});
+      const { data } = await API.post('/auth/login', {
+        email, password
+      });
+      dispatch({ type: AUTH_LOGIN, ...data });
+      dispatch({ type: AUTH_LOADING_SET_LOGGINGIN, loading: false });
 
-            return data;
-        } catch (e) {
+      return data;
+    } catch (e) {
 
-            dispatch({type: AUTH_LOADING_SET_LOGGINGIN, loading: false});
+      dispatch({ type: AUTH_LOADING_SET_LOGGINGIN, loading: false });
 
-            return dispatch({type: AUTH_LOGIN_FAILED, message: e.message});
-        }
+      return dispatch({ type: AUTH_LOGIN_FAILED, message: e.message });
+    }
 
 
-    };
+  };
 
 export const verify = () =>
-    async (dispatch: Dispatch) => {
-        try {
-            const {data} = await API.get('/auth/verify');
+  async (dispatch: Dispatch) => {
+    try {
+      const { data } = await API.get('/auth/verify');
 
-            dispatch({type: AUTH_VERIFIED});
+      dispatch({ type: AUTH_VERIFIED });
 
-            return (data as {token: string}).token;
+      return (data as { token: string }).token;
 
-        } catch (e) {
-            if (e.code === CODES.UNAUTHORIZED || e.code === CODES.BAD_REQUEST) {
-                dispatch({type: AUTH_VERIFIED_FAILED, message: e.message});
-                dispatch({type: AUTH_CLEAR});
-            }
+    } catch (e) {
+      if (e.code === CODES.UNAUTHORIZED || e.code === CODES.BAD_REQUEST) {
+        dispatch({ type: AUTH_VERIFIED_FAILED, message: e.message });
+        dispatch({ type: AUTH_CLEAR });
+      }
 
-            return false;
-        }
-    };
+      // return false;
+    }
+  };
 
 
 export const logout = () =>
-    (dispatch: Dispatch) => dispatch({type: AUTH_LOGOUT});
+  (dispatch: Dispatch) => dispatch({ type: AUTH_LOGOUT });

@@ -1,4 +1,4 @@
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import CSS from './avatar-css';
 
 // @ts-ignore

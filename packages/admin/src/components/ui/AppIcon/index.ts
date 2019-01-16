@@ -1,4 +1,4 @@
-import { customElement, html, LitElement, property } from '@polymer/lit-element/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element/lit-element';
 import CSS from './app-icon-css';
 
 

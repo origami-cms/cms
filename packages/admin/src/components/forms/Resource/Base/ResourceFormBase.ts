@@ -1,11 +1,10 @@
 import { APIActions } from '@origami/zen-lib/API';
 import { Field, FormValues } from '@origami/zen-lib/FormValidator';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
-import _ from 'lodash';
+import { html, LitElement, property } from 'lit-element';
+import upperFirst from 'lodash-es/upperFirst';
 import pluralize from 'pluralize';
 // @ts-ignore
 import { connect } from 'pwa-helpers/connect-mixin';
-
 import { navigate } from '../../../../actions/App';
 import { BASE_URI } from '../../../../const';
 import { API } from '../../../../lib/API';
@@ -29,11 +28,11 @@ export class ResourceFormBase extends connect(store)(LitElement) {
   }
 
   protected get _resPluralUpper() {
-    return _.upperFirst(this._resPlural);
+    return upperFirst(this._resPlural);
   }
 
   protected get _typeUpper() {
-    return _.upperFirst(this.type);
+    return upperFirst(this.type);
   }
 
   @property()
@@ -70,7 +69,7 @@ export class ResourceFormBase extends connect(store)(LitElement) {
 
     switch (type) {
       case 'Update':
-        store.dispatch(
+        store.dispatch<any>(
           // @ts-ignore Is a valid resource
           this._actions
           // @ts-ignore
@@ -79,14 +78,14 @@ export class ResourceFormBase extends connect(store)(LitElement) {
         break;
 
       case 'Create':
-        const res = await store.dispatch(
+        const res = await store.dispatch<any>(
           // @ts-ignore Is a valid resource
           this._actions
           [`${this._resPlural}${type}`](e.target.values)
         );
 
         if (res && res.id) {
-          store.dispatch(
+          store.dispatch<any>(
             navigate(`${BASE_URI}/${this._resPlural}/${res.id}`)
           );
         }

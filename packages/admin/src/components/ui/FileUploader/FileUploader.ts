@@ -1,5 +1,5 @@
 import { InputFile } from '@origami/zen';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { upload } from '../../../actions/Media';
 import { store } from '../../../store/store';
 import CSS from './file-uploader-css';
@@ -30,7 +30,7 @@ export class FileUploader extends LitElement {
         const files = e.target.files;
 
         if (files[0]) {
-            const {data} = await store.dispatch(upload(files[0]));
+            const {data} = store.dispatch<any>(upload(files[0]));
             this.dispatchEvent(new CustomEvent('upload', {
                 detail: data
             }));

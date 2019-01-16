@@ -1,4 +1,4 @@
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 // @ts-ignore
 import { connect } from 'pwa-helpers/connect-mixin';
 import { State, store } from '../../../../store/store';

@@ -1,5 +1,5 @@
 import { ButtonOptions } from '@origami/zen';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { State, store } from '../../../store/store';
 import CSS from './header-css';

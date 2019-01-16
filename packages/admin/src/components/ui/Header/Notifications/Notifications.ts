@@ -1,5 +1,5 @@
 
-import {customElement, html, LitElement} from '@polymer/lit-element';
+import {customElement, html, LitElement} from 'lit-element';
 import CSS from './notifications-css';
 
 // @ts-ignore

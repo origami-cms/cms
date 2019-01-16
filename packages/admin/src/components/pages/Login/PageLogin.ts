@@ -1,5 +1,5 @@
 import { Field, FormValues } from '@origami/zen-lib/FormValidator';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { navigate } from '../../../actions/App';
 import { login } from '../../../actions/Auth';
@@ -50,7 +50,7 @@ export class PageLogin extends connect(store)(LitElement) {
 
   public submit(e: { target: { values: { email: string; password: string } } }) {
     const { email, password } = e.target.values;
-    store.dispatch(login(email, password));
+    store.dispatch<any>(login(email, password));
   }
 
   public render() {
@@ -64,8 +64,8 @@ export class PageLogin extends connect(store)(LitElement) {
 
     return html`
     ${CSS}
-    <div class="center rounded text-center padding-large shadow-shade-1">
-      <img class="logo margin-b-large height-main" src="/admin/images/logo" />
+    <div class="card">
+      <img class="logo" src="/admin/images/logo" />
       <zen-form .fields=${fields} @submit=${this.submit} .error=${error} .values=${v} />
     </div>
     `;
@@ -74,7 +74,7 @@ export class PageLogin extends connect(store)(LitElement) {
   public updated(p: any) {
     super.updated(p);
 
-    if (this.loggedIn) store.dispatch(navigate('/admin/'));
+    if (this.loggedIn) store.dispatch<any>(navigate('/admin/'));
   }
 
   private _stateChanged(s: State) {

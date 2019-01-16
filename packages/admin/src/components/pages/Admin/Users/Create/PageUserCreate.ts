@@ -1,5 +1,5 @@
 import { Field } from '@origami/zen-lib/FormValidator';
-import { customElement, html, LitElement } from '@polymer/lit-element';
+import { customElement, html, LitElement } from 'lit-element';
 
 
 // @ts-ignore

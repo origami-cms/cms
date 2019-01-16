@@ -1,11 +1,11 @@
 import { APIActions } from '@origami/zen-lib/API';
 import { Field, FormValues } from '@origami/zen-lib/FormValidator';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 // @ts-ignore
 import { connect } from 'pwa-helpers/connect-mixin';
 import { API } from '../../../../lib/API';
 import { State, store } from '../../../../store/store';
-import CSS from './create-css';
+import CSS from './user-create-css';
 
 // @ts-ignore
 @customElement('form-user-create')
@@ -70,7 +70,7 @@ export class FormUserCreate extends connect(store)(LitElement) {
 
 
   public submit(e: { target: { values: object } }) {
-    store.dispatch(this._actions.usersCreate(e.target.values));
+    store.dispatch<any>(this._actions.usersCreate(e.target.values));
   }
 
 

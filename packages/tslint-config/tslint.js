@@ -79,9 +79,7 @@ module.exports = {
     "no-object-literal-type-assertion": false,
     "no-reserved-keywords": false,
     "no-empty": false,
-    "no-unsafe-any": {
-      "severity": "warning"
-    },
+    "no-unsafe-any": false,
     "strict-boolean-expressions": false,
     "no-use-before-declare": false,
     "no-parameter-properties": false,

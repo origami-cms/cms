@@ -1,4 +1,4 @@
-import {customElement} from '@polymer/lit-element';
+import {customElement} from 'lit-element';
 import {ResourceFormBase} from '../Base/ResourceFormBase';
 
 

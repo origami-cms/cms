@@ -1,6 +1,6 @@
 import { APIActions } from '@origami/zen-lib/API';
 import { Field } from '@origami/zen-lib/FormValidator';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 // @ts-ignore
 import { connect } from 'pwa-helpers/connect-mixin';
 import { navigate } from '../../../../actions/App';
@@ -52,7 +52,7 @@ export class FormUserEdit extends connect(store)(LitElement) {
   private _stateChanged(s: State) {
     if (this.errorGet && !this._redirecting) {
       this._redirecting = true;
-      if (window.location.pathname !== '/admin/404') store.dispatch(navigate('/admin/404'));
+      if (window.location.pathname !== '/admin/404') store.dispatch<any>(navigate('/admin/404'));
       return;
     }
 
@@ -108,12 +108,12 @@ export class FormUserEdit extends connect(store)(LitElement) {
 
 
   submit(e: { target: { values: object } }) {
-    store.dispatch(this._actions.usersUpdate(this.id, e.target.values));
+    store.dispatch<any>(this._actions.usersUpdate(this.id, e.target.values));
   }
 
   _get() {
     if (!this.id) return;
-    if (!this.loadingGet) store.dispatch(this._actions.usersGet(this.id));
+    if (!this.loadingGet) store.dispatch<any>(this._actions.usersGet(this.id));
   }
 
 

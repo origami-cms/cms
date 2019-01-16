@@ -1,6 +1,6 @@
-import { injectReducer } from 'redux-injector';
 import * as actions from './actions/index';
 import { API } from './lib/API';
+import { injectReducer } from './lib/reduxInjector';
 import { store } from './store/store';
 
 declare global {

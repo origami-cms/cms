@@ -1,5 +1,5 @@
 import { ZenRoute } from '@origami/zen';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { appsGet } from '../../../actions/Apps';
 import { getMe } from '../../../actions/Me';
@@ -50,8 +50,8 @@ export class PageAdmin extends connect(store)(LitElement) implements PageAdminPr
 
 
   public async firstUpdated() {
-    store.dispatch(getMe());
-    await store.dispatch(appsGet());
+    store.dispatch<any>(getMe());
+    store.dispatch<any>(appsGet());
   }
 
   public render() {

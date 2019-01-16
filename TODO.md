@@ -3,6 +3,7 @@
 |:------|:------:|:------
 | [packages/core-server/src/Server.ts](packages/core-server/src/Server.ts#L210) | 210 | Check if know error, or throw otherwise (should NOT catch
 | [packages/admin/src/actions/App.ts](packages/admin/src/actions/App.ts#L17) | 17 | Convert to endpoint
+| [packages/admin/src/lib/reduxInjector.ts](packages/admin/src/lib/reduxInjector.ts#L6) | 6 | Fix ts-ignores
 | [packages/admin/src/router/Router.ts](packages/admin/src/router/Router.ts#L72) | 72 | Convert to a better structure
 | [packages/core-lib/src/Renderer/index.ts](packages/core-lib/src/Renderer/index.ts#L83) | 83 | Remove dependency
 | [packages/cli/src/commands/new/index.ts](packages/cli/src/commands/new/index.ts#L57) | 57 | Init database

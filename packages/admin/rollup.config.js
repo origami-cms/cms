@@ -8,6 +8,7 @@ import replace from 'rollup-plugin-replace';
 import sass from 'rollup-plugin-sass';
 import strip from 'rollup-plugin-strip';
 import uglifycss from 'uglifycss';
+import vizualizer from 'rollup-plugin-visualizer';
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -15,7 +16,7 @@ export default {
   input: path.resolve(__dirname, './.tsbuild/app.js'),
   output: {
     format: 'iife',
-    file: 'dist/app.js',
+    file: 'build/app.js',
     sourcemap: true
   },
   plugins: [
@@ -25,15 +26,20 @@ export default {
     node(),
     commonjs(),
     copy({
-      './src/images': './dist/images',
-      './src/app.html': './dist/index.html'
+      './src/images': './build/images',
+      './src/app.html': './build/index.html'
     }),
 
     sass({
       output(css) {
         if (isProduction) css = uglifycss.processString(css);
-        fs.writeFileSync(path.resolve('./dist/app.css'), css);
+        fs.writeFileSync(path.resolve('./build/app.css'), css);
       }
+    }),
+
+    vizualizer({
+      filename: path.resolve(process.cwd(), 'build-stats/stats.html'),
+      // sourcemap: true
     }),
 
     ...(isProduction ? [

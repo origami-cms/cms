@@ -1,6 +1,6 @@
 import { bindAttributes } from '@origami/zen-lib/decorators';
-import { customElement, html, LitElement, property } from '@polymer/lit-element';
 import Fuse from 'fuse.js';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 // @ts-ignore
 import { connect } from 'pwa-helpers/connect-mixin';
@@ -60,7 +60,7 @@ export class AppSelector extends connect(store)(LitElement) {
 
 
   public firstUpdated() {
-    store.dispatch(getSidebarItems());
+    store.dispatch<any>(getSidebarItems());
   }
 
 
@@ -116,7 +116,7 @@ export class AppSelector extends connect(store)(LitElement) {
   }
 
   public close() {
-    if (this.open) store.dispatch(toggleAppSelector(false));
+    if (this.open) store.dispatch<any>(toggleAppSelector(false));
   }
 
 
