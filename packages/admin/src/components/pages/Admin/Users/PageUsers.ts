@@ -1,5 +1,6 @@
 import { customElement, html, LitElement } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
+import { titleSet } from '../../../../lib/decorators/titleSet';
 import { store } from '../../../../store/store';
 
 export * from './Create/PageUserCreate';
@@ -9,6 +10,7 @@ export * from './List/PageUsersList';
 
 // @ts-ignore
 @customElement('page-users')
+@titleSet('Users')
 export class PageUsers extends connect(store)(LitElement) {
   public routes = [
     { path: '/create', element: 'page-user-create' },

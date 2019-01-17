@@ -25,9 +25,9 @@ export class HeaderUser extends connect(store)(LitElement) {
     return html`
       ${CSS}
       <ui-avatar .user=${id} @click=${this.toggle}></ui-avatar>
-      ${this.me && this._open
+      ${this.me
         ? html`
-          <zen-tooltip show={true} position="bottom-left">
+          <zen-tooltip ?show=${this._open} position="bottom-left">
             <h5>${this.me.fname}</h5>
             <ul>
               <li>
