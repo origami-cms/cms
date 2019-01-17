@@ -25,7 +25,7 @@ export class Header extends connect(store)(LitElement) {
         ? html`<zen-button-group .buttons=${this.actions}></zen-button-group>`
         : null
       }
-      <ui-header-notifications></ui-header-notifications>
+      <!-- <ui-header-notifications></ui-header-notifications> -->
       <ui-header-user></ui-header-user>
     `;
   }
