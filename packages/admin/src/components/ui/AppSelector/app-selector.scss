@@ -82,7 +82,7 @@
         @extend %padding-v-tiny;
 
         ui-app-icon {
-          @extend %size-main;
+          @extend %size-large;
           transition: all calc(var(--transition-time) / 2);
         }
 
@@ -91,6 +91,7 @@
         }
         small {
           display: block;
+          @extend %margin-t-tiny;
           @extend %ellipsis;
         }
       }

@@ -37,11 +37,11 @@ export const getSidebarItems = () =>
           path: '/users/',
           name: 'Users'
         },
-        // {
-        //     icon: {type: 'image', background: 'gold'},
-        //     path: '/images',
-        //     name: 'Images'
-        // },
+        {
+            icon: {type: 'image', background: 'green'},
+            path: '/media/',
+            name: 'media'
+        },
         {
           icon: { type: 'settings', background: 'white', color: 'grey-700' },
           path: '/settings/',

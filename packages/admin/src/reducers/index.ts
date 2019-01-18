@@ -17,5 +17,6 @@ export const reducers = {
     Organization,
     resources: {
         users: APIReducer('users'),
+        media: APIReducer('media'),
     }
 };

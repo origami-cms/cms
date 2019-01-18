@@ -14,6 +14,7 @@ interface PageAdminProps {
 export * from './App/PageApp';
 export * from './Settings/PageSettings';
 export * from './Users/PageUsers';
+export * from './Media/PageMedia';
 
 // @ts-ignore
 @customElement('page-admin')
@@ -39,6 +40,7 @@ export class PageAdmin extends connect(store)(LitElement) implements PageAdminPr
   public baseRoutes: ZenRoute[] = [
     { path: '/404/', element: 'page-not-found', exact: true },
     { path: '/users/(.*)', element: 'page-users' },
+    { path: '/media/(.*)', element: 'page-media' },
     { path: '/settings/(.*)', element: 'page-settings' },
     { path: '/', element: 'page-dashboard', exact: true }
   ];

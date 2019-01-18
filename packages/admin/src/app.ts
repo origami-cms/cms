@@ -8,4 +8,3 @@ import './const';
 import './OrigamiAdmin';
 import './router/Router';
 import './store/store';
-

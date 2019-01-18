@@ -14,6 +14,7 @@ export interface State {
   Organization: Organization;
   resources: {
     users: Users;
+    media: Media;
     [name: string]: any;
   };
 }
@@ -126,6 +127,17 @@ export interface User {
   fname: null | string;
   lname: null | string;
   email: null | string;
+}
+
+export interface Media extends ResourceState {
+  media: MediaResource[];
+}
+export interface MediaResource {
+  id: null | string;
+  name: null | string;
+  type: null | string;
+  author: null | string;
+  provider: null | string;
 }
 
 

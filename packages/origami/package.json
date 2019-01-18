@@ -29,9 +29,9 @@
     "@origami/plugin-auth": "0.0.3-alpha.11",
     "@origami/plugin-core-api": "0.0.3-alpha.11",
     "@origami/plugin-default-pages": "0.0.3-alpha.11",
+    "@origami/plugin-media": "0.0.0",
     "@origami/plugin-setup": "0.0.3-alpha.11",
     "origami-plugin-favicon": "^0.0.1",
-    "origami-plugin-media": "^2.0.0",
     "origami-plugin-user-profiles": "^1.0.1",
     "signal-exit": "^3.0.2"
   },
