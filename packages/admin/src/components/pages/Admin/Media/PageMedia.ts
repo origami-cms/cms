@@ -33,7 +33,7 @@ export class PageMedia extends connect(store)(LitElement) {
           ${repeat(this.resources, (r) => r.id, (r, i) => html`
           <li class="card" style="animation-delay: ${i * animation}s">
             <div class="img">
-              <img src="/api/v1/media/${r.id}?width=400" />
+              <ui-image src="/api/v1/media/${r.id}?width=400" />
             </div>
             <div class="details">
               <span>${r.name}</span>

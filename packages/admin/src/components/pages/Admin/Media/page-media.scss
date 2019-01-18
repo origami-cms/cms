@@ -33,9 +33,8 @@
           padding-bottom: 9/16 * 100%;
         }
 
-        img {
+        ui-image {
           @extend %cover;
-          object-fit: cover;
         }
       }
 

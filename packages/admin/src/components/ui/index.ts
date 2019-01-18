@@ -7,3 +7,4 @@ export * from './ResourceTable/ResourceTable';
 export * from './AppSelector/AppSelector';
 export * from './FileUploader/FileUploader';
 export * from './SideMenu/SideMenu';
+export * from './Image/Image';
