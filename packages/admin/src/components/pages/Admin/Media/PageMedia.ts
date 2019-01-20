@@ -24,7 +24,7 @@ export class PageMedia extends connect(store)(LitElement) {
   }
 
   public render() {
-    const animation = 0.025;
+    const animation = 0.0125;
     return html`
       ${CSS}
       ${this._loading
@@ -36,7 +36,9 @@ export class PageMedia extends connect(store)(LitElement) {
               <ui-image src="/api/v1/media/${r.id}?width=400" />
             </div>
             <div class="details">
-              <span>${r.name}</span>
+              <span>
+                ${r.name}
+              </span>
               <ui-avatar user="${r.author}"></ui-avatar>
             </div>
           </li>

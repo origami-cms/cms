@@ -85,9 +85,13 @@ export const handlerGet = (
   res.header('content-type', file.type);
 
 
-  try {
-    let stream: Readable = fs.createReadStream(path.resolve(location, file.id));
+  let stream: Readable = fs.createReadStream(path.resolve(location, file.id));
+  stream.on('error', (err) => {
+    next(err);
+    return;
+  });
 
+  try {
     if (req.query.width) {
       const width = parseInt(req.query.width);
       if (typeof width === 'number') {
@@ -97,7 +101,6 @@ export const handlerGet = (
 
     res.locals.content.set(stream);
     next();
-
 
   } catch (e) {
     next(e);
