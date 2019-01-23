@@ -13,6 +13,8 @@ import CSS from './resource-form-css';
 
 
 export class ResourceFormBase extends connect(store)(LitElement) {
+  public static styles = [CSS];
+
   protected get _actions() {
     if (!this._resPlural) return {};
     return APIActions(this._resPlural, API);
@@ -104,7 +106,6 @@ export class ResourceFormBase extends connect(store)(LitElement) {
     }];
 
     return html`
-      ${CSS}
       <div class="card shadow-main center-h">
         <h3 class="margin-t-small">${this._typeUpper} a ${this._resSingular}</h3>
         <zen-form .error=${error} .fields=${f} .values=${values} @change=${(e: { target: { values: object } }) => this.values

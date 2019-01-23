@@ -10,6 +10,9 @@ export type Icon = string | {
 
 @customElement('ui-app-icon')
 export class AppIcon extends LitElement {
+
+  public static styles = [CSS];
+
   @property()
   public icon?: Icon;
 
@@ -29,6 +32,6 @@ export class AppIcon extends LitElement {
         </div>
       `;
 
-    return html`${CSS}${icon}`;
+    return html`${icon}`;
   }
 }

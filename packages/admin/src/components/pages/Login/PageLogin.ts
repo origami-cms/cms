@@ -10,6 +10,8 @@ import CSS from './page-login-css';
 @customElement('page-login')
 export class PageLogin extends connect(store)(LitElement) {
 
+  public static styles = [CSS];
+
   public static fields: Field[] = [
     {
       type: 'email',
@@ -63,7 +65,6 @@ export class PageLogin extends connect(store)(LitElement) {
 
     // TODO: Loading state for login form
     return html`
-    ${CSS}
     <div class="card">
       <img class="logo" src="/admin/images/logo" />
       <zen-form .fields=${fields} @submit=${this.submit} .error=${error} .values=${v} />

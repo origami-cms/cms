@@ -9,6 +9,9 @@ import CSS from './sidebar-css';
 
 @customElement('ui-sidebar')
 export class Sidebar extends connect(store)(LitElement) {
+
+  public static styles = [CSS];
+
   @property()
   public apps: SidebarItem[] = [];
 
@@ -23,7 +26,6 @@ export class Sidebar extends connect(store)(LitElement) {
   public render() {
     const { apps, logo } = this;
     return html`
-    ${CSS}
 
     <a href='${BASE_URI}/' class="top-link">
       <img class="logo" src="${BASE_URI}/images/logo?${logo}" alt="Logo" />

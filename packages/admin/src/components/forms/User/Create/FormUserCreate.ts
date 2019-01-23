@@ -9,6 +9,7 @@ import CSS from './user-create-css';
 
 @customElement('form-user-create')
 export class FormUserCreate extends connect(store)(LitElement) {
+  public static styles = [CSS];
 
   get fields(): Field[] {
     return [
@@ -76,7 +77,6 @@ export class FormUserCreate extends connect(store)(LitElement) {
   public render() {
     const { error, values } = this;
     return html`
-    ${CSS}
     <div class="card shadow-main center-h">
       <img class="width-super margin-b-main margin-r-main display-ib float-left" src="/admin/images/icons/user/create.svg" />
       <h3 class="margin-t-small">Add ${values.fname

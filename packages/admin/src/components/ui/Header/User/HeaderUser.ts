@@ -7,6 +7,8 @@ import CSS from './header-user-css';
 @customElement('ui-header-user')
 export class HeaderUser extends connect(store)(LitElement) {
 
+  public static styles = [CSS];
+
   @property()
   public me: Me | null = null;
 
@@ -22,7 +24,6 @@ export class HeaderUser extends connect(store)(LitElement) {
     const id = this.me ? this.me.id : 'default';
 
     return html`
-      ${CSS}
       <ui-avatar .user=${id} @click=${this.toggle}></ui-avatar>
       ${this.me
         ? html`

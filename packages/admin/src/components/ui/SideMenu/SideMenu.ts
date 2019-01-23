@@ -16,6 +16,9 @@ export interface SettingsMenuProps {
 
 @customElement('ui-side-menu')
 export class SideMenu extends LitElement {
+
+  public static styles = [CSS];
+
   @property()
   public links: Link[] = [];
 
@@ -30,17 +33,16 @@ export class SideMenu extends LitElement {
       }));
     }
     return html`
-            ${CSS}
-            <ul>
-              ${links.map((l) => html`
-              <li>
-                <a href=${l.to}>
-                  ${l.icon ? html`<zen-icon .type=${l.icon} color='grey-300' size="medium"></zen-icon>` : ''}
-                  <span>${l.text}</span>
-                </a>
-              </li>
-              `)}
-            </ul>
-        `;
+      <ul>
+        ${links.map((l) => html`
+        <li>
+          <a href=${l.to}>
+            ${l.icon ? html`<zen-icon .type=${l.icon} color='grey-300' size="medium"></zen-icon>` : ''}
+            <span>${l.text}</span>
+          </a>
+        </li>
+        `)}
+      </ul>
+    `;
   }
 }

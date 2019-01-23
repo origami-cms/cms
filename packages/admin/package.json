@@ -10,7 +10,7 @@
     "gzip": "gzip-all 'build/**/*.*(js|css|svg|png|jpg|jpeg)'",
     "build:ts": "tsc -p .",
     "build:rollup": "rollup -c",
-    "build:sass": "sass-render src/components/**/*.scss --suffix=-css.ts -i ../../node_modules",
+    "build:sass": "sass-render src/components/**/*.scss --suffix=-css.ts -i ../../node_modules --template ./style-template.ts",
     "build": "yarn clean; yarn build:sass; yarn build:ts; yarn build:rollup;",
     "build:prod": "yarn clean; yarn build:sass; NODE_ENV=production yarn build:rollup; yarn gzip",
     "watch:ts": "yarn build:ts -w",

@@ -8,6 +8,7 @@ import CSS from './page-app-css';
 
 @customElement('page-app')
 export class PageApp extends connect(store)(LitElement) {
+  public static styles = [CSS];
 
   @property({ reflect: true, type: String })
   public appName?: string;
@@ -20,7 +21,6 @@ export class PageApp extends connect(store)(LitElement) {
 
   public render() {
     return html`
-    ${CSS}
     ${this.entry
       ? unsafeHTML(this.entry)
       : html`<zen-loading></zen-loading>`

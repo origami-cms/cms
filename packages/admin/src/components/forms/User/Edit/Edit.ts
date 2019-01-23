@@ -12,6 +12,8 @@ import CSS from './edit-css';
 
 @customElement('form-user-edit')
 export class FormUserEdit extends connect(store)(LitElement) {
+  public static styles = [CSS];
+
   @property()
   get userId() {
     return this._id;
@@ -121,7 +123,6 @@ export class FormUserEdit extends connect(store)(LitElement) {
     if (!user) return html``;
 
     return html`
-    ${CSS}
     <div class="card shadow-main center-h">
       <h3>
         <ui-avatar .user=${this.userId || 'default' } size="main" class="align-middle"></ui-avatar>

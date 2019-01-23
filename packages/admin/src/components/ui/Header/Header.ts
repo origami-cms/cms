@@ -10,6 +10,9 @@ export * from './User/HeaderUser';
 
 @customElement('ui-header')
 export class Header extends connect(store)(LitElement) {
+
+  public static styles = [CSS];
+
   @property()
   public heading?: string;
 
@@ -18,7 +21,6 @@ export class Header extends connect(store)(LitElement) {
 
   public render() {
     return html`
-      ${CSS}
       <h1 class="display-ib">${this.heading}</h1>
       ${this.actions.length
         ? html`<zen-button-group .buttons=${this.actions}></zen-button-group>`

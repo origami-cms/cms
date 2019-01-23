@@ -7,10 +7,8 @@ export * from './Create/PageUserCreate';
 export * from './Edit/PageUserEdit';
 export * from './List/PageUsersList';
 
-
 @customElement('page-users')
-@titleSet('Users')
-export class PageUsers extends connect(store)(LitElement) {
+export class PageUsers extends titleSet('Users')(connect(store)(LitElement)) {
   public routes = [
     { path: '/create', element: 'page-user-create' },
     { path: '/:userID', element: 'page-user-edit' },

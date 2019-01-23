@@ -1,16 +1,17 @@
 import { customElement, html, LitElement, property } from 'lit-element';
 import { repeat } from 'lit-html/directives/repeat';
-import { until } from 'lit-html/directives/until';
 import { connect } from 'pwa-helpers/connect-mixin';
 import { mediaGet } from '../../../../actions/media';
 import { titleSet } from '../../../../lib/decorators/titleSet';
 import { MediaResource, State, store } from '../../../../store/store';
 import CSS from './page-media-css';
 
-@customElement('page-media')
-// @ts-ignore
+
 @titleSet('Media')
+@customElement('page-media')
 export class PageMedia extends connect(store)(LitElement) {
+  public static styles = [CSS];
+
   @property()
   public resources: MediaResource[] = [];
 
@@ -25,22 +26,21 @@ export class PageMedia extends connect(store)(LitElement) {
   public render() {
     const animation = 0.0125;
     return html`
-      ${CSS}
       ${this._loading
         ? html`<zen-loading></zen-loading>`
         : html`<ul>
-          ${repeat(this.resources, (r) => r.id, (r, i) => html`
-          <li class="card" style="animation-delay: ${i * animation}s">
-            <div class="img">
-              <ui-image src="/api/v1/media/${r.id}?width=400" />
-            </div>
-            <div class="details">
-              <span>
-                ${r.name}
-              </span>
-              <ui-avatar user="${r.author}"></ui-avatar>
-            </div>
-          </li>
+        ${repeat(this.resources, (r) => r.id, (r, i) => html`
+        <li class="card" style="animation-delay: ${i * animation}s">
+          <div class="img">
+            <ui-image src="/api/v1/media/${r.id}?width=400" />
+          </div>
+          <div class="details">
+            <span>
+              ${r.name}
+            </span>
+            <ui-avatar user="${r.author}"></ui-avatar>
+          </div>
+        </li>
         `)}
       </ul>`}
     `;

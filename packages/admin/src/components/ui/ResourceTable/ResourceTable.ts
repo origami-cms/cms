@@ -18,6 +18,7 @@ type ResourceTableData = {
 @customElement('ui-resource-table')
 export class ResourceTable extends connect(store)(LitElement) {
 
+  public static styles = [CSS];
 
   private get _resPlural() {
     return pluralize(this.resource || '');
@@ -57,7 +58,6 @@ export class ResourceTable extends connect(store)(LitElement) {
 
   public render() {
     return html`
-        ${CSS}
         <zen-button-group .buttons=${this._buttons}></zen-button-group>
         <zen-table
           .data=${this._data}

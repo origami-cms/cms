@@ -4,7 +4,6 @@ import {matchPath} from '../../../../lib/matchPath';
 import { State, store } from '../../../../store/store';
 import { ResourceFormBase } from '../Base/ResourceFormBase';
 
-// @ts-ignore
 @customElement('form-resource-edit')
 export class FormResourceEdit extends ResourceFormBase {
   @property()

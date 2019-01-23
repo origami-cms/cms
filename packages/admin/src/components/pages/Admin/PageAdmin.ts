@@ -18,6 +18,7 @@ export * from './Media/PageMedia';
 
 @customElement('page-admin')
 export class PageAdmin extends connect(store)(LitElement) implements PageAdminProps {
+  public static styles = [CSS];
 
   get routes() {
     return [
@@ -58,7 +59,6 @@ export class PageAdmin extends connect(store)(LitElement) implements PageAdminPr
   public render() {
     // @ts-ignore
     return html`
-    ${CSS}
     <ui-sidebar></ui-sidebar>
     <ui-header></ui-header>
     <zen-router .routes=${this.routes} .base=${this.base} notfound="page-not-found"></zen-router>

@@ -10,6 +10,8 @@ import CSS from './organization-css';
 
 @customElement('page-settings-organization')
 export class PageSettingsOrganization extends connect(store)(LitElement) {
+  public static styles = [CSS];
+
   public static _formGeneral: Field[] = [
     {
       type: 'text',
@@ -64,7 +66,6 @@ export class PageSettingsOrganization extends connect(store)(LitElement) {
     const formT: Fields[] = this.constructor._formTheme;
 
     return html`
-    ${CSS}
     <div class="general">
       <h4>General settings</h4>
       <div class="logo">

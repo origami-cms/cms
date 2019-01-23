@@ -1,16 +1,13 @@
 import { Input } from '@origami/zen';
-import { bindAttributes } from '@origami/zen-lib/decorators';
 import Fuse from 'fuse.js';
 import { customElement, html, LitElement, property } from 'lit-element';
 import { repeat } from 'lit-html/directives/repeat';
 import { connect } from 'pwa-helpers/connect-mixin';
-
 import { getSidebarItems, toggleAppSelector } from '../../../actions/App';
 import { BASE_URI } from '../../../const';
 import { SidebarItem, State, store } from '../../../store/store';
 import CSS from './app-selector-css';
 
-// @ts-ignore
 
 export interface Routes {
   [path: string]: string;
@@ -18,8 +15,9 @@ export interface Routes {
 
 
 @customElement('ui-app-selector')
-@bindAttributes
 export class AppSelector extends connect(store)(LitElement) {
+
+  public static styles = [CSS];
 
   @property()
   get filter() {
@@ -99,7 +97,6 @@ export class AppSelector extends connect(store)(LitElement) {
     }
 
   return html`
-    ${CSS}
     <zen-icon type="cross" @click=${this.close} color="grey-200" size="large"></zen-icon>
     <h1>Applications</h1>
 
