@@ -16,7 +16,6 @@ export * from './Settings/PageSettings';
 export * from './Users/PageUsers';
 export * from './Media/PageMedia';
 
-// @ts-ignore
 @customElement('page-admin')
 export class PageAdmin extends connect(store)(LitElement) implements PageAdminProps {
 
@@ -74,7 +73,7 @@ export class PageAdmin extends connect(store)(LitElement) implements PageAdminPr
   }
 
 
-  private _stateChanged(s: State) {
+  public stateChanged(s: State) {
     this.me = s.Me;
     this._appSelectorOpen = s.App.appSelector.open;
     if (Object.keys(s.Apps.apps).length !== Object.keys(this.apps).length) {

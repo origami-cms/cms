@@ -10,14 +10,13 @@ import { State, store, User } from '../../../../store/store';
 import CSS from './edit-css';
 
 
-// @ts-ignore
 @customElement('form-user-edit')
 export class FormUserEdit extends connect(store)(LitElement) {
   @property()
-  get id() {
+  get userId() {
     return this._id;
   }
-  set id(v) {
+  set userId(v) {
     if (this._id === v || !v) return;
     this._id = v;
     this._get();
@@ -49,7 +48,7 @@ export class FormUserEdit extends connect(store)(LitElement) {
   }
 
 
-  private _stateChanged(s: State) {
+  public stateChanged(s: State) {
     if (this.errorGet && !this._redirecting) {
       this._redirecting = true;
       if (window.location.pathname !== '/admin/404') store.dispatch<any>(navigate('/admin/404'));
@@ -64,8 +63,8 @@ export class FormUserEdit extends connect(store)(LitElement) {
     const match = matchPath(s.App.page.path, '/admin/users/:userID');
     if (match) {
       // tslint:disable
-      if (this.id != match.params.userID) this.id = match.params.userID;
-      const u = s.resources.users.users.find((u: any) => u.id === this.id);
+      if (this.userId != match.params.userID) this.userId = match.params.userID;
+      const u = s.resources.users.users.find((u: any) => u.id === this.userId);
       if (u) this.user = u;
     }
   }
@@ -108,12 +107,12 @@ export class FormUserEdit extends connect(store)(LitElement) {
 
 
   submit(e: { target: { values: object } }) {
-    store.dispatch<any>(this._actions.usersUpdate(this.id, e.target.values));
+    store.dispatch<any>(this._actions.usersUpdate(this.userId, e.target.values));
   }
 
   _get() {
-    if (!this.id) return;
-    if (!this.loadingGet) store.dispatch<any>(this._actions.usersGet(this.id));
+    if (!this.userId) return;
+    if (!this.loadingGet) store.dispatch<any>(this._actions.usersGet(this.userId));
   }
 
 
@@ -125,7 +124,7 @@ export class FormUserEdit extends connect(store)(LitElement) {
     ${CSS}
     <div class="card shadow-main center-h">
       <h3>
-        <ui-avatar .user=${this.id || 'default' } size="main" class="align-middle"></ui-avatar>
+        <ui-avatar .user=${this.userId || 'default' } size="main" class="align-middle"></ui-avatar>
         <span class="align-middle margin-l-tiny">Edit <strong>${user.fname}</strong></span>
       </h3>
       <zen-form .error=${errorEdit} .fields=${this.fields} .values=${user} @change=${(e: { target: { values: User } })=>

@@ -11,7 +11,6 @@ import { State, store } from '../store/store';
 
 // Simple router for all main pages, and verifies token on page refresh.
 // Boots to login if invalid verification or no JWT
-// @ts-ignore
 @customElement('zen-app')
 export class Router extends connect(store)(LitElement) {
   public base = '/admin';
@@ -31,9 +30,11 @@ export class Router extends connect(store)(LitElement) {
 
   public render() {
     return html`
-    <style>zen-loading{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)}</style>
+    <style>
+      zen-loading{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)}
+    </style>
     ${this._loading && !this._verified
-      ? html`<zen-loading .size="large"></zen-loading>`
+      ? html`<zen-loading size="large"></zen-loading>`
       : html`<zen-router base=${this.base} .routes=${this.routes}></zen-router>`
     }
     `;
@@ -46,8 +47,8 @@ export class Router extends connect(store)(LitElement) {
     });
   }
 
-  public firstUpdated() {
-    super.firstUpdated();
+  public firstUpdated(props: any) {
+    super.firstUpdated(props);
     store.dispatch<any>(verify());
     store.dispatch<any>(getTheme());
   }
@@ -66,7 +67,7 @@ export class Router extends connect(store)(LitElement) {
     if (v && this.path !== url) store.dispatch<any>(navigate(url));
   }
 
-  private _stateChanged(s: State) {
+  public stateChanged(s: State) {
     this._verifyError = s.Auth.errors.verify;
     this._verified = Boolean(s.Auth.verified);
     // TODO: Convert to a better structure

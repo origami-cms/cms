@@ -73,7 +73,7 @@ export class ResourceFormBase extends connect(store)(LitElement) {
           // @ts-ignore Is a valid resource
           this._actions
           // @ts-ignore
-          [`${this._resPlural}${type}`](this.id, e.target.values)
+          [`${this._resPlural}${type}`](this.resourceID, e.target.values)
         );
         break;
 

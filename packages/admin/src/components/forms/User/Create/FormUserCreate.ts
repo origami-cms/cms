@@ -7,7 +7,6 @@ import { API } from '../../../../lib/API';
 import { State, store } from '../../../../store/store';
 import CSS from './user-create-css';
 
-// @ts-ignore
 @customElement('form-user-create')
 export class FormUserCreate extends connect(store)(LitElement) {
 
@@ -94,7 +93,7 @@ export class FormUserCreate extends connect(store)(LitElement) {
   }
 
 
-  private _stateChanged(s: State) {
+  public stateChanged(s: State) {
     this.error = s.resources.users._errors.post;
     this.loading = Boolean(s.resources.users._loading.post);
   }

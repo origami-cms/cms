@@ -5,7 +5,6 @@ import { logout } from '../../../actions/Auth';
 import { store } from '../../../store/store';
 
 
-// @ts-ignore
 @customElement('page-logout')
 export class PageLogout extends LitElement {
   public async connectedCallback() {

@@ -6,7 +6,6 @@ import { SERVER_API } from '../../../../const';
 import { AppConfig, State, store } from '../../../../store/store';
 import CSS from './page-app-css';
 
-// @ts-ignore
 @customElement('page-app')
 export class PageApp extends connect(store)(LitElement) {
 
@@ -37,7 +36,7 @@ export class PageApp extends connect(store)(LitElement) {
     }
   }
 
-  private _stateChanged(state: State) {
+  public stateChanged(state: State) {
     if (!this.app && this.appName) this.app = state.Apps.apps[this.appName];
     if (!this.entry && this.appName) this.entry = state.Apps.entries[this.appName];
   }

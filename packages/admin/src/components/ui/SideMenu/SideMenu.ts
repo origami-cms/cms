@@ -14,7 +14,6 @@ export interface SettingsMenuProps {
 }
 
 
-// @ts-ignore
 @customElement('ui-side-menu')
 export class SideMenu extends LitElement {
   @property()

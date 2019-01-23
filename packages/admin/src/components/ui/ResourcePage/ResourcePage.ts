@@ -14,7 +14,6 @@ interface Schema {
   };
 }
 
-// @ts-ignore
 @customElement('ui-resource-page')
 export class ResourcePage extends LitElement {
   @property()

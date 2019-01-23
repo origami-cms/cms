@@ -7,7 +7,6 @@ import { State, store } from '../../../store/store';
 import CSS from './page-login-css';
 
 
-// @ts-ignore
 @customElement('page-login')
 export class PageLogin extends connect(store)(LitElement) {
 
@@ -62,6 +61,7 @@ export class PageLogin extends connect(store)(LitElement) {
     // @ts-ignore
     const fields = this.constructor.fields;
 
+    // TODO: Loading state for login form
     return html`
     ${CSS}
     <div class="card">
@@ -77,7 +77,7 @@ export class PageLogin extends connect(store)(LitElement) {
     if (this.loggedIn) store.dispatch<any>(navigate('/admin/'));
   }
 
-  private _stateChanged(s: State) {
+  public stateChanged(s: State) {
     this.error = s.Auth.errors.loggingIn;
     this.loggedIn = s.Auth.loggedIn;
     this._email = s.Me.email;

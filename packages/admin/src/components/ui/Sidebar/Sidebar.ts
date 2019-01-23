@@ -7,7 +7,6 @@ import { State, store } from '../../../store/store';
 import CSS from './sidebar-css';
 
 
-// @ts-ignore
 @customElement('ui-sidebar')
 export class Sidebar extends connect(store)(LitElement) {
   @property()
@@ -64,7 +63,7 @@ export class Sidebar extends connect(store)(LitElement) {
     });
   }
 
-  private _stateChanged(state: State) {
+  public stateChanged(state: State) {
     const _apps = Object.entries(state.Apps.apps).map(([name, a]) => ({
       icon: a.icon,
       path: a.uriBase,

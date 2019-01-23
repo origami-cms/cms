@@ -8,7 +8,6 @@ export * from './Edit/PageUserEdit';
 export * from './List/PageUsersList';
 
 
-// @ts-ignore
 @customElement('page-users')
 @titleSet('Users')
 export class PageUsers extends connect(store)(LitElement) {
@@ -28,5 +27,5 @@ export class PageUsers extends connect(store)(LitElement) {
     this.shadowRoot.querySelector('zen-router').routes = this.routes;
   }
 
-  private _stateChanged() { }
+  public stateChanged() { }
 }

@@ -7,7 +7,6 @@ import { titleSet } from '../../../../lib/decorators/titleSet';
 import { MediaResource, State, store } from '../../../../store/store';
 import CSS from './page-media-css';
 
-// @ts-ignore
 @customElement('page-media')
 // @ts-ignore
 @titleSet('Media')
@@ -47,7 +46,7 @@ export class PageMedia extends connect(store)(LitElement) {
     `;
   }
 
-  private _stateChanged(s: State) {
+  public stateChanged(s: State) {
     this.resources = s.resources.media.media;
     this._loading = s.resources.media._loading.all;
   }

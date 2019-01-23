@@ -2,7 +2,6 @@ import { Field } from '@origami/zen-lib/FormValidator';
 import { customElement, html, LitElement } from 'lit-element';
 
 
-// @ts-ignore
 @customElement('page-user-create')
 export class PageUserCreate extends LitElement {
   get fields(): Field[] {

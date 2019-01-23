@@ -12,7 +12,6 @@ interface PageSettingsProps {
 export * from './Organization/PageSettingsOrganization';
 export * from './SettingsMenu/SettingsMenu';
 
-// @ts-ignore
 @customElement('page-settings')
 @titleSet('Settings')
 export class PageSettings extends LitElement implements PageSettingsProps {

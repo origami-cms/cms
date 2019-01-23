@@ -4,7 +4,6 @@ import { connect } from 'pwa-helpers/connect-mixin';
 import { Me, State, store } from '../../../../store/store';
 import CSS from './header-user-css';
 
-// @ts-ignore
 @customElement('ui-header-user')
 export class HeaderUser extends connect(store)(LitElement) {
 
@@ -50,7 +49,7 @@ export class HeaderUser extends connect(store)(LitElement) {
     this._open = !this._open;
   }
 
-  private _stateChanged(s: State) {
+  public stateChanged(s: State) {
     this.me = s.Me;
   }
 }

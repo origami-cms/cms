@@ -8,10 +8,10 @@ import { ResourceFormBase } from '../Base/ResourceFormBase';
 @customElement('form-resource-edit')
 export class FormResourceEdit extends ResourceFormBase {
   @property()
-  get id() {
+  get resourceID() {
     return this._id;
   }
-  set id(v) {
+  set resourceID(v) {
     if (this._id === v || !v) return;
     this._id = v;
     this._get();
@@ -52,18 +52,18 @@ export class FormResourceEdit extends ResourceFormBase {
 
     if (match) {
       // tslint:disable
-      if (this.id != match.params.id) this.id = match.params.id;
-      const u = res[this._resPlural].find((r: any) => r.id === this.id);
+      if (this.resourceID != match.params.id) this.resourceID = match.params.id;
+      const u = res[this._resPlural].find((r: any) => r.id === this.resourceID);
 
       if (u) this.values = u;
     }
   }
 
   _get() {
-    if (!this.id) return;
+    if (!this.resourceID) return;
     if (!this._loadingGet) {
       // @ts-ignore Is a valid resource
-      store.dispatch<any>(this._actions[`${this._resPlural}Get`](this.id))
+      store.dispatch<any>(this._actions[`${this._resPlural}Get`](this.resourceID))
     }
   }
 }

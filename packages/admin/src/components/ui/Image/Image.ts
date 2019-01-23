@@ -1,7 +1,6 @@
 import { customElement, html, LitElement, property } from 'lit-element';
 import CSS from './image-css';
 
-// @ts-ignore
 @customElement('ui-image')
 export class Image extends LitElement {
   @property()

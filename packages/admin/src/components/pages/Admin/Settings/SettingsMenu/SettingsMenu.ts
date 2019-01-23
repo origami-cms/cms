@@ -8,7 +8,6 @@ interface Link {
   to?: string;
 }
 
-// @ts-ignore
 @customElement('page-settings-menu')
 export class SettingsMenu extends LitElement {
   private _links: Link[] = [

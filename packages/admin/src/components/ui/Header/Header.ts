@@ -8,7 +8,6 @@ export * from './Notifications/Notifications';
 export * from './User/HeaderUser';
 
 
-// @ts-ignore
 @customElement('ui-header')
 export class Header extends connect(store)(LitElement) {
   @property()
@@ -30,7 +29,7 @@ export class Header extends connect(store)(LitElement) {
     `;
   }
 
-  private _stateChanged(state: State) {
+  public stateChanged(state: State) {
     this.heading = state.App.page.title;
     this.actions = state.App.page.actions;
   }

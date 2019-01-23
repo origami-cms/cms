@@ -8,7 +8,6 @@ export type Icon = string | {
   background: string;
 };
 
-// @ts-ignore
 @customElement('ui-app-icon')
 export class AppIcon extends LitElement {
   @property()

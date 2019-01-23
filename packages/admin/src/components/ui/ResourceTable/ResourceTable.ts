@@ -15,7 +15,6 @@ type ResourceTableData = {
   [key: string]: any;
 };
 
-// @ts-ignore
 @customElement('ui-resource-table')
 export class ResourceTable extends connect(store)(LitElement) {
 
@@ -77,18 +76,15 @@ export class ResourceTable extends connect(store)(LitElement) {
     if (p.has('selected')) this._updateButtons();
   }
 
-
-  private _stateChanged(s: State) {
-    // @ts-ignore
-    this._data = s.resources[this._resPlural][this._resPlural].asMutable();
-  }
-
-  // tslint:disable-next-line function-name
-  private firstUpdated() {
+  public firstUpdated() {
     this._updateActions();
     this._get();
   }
 
+  public stateChanged(s: State) {
+    // @ts-ignore
+    this._data = s.resources[this._resPlural][this._resPlural].asMutable();
+  }
 
   private _get() {
     store.dispatch<any>(this._actions.get());

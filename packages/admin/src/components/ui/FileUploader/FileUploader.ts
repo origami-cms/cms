@@ -5,7 +5,6 @@ import { store } from '../../../store/store';
 import CSS from './file-uploader-css';
 
 
-// @ts-ignore
 @customElement('ui-file-uploader')
 export class FileUploader extends LitElement {
     @property()

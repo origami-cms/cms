@@ -1,7 +1,6 @@
 import { customElement, html, LitElement, property } from 'lit-element';
 import CSS from './avatar-css';
 
-// @ts-ignore
 @customElement('ui-avatar')
 export class Avatar extends LitElement {
   @property()

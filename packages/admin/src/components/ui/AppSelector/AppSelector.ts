@@ -1,21 +1,22 @@
+import { Input } from '@origami/zen';
 import { bindAttributes } from '@origami/zen-lib/decorators';
 import Fuse from 'fuse.js';
 import { customElement, html, LitElement, property } from 'lit-element';
 import { repeat } from 'lit-html/directives/repeat';
-// @ts-ignore
 import { connect } from 'pwa-helpers/connect-mixin';
+
 import { getSidebarItems, toggleAppSelector } from '../../../actions/App';
 import { BASE_URI } from '../../../const';
 import { SidebarItem, State, store } from '../../../store/store';
 import CSS from './app-selector-css';
 
+// @ts-ignore
 
 export interface Routes {
   [path: string]: string;
 }
 
 
-// @ts-ignore
 @customElement('ui-app-selector')
 @bindAttributes
 export class AppSelector extends connect(store)(LitElement) {
@@ -119,8 +120,12 @@ export class AppSelector extends connect(store)(LitElement) {
     if (this.open) store.dispatch<any>(toggleAppSelector(false));
   }
 
+  public updated() {
+    if (this.open) (this.shadowRoot!.querySelector('zen-input')! as Input).focus();
+  }
 
-  private _stateChanged(state: State) {
+
+  public stateChanged(state: State) {
     const _apps = Object.entries(state.Apps.apps).map(([name, a]) => ({
       icon: a.icon,
       path: a.uriBase,
@@ -131,12 +136,6 @@ export class AppSelector extends connect(store)(LitElement) {
     this._fuse = new Fuse(this.apps, {
       keys: ['name']
     });
-  }
-
-  // tslint:disable-next-line:function-name
-  private updated() {
-    // @ts-ignore Shadow root exists
-    if (this.open) this.shadowRoot.querySelector('zen-input').focus();
   }
 
 

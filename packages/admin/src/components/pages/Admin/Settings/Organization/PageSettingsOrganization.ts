@@ -8,7 +8,6 @@ import { OrganizationTheme, State, store } from '../../../../../store/store';
 import CSS from './organization-css';
 
 
-// @ts-ignore
 @customElement('page-settings-organization')
 export class PageSettingsOrganization extends connect(store)(LitElement) {
   public static _formGeneral: Field[] = [
@@ -84,7 +83,7 @@ export class PageSettingsOrganization extends connect(store)(LitElement) {
     `;
   }
 
-  private _stateChanged(s: State) {
+  public stateChanged(s: State) {
     this.theme = s.Organization.theme;
   }
 

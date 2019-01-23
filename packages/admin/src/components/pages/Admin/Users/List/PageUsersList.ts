@@ -1,6 +1,5 @@
 import { customElement, html, LitElement } from 'lit-element';
 import { User } from '../../../../../store/state';
-// @ts-ignore
 @customElement('page-users-list')
 export class PageUsersList extends LitElement {
     public static columns = ['fname', 'lname', 'email'];
