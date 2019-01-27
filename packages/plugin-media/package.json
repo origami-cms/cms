@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-media",
-  "version": "0.0.0",
+  "version": "0.0.3-alpha.13",
   "description": "Media plugin for OrigamiCMS",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-media",
   "homepage": "http://www.origami.so",
@@ -20,14 +20,14 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
-    "@origami/core": "0.0.3-alpha.11",
+    "@origami/core": "0.0.3-alpha.13",
     "aws-sdk": "^2.337.0",
     "mkdir-recursive": "^0.4.0",
     "sharp": "^0.21.2"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^7.1.2",
-    "@origami/tslint-config": "0.0.3-alpha.3",
+    "@origami/tslint-config": "0.0.3-alpha.13",
     "@types/sharp": "^0.21.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
