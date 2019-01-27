@@ -1,0 +1,20 @@
+@import 'zen-css/import';
+
+
+:host {
+  position: relative;
+  zen-icon {
+    @extend %center;
+    height: 30%;
+  }
+  img {
+    @extend %cover;
+    object-fit: cover;
+    opacity: 0;
+    transition: all var(--transition-time);
+
+    &.loaded {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+:host {
+    position: relative;
+    display: block;
+    width: var(--header-height);
+    height: var(--header-height);
+    line-height: var(--header-height);
+    text-align: center;
+
+    * {
+        vertical-align: middle;
+    }
+
+    ui-avatar {
+        width: 50%;
+        height: 50%;
+    }
+
+
+    zen-tooltip {
+      position: absolute;
+      top: 5rem;
+      right: 1.5rem;
+      transform: none;
+      min-width: 16rem;
+      text-align: left;
+
+      --tooltip-padding: var(--size-tiny) 0;
+
+
+      h5 {
+        margin: 0;
+        line-height: var(--size-main);
+        text-transform: uppercase;
+        color: var(--color-grey-500);
+        letter-spacing: 1px;
+      }
+
+      h5, a {
+        padding: 0 var(--size-small);
+      }
+
+      ul, li {
+        margin: 0;
+        padding: 0;
+        color: var(--color-600);
+        list-style: none;
+
+        &, * {
+          line-height: var(--size-main);
+        }
+
+        a {
+          text-decoration: none;
+          color: var(--color-600);
+          padding: 0 var(--size-small);
+        }
+      }
+
+      li:hover {
+        background: var(--color-hover);
+      }
+    }
+}

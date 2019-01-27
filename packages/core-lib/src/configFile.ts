@@ -283,7 +283,8 @@ export namespace config {
         else if (c instanceof Object) {
           _conf = {
             ..._conf,
-            ...(c as Origami.ConfigController)
+            // tslint:disable-next-line no-unnecessary-type-assertion
+            ...c as Origami.ConfigController
           };
         }
         const route = new Route(_conf.prefix);

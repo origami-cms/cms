@@ -1,0 +1,42 @@
+@import "zen-css/import";
+@import "zen-css/helpers";
+@import "../../../styles/lib/extenders";
+
+:host {
+
+  @extend %page;
+  @extend %bg-waves;
+  --input-height: 6rem;
+
+  &, * {
+    @extend %reset;
+  }
+
+  .logo, form {
+    width: 100%;
+  }
+  .card {
+    @extend %comp-card;
+    @extend %center;
+    @extend %padding-large;
+    width: 48rem;
+    text-align: center;
+    background-color: default('card-bg');
+    box-shadow: var(--shadow-main-soft);
+
+    // center
+    // rounded
+    // text-center
+    //
+    // shadow-shade-1
+
+    zen-form {
+      text-align: left;
+    }
+
+    .logo {
+      @extend %margin-b-large;
+      @extend %height-main;
+    }
+  }
+}

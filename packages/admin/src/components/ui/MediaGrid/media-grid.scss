@@ -1,0 +1,214 @@
+@import 'zen-css/import';
+@import 'zen-css/components/card';
+@import 'zen-css/animations/fade-slide-up';
+
+
+:host {
+
+  $details-height: 5rem;
+
+  &,
+  * {
+    @extend %reset;
+  }
+
+  display: block;
+
+  --media-grid-columns: 5;
+  --media-grid-gap: var(--size-medium);
+
+  zen-loading {
+    @extend %center;
+    --loading-size: var(--size-large);
+  }
+
+  ul {
+    --card-padding: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--media-grid-columns), 1fr);
+    grid-gap: var(--media-grid-gap);
+    list-style: none;
+
+    li {
+      position: relative;
+      background: var(--color-white);
+      overflow: hidden;
+
+      zen-icon.tick {
+        @extend %center;
+        width: 40%;
+        height: 40%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all calc(var(--transition-time) / 2) var(--ease-out-back);
+        z-index: 1;
+      }
+
+      ui-upload-progress {
+        @extend %center;
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0;
+        margin-top: calc(-1 * #{$details-height} / 2);
+        transition: all calc(var(--transition-time) / 2) ease-out;
+      }
+
+      &:before {
+        content: '';
+        @extend %cover;
+        border: 2px solid var(--color-active);
+        opacity: 0;
+        transition: opacity calc(var(--transition-time) / 2) ease-out;
+        box-sizing: border-box;
+        z-index: 1;
+        visibility: hidden;
+      }
+
+      &:after {
+        content: '';
+        opacity: 0;
+        background: var(--color-active);
+        transition: opacity calc(var(--transition-time) / 2) ease-out;
+      }
+
+      &.active {
+        zen-icon.tick {
+          transform: translate(-50%, -50%) scale(1);
+        }
+
+        &:before {
+          visibility: visible;
+          opacity: 1;
+        }
+        &:after {
+          @extend %cover;
+          opacity: 0.5;
+        }
+      }
+
+      .img {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          padding-bottom: 9/16 * 100%;
+        }
+
+        ui-image {
+          @extend %cover;
+          transition: all var(--transition-time) ease-out;
+        }
+      }
+
+      &.uploading {
+        ui-image {
+          transform: scale(1.2);
+          filter: brightness(0.5);
+        }
+        ui-upload-progress {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+      }
+
+      .details {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: var(--size-tiny) var(--size-small);
+        height: $details-height;
+        background: var(--color-white);
+
+        span {
+          display: block;
+          flex: 1;
+          margin-right: var(--size-tiny);
+          font-size: var(--font-size-small);
+          color: var(--color-grey-300);
+          @extend %ellipsis;
+        }
+
+        ui-avatar {
+          flex-grow: 0;
+          @extend %size-medium;
+        }
+      }
+
+    }
+  }
+
+  .drop-zone {
+    width: 0;
+    height: 0;
+    @extend %rounded;
+
+    &:before, &:after {
+      box-sizing: border-box;
+      content: '';
+      @extend %cover;
+      @extend %rounded;
+      visibility: hidden;
+      opacity: 0;
+      transition: all calc(var(--transition-time)) var(--ease-out-back);
+    }
+
+    &:before {
+      background: var(--color-active);
+    }
+    &:after {
+      border: 2px dashed var(--color-active);
+    }
+
+    .center {
+      @extend %center;
+      visibility: hidden;
+      font-size: var(--font-size-large);
+
+      * {
+        display: block;
+        margin: auto;
+        transform: translateY(var(--size-main));
+        transition: transform var(--transition-time) ease-out;
+        opacity: 0;
+      }
+      zen-icon {
+        // margin-bottom: var(--size-small);
+      }
+      span {
+        transition-delay: calc(var(--transition-time) / 8);
+        // transition: all var(--transition-time) calc(var(--transition-time) / 8) ease-out;
+      }
+
+    }
+
+
+    &.show {
+      &:before {
+        visibility: visible;
+        opacity: 0.5;
+      }
+      &:after {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &.empty .center {
+      color: var(--color-grey-200);
+    }
+    &.show .center {
+      color: var(--color-white);
+    }
+
+    &.show, &.empty {
+      .center {
+        visibility: visible;
+        * {
+          transform: none;
+          opacity: 1;
+        }
+      }
+    }
+
+
+  }
+}

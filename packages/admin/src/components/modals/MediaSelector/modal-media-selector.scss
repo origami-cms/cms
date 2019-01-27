@@ -1,0 +1,20 @@
+@import 'zen-css/import';
+
+.icon {
+  position: relative;
+  padding: calc(var(--size-tiny) / 2);
+
+  &:before {
+    content: '';
+    @extend %cover;
+    @extend %gradient-green;
+    opacity: 0.2;
+    border-radius: 50%;
+  }
+
+}
+ui-media-grid {
+  max-width: 60rem;
+  --media-grid-columns: 3;
+  --media-grid-gap: var(--size-tiny);
+}

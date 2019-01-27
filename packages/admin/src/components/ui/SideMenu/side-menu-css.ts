@@ -1,0 +1,4 @@
+import {css} from 'lit-element';
+// tslint:disable-next-line no-default-export export-name
+export default css`:host,:host *{box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline}:host ul{position:absolute;top:0;left:0;width:100%;height:100%}:host{position:absolute;top:0;left:0;width:var(--side-menu-width, 20rem);background-color:rgba(255,255,255,0.7);border-right:1px solid var(--color-grey-100);bottom:0}:host ul li{list-style:none;font-size:var(--font-size-small);color:var(--color-grey-300);height:var(--sidebar-width);line-height:var(--sidebar-width);padding-left:var(--size-small);border-bottom:1px solid var(--color-grey-100)}:host ul li a{width:100%}:host ul li a *{vertical-align:middle;display:inline-block}:host ul li a.active{--icon-color: var(--color-main);color:var(--color-main)}
+`;

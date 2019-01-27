@@ -1,0 +1,8 @@
+src/
+.*
+*.log
+tsconfig.json
+tslint.json
+README.md
+CHANGELOG.md
+db-scripts

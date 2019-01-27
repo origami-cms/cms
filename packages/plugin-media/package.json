@@ -1,0 +1,43 @@
+{
+  "name": "@origami/plugin-media",
+  "version": "0.0.0",
+  "description": "Media plugin for OrigamiCMS",
+  "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-media",
+  "homepage": "http://www.origami.so",
+  "author": "Tristan Matthias <tristan@origami.so>",
+  "license": "MIT",
+  "main": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf build",
+    "watch": "tsc -w",
+    "build": "yarn clean && tsc",
+    "db:init": "mongo db-scripts/init.js",
+    "db:clear": "mongo db-scripts/clear.js",
+    "db:reset": "yarn db:clear; yarn db:init",
+    "test:clean-media": "rm -rf ./test/media/",
+    "test": "yarn test:clean-media; yarn db:reset; nyc mocha --exit",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "dependencies": {
+    "@origami/core": "0.0.3-alpha.11",
+    "aws-sdk": "^2.337.0",
+    "mkdir-recursive": "^0.4.0",
+    "sharp": "^0.21.2"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^7.1.2",
+    "@origami/tslint-config": "0.0.3-alpha.3",
+    "@types/sharp": "^0.21.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.0.0",
+    "codecov": "^3.0.2",
+    "commitlint": "^7.2.1",
+    "husky": "^1.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  }
+}

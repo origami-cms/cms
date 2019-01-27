@@ -1,0 +1,11 @@
+.DS_Store
+*.log
+rollup.config.js
+tsconfig.json
+tslint.json
+
+node_modules
+src/
+.vscode
+.tsbuild
+/.*_cache

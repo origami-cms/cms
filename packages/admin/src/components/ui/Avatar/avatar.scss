@@ -1,0 +1,26 @@
+@import 'zen-css/import';
+
+:host {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    min-width: default('size-small');
+    min-height: default('size-small');
+    background-color: default('color-main');
+    background-image: url('/content/profiles/default');
+    background-size: 100%;
+
+    img {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+    }
+}
+
+@each $size in $sizes {
+    :host-context([size=#{$size}]) {
+        width: default('size-#{$size}');
+        height: default('size-#{$size}');
+    }
+}

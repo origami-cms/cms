@@ -27,8 +27,13 @@ export const format = (): RequestHandler => {
       if (parsed.code) res.status(parsed.code);
     }
 
-    // Format the response with the accepted headers and custom message if present
-    return (new Formatter(res, req.headers.accept, message)).send();
+    try {
+      // Format the response with the accepted headers and custom message if present
+      return await (new Formatter(res, req.headers.accept, message)).send();
+    } catch (e) {
+      const error = 500;
+      res.redirect('/500', error);
+    }
   };
 
   return fn as RequestHandler;

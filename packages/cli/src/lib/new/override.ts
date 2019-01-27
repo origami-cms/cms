@@ -17,6 +17,7 @@ export const override = async (): Promise<boolean> => {
     override: boolean;
   }
 
+  // tslint:disable-next-line no-unnecessary-type-assertion
   return (await inq.prompt({
     type: 'confirm',
     message: `Override existing app ${colors.red(existing.app.name || '')}?`,
