@@ -1,4 +1,4 @@
-import { InputFile } from '@origami/zen';
+import { ZenInputFile } from '@origami/zen';
 import { customElement, html, LitElement, property } from 'lit-element';
 import { upload } from '../../../actions/Media';
 import { store } from '../../../store/store';
@@ -27,7 +27,7 @@ export class FileUploader extends LitElement {
     `;
   }
 
-  private async _handleChange(e: { target: InputFile }) {
+  private async _handleChange(e: { target: ZenInputFile }) {
     const files = e.target.files;
 
     if (files[0]) {

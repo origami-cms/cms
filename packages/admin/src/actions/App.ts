@@ -40,13 +40,13 @@ export const getSidebarItems = () =>
         {
             icon: {type: 'image', background: 'green'},
             path: '/media/',
-            name: 'media'
-        },
-        {
-          icon: { type: 'settings', background: 'white', color: 'grey-700' },
-          path: '/settings/',
-          name: 'Settings'
+            name: 'Media'
         }
+        // {
+        //   icon: { type: 'settings', background: 'white', color: 'grey-700' },
+        //   path: '/settings/',
+        //   name: 'Settings'
+        // }
       ]
     });
   };

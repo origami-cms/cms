@@ -135,6 +135,7 @@ export class ResourceTable extends connect(store)(LitElement) {
     const s = this.selected;
     if (s.length >= 1) {
       buttons.push({
+        // @ts-ignore
         icon: 'remove', text: 'Remove', color: 'red', size: 'medium',
         onclick: this._actionRemove
       });

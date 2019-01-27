@@ -3,59 +3,15 @@
 @import 'zen-css/animations/fade-slide-up';
 
 :host {
-  @extend %cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow-y: auto;
+  padding: var(--size-small);
 
-  zen-loading {
-    @extend %center;
-    --loading-size: var(--size-large);
-  }
-
-  ul {
-    --card-padding: 0;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: var(--size-medium);
-    list-style: none;
-
-    li {
-      background: var(--color-white);
-      overflow: hidden;
-      opacity: 0;
-      animation: fade-slide-up 0.35s ease-in-out forwards;
-
-      .img {
-        position: relative;
-
-        &:before {
-          content: '';
-          display: block;
-          padding-bottom: 9/16 * 100%;
-        }
-
-        ui-image {
-          @extend %cover;
-        }
-      }
-
-      .details {
-        display: flex;
-        align-items: center;
-        padding: var(--size-tiny) var(--size-small);
-
-        span {
-          display: block;
-          flex: 1;
-          margin-right: var(--size-tiny);
-          @extend %ellipsis;
-        }
-        ui-avatar {
-          flex-grow: 0;
-          @extend %size-medium;
-        }
-      }
-
-    }
-
+  ui-media-grid {
+    @extend %cover;
   }
 }

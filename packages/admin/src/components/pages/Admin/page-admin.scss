@@ -11,7 +11,7 @@
     zen-router {
         // Sidebar offset
         position: absolute;
-        left: var(--sidebar-width);
+        left: calc(var(--sidebar-width) + var(--size-small));
         top: var(--header-height);
         bottom: 0;
         right: 0;

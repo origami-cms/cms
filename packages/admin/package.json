@@ -12,7 +12,7 @@
     "build:rollup": "rollup -c",
     "build:sass": "sass-render src/components/**/*.scss --suffix=-css.ts -i ../../node_modules --template ./style-template.ts",
     "build": "yarn clean; yarn build:sass; yarn build:ts; yarn build:rollup;",
-    "build:prod": "yarn clean; yarn build:sass; NODE_ENV=production yarn build:rollup; yarn gzip",
+    "build:prod": "yarn clean; yarn build:sass; yarn build:ts; NODE_ENV=production yarn build:rollup; yarn gzip",
     "watch:ts": "yarn build:ts -w",
     "watch:rollup": "yarn build:rollup -w",
     "watch:sass": "yarn build:sass -w",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@origami/core-lib": "0.0.3-alpha.11",
     "@origami/core-server": "0.0.3-alpha.11",
+    "@origami/zen": "^0.0.2-alpha.1",
     "@types/color": "^3.0.0",
     "@types/deep-equal": "^1.0.1",
     "@types/deepmerge": "^2.1.0",
@@ -65,6 +66,6 @@
     "typescript": "^3.0.1",
     "uglifycss": "^0.0.29",
     "wc-sass-render": "^1.1.2",
-    "zen-css": "^1.1.17"
+    "zen-css": "^1.1.18"
   }
 }

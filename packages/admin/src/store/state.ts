@@ -12,6 +12,7 @@ export interface State {
   Auth: Auth;
   Pages: Pages;
   Organization: Organization;
+  UploadingMedia: UploadingMedia;
   resources: {
     users: Users;
     media: Media;
@@ -138,6 +139,21 @@ export interface MediaResource {
   type: null | string;
   author: null | string;
   provider: null | string;
+  createdAt: string;
+}
+
+export interface UploadingMedia {
+  uploading: UploadingResource[];
+  error: UploadingResource[];
+}
+
+export interface UploadingResource {
+  id: string;
+  name: string;
+  progress: number;
+  preview: string | null;
+  error: string | null;
+  created: Date;
 }
 
 

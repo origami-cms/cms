@@ -1,54 +1,15 @@
-import { customElement, html, LitElement, property } from 'lit-element';
-import { repeat } from 'lit-html/directives/repeat';
+import { customElement, html, LitElement } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
-import { mediaGet } from '../../../../actions/media';
 import { titleSet } from '../../../../lib/decorators/titleSet';
-import { MediaResource, State, store } from '../../../../store/store';
+import { store } from '../../../../store/store';
 import CSS from './page-media-css';
 
-
-@titleSet('Media')
 @customElement('page-media')
-export class PageMedia extends connect(store)(LitElement) {
+export class PageMedia extends titleSet('Media')(connect(store)(LitElement)) {
   public static styles = [CSS];
 
-  @property()
-  public resources: MediaResource[] = [];
-
-  @property()
-  private _loading: boolean = true;
-
-  constructor() {
-    super();
-    store.dispatch<any>(mediaGet());
-  }
-
   public render() {
-    const animation = 0.0125;
-    return html`
-      ${this._loading
-        ? html`<zen-loading></zen-loading>`
-        : html`<ul>
-        ${repeat(this.resources, (r) => r.id, (r, i) => html`
-        <li class="card" style="animation-delay: ${i * animation}s">
-          <div class="img">
-            <ui-image src="/api/v1/media/${r.id}?width=400" />
-          </div>
-          <div class="details">
-            <span>
-              ${r.name}
-            </span>
-            <ui-avatar user="${r.author}"></ui-avatar>
-          </div>
-        </li>
-        `)}
-      </ul>`}
-    `;
-  }
-
-  public stateChanged(s: State) {
-    this.resources = s.resources.media.media;
-    this._loading = s.resources.media._loading.all;
+    return html`<ui-media-grid></ui-media-grid>`;
   }
 }
 

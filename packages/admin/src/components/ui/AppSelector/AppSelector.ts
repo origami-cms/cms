@@ -1,4 +1,4 @@
-import { Input } from '@origami/zen';
+import { ZenInput } from '@origami/zen';
 import Fuse from 'fuse.js';
 import { customElement, html, LitElement, property } from 'lit-element';
 import { repeat } from 'lit-html/directives/repeat';
@@ -29,8 +29,7 @@ export class AppSelector extends connect(store)(LitElement) {
     else this._filtered = this._fuse.search(v);
   }
 
-  public static _boundAttributes = ['open'];
-  @property()
+  @property({type: Boolean, attribute: true, reflect: true})
   public open: boolean = false;
 
   @property()
@@ -118,7 +117,7 @@ export class AppSelector extends connect(store)(LitElement) {
   }
 
   public updated() {
-    if (this.open) (this.shadowRoot!.querySelector('zen-input')! as Input).focus();
+    if (this.open) this.shadowRoot!.querySelector('zen-input')!.focus();
   }
 
 

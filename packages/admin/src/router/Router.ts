@@ -77,3 +77,10 @@ export class Router extends connect(store)(LitElement) {
     }, 10);
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    // @ts-ignore
+    'zen-router': Router;
+  }
+}

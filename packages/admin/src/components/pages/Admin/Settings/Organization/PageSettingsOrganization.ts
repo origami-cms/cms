@@ -1,4 +1,4 @@
-import { Form } from '@origami/zen';
+import { ZenForm } from '@origami/zen';
 import { Field } from '@origami/zen-lib/FormValidator';
 import { customElement, html, LitElement, property } from 'lit-element';
 import { connect } from 'pwa-helpers/connect-mixin';
@@ -88,7 +88,7 @@ export class PageSettingsOrganization extends connect(store)(LitElement) {
     this.theme = s.Organization.theme;
   }
 
-  private _saveTheme(e: { target: Form }) {
+  private _saveTheme(e: { target: ZenForm }) {
     const { colorMain, colorSecondary } = e.target.values;
 
     store.dispatch<any>(setTheme(colorMain, colorSecondary));

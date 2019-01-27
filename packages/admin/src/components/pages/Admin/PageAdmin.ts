@@ -12,9 +12,9 @@ interface PageAdminProps {
 }
 
 export * from './App/PageApp';
-export * from './Settings/PageSettings';
 export * from './Users/PageUsers';
 export * from './Media/PageMedia';
+// export * from './Settings/PageSettings';
 
 @customElement('page-admin')
 export class PageAdmin extends connect(store)(LitElement) implements PageAdminProps {
@@ -41,7 +41,7 @@ export class PageAdmin extends connect(store)(LitElement) implements PageAdminPr
     { path: '/404/', element: 'page-not-found', exact: true },
     { path: '/users/(.*)', element: 'page-users' },
     { path: '/media/(.*)', element: 'page-media' },
-    { path: '/settings/(.*)', element: 'page-settings' },
+    // { path: '/settings/(.*)', element: 'page-settings' },
     { path: '/', element: 'page-dashboard', exact: true }
   ];
 
@@ -69,7 +69,7 @@ export class PageAdmin extends connect(store)(LitElement) implements PageAdminPr
   public updated(p: any) {
     super.updated(p);
     // @ts-ignore
-    this.shadowRoot.querySelector('zen-router').routes = this.routes;
+    this.shadowRoot!.querySelector('zen-router').routes = this.routes;
   }
 
 
