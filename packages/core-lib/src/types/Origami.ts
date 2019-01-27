@@ -227,9 +227,7 @@ export namespace Origami {
 
   export namespace Store {
     // tslint:disable-next-line no-shadowed-variable
-    export declare const Store: {
-      new (options: StoreOptions): Store;
-    };
+    export declare const Store: new (options: StoreOptions) => Store;
     // tslint:disable-next-line no-shadowed-variable
     export interface Store {
       models: { [name: string]: Model };
@@ -254,9 +252,7 @@ export namespace Origami {
       };
     }
 
-    export declare const Model: {
-      new (name: string, schema: Schema): Model;
-    };
+    export declare const Model: new (name: string, schema: Schema) => Model;
     export interface Model {
       create(resource: Resource): Resource;
 

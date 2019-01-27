@@ -1,0 +1,64 @@
+@import 'zen-css/import';
+:host {
+  &, * {
+    box-sizing: border-box;
+  }
+
+  $max-height: calc(100vh - 2 * var(--size-main));
+  $header-height: var(--size-huge);
+  $footer-height: var(--size-huge);
+
+  @extend %comp-card;
+  position: relative;
+  z-index: 101;
+  max-height: $max-height;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  header {
+    @extend %n-margin-main;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: var(--size-small) var(--size-main);
+    height: $header-height;
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    zen-icon[type='cross'] {
+      margin-left: auto;
+      transform: translateX(var(--size-small));
+      cursor: pointer;
+    }
+
+    .icon {
+      transform: translateX(calc(-1 * var(--size-small)));
+    }
+  }
+
+  .content {
+    overflow-y: auto;
+    padding-bottom: var(--size-small);
+    max-height: calc(100vh - 2 * var(--size-main) - #{$header-height} - #{$footer-height});
+    @extend %n-margin-h-small;
+    @extend %padding-h-small;
+    // margin-left: calc(-1 * var(--size-small));
+    // margin-right: calc(-1 * var(--size-small));
+    // position: absolute;
+    // top: var(--size-huge);
+    // bottom: var(--size-huge);
+  }
+
+  footer {
+    display: flex;
+    @extend %n-margin-main;
+    @extend %padding-h-small;
+    margin-top: 0;
+    height: $footer-height;
+    background-color: var(--color-grey-200);
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

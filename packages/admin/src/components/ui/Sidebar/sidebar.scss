@@ -1,0 +1,131 @@
+@import "zen-css/import";
+
+:host {
+  position: absolute;
+  display: grid;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  z-index: 1;
+  box-shadow: var(--sidebar-shadow);
+  grid-template-rows: repeat(2, var(--sidebar-width)) 1fr var(--sidebar-width);
+
+  &,
+  * {
+    @extend %reset;
+  }
+
+
+  a.top-link {
+    display: inline-block;
+    position: relative;
+    height: var(--sidebar-width);
+    line-height: var(--sidebar-width);
+    text-align: center;
+
+    &:before {
+      content: '';
+      @extend %cover;
+      background: var(--gradient-main);
+      opacity: 0;
+      transition: all var(--transition-time);
+      @extend %rounded;
+    }
+
+    &.active {
+      &:before {
+        opacity: 1;
+      }
+
+      img {
+        filter: brightness(10);
+      }
+    }
+  }
+
+  img.logo {
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  .apps-button {
+    line-height: var(--sidebar-width);
+    text-align: center;
+    border-top: var(--header-divider);
+    transition: all calc(var(--transition-time) / 2);
+
+    zen-icon {
+      vertical-align: middle;
+      transition: all calc(var(--transition-time) / 2);
+    }
+
+    &:hover {
+      background-color: var(--color-hover);
+
+      zen-icon {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  a.top-link,
+  .search {
+    border-bottom: var(--header-divider);
+  }
+
+  .search {
+    position: relative;
+    width: var(--sidebar-width);
+    height: var(--sidebar-width);
+
+    zen-icon {
+      @extend %center;
+    }
+  }
+
+  ul.apps {
+    font-size: 0;
+    display: grid;
+    grid-auto-rows: var(--sidebar-width);
+
+    li {
+      position: relative;
+      height: var(--sidebar-width);
+      text-align: center;
+      clip-path: url(#sidebar-app-clip);
+      border-bottom: var(--header-divider);
+      border-radius: var(--border-radius);
+
+      a {
+        transition: all calc(var(--transition-time) / 2);
+
+        ui-app-icon {
+          width: 90%;
+          height: 90%;
+          margin-left: 5%;
+          margin-top: 5%;
+          transition: all calc(var(--transition-time) / 2);
+          opacity: 0.4;
+          transform: scale(0.7);
+        }
+
+        &:hover ui-app-icon {
+          transform: scale(0.8);
+        }
+
+        &.active {
+          ui-app-icon {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+
+  zen-tooltip {
+    margin-left: 1rem;
+  }
+}

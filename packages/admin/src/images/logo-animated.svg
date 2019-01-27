@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 236.3 40" style="enable-background:new 0 0 236.3 40;" xml:space="preserve">
+	<style type="text/css">
+		.bird {
+			fill: url(#gradient-bird);
+			animation: bird 2.5s forwards ease-in-out;
+		}
+		.letter {
+			opacity: 0;
+			animation: letter 1.5s forwards ease-out;
+		}
+
+		.letter-o {
+			fill: url(#gradient-letter-o);
+			animation-delay: 1.08s;
+			animation-duration: 1.72s;
+		}
+		.letter-r {
+			fill: url(#gradient-letter-r);
+			animation-delay: 1.05s;
+			animation-duration: 1.7s;
+		}
+		.letter-i {
+			fill: url(#gradient-letter-i);
+			animation-delay: 1.01s;
+			animation-duration: 1.67s;
+		}
+		.letter-g {
+			fill: url(#gradient-letter-g);
+			animation-delay: 0.95s;
+			animation-duration: 1.63s;
+		}
+		.letter-a {
+			fill: url(#gradient-letter-a);
+			animation-delay: 0.88s;
+			animation-duration: 1.59s;
+		}
+		.letter-m {
+			fill: url(#gradient-letter-m);
+			animation-delay: 0.8s;
+			animation-duration: 1.55s;
+		}
+		.letter-i-2 {
+			fill: url(#gradient-letter-i-2);
+			animation-delay: 0.7s;
+			animation-duration: 1.5s;
+		}
+
+
+		@keyframes bird {
+			0% {
+				opacity: 0;
+			}
+			0%, 20% {
+				transform: translateX(calc(50% - 22.5px));
+			}
+			20% {
+				opacity: 1;
+			}
+			100% {
+				transform: none;
+			}
+		}
+		@keyframes letter {
+			0%, 30% {
+				opacity: 0;
+				transform: translateX(-10%);
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	</style>
+	<g>
+
+		<!-- BIRD -->
+		<linearGradient id="gradient-bird" gradientUnits="userSpaceOnUse" x1="0.1067" y1="20" x2="236.4308" y2="20">
+			<stop offset="0" style="stop-color:#B155BA" />
+			<stop offset="1" style="stop-color:#69299A" />
+		</linearGradient>
+		<path class="bird" d="M43.9,2.1H26.3c-0.3,0-0.6,0.1-0.8,0.3l-6.7,6.7L9.9,0.3C9.7,0.1,9.4,0,9.1,0C8.8,0,8.5,0.1,8.3,0.3l-8,8
+		C0,8.6-0.1,9.1,0.1,9.6c0.2,0.4,0.6,0.7,1,0.7H8v10.1c0,0,0,0,0,0c0,0.1,0,0.2,0,0.3c0,0,0,0,0,0.1c0,0.1,0.1,0.2,0.1,0.3
+		c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2l8.8,8.8c0,0,0,0,0,0l0,0l9.6,9.6c0.2,0.2,0.5,0.3,0.8,0.3c0.1,0,0.3,0,0.4-0.1
+		c0.4-0.2,0.7-0.6,0.7-1V22.6v-2.5l0.8-0.7l2.1-2.2L44.7,4.1c0.3-0.3,0.4-0.8,0.2-1.2S44.3,2.1,43.9,2.1z M10.3,17.7V9.1V3.9
+		l6.9,6.9L10.3,17.7z M3.9,8L8,3.9V8H3.9z M26.4,36.1l-6.7-6.7l6.4-4.4l0.3-0.2V36.1z M30,15.6l-2.1,2.2l-1.1,1.1l-8.8,8.8l-7.2-7.2
+		l16-16h14.4L30,15.6z" />
+
+
+		<linearGradient id="gradient-letter-o" gradientUnits="userSpaceOnUse" x1="0.1067" y1="20.0993" x2="236.4308" y2="20.0993">
+			<stop offset="0" style="stop-color:#B155BA" />
+			<stop offset="1" style="stop-color:#69299A" />
+		</linearGradient>
+		<path class="letter letter-o" d="M73.1,5C64.8,5,58,11.8,58,20.1c0,8.3,6.8,15.1,15.1,15.1c8.3,0,15.1-6.8,15.1-15.1C88.3,11.8,81.5,5,73.1,5z
+		 M73.1,31.9c-6.5,0-11.8-5.3-11.8-11.8c0-6.5,5.3-11.8,11.8-11.8c6.5,0,11.8,5.3,11.8,11.8C84.9,26.6,79.6,31.9,73.1,31.9z"
+		/>
+
+
+		<linearGradient id="gradient-letter-r" gradientUnits="userSpaceOnUse" x1="0.1067" y1="20.1241" x2="236.4308" y2="20.1241">
+			<stop offset="0" style="stop-color:#B155BA" />
+			<stop offset="1" style="stop-color:#69299A" />
+		</linearGradient>
+		<path class="letter letter-r" d="M106.3,22.1c3.5-1.2,6-4.5,6-8.3c0-4.8-3.9-8.8-8.8-8.8h-7.1c-0.9,0-1.7,0.8-1.7,1.7v26.9
+		c0,0.9,0.8,1.7,1.7,1.7s1.7-0.8,1.7-1.7v-11h4.5l7.8,12c0.3,0.5,0.9,0.8,1.4,0.8c0.3,0,0.6-0.1,0.9-0.3c0.8-0.5,1-1.6,0.5-2.3
+		L106.3,22.1z M98.1,19.2V8.3h5.4c3,0,5.4,2.4,5.4,5.4c0,3-2.4,5.4-5.4,5.4H98.1z" />
+
+
+		<linearGradient id="gradient-letter-i" gradientUnits="userSpaceOnUse" x1="0.1067" y1="20.0993" x2="236.4308" y2="20.0993">
+			<stop offset="0" style="stop-color:#B155BA" />
+			<stop offset="1" style="stop-color:#69299A" />
+		</linearGradient>
+		<path class="letter letter-i" d="M122.9,5c-0.9,0-1.7,0.8-1.7,1.7v26.9c0,0.9,0.8,1.7,1.7,1.7s1.7-0.8,1.7-1.7V6.6C124.6,5.7,123.9,5,122.9,5z"
+		/>
+
+
+		<linearGradient id="gradient-letter-g" gradientUnits="userSpaceOnUse" x1="0.1067" y1="20.0993" x2="236.4308" y2="20.0993">
+			<stop offset="0" style="stop-color:#B155BA" />
+			<stop offset="1" style="stop-color:#69299A" />
+		</linearGradient>
+		<path class="letter letter-g" d="M161,18.5c-0.1,0-0.2,0-0.3,0h-13.5c-0.9,0-1.7,0.8-1.7,1.7s0.8,1.7,1.7,1.7h11.7c-0.8,5.7-5.7,10.1-11.7,10.1
+				c-6.5,0-11.8-5.3-11.8-11.8c0-6.5,5.3-11.8,11.8-11.8c0.9,0,1.7-0.8,1.7-1.7S148.1,5,147.2,5c-8.3,0-15.1,6.8-15.1,15.1
+				c0,8.3,6.8,15.1,15.1,15.1c8.3,0,15.1-6.8,15.1-15.1C162.3,19.3,161.7,18.6,161,18.5z" />
+
+
+		<linearGradient id="gradient-letter-a" gradientUnits="userSpaceOnUse" x1="0.1067" y1="20.2483" x2="236.4308" y2="20.2483">
+			<stop offset="0" style="stop-color:#B155BA" />
+			<stop offset="1" style="stop-color:#69299A" />
+		</linearGradient>
+		<path class="letter letter-a" d="M179.6,6.1c-0.3-0.6-0.9-1-1.5-1h0c-0.6,0-1.2,0.4-1.5,1L163.8,33c-0.2,0.5-0.2,1.1,0.1,1.6
+		c0.3,0.5,0.8,0.8,1.4,0.8h25.6c0.6,0,1.1-0.3,1.4-0.8c0.3-0.5,0.3-1.1,0.1-1.6L179.6,6.1z M168,32l10.1-21.3L188.2,32H168z"
+		/>
+
+
+		<linearGradient id="gradient-letter-m" gradientUnits="userSpaceOnUse" x1="0.1067" y1="20.0993" x2="236.4308" y2="20.0993">
+			<stop offset="0" style="stop-color:#B155BA" />
+			<stop offset="1" style="stop-color:#69299A" />
+		</linearGradient>
+		<path class="letter letter-m" d="M225.1,5.1c-0.7-0.2-1.4,0-1.9,0.5l-11.5,14l-11.5-14c-0.5-0.6-1.2-0.8-1.9-0.5c-0.7,0.2-1.1,0.9-1.1,1.6v26.9
+		c0,0.9,0.8,1.7,1.7,1.7c0.9,0,1.7-0.8,1.7-1.7V11.4l9.8,11.9c0.3,0.4,0.8,0.6,1.3,0.6c0,0,0,0,0,0c0.5,0,1-0.2,1.3-0.6l9.8-12v22.2
+		c0,0.9,0.8,1.7,1.7,1.7c0.9,0,1.7-0.8,1.7-1.7V6.6C226.2,5.9,225.8,5.3,225.1,5.1z" />
+
+
+		<linearGradient id="gradient-letter-i-2" gradientUnits="userSpaceOnUse" x1="0.1067" y1="20.0993" x2="236.4308" y2="20.0993">
+			<stop offset="0" style="stop-color:#B155BA" />
+			<stop offset="1" style="stop-color:#69299A" />
+		</linearGradient>
+		<path class="letter letter-i-2" d="M234.6,5c-0.9,0-1.7,0.8-1.7,1.7v26.9c0,0.9,0.8,1.7,1.7,1.7c0.9,0,1.7-0.8,1.7-1.7V6.6
+				C236.3,5.7,235.6,5,234.6,5z" />
+
+	</g>
+</svg>

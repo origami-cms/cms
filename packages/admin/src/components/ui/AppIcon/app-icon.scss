@@ -1,0 +1,27 @@
+@import 'zen-css/import';
+@import 'zen-css/classes/gradients';
+
+:host {
+    display: inline-grid;
+    align-items: center;
+
+    .rounded {
+        @extend %rounded;
+    }
+    div, img {
+        width: 100%;
+        height: 100%;
+    }
+    div {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+:host([shadow]) {
+    img, div {
+        box-shadow: 0 0.4rem 0.8rem var(--color-main-faint);
+    }
+}

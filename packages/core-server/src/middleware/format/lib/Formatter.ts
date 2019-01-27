@@ -1,14 +1,9 @@
 import { Origami } from '@origami/core-lib';
-import {
-  FORBIDDEN,
-  INTERNAL_SERVER_ERROR,
-  NOT_FOUND,
-  UNAUTHORIZED
-} from 'http-status-codes';
+import { FORBIDDEN, INTERNAL_SERVER_ERROR, NOT_FOUND, UNAUTHORIZED } from 'http-status-codes';
 import js2xmlParser from 'js2xmlparser';
 // @ts-ignore
 import json2csv from 'json-2-csv';
-import { Writable } from 'stream';
+import { Stream, Writable } from 'stream';
 import { promisify } from 'util';
 import { ResponseContent } from '../../../lib/Content';
 import { jsonToTable } from './jsonToTable';
@@ -24,6 +19,7 @@ interface ReturningJSON {
 export class Formatter {
   public body: ResponseContent | false;
   public type: string;
+  public readonly isStream: boolean;
 
   constructor(
     public res: Origami.Server.Response,
@@ -31,6 +27,7 @@ export class Formatter {
     public message?: string
   ) {
     this.body = res.locals.content.get();
+    this.isStream = this.body instanceof Stream;
 
     // Set the type to the returning data, or the accepted data
     let t = res.get('Content-Type') || accept;
@@ -52,6 +49,8 @@ export class Formatter {
   }
 
   public async send() {
+    if (this.isStream) return this.sendStream();
+
     switch (this.type.toLowerCase()) {
       case 'application/json':
         return this.sendJSON();
@@ -98,7 +97,6 @@ export class Formatter {
       // If body is a stream, send it as a stream instead
     } else if (body instanceof Writable) {
       return this.sendStream();
-      return;
 
       // Else send as normal JSON
     } else return this._sendJSON(body);
@@ -172,7 +170,26 @@ export class Formatter {
    * Send Stream response
    */
   public async sendStream() {
-    this.res.pipe(this.body as Writable);
+    const stream = this.body as Writable;
+    stream.pipe(this.res);
+
+    // If stream is a writeable stream, pipe the response into it
+    // if (
+    //   stream.writable !== false &&
+    //   typeof stream._write === 'function' &&
+    //   typeof stream._writableState === 'object'
+    // ) {
+
+      // Otherwise if it's a readable stream, pipe it to the response
+    // } else this.res.pipe(stream);
+
+      // stream.readable !== false &&
+      // typeof stream._read === 'function' &&
+      // typeof stream._readableState === 'object';
+
+    // (this.body as Stream).pipe(this.res);
+
+    // this.res.pipe(this.body as Writable);
   }
 
   private _isJSON(obj: any) {

@@ -1,0 +1,17 @@
+@import 'zen-css/import';
+@import 'zen-css/components/card';
+@import 'zen-css/animations/fade-slide-up';
+
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: var(--size-small);
+
+  ui-media-grid {
+    @extend %cover;
+  }
+}

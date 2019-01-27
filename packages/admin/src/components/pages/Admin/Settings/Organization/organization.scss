@@ -1,0 +1,65 @@
+@import 'zen-css/import';
+@import 'zen-css/components/type';
+@import 'zen-css/components/hr';
+
+:host {
+    display: block;
+    max-width: 60rem;
+    margin: auto;
+
+    &, *:not(ui-file-uploader) {
+        @extend %reset;
+    }
+
+    .general {
+        display: flex;
+        flex-wrap: wrap;
+
+        h4 {
+            flex-basis: 100%;
+            margin-bottom: 1rem;
+        }
+        .logo {
+            position: relative;
+            width: 20rem;
+            max-height: 24rem;
+            flex-grow: 0;
+            margin-right: var(--size-main);
+
+            zen-button {
+                font-size: var(--font-size-tiny);
+                width: 20rem;
+                padding: 0;
+                position: absolute;
+                bottom: 0;
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: calc(100% - 4rem);
+                object-fit: contain;
+            }
+
+            ui-file-uploader {
+                height: 100%;
+                padding-bottom: 4rem;
+                border-radius: var(--border-radius) var(--border-radius) 0 0;
+                border-bottom: 0;
+            }
+        }
+        zen-form {
+            flex: 1;
+            margin-top: -1rem;
+        }
+    }
+
+    .theme {
+        h4 {
+            display: inline-block;
+        }
+    }
+}

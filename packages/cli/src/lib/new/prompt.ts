@@ -91,7 +91,8 @@ const listOther = (
       message
     }, {
       name: `${name}.type`,
-      when: (opts: inq.Answers) => opts[name].type === 'Other',
+      // tslint:disable-next-line no-unnecessary-type-assertion
+      when: (opts) => opts[name].type === 'Other',
       validate: required,
       message
     }
@@ -187,6 +188,7 @@ export const prompt = async (
   const secretText = 'Auto-generated secret';
 
   // Check if the user wants to use default config for server...
+  // tslint:disable-next-line no-unnecessary-type-assertion
   if ((await inq.prompt({
     type: 'confirm',
     message: 'Use default server config?',

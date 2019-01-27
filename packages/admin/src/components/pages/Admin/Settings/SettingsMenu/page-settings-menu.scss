@@ -1,0 +1,33 @@
+@import 'zen-css/import';
+
+:host {
+    display: block;
+    user-select: none;
+
+    &, * {
+        @extend %reset;
+    }
+
+    li {
+        list-style: none;
+        display: block;
+        font-size: var(--font-size-small);
+        color: var(--color-grey-300);
+        height: var(--size-main);
+        line-height: var(--size-main);
+
+        a {
+            width: 100%;
+            text-decoration: none;
+        }
+
+        * {
+            vertical-align: middle;
+        }
+
+        .active {
+            color: var(--color-main);
+            --icon-color: var(--color-main);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import 'zen-css/import';
+
+:host {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+
+  &, .back {
+    @extend %cover;
+    z-index: 100;
+  }
+
+  .back {
+    background-color: #1b1025;
+    opacity: 0.7;
+  }
+}
+
+:host-context([show]) {
+  display: flex;
+}
