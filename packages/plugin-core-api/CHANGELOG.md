@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.14](https://github.com/origami-cms/core/tree/master/packages/core-api/compare/v0.0.3-alpha.13...v0.0.3-alpha.14) (2019-01-28)
+
+
+### Features
+
+* **plugin-social-login:** added google and facebook login ([a5a4959](https://github.com/origami-cms/core/tree/master/packages/core-api/commit/a5a4959))
+
+
+
+
+
 ## [0.0.3-alpha.13](https://github.com/origami-cms/core/tree/master/packages/core-api/compare/v0.0.3-alpha.12...v0.0.3-alpha.13) (2019-01-27)
 
 **Note:** Version bump only for package @origami/plugin-core-api

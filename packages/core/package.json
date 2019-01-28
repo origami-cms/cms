@@ -1,6 +1,6 @@
 {
   "name": "@origami/core",
-  "version": "0.0.3-alpha.13",
+  "version": "0.0.3-alpha.14",
   "description": "Core of Origami",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/core",
   "homepage": "http://www.origami.so",
@@ -14,10 +14,10 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/core-lib": "0.0.3-alpha.13",
-    "@origami/core-server": "0.0.3-alpha.13",
-    "@origami/plugin-core-api": "0.0.3-alpha.13",
-    "@origami/tslint-config": "0.0.3-alpha.13"
+    "@origami/core-lib": "0.0.3-alpha.14",
+    "@origami/core-server": "0.0.3-alpha.14",
+    "@origami/plugin-core-api": "0.0.3-alpha.14",
+    "@origami/tslint-config": "0.0.3-alpha.14"
   },
   "devDependencies": {
     "tslint": "^5.11.0"
