@@ -67,5 +67,8 @@
     "uglifycss": "^0.0.29",
     "wc-sass-render": "^1.1.2",
     "zen-css": "^1.1.18"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
