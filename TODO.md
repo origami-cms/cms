@@ -2,6 +2,7 @@
 | Filename | line # | TODO
 |:------|:------:|:------
 | [packages/core-server/src/Server.ts](packages/core-server/src/Server.ts#L210) | 210 | Check if know error, or throw otherwise (should NOT catch
+| [packages/plugin-core-api/src/index.ts](packages/plugin-core-api/src/index.ts#L48) | 48 | Fix security issue
 | [packages/admin/src/actions/App.ts](packages/admin/src/actions/App.ts#L17) | 17 | Convert to endpoint
 | [packages/admin/src/lib/reduxInjector.ts](packages/admin/src/lib/reduxInjector.ts#L6) | 6 | Fix ts-ignores
 | [packages/admin/src/router/Router.ts](packages/admin/src/router/Router.ts#L73) | 73 | Convert to a better structure

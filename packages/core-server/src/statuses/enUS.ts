@@ -40,7 +40,7 @@ export const enUS = {
     },
     success: {
       verified: ['JWT is valid', OK],
-      login: ['Sucessfully logged in', OK]
+      login: ['Successfully logged in', OK]
     }
   },
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.13](https://github.com/origami-cms/core/tree/master/packages/origami/compare/v0.0.3-alpha.12...v0.0.3-alpha.13) (2019-01-27)
+
+
+### Bug Fixes
+
+* **admin:** app selector now working again ([cbe23ac](https://github.com/origami-cms/core/tree/master/packages/origami/commit/cbe23ac))
+
+
+
+
+
 ## [0.0.3-alpha.11](https://github.com/origami-cms/core/tree/master/packages/origami/compare/v0.0.3-alpha.10...v0.0.3-alpha.11) (2018-12-16)
 
 **Note:** Version bump only for package @origami/plugin-setup

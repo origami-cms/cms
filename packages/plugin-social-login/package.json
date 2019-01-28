@@ -1,8 +1,8 @@
 {
-  "name": "@origami/plugin-auth",
-  "version": "0.0.3-alpha.13",
-  "description": "Authentication plugin for the Origami platform",
-  "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-auth",
+  "name": "@origami/plugin-social-login",
+  "version": "0.0.0",
+  "description": "Social login plugin for the Origami platform",
+  "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-social-login",
   "homepage": "http://www.origami.so",
   "author": "Tristan Matthias <tristan@origami.so>",
   "license": "MIT",
@@ -14,6 +14,7 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/core": "0.0.3-alpha.13"
+    "@origami/core": "0.0.3-alpha.13",
+    "request-promise-native": "^1.0.5"
   }
 }
