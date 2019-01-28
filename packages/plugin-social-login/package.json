@@ -14,7 +14,7 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/core": "0.0.3-alpha.11",
+    "@origami/core": "0.0.3-alpha.13",
     "request-promise-native": "^1.0.5"
   }
 }

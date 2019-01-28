@@ -45,6 +45,7 @@ module.exports = async (app: any, options: any) => {
     .position('pre-store')
     .use(async (req, res, next) => {
       if (req.body.password) {
+        // TODO: Fix security issue
         req.__initialPassword = req.body.password;
         req.body.password = await auth.hash(req.body.password);
       }

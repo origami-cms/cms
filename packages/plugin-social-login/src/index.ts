@@ -1,14 +1,17 @@
 import { Route, Server } from '@origami/core';
+import { final } from './final/final';
 import { facebook } from './providers/facebook';
+import { google } from './providers/google';
 
-
+export interface ProviderSettings {
+  clientID: string;
+  clientSecret: string;
+  callbackUrl?: string;
+}
 export interface SocialLoginSettings {
   host: string;
-  facebook: {
-    appId: string;
-    appSecret: string;
-    callbackUrl?: string;
-  };
+  google: ProviderSettings;
+  facebook: ProviderSettings;
 }
 
 export const URI_PREFIX = '/api/v1/social-login';
@@ -18,12 +21,23 @@ export const URI_PREFIX = '/api/v1/social-login';
 export default (server: Server, settings: SocialLoginSettings) => {
   const socialLogin = new Route(URI_PREFIX);
 
+  // Nest the final route
+  final.parent = socialLogin;
+  socialLogin.nested.push(final);
 
   if (settings.facebook) {
     const fb = facebook(settings);
     if (fb) {
-      fb.parent = socialLogin;
-      socialLogin.nested.push(fb);
+      fb.route.parent = socialLogin;
+      socialLogin.nested.push(fb.route);
+    }
+  }
+
+  if (settings.google) {
+    const g = google(settings);
+    if (g) {
+      g.route.parent = socialLogin;
+      socialLogin.nested.push(g.route);
     }
   }
 
