@@ -16,5 +16,8 @@
   "dependencies": {
     "@origami/core": "0.0.3-alpha.14",
     "request-promise-native": "^1.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
