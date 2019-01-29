@@ -12,4 +12,5 @@ export * from './ResourceTable/ResourceTable';
 export * from './Sidebar/Sidebar';
 export * from './SideMenu/SideMenu';
 export * from './UploadProgress/UploadProgress';
+export * from './WYSIWYG/WYSIWYG';
 

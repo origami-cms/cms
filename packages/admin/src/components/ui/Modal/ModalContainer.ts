@@ -73,15 +73,19 @@ export class ModalContainer extends LitElement {
    * @param eventName Name of event to wait for (default: 'answer')
    */
   public async waitFor<T>(eventName: string = 'answer'): Promise<T | false> {
+    await this.updateComplete;
+
     return new Promise((res) => {
       if (!this._modalTag) {
         res(false);
+        this.close();
         return;
       }
       const modal = this._modalElement;
 
       if (!modal) {
         res(false);
+        this.close();
         return;
       }
 
@@ -89,8 +93,16 @@ export class ModalContainer extends LitElement {
       const handler = (e: CustomEventInit) => {
         res(e.detail);
         modal.removeEventListener(eventName, handler);
+        this.close();
       };
       modal.addEventListener(eventName, handler);
     });
+  }
+}
+
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'ui-modal-container': ModalContainer;
   }
 }

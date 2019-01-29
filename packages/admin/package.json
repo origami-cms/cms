@@ -10,7 +10,7 @@
     "gzip": "gzip-all 'build/**/*.*(js|css|svg|png|jpg|jpeg)'",
     "build:ts": "tsc -p .",
     "build:rollup": "rollup -c",
-    "build:sass": "sass-render src/components/**/*.scss --suffix=-css.ts -i ../../node_modules --template ./style-template.ts",
+    "build:sass": "sass-render src/components/**/*.scss --suffix=-css.ts -i '../../node_modules,../../' --template ./style-template.ts",
     "build": "yarn clean; yarn build:sass; yarn build:ts; yarn build:rollup;",
     "build:prod": "yarn clean; yarn build:sass; yarn build:ts; NODE_ENV=production yarn build:rollup; yarn gzip",
     "watch:ts": "yarn build:ts -w",
@@ -38,13 +38,13 @@
     "deep-equal": "^1.0.1",
     "deepmerge": "^2.1.1",
     "fuse.js": "^3.2.1",
+    "grapesjs": "^0.14.52",
     "gzip-all": "^1.0.0",
     "http-status-codes": "^1.3.0",
     "lit-element": "^2.0.0-rc.2",
     "lit-html": "^1.0.0-rc.2",
     "lodash-es": "^4.17.11",
     "origami-rollup-config": "^1.0.0",
-    "origami-zen": "^0.3.20-alpha.9",
     "path-to-regexp": "^2.2.1",
     "pluralize": "^7.0.0",
     "pwa-helpers": "^0.9.0",
@@ -65,10 +65,12 @@
     "tslint-config-origami": "^1.0.3",
     "typescript": "^3.0.1",
     "uglifycss": "^0.0.29",
-    "wc-sass-render": "^1.1.2",
     "zen-css": "^1.1.18"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@origami/zen": "^0.0.2-alpha.1"
   }
 }

@@ -8,6 +8,7 @@
 
   &, .back {
     @extend %cover;
+    position: fixed;
     z-index: 100;
   }
 
