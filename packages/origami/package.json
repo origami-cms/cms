@@ -1,6 +1,6 @@
 {
   "name": "@origami/origami",
-  "version": "0.0.3-alpha.14",
+  "version": "0.0.3-alpha.15",
   "description": "The flexible, easy to use, and open-source CMS built for Node.js",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/origami",
   "homepage": "http://www.origami.so",
@@ -23,7 +23,7 @@
     "dashboard"
   ],
   "dependencies": {
-    "@origami/admin": "0.0.3-alpha.14",
+    "@origami/admin": "0.0.3-alpha.15",
     "@origami/bird": "0.0.3-alpha.14",
     "@origami/core": "0.0.3-alpha.14",
     "@origami/plugin-auth": "0.0.3-alpha.14",

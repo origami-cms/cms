@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-social-login",
-  "version": "0.0.3-alpha.14",
+  "version": "0.0.3-alpha.15",
   "description": "Social login plugin for the Origami platform",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-social-login",
   "homepage": "http://www.origami.so",
