@@ -11,6 +11,7 @@ interface PageAdminProps {
   _appSelectorOpen: boolean;
 }
 
+export * from './Home/PageHome';
 export * from './App/PageApp';
 export * from './Users/PageUsers';
 export * from './Media/PageMedia';
@@ -42,7 +43,7 @@ export class PageAdmin extends connect(store)(LitElement) implements PageAdminPr
     { path: '/users/(.*)', element: 'page-users' },
     { path: '/media/(.*)', element: 'page-media' },
     // { path: '/settings/(.*)', element: 'page-settings' },
-    { path: '/', element: 'page-dashboard', exact: true }
+    { path: '/', element: 'page-home', exact: true }
   ];
 
   @property()
