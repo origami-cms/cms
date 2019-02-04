@@ -1,6 +1,6 @@
 {
   "name": "@origami/admin",
-  "version": "0.0.3-alpha.15",
+  "version": "0.0.3-alpha.16",
   "main": "index.js",
   "repository": "https://github.com/origami-cms/admin-zen.git",
   "author": "Tristan Matthias <hello@tristanmatthias.com>",

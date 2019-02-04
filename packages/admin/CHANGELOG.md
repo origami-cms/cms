@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.16](https://github.com/origami-cms/admin-zen/compare/v0.0.3-alpha.15...v0.0.3-alpha.16) (2019-02-04)
+
+
+### Features
+
+* **admin:** added search and search to media grid ([4991b8c](https://github.com/origami-cms/admin-zen/commit/4991b8c))
+
+
+
+
+
 ## [0.0.3-alpha.15](https://github.com/origami-cms/admin-zen/compare/v0.0.3-alpha.14...v0.0.3-alpha.15) (2019-01-29)
 
 
