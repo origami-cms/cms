@@ -10,8 +10,4 @@
   bottom: 0;
   overflow-y: auto;
   padding: var(--size-small);
-
-  ui-media-grid {
-    @extend %cover;
-  }
 }

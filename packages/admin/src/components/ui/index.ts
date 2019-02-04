@@ -9,6 +9,7 @@ export * from './Modal/Modal';
 export * from './Modal/ModalContainer';
 export * from './ResourcePage/ResourcePage';
 export * from './ResourceTable/ResourceTable';
+export * from './Search/Search';
 export * from './Sidebar/Sidebar';
 export * from './SideMenu/SideMenu';
 export * from './UploadProgress/UploadProgress';

@@ -1,7 +1,7 @@
 import { AnyAction } from 'redux';
 // tslint:disable-next-line match-default-export-name
 import immutable, { ImmutableObjectMixin } from 'seamless-immutable';
-import { UPLOADING_MEDIA_PREVIEW, UPLOADING_MEDIA_PROGRESS, UPLOADING_MEDIA_START } from '../actions/UploadMedia';
+import { UPLOADING_MEDIA_END, UPLOADING_MEDIA_PREVIEW, UPLOADING_MEDIA_PROGRESS, UPLOADING_MEDIA_START } from '../actions/UploadMedia';
 import { UploadingMedia as StateUploadingMedia, UploadingResource } from '../store/state';
 
 const initialState = immutable.from<StateUploadingMedia>({
@@ -38,6 +38,12 @@ export const UploadingMedia = (
       if (index2 < 0) return state;
 
       return state.setIn(['uploading', index2, 'preview'], action.preview);
+
+    case UPLOADING_MEDIA_END:
+      return state.set(
+        'uploading',
+        state.asMutable().uploading.filter((u) => u.id !== action.id)
+      );
 
 
     default:

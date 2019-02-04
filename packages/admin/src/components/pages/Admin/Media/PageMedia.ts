@@ -9,7 +9,9 @@ export class PageMedia extends titleSet('Media')(connect(store)(LitElement)) {
   public static styles = [CSS];
 
   public render() {
-    return html`<ui-media-grid></ui-media-grid>`;
+    return html`
+      <ui-media-grid searchable></ui-media-grid>
+    `;
   }
 }
 

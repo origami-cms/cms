@@ -42,13 +42,15 @@ export class MediaGrid extends connect(store)(LitElement) {
   @property({ type: Boolean, attribute: true })
   public multiple: boolean = false;
 
+  @property({ type: Boolean, attribute: true })
+  public searchable: boolean = false;
+
   public get value() {
     return this._value;
   }
 
   @property()
   private _value: MediaResource[] = [];
-
 
   @property()
   private _loading: boolean = true;
@@ -61,6 +63,9 @@ export class MediaGrid extends connect(store)(LitElement) {
 
   @property()
   private _meID: null | string = null;
+
+  @property()
+  private _filteredResources: GridResource[] = [];
 
   @property({type: Boolean})
   private _dragging: boolean = false;
@@ -106,8 +111,11 @@ export class MediaGrid extends connect(store)(LitElement) {
 
   constructor() {
     super();
-    store.dispatch<any>(mediaGet());
+    store.dispatch<any>(mediaGet()).then(() => {
+      this._filteredResources = this._resources;
+    });
   }
+
 
   public connectedCallback() {
     super.connectedCallback();
@@ -127,10 +135,21 @@ export class MediaGrid extends connect(store)(LitElement) {
 
   public render() {
     if (this._loading) return html`<zen-loading></zen-loading>`;
-    const resources = this._resources;
-    const empty = resources.length === 0;
+    const _resources = this._resources;
+    const resources = this.searchable ? this._filteredResources : _resources;
+    const empty = _resources.length === 0 && resources.length === 0;
 
     return html`
+      ${this.searchable
+        ? html`<ui-search
+          .keys=${['name']}
+          .items=${_resources}
+          @filtered=${({ detail }: { detail: GridResource[]}) => this._filteredResources = detail}
+          placeholder="Search for media…">
+        </ui-search>`
+        : null
+      }
+
       <ul>
         ${repeat(resources, (r) => r.src, (r, i) => html`
           <li
@@ -167,11 +186,17 @@ export class MediaGrid extends connect(store)(LitElement) {
     `;
   }
 
+  // public firstUpdated() {
+  //   this._filteredResources = this._resources;
+  // }
 
   public stateChanged(state: State) {
     const media = state.resources.media;
     if (this._loading !== media._loading.all) this._loading = state.resources.media._loading.all;
-    if (this._media.length !== media.media.length) this._media = state.resources.media.media;
+    if (this._media !== media.media) {
+      this._media = state.resources.media.media;
+      this._filteredResources = this._resources;
+    }
     this._uploading = state.UploadingMedia.uploading;
     if (!this._meID && state.Me.id) this._meID = state.Me.id;
   }

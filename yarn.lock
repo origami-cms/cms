@@ -965,9 +965,15 @@
     tslint-eslint-rules "^5.4.0"
     tslint-xo "^0.9.0"
 
-"@origami/zen@^0.0.2-alpha.1":
-  version "0.0.2-alpha.1"
-  resolved "https://registry.yarnpkg.com/@origami/zen/-/zen-0.0.2-alpha.1.tgz#0351148bf84b65a4ec0f8bc48f7b5f5bd3e0f312"
+"@origami/zen-lib@^0.0.4-alpha.0":
+  version "0.0.4-alpha.0"
+  resolved "https://registry.yarnpkg.com/@origami/zen-lib/-/zen-lib-0.0.4-alpha.0.tgz#244d176871d87823c2df2436fbec6e47da98f9dd"
+  dependencies:
+    polymer3-decorators "^0.0.1"
+
+"@origami/zen@^0.0.4-alpha.0":
+  version "0.0.4-alpha.0"
+  resolved "https://registry.yarnpkg.com/@origami/zen/-/zen-0.0.4-alpha.0.tgz#947aa3e9997a62281b46b2e3e030f27597a607e2"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -7918,6 +7924,12 @@ pngjs@^3.0.0, pngjs@^3.2.0:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.3.tgz#85173703bde3edac8998757b96e5821d0966a21b"
 
+polymer3-decorators@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/polymer3-decorators/-/polymer3-decorators-0.0.1.tgz#6667bf7c7ed596bc6cc62892243b075ecad9eaea"
+  dependencies:
+    reflect-metadata "^0.1.10"
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -8491,7 +8503,7 @@ referrer-policy@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/referrer-policy/-/referrer-policy-1.1.0.tgz#35774eb735bf50fb6c078e83334b472350207d79"
 
-reflect-metadata@^0.1.12:
+reflect-metadata@^0.1.10, reflect-metadata@^0.1.12:
   version "0.1.13"
   resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
 

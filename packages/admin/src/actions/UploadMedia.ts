@@ -13,7 +13,7 @@ export const uploadProgress = (file: File) =>
     const reader = new FileReader();
     reader.onload = (e: ProgressEvent) => {
       // @ts-ignore
-      dispatch({ type: UPLOADING_MEDIA_PREVIEW, id, preview: e.target!.result});
+      dispatch({ type: UPLOADING_MEDIA_PREVIEW, id, preview: e.target!.result });
     };
     reader.readAsDataURL(file);
 
@@ -23,7 +23,7 @@ export const uploadProgress = (file: File) =>
     request.open('POST', '/api/v1/media');
     request.setRequestHeader('Authorization', API.token!);
 
-    dispatch({type: UPLOADING_MEDIA_START, id, name: file.name});
+    dispatch({ type: UPLOADING_MEDIA_START, id, name: file.name });
 
     request.upload.onprogress = ((e: ProgressEvent) => {
       dispatch({
@@ -40,12 +40,21 @@ export const uploadProgress = (file: File) =>
       });
     });
 
-    request.upload.onloadend = ((e: ProgressEvent) => {
-      dispatch({
-        type: UPLOADING_MEDIA_END,
-        id
-      });
-    });
+    request.onreadystatechange = () => {
+      const ready = 4;
+      if (request.readyState === ready) {
+        dispatch({
+          type: UPLOADING_MEDIA_END,
+          id
+        });
+
+        dispatch({
+          type: 'MEDIA_CREATED',
+          media: JSON.parse(request.response).data
+        });
+
+      }
+    };
 
     request.send(formData);
 
