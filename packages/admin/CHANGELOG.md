@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.17](https://github.com/origami-cms/admin-zen/compare/v0.0.3-alpha.16...v0.0.3-alpha.17) (2019-02-10)
+
+
+### Features
+
+* **admin:** moved RTEditor from Zen ([d91f221](https://github.com/origami-cms/admin-zen/commit/d91f221))
+
+
+
+
+
 ## [0.0.3-alpha.16](https://github.com/origami-cms/admin-zen/compare/v0.0.3-alpha.15...v0.0.3-alpha.16) (2019-02-04)
 
 
