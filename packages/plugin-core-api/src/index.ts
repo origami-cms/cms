@@ -59,7 +59,7 @@ module.exports = async (app: any, options: any) => {
   api
     .position('pre-render')
     .use((req, res, next) => {
-      if (!res.locals.content.hasContent) {
+      if (!res.locals.content.hasContent && !res.locals.content.responseCode) {
         res.locals.content.responseCode = 'general.errors.notFound';
       }
       next();
