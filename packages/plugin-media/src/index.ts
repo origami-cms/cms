@@ -1,9 +1,10 @@
 import { error, Origami, Server } from '@origami/core';
 import Media from './models/media';
 import * as ProviderFilesystem from './providers/filesystem';
+import * as ProviderImgur from './providers/imgur';
 import * as ProviderS3 from './providers/s3';
 
-export type ProviderTypes = 's3' | 'filesystem';
+export type ProviderTypes = 's3' | 'filesystem' | 'imgur';
 export type PluginOptionsBase = {
   provider: ProviderTypes;
 };
@@ -20,12 +21,24 @@ export interface PluginOptionsS3 extends PluginOptionsBase {
   region: string;
 }
 
-export type PluginOptions = PluginOptionsFileSystem | PluginOptionsS3;
+export interface PluginOptionsImgur extends PluginOptionsBase {
+  provider: 'imgur';
+  clientID: string;
+  clientSecret: string;
+}
+
+export type PluginOptions = PluginOptionsFileSystem | PluginOptionsS3 | PluginOptionsImgur;
 
 export interface Provider<T> {
   initialize(options: T): any;
   handlerCreate(options: T): Origami.Server.RequestHandler;
   handlerGet(options: T): Origami.Server.RequestHandler;
+  handlerDelete(options: T): Origami.Server.RequestHandler;
+}
+
+export interface MediaResource {
+  id: string;
+  type: string;
 }
 
 // @ts-ignore
@@ -55,6 +68,10 @@ module.exports = async (server: Server, options: PluginOptions) => {
       provider = ProviderFilesystem;
       break;
 
+    case 'imgur':
+      provider = ProviderImgur;
+      break;
+
     default:
       throw new Error(
         `Media provider ${
@@ -76,7 +93,8 @@ module.exports = async (server: Server, options: PluginOptions) => {
     },
     controllers: {
       create: provider.handlerCreate(options),
-      get: provider.handlerGet(options)
+      get: provider.handlerGet(options),
+      delete: provider.handlerDelete(options)
     }
   });
 };

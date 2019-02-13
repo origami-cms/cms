@@ -257,6 +257,7 @@ export namespace Origami {
       create(resource: Resource): Resource;
 
       find(query: object, opts?: object): Promise<Resource | Resource[] | null>;
+      delete(idOrObj: string | object): Promise<true | undefined>;
     }
 
     export interface Resource {

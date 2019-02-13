@@ -7,7 +7,7 @@
 | [packages/admin/src/lib/reduxInjector.ts](packages/admin/src/lib/reduxInjector.ts#L6) | 6 | Fix ts-ignores
 | [packages/admin/src/router/Router.ts](packages/admin/src/router/Router.ts#L73) | 73 | Convert to a better structure
 | [packages/core-lib/src/Renderer/index.ts](packages/core-lib/src/Renderer/index.ts#L83) | 83 | Remove dependency
-| [packages/plugin-media/src/providers/s3.ts](packages/plugin-media/src/providers/s3.ts#L104) | 104 | Investigate if data.LastModified is actually a date
+| [packages/plugin-media/src/providers/s3.ts](packages/plugin-media/src/providers/s3.ts#L110) | 110 | Investigate if data.LastModified is actually a date
 | [packages/cli/src/commands/new/index.ts](packages/cli/src/commands/new/index.ts#L57) | 57 | Init database
 | [packages/core-server/src/lib/App/App.ts](packages/core-server/src/lib/App/App.ts#L187) | 187 | convert to gzip serve
 | [packages/admin/src/components/pages/Login/PageLogin.ts](packages/admin/src/components/pages/Login/PageLogin.ts#L66) | 66 | Loading state for login form

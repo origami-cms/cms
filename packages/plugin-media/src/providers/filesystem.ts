@@ -1,14 +1,15 @@
 import { Origami } from '@origami/core';
 import fs from 'fs';
-import path from 'path';
-import { promisify } from 'util';
-import { PluginOptionsFileSystem } from '../';
-import { thumbnail } from '../lib/thumbnail';
-
 // @ts-ignore
 import { mkdir as mkdirAsync } from 'mkdir-recursive';
-import { Readable, Stream, Writable } from 'stream';
+import path from 'path';
+import { Readable } from 'stream';
+import { promisify } from 'util';
+import { MediaResource, PluginOptionsFileSystem } from '../';
+import { parseImg } from '../lib/parseImg';
+
 const writeFile = promisify(fs.writeFile);
+const deleteFile = promisify(fs.unlink);
 const stat = promisify(fs.stat);
 const mkdir = promisify(mkdirAsync);
 
@@ -72,10 +73,7 @@ export const handlerGet = (
   options: PluginOptionsFileSystem
 ): Origami.Server.RequestHandler => async (req, res, next) => {
   const m = res.app.get('store').model('media');
-  interface MediaResource {
-    id: string;
-    type: string;
-  }
+
   const file = (await m.find({ id: req.params.mediaId })) as MediaResource;
   if (!file) {
     res.locals.responseCode = 'resource.errors.notFound';
@@ -85,24 +83,40 @@ export const handlerGet = (
   res.header('content-type', file.type);
 
 
-  let stream: Readable = fs.createReadStream(path.resolve(location, file.id));
+  const stream: Readable = fs.createReadStream(path.resolve(location, file.id));
   stream.on('error', (err) => {
     next(err);
     return;
   });
 
-  try {
-    if (req.query.width) {
-      const width = parseInt(req.query.width);
-      if (typeof width === 'number') {
-        stream = stream.pipe(thumbnail(width)) as Readable;
-      }
+  // @ts-ignore Is a stream
+  parseImg(stream, req, res, next);
+};
+
+
+/**
+ * Delete a media resource from the filesystem and mark as deleted in DB
+ */
+export const handlerDelete = (options: PluginOptionsFileSystem): Origami.Server.RequestHandler =>
+  async (req, res, next) => {
+    // Lookup file in database first
+    const m = res.app.get('store').model('media') as Origami.Store.Model;
+
+    const file = (await m.find({ id: req.params.mediaId })) as MediaResource;
+
+    if (!file) {
+      next();
+      return;
     }
 
-    res.locals.content.set(stream);
-    next();
+    await deleteFile(path.resolve(location, file.id));
 
-  } catch (e) {
-    next(e);
-  }
-};
+
+    try {
+      await m.delete(file.id);
+      res.locals.content.responseCode = 'resource.success.deleted';
+      next();
+    } catch (e) {
+      next(e);
+    }
+  };
