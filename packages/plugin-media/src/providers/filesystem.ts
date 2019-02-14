@@ -90,7 +90,7 @@ export const handlerGet = (
   });
 
   // @ts-ignore Is a stream
-  parseImg(stream, req, res, next);
+  parseImg(file, stream, req, res, next);
 };
 
 
