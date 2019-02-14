@@ -120,7 +120,7 @@ export const handlerGet = (): Origami.Server.RequestHandler =>
       return;
     });
 
-    parseImg(stream, req, res, next);
+    parseImg(file, stream, req, res, next);
   };
 
 /**

@@ -2,14 +2,22 @@ import { Origami } from '@origami/core';
 import Color from 'color';
 import sharp from 'sharp';
 import { Readable } from 'stream';
+import { MediaResource } from '..';
 
 export const parseImg = (
+  file: MediaResource,
   stream: Readable,
   req: Origami.Server.Request,
   res: Origami.Server.Response,
   next: Origami.Server.NextFunction
 ) => {
   let s = stream;
+
+  if (file.type === 'image/gif') {
+    res.locals.content.set(s);
+    next();
+    return;
+  }
 
   try {
     let _modify = sharp();

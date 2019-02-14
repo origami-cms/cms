@@ -86,13 +86,21 @@ export const handlerGet = (
   const fileID = file.providerInfo.id;
   const fileType = file.type.split('/').pop();
   const stream = request(`https://imgur.com/${fileID}.${fileType}`);
+
+  stream.on('response', (r) => {
+    res.setHeader('etag', r.headers.etag as string);
+    res.setHeader('content-type', r.headers['content-type']!);
+    res.setHeader('content-length', r.headers['content-length']!);
+    res.setHeader('cache-control', 'public, max-age=31536000');
+  });
+
   stream.catch((err) => {
     next(err);
     return;
   });
 
   // @ts-ignore Is a stream
-  parseImg(stream, req, res, next);
+  parseImg(file, stream, req, res, next);
 };
 
 
