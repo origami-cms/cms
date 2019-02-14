@@ -45,6 +45,7 @@ export interface Auth {
   verified: null | boolean;
   loggedIn: boolean;
   token?: string | null;
+  expires: number | null;
   loading: {
     verifying: boolean;
     loggingIn: boolean;

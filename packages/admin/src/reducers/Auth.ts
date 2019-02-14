@@ -8,10 +8,12 @@ import {
   AUTH_LOGIN,
   AUTH_LOGIN_FAILED,
   AUTH_LOGOUT,
+  AUTH_REFRESH,
+  AUTH_REFRESH_FAILED,
   AUTH_VERIFIED,
   AUTH_VERIFIED_FAILED
 } from '../actions/Auth';
-import { LS_EMAIL, LS_JWT } from '../const';
+import { LS_EMAIL, LS_JWT, LS_JWT_EXPIRES } from '../const';
 import { Auth as StateAuth } from '../store/state';
 
 
@@ -19,6 +21,7 @@ const intitialState = immutable.from<StateAuth>({
   verified: null,
   loggedIn: false,
   token: localStorage.getItem(LS_JWT),
+  expires: null,
   loading: {
     verifying: false,
     loggingIn: false
@@ -41,6 +44,7 @@ export const Auth = (state = intitialState, action: AnyAction) => {
     case AUTH_LOGOUT:
     case AUTH_CLEAR:
       localStorage.removeItem(LS_JWT);
+      localStorage.removeItem(LS_JWT_EXPIRES);
 
       return state.merge({
         loggedIn: false,
@@ -50,18 +54,25 @@ export const Auth = (state = intitialState, action: AnyAction) => {
 
     case AUTH_VERIFIED:
     case AUTH_LOGIN:
+    case AUTH_REFRESH:
       const merging = {
         loggedIn: true,
         errors: {
           loggingIn: null
         },
         token: null,
+        expires: null,
         verified: true
       };
+
 
       if (action.token) {
         localStorage.setItem(LS_JWT, `Bearer ${action.token}`);
         merging.token = action.token;
+      }
+      if (action.expires) {
+        localStorage.setItem(LS_JWT_EXPIRES, action.expires);
+        merging.expires = action.expires;
       }
       if (action.email) localStorage.setItem(LS_EMAIL, action.email);
 
@@ -72,6 +83,7 @@ export const Auth = (state = intitialState, action: AnyAction) => {
       return state.setIn(['errors', 'loggingIn'], action.message);
 
 
+    case AUTH_REFRESH_FAILED:
     case AUTH_VERIFIED_FAILED:
       let { message } = action;
 

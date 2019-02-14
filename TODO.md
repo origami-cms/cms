@@ -5,7 +5,7 @@
 | [packages/plugin-core-api/src/index.ts](packages/plugin-core-api/src/index.ts#L48) | 48 | Fix security issue
 | [packages/admin/src/actions/App.ts](packages/admin/src/actions/App.ts#L17) | 17 | Convert to endpoint
 | [packages/admin/src/lib/reduxInjector.ts](packages/admin/src/lib/reduxInjector.ts#L6) | 6 | Fix ts-ignores
-| [packages/admin/src/router/Router.ts](packages/admin/src/router/Router.ts#L73) | 73 | Convert to a better structure
+| [packages/admin/src/router/Router.ts](packages/admin/src/router/Router.ts#L97) | 97 | Convert to a better structure
 | [packages/core-lib/src/Renderer/index.ts](packages/core-lib/src/Renderer/index.ts#L83) | 83 | Remove dependency
 | [packages/plugin-media/src/providers/s3.ts](packages/plugin-media/src/providers/s3.ts#L110) | 110 | Investigate if data.LastModified is actually a date
 | [packages/cli/src/commands/new/index.ts](packages/cli/src/commands/new/index.ts#L57) | 57 | Init database

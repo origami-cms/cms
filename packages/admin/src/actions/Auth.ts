@@ -13,6 +13,9 @@ export const AUTH_VERIFIED_FAILED = 'AUTH_VERIFIED_FAILED';
 export const AUTH_LOGIN = 'AUTH_LOGIN';
 export const AUTH_LOGIN_FAILED = 'AUTH_LOGIN_FAILED';
 
+export const AUTH_REFRESH = 'AUTH_REFRESH';
+export const AUTH_REFRESH_FAILED = 'AUTH_REFRESH_FAILED';
+
 export const AUTH_LOGOUT = 'AUTH_LOGOUT';
 
 
@@ -61,6 +64,21 @@ export const verify = () =>
 
       // return false;
     }
+  };
+
+
+export const refresh = () =>
+  async (dispatch: Dispatch) => {
+    try {
+      const { data } = await API.post('/auth/refresh', {});
+      dispatch({ type: AUTH_REFRESH, ...data });
+
+      return data;
+    } catch (e) {
+      return dispatch({ type: AUTH_LOGIN_FAILED, message: e.message });
+    }
+
+
   };
 
 
