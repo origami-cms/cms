@@ -12,13 +12,11 @@ export namespace auth {
     bcrypt.compare(pass, hash);
 
 
-  export const jwtSign = (data: object, secret: string): string =>
+  export const jwtSign = (data: object, secret: string, expiresIn = '30m'): string =>
     jwt.sign(
       data,
       secret,
-      {
-        expiresIn: '30m'
-      }
+      {expiresIn}
     );
 
   export interface JWTVerifyResult {

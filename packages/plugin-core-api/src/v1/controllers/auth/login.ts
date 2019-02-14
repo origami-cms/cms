@@ -30,7 +30,7 @@ r.post(async (req, res, next) => {
       userId: user.id,
       email: user.email
     }, secret);
-    const { iat: expires } = auth.jwtVerify(token, secret);
+    const { exp: expires } = auth.jwtVerify(token, secret);
 
 
     res.locals.content.set({ token, expires });
