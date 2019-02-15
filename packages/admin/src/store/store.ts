@@ -9,10 +9,8 @@ export const store = createInjectStore(
     reducers,
     compose(
       applyMiddleware(
-        thunkMiddleware,
-      ),
-      // @ts-ignore
-      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        thunkMiddleware
+      )
     )
 );
 
