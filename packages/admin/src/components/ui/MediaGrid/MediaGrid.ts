@@ -1,3 +1,4 @@
+import { ButtonOptions } from '@origami/zen';
 import { customElement, html, LitElement, property } from 'lit-element';
 import { repeat } from 'lit-html/directives/repeat';
 import { connect } from 'pwa-helpers/connect-mixin';
@@ -12,7 +13,6 @@ type GridResource = GridResourceMedia | GridResourceUpload;
 
 interface GridResourceBase {
   src: string | null;
-  class: string;
   name: string;
   author: string;
   created: Date;
@@ -45,12 +45,25 @@ export class MediaGrid extends connect(store)(LitElement) {
   @property({ type: Boolean, attribute: true })
   public searchable: boolean = false;
 
+  @property()
+  public buttons: ButtonOptions[] = [];
+
   public get value() {
     return this._value;
   }
 
+  // tslint:disable-next-line:variable-name
+  private __value: MediaResource[] = [];
   @property()
-  private _value: MediaResource[] = [];
+  private set _value(v) {
+    this.__value = v;
+    this.dispatchEvent(new CustomEvent(EVENT_CHANGED, {
+      detail: this.__value
+    }));
+  }
+  private get _value() {
+    return this.__value;
+  }
 
   @property()
   private _loading: boolean = true;
@@ -80,7 +93,6 @@ export class MediaGrid extends connect(store)(LitElement) {
         uploadProgress: r.progress,
         name: r.name,
         author: this._meID!,
-        class: r.progress < 100 ? 'uploading' : '',
         src: r.preview,
         original: r,
         created: r.created
@@ -92,7 +104,6 @@ export class MediaGrid extends connect(store)(LitElement) {
         upload: false,
         name: r.name!,
         author: r.author!,
-        class: this.value.includes(r) ? 'active' : '',
         src: `/api/v1/media/${r.id}?width=${this.previewSize}`,
         original: r,
         created: new Date(r.createdAt)
@@ -140,20 +151,27 @@ export class MediaGrid extends connect(store)(LitElement) {
     const empty = _resources.length === 0 && resources.length === 0;
 
     return html`
-      ${this.searchable
-        ? html`<ui-search
-          .keys=${['name']}
-          .items=${_resources}
-          @filtered=${({ detail }: { detail: GridResource[]}) => this._filteredResources = detail}
-          placeholder="Search for media…">
-        </ui-search>`
-        : null
-      }
+      <header>
+        ${this.searchable
+          ? html`<ui-search
+            .keys=${['name']}
+            .items=${_resources}
+            @filtered=${({ detail }: { detail: GridResource[]}) => this._filteredResources = detail}
+            placeholder="Search for media…">
+          </ui-search>`
+          : null
+        }
+
+        ${this.buttons.length
+          ? html`<zen-button-group .buttons=${this.buttons}></zen-button-group>`
+          : null
+        }
+      </header>
 
       <ul>
         ${repeat(resources, (r) => r.src, (r, i) => html`
           <li
-            class="card ${r.class}"
+            class="card ${this._getClass(r)}"
             @click=${() => {
               if (!r.upload) this._onClick(r.original);
             }}
@@ -186,44 +204,45 @@ export class MediaGrid extends connect(store)(LitElement) {
     `;
   }
 
-  // public firstUpdated() {
-  //   this._filteredResources = this._resources;
-  // }
 
   public stateChanged(state: State) {
     const media = state.resources.media;
-    if (this._loading !== media._loading.all) this._loading = state.resources.media._loading.all;
+    if (this._loading !== media._loading.all) this._loading = media._loading.all;
     if (this._media !== media.media) {
-      this._media = state.resources.media.media;
+      this._media = media.media;
       this._filteredResources = this._resources;
+      this._flushRemovedMedia();
     }
     this._uploading = state.UploadingMedia.uploading;
     if (!this._meID && state.Me.id) this._meID = state.Me.id;
   }
 
-  private _onClick(resource: MediaResource) {
-    const update = (value: MediaResource[]) => {
-      this._value = value;
-      this.dispatchEvent(new CustomEvent(EVENT_CHANGED, {
-        detail: this._value
-      }));
-    };
+  private _getClass(resource: GridResource) {
+    if (resource.upload && resource.uploadProgress < 100) {
+      return 'uploading';
+    }
 
+    if (this.value.find((r) => r.id === resource.original.id)) {
+      return 'active';
+    }
+  }
+
+  private _onClick(resource: MediaResource) {
     if (this.selectable) {
       if (this.multiple) {
         // If already selected, unselect it
         if (this._value.includes(resource)) {
           const filtered = this._value.filter((r) => r.id !== resource.id);
-          update(filtered);
+          this._value = filtered;
 
           // Otherwise add it to the selected values
         } else {
           const newValues = [...this._value];
           newValues.push(resource);
-          update(newValues);
+          this._value = newValues;
         }
       } else {
-        update([resource]);
+        this._value = [resource];
       }
     }
   }
@@ -239,5 +258,11 @@ export class MediaGrid extends connect(store)(LitElement) {
       .forEach((f) => {
         store.dispatch<any>(uploadProgress(f));
       });
+  }
+
+  private _flushRemovedMedia() {
+    this._value = this._value.filter((m) => {
+      return Boolean(this._media.find((_m) => m.id === _m.id));
+    });
   }
 }

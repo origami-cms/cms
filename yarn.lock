@@ -971,9 +971,9 @@
   dependencies:
     polymer3-decorators "^0.0.1"
 
-"@origami/zen@^0.0.5-alpha.0":
-  version "0.0.5-alpha.0"
-  resolved "https://registry.yarnpkg.com/@origami/zen/-/zen-0.0.5-alpha.0.tgz#add535fb8d102f4a06531b2de01471a1e72600b3"
+"@origami/zen@^0.0.6-alpha.1":
+  version "0.0.6-alpha.1"
+  resolved "https://registry.yarnpkg.com/@origami/zen/-/zen-0.0.6-alpha.1.tgz#1ac25e2780438799250d42165512d3c259bcbfce"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"

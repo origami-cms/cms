@@ -22,12 +22,25 @@
     --loading-size: var(--size-large);
   }
 
-  ui-search {
-    display: block;
-    margin: auto;
+  header {
+    display: flex;
+    align-items: center;
     margin-bottom: var(--size-small);
-    max-width: 60rem;
+    justify-content: space-between;
+
+    ui-search {
+      display: block;
+      // margin: auto;
+      max-width: 60rem;
+      flex-grow: 1;
+    }
+
+    zen-button-group {
+      flex-grow: 0;
+      margin-left: var(--size-small);
+    }
   }
+
 
   ul {
     --card-padding: 0;

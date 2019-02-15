@@ -23,7 +23,7 @@
   "devDependencies": {
     "@origami/core-lib": "0.0.3-alpha.14",
     "@origami/core-server": "0.0.3-alpha.14",
-    "@origami/zen": "^0.0.5-alpha.0",
+    "@origami/zen": "^0.0.6-alpha.0",
     "@origami/zen-lib": "^0.0.5-alpha.0",
     "@types/color": "^3.0.0",
     "@types/deep-equal": "^1.0.1",
@@ -73,5 +73,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@origami/zen": "^0.0.6-alpha.1"
   }
 }
