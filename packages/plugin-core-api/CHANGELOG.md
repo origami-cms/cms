@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.18](https://github.com/origami-cms/core/tree/master/packages/core-api/compare/v0.0.3-alpha.17...v0.0.3-alpha.18) (2019-02-15)
+
+
+### Bug Fixes
+
+* **core-api:** fixed issue with responseCode and no content.hasContent ([14964e8](https://github.com/origami-cms/core/tree/master/packages/core-api/commit/14964e8))
+* expiry on issued JWT ([141c76a](https://github.com/origami-cms/core/tree/master/packages/core-api/commit/141c76a))
+
+
+
+
+
 ## [0.0.3-alpha.14](https://github.com/origami-cms/core/tree/master/packages/core-api/compare/v0.0.3-alpha.13...v0.0.3-alpha.14) (2019-01-28)
 
 

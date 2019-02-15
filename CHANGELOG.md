@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.18](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.17...v0.0.3-alpha.18) (2019-02-15)
+
+
+### Bug Fixes
+
+* expiry on issued JWT ([141c76a](https://github.com/origami-cms/cms/commit/141c76a))
+* **admin:** fixed broken app ([930fdc1](https://github.com/origami-cms/cms/commit/930fdc1))
+* **core-api:** fixed issue with responseCode and no content.hasContent ([14964e8](https://github.com/origami-cms/cms/commit/14964e8))
+* **plugin-media:** disabled resize of gifs ([6957ebb](https://github.com/origami-cms/cms/commit/6957ebb))
+* **plugin-media:** disabled resize of gifs ([462ca6f](https://github.com/origami-cms/cms/commit/462ca6f))
+
+
+### Features
+
+* **admin:** added image removal to media ([1d54735](https://github.com/origami-cms/cms/commit/1d54735))
+* **admin:** token refresh keep alive ([a7d4dac](https://github.com/origami-cms/cms/commit/a7d4dac))
+* **plugin-media:** added imgur and delete functionality ([4eca236](https://github.com/origami-cms/cms/commit/4eca236))
+
+
+
+
+
 ## [0.0.3-alpha.17](https://github.com/origami-cms/cms/compare/v0.0.3-alpha.16...v0.0.3-alpha.17) (2019-02-10)
 
 

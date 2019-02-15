@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.18](https://github.com/origami-cms/admin-zen/compare/v0.0.3-alpha.17...v0.0.3-alpha.18) (2019-02-15)
+
+
+### Bug Fixes
+
+* **admin:** fixed broken app ([930fdc1](https://github.com/origami-cms/admin-zen/commit/930fdc1))
+
+
+### Features
+
+* **admin:** added image removal to media ([1d54735](https://github.com/origami-cms/admin-zen/commit/1d54735))
+* **admin:** token refresh keep alive ([a7d4dac](https://github.com/origami-cms/admin-zen/commit/a7d4dac))
+
+
+
+
+
 ## [0.0.3-alpha.17](https://github.com/origami-cms/admin-zen/compare/v0.0.3-alpha.16...v0.0.3-alpha.17) (2019-02-10)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-social-login",
-  "version": "0.0.3-alpha.15",
+  "version": "0.0.3-alpha.18",
   "description": "Social login plugin for the Origami platform",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-social-login",
   "homepage": "http://www.origami.so",
@@ -14,7 +14,7 @@
     "build": "yarn clean && tsc"
   },
   "dependencies": {
-    "@origami/core": "0.0.3-alpha.14",
+    "@origami/core": "0.0.3-alpha.18",
     "request-promise-native": "^1.0.5"
   },
   "publishConfig": {

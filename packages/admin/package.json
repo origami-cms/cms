@@ -1,6 +1,6 @@
 {
   "name": "@origami/admin",
-  "version": "0.0.3-alpha.17",
+  "version": "0.0.3-alpha.18",
   "main": "index.js",
   "repository": "https://github.com/origami-cms/admin-zen.git",
   "author": "Tristan Matthias <hello@tristanmatthias.com>",
@@ -21,8 +21,8 @@
     "start": "yarn watch & yarn watch:sass & yarn serve"
   },
   "devDependencies": {
-    "@origami/core-lib": "0.0.3-alpha.14",
-    "@origami/core-server": "0.0.3-alpha.14",
+    "@origami/core-lib": "0.0.3-alpha.18",
+    "@origami/core-server": "0.0.3-alpha.18",
     "@origami/zen": "^0.0.6-alpha.0",
     "@origami/zen-lib": "^0.0.5-alpha.0",
     "@types/color": "^3.0.0",

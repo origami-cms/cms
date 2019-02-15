@@ -1,6 +1,6 @@
 {
   "name": "@origami/plugin-media",
-  "version": "0.0.3-alpha.14",
+  "version": "0.0.3-alpha.18",
   "description": "Media plugin for OrigamiCMS",
   "repository": "https://github.com/origami-cms/core/tree/master/packages/plugin-media",
   "homepage": "http://www.origami.so",
@@ -20,7 +20,7 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
-    "@origami/core": "0.0.3-alpha.14",
+    "@origami/core": "0.0.3-alpha.18",
     "aws-sdk": "^2.337.0",
     "color": "^3.1.0",
     "mkdir-recursive": "^0.4.0",
