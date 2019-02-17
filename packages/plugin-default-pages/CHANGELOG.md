@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3-alpha.19](https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages/compare/v0.0.3-alpha.18...v0.0.3-alpha.19) (2019-02-17)
+
+
+### Features
+
+* **admin:** optimized wysiwyg editor ([58fb7af](https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages/commit/58fb7af))
+
+
+
+
+
 ## [0.0.3-alpha.18](https://github.com/origami-cms/core/tree/master/packages/plugin-default-pages/compare/v0.0.3-alpha.17...v0.0.3-alpha.18) (2019-02-15)
 
 **Note:** Version bump only for package @origami/plugin-default-pages
