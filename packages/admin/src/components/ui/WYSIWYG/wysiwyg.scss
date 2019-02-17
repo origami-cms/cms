@@ -63,4 +63,34 @@
       color: var(--color-white);
     }
   }
+
+  .gjs-toolbar {
+    white-space: nowrap;
+
+    .fa {
+      display: inline-block;
+      width: var(--size-medium);
+      height: var(--size-medium);
+      background-size: 100%;
+      filter: invert(1);
+
+      &:before {
+        content: '';
+      }
+
+      &.fa-arrow-up {
+        background-image: url('/origami/icons.svg#arrow-up');
+      }
+      &.fa-arrows {
+        background-image: url('/origami/icons.svg#reorder');
+      }
+      &.fa-clone {
+        background-image: url('/origami/icons.svg#copy');
+      }
+      &.fa-trash-o {
+        background-image: url('/origami/icons.svg#remove');
+      }
+    }
+  }
 }
+

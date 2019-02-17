@@ -52,14 +52,16 @@ export class MediaGrid extends connect(store)(LitElement) {
     return this._value;
   }
 
+  @property()
   // tslint:disable-next-line:variable-name
   private __value: MediaResource[] = [];
-  @property()
   private set _value(v) {
     this.__value = v;
     this.dispatchEvent(new CustomEvent(EVENT_CHANGED, {
       detail: this.__value
     }));
+    // tslint:disable-next-line no-floating-promises
+    this.requestUpdate();
   }
   private get _value() {
     return this.__value;

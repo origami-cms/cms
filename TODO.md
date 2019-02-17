@@ -12,7 +12,6 @@
 | [packages/core-server/src/lib/App/App.ts](packages/core-server/src/lib/App/App.ts#L187) | 187 | convert to gzip serve
 | [packages/admin/src/components/pages/Login/PageLogin.ts](packages/admin/src/components/pages/Login/PageLogin.ts#L66) | 66 | Loading state for login form
 | [packages/admin/src/components/ui/ResourcePage/ResourcePage.ts](packages/admin/src/components/ui/ResourcePage/ResourcePage.ts#L129) | 129 | Repair list columns on ResourceTable
-| [packages/admin/src/components/ui/WYSIWYG/WYSIWYG.ts](packages/admin/src/components/ui/WYSIWYG/WYSIWYG.ts#L102) | 102 | Make more efficient
 | [packages/plugin-core-api/src/v1/controllers/themes/installed.ts](packages/plugin-core-api/src/v1/controllers/themes/installed.ts#L11) | 11 | Move to db call
 | [packages/core-server/src/middleware/format/lib/__tests__/Formatter.test.ts](packages/core-server/src/middleware/format/lib/__tests__/Formatter.test.ts#L242) | 242 | core-server.Formatter.sendHTML
 | [packages/core-server/src/middleware/format/lib/__tests__/Formatter.test.ts](packages/core-server/src/middleware/format/lib/__tests__/Formatter.test.ts#L245) | 245 | core-server.Formatter.sendText

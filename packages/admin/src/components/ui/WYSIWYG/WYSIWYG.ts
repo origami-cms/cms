@@ -1,6 +1,7 @@
 // @ts-ignore
 import gjs from 'grapesjs';
 import { customElement, html, LitElement, property, svg } from 'lit-element';
+import { MediaResource } from 'src/store/state';
 import CSS from './wysiwyg-css';
 
 @customElement('ui-wysiwyg')
@@ -10,14 +11,17 @@ export class WYSIWYG extends LitElement {
   // GJS Editor
   private _editor: any;
   private _initialValue: string = '';
+  private _lastMediaSelected: MediaResource | null = null;
 
   get _modalContainer() {
     return document.querySelector('ui-modal-container')!;
   }
 
-  public async selectMedia() {
+  public async selectMedia(): Promise<MediaResource | false> {
     this._modalContainer.open('modal-media-selector');
-    return this._modalContainer.waitFor();
+    const r = await this._modalContainer.waitFor<{ resources: MediaResource[] }>();
+    if (r) return this._lastMediaSelected = r.resources[0];
+    else return false;
   }
 
 
@@ -26,10 +30,11 @@ export class WYSIWYG extends LitElement {
     return this._editor.getHtml();
   }
   set value(v: string) {
-    if (!this._editor) {
-      this._initialValue = v;
-      return;
-    } else this._editor.setComponents(v);
+    this._initialValue = v;
+    // if (!this._editor) {
+    //   this._initialValue = v;
+    //   return;
+    // } else this._editor.setComponents(v);
   }
 
   public render() {
@@ -85,22 +90,25 @@ export class WYSIWYG extends LitElement {
 
     const self = this;
 
+
     this._editor.Commands.add('open-assets', {
-      async run(editor: any, sender: any) {
-        const media = await self.selectMedia();
-        if (media) {
-          // @ts-ignore
-          const src = `/api/v1/media/${media.resources[0].id}`;
-
-          self._editor.getSelected().setAttributes({src});
-        }
-
+      async run(editor: any, sender: any, opts = {}) {
+        await self._setImageSrc(opts.target);
       }
     });
 
-    this._editor.on('change', () => {
-      // TODO: Make more efficient
+    this._editor.on('change:changesCount', () => {
       this.dispatchEvent(new CustomEvent('change'));
     });
+  }
+
+  private async _setImageSrc(model: any) {
+    const media = await this.selectMedia();
+    if (media) {
+      const src = `/api/v1/media/${media.id}`;
+
+      const img = this._editor.getSelected();
+      img.set('src', src);
+    }
   }
 }
