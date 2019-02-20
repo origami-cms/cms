@@ -189,6 +189,8 @@ export class Server {
         }
       );
     });
+    // TODO: Wrap each middleware in Node.js Worker thread with Async
+    // EG: https://github.com/mochicode/worker-fns
     router.nested.forEach((_r) => this.useRouter(_r, requireNamedMiddleware));
   }
 

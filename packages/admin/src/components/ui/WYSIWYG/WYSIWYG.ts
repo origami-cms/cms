@@ -2,6 +2,7 @@
 import gjs from 'grapesjs';
 import { customElement, html, LitElement, property, svg } from 'lit-element';
 import { MediaResource } from 'src/store/state';
+import { blocks } from './blocks';
 import CSS from './wysiwyg-css';
 
 @customElement('ui-wysiwyg')
@@ -66,33 +67,18 @@ export class WYSIWYG extends LitElement {
 
       blockManager: {
         appendTo: this.shadowRoot!.querySelector('#blocks'),
-        blocks: [
-          {
-            id: 'text',
-            label: 'Text',
-            content: '<div data-gjs-type="text">Insert your text here</div>',
-          },
-          {
-            id: 'image',
-            label: 'Image',
-            // Select the component once it's dropped
-            select: true,
-            // You can pass components as a JSON instead of a simple HTML string,
-            // in this case we also use a defined component type `image`
-            content: { type: 'image' },
-            // This triggers `active` event on dropped components and the `image`
-            // reacts by opening the AssetManager
-            activate: true,
-          }
-        ]
+        blocks: blocks
       }
     });
+
+    // TODO: convert to better css injection
+    this._editor.CssComposer.setRule('img', 'max-width: 100%');
 
     const self = this;
 
 
     this._editor.Commands.add('open-assets', {
-      async run(editor: any, sender: any, opts = {}) {
+      async run(editor: any, sender: any, opts: any = {}) {
         await self._setImageSrc(opts.target);
       }
     });
