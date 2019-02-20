@@ -1,7 +1,8 @@
 ### TODOs
 | Filename | line # | TODO
 |:------|:------:|:------
-| [packages/core-server/src/Server.ts](packages/core-server/src/Server.ts#L210) | 210 | Check if know error, or throw otherwise (should NOT catch
+| [packages/core-server/src/Server.ts](packages/core-server/src/Server.ts#L192) | 192 | Wrap each middleware in Node.js Worker thread with Async
+| [packages/core-server/src/Server.ts](packages/core-server/src/Server.ts#L212) | 212 | Check if know error, or throw otherwise (should NOT catch
 | [packages/plugin-core-api/src/index.ts](packages/plugin-core-api/src/index.ts#L48) | 48 | Fix security issue
 | [packages/admin/src/actions/App.ts](packages/admin/src/actions/App.ts#L17) | 17 | Convert to endpoint
 | [packages/admin/src/lib/reduxInjector.ts](packages/admin/src/lib/reduxInjector.ts#L6) | 6 | Fix ts-ignores
@@ -12,6 +13,7 @@
 | [packages/core-server/src/lib/App/App.ts](packages/core-server/src/lib/App/App.ts#L187) | 187 | convert to gzip serve
 | [packages/admin/src/components/pages/Login/PageLogin.ts](packages/admin/src/components/pages/Login/PageLogin.ts#L66) | 66 | Loading state for login form
 | [packages/admin/src/components/ui/ResourcePage/ResourcePage.ts](packages/admin/src/components/ui/ResourcePage/ResourcePage.ts#L129) | 129 | Repair list columns on ResourceTable
+| [packages/admin/src/components/ui/WYSIWYG/WYSIWYG.ts](packages/admin/src/components/ui/WYSIWYG/WYSIWYG.ts#L74) | 74 | convert to better css injection
 | [packages/plugin-core-api/src/v1/controllers/themes/installed.ts](packages/plugin-core-api/src/v1/controllers/themes/installed.ts#L11) | 11 | Move to db call
 | [packages/core-server/src/middleware/format/lib/__tests__/Formatter.test.ts](packages/core-server/src/middleware/format/lib/__tests__/Formatter.test.ts#L242) | 242 | core-server.Formatter.sendHTML
 | [packages/core-server/src/middleware/format/lib/__tests__/Formatter.test.ts](packages/core-server/src/middleware/format/lib/__tests__/Formatter.test.ts#L245) | 245 | core-server.Formatter.sendText
